@@ -7,7 +7,8 @@ import { font, width100 } from './mixins';
 export const GlobalStyle = createGlobalStyle`
 
   body {
-
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
     ${font({ size: '16', lineHeight: '22' })}
     overflow-x: hidden;
   }

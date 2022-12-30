@@ -1,6 +1,6 @@
-import { css } from "styled-components";
+import { css } from 'styled-components';
 
-import { FontType } from "./interfaces";
+import { FontType } from './interfaces';
 
 export const width100 = css`
   width: 100%;
@@ -47,6 +47,11 @@ export const flexColumnCenterHorizontal = css`
   align-items: center;
 `;
 
+export const flexAlignCenter = css`
+  display: flex;
+  align-items: center;
+`;
+
 export const flexColumn = css`
   display: flex;
   flex-direction: column;
@@ -64,14 +69,14 @@ export const widthHeight100 = css`
 `;
 
 export const absolutePseudoEl = css`
-  content: "";
+  content: '';
   position: absolute;
 `;
 
 export const font = ({ size, lineHeight, fontWeight }: FontType) => `
-  font-size: ${size || "16"}px;
-  line-height: ${lineHeight || "0"}px;
-  font-weight: ${fontWeight || "400"};
+  font-size: ${size || '16'}px;
+  line-height: ${lineHeight || '0'}px;
+  font-weight: ${fontWeight || '400'};
 `;
 
 export const box = (size: number) => `

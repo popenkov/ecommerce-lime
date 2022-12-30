@@ -1,32 +1,10 @@
 export type Color = {
-  red: string;
-  redHover: string;
-  redBtnHover: string;
-  pink: string;
-  black: string;
-  blackHover: string;
-  blackBtnHover: string;
-  grey: string;
-  greyHover: string;
-  greyBtnHover: string;
-  lightGrey: string;
-  greyBorder: string;
-  lightGreyBorder: string;
-  greyBg: string;
-  greyBgHover: string;
-  greyBgLogo: string;
-  greyBold: string;
-  greyHeader: string;
-  greyPale: string;
+  background: string;
   white: string;
-  bgColor: string;
-  bgCover: string;
-  bgPopup: string;
-  whiteOpacity50: string;
-  greyBorderOpacity50: string;
-  blackOpacity40: string;
+  black: string;
+  greyBg: string;
+  greyLightBg: string;
   green: string;
-  greenSuccess: string;
 };
 
 export type Breakpoints = {
