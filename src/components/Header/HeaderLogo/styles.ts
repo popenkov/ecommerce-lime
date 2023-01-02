@@ -15,12 +15,15 @@ const Shadow = styled.div`
   left: -34px;
   ${box(193)};
   border-radius: 50%;
+  background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 `;
 
 const Logo = styled.div`
   clip-path: circle(50% at 30% 10%);
   ${box(193)};
+  position: relative;
+  z-index: 2;
 
   display: flex;
 
