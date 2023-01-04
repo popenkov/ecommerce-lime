@@ -1,9 +1,12 @@
 import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import './App.css';
 import { AppLayout } from './layout';
 import { Main } from './pages/Main';
+
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import './App.css';
 
 const App: FC = () => {
   return (
