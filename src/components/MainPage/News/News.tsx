@@ -1,4 +1,3 @@
-import { Section } from '@src/components/UI/Section';
 import { MainPageData } from '@src/mock/MainPageData';
 import { FC } from 'react';
 import { Styled } from './styles';

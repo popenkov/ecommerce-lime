@@ -6,7 +6,6 @@ import { Main } from './pages/Main';
 
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import './App.css';
 
 const App: FC = () => {
   return (

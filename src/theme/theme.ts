@@ -9,6 +9,7 @@ export const theme: Theme = {
     greyBorder: 'rgba(255, 255, 255, 0.3)',
     greyLightBg: '#f1f1f1',
     green: '#A1D214',
+    orange: '#FF5C00',
   },
 
   breakpoints: {

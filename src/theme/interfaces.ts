@@ -6,6 +6,7 @@ export type Color = {
   greyBorder: string;
   greyLightBg: string;
   green: string;
+  orange: string;
 };
 
 export type Breakpoints = {

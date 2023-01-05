@@ -12,6 +12,9 @@ import newsSecond from '@src/assets/images/news/news-2.jpg';
 import newsThird from '@src/assets/images/news/news-3.jpg';
 import newsFourth from '@src/assets/images/news/news-4.jpg';
 
+import productFirst from '@src/assets/images/products/product-1.jpg';
+import productSecond from '@src/assets/images/products/product-2.jpg';
+
 export type SlideType = {
   id: string;
   title: string;
@@ -65,7 +68,7 @@ export type ItemType = {
   title: string;
   price: {
     price: string;
-    oldPrice: string;
+    oldPrice: string | null;
   };
   button: string;
 };
@@ -209,7 +212,22 @@ export const MainPageData: MainPageDataType = {
     items: [
       {
         id: '1',
-        img: '',
+        img: productFirst,
+        rating: {
+          value: '4',
+          amount: '3 253',
+        },
+        isFavorite: false,
+        title: 'Макаронные изделия Макфа Триколлини свитки',
+        price: {
+          price: '120 руб.',
+          oldPrice: '140 руб.',
+        },
+        button: 'В корзину',
+      },
+      {
+        id: '1',
+        img: productSecond,
         rating: {
           value: '4',
           amount: '3 254',
@@ -218,7 +236,7 @@ export const MainPageData: MainPageDataType = {
         title: 'Макаронные изделия Макфа Триколлини свитки',
         price: {
           price: '120 руб.',
-          oldPrice: '140 руб.',
+          oldPrice: null,
         },
         button: 'В корзину',
       },

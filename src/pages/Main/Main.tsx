@@ -2,7 +2,7 @@ import { Sidebar } from '@src/components';
 import { Advantages } from '@src/components/MainPage/Advantages';
 import { MainSlider } from '@src/components/MainPage/MainSlider';
 import { News } from '@src/components/MainPage/News';
-import { Section } from '@src/components/UI/Section';
+import { ProductsSection } from '@src/components/UI/ProductsSection';
 import { MainPageData } from '@src/mock/MainPageData';
 import { FC } from 'react';
 
@@ -16,7 +16,7 @@ export const Main: FC = () => {
         <MainSlider />
         <Advantages />
         <News />
-        <Section data={promoProducts} />
+        <ProductsSection data={promoProducts} />
       </Styled.MainContainer>
       <Sidebar />
     </Styled.PageContainer>
