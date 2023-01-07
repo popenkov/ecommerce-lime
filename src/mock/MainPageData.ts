@@ -83,11 +83,24 @@ export type ItemsType = {
   items: ItemType[];
 };
 
+export type ReviewType = {
+  id: string;
+  name: string;
+  text: string;
+};
+
+export type ReviewsType = {
+  title: string;
+  button: string;
+  items: ReviewType[];
+};
+
 type MainPageDataType = {
   slider: SlideType[];
   advantages: AdvantageType[];
   news: NewsType;
-  promoItems: ItemsType;
+  products: ItemsType[];
+  reviews: ReviewsType;
 };
 
 export const MainPageData: MainPageDataType = {
@@ -202,43 +215,497 @@ export const MainPageData: MainPageDataType = {
       },
     ],
   },
-  promoItems: {
-    title: 'Акционные продукты',
-    color: 'linear-gradient(90deg, #FFA800 0%, #FFC709 100%), #A1D214;',
-    button: {
-      text: 'Смотреть все',
-      href: '#',
+  products: [
+    {
+      title: 'Акционные продукты',
+      color: 'linear-gradient(90deg, #FFA800 0%, #FFC709 100%), #A1D214;',
+      button: {
+        text: 'Смотреть все',
+        href: '#',
+      },
+      items: [
+        {
+          id: '4532341',
+          img: productFirst,
+          rating: {
+            value: '4',
+            amount: '3 253',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: '140 руб.',
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '132123',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '2111',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '3354534234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '44234234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '33545sdasd34234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '442334',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+      ],
     },
+    {
+      title: 'Новинки',
+      color:
+        ' linear-gradient(90deg, #00D1FF 0%, #17BADE 0.01%, #14D28E 100%), #A1D214',
+      button: {
+        text: 'Смотреть все',
+        href: '#',
+      },
+      items: [
+        {
+          id: '4532341',
+          img: productFirst,
+          rating: {
+            value: '4',
+            amount: '3 253',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: '140 руб.',
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '132123',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '2111',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '3354534234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '44234234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '33545sdasd34234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '442334',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+      ],
+    },
+    {
+      title: 'Выбор вегана',
+      color: ' linear-gradient(90deg, #76B852 0%, #8DC26F 100%), #A1D214;',
+      button: {
+        text: 'Смотреть все',
+        href: '#',
+      },
+      items: [
+        {
+          id: '4532341',
+          img: productFirst,
+          rating: {
+            value: '4',
+            amount: '3 253',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: '140 руб.',
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '132123',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '2111',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '3354534234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '44234234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '33545sdasd34234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '442334',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+      ],
+    },
+    {
+      title: 'Популярные товары',
+      color: '  linear-gradient(90deg, #FF5C00 0%, #FF9900 100%), #A1D214;',
+      button: {
+        text: 'Смотреть все',
+        href: '#',
+      },
+      items: [
+        {
+          id: '4532341',
+          img: productFirst,
+          rating: {
+            value: '4',
+            amount: '3 253',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: '140 руб.',
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '132123',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '2111',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '3354534234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '44234234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '33545sdasd34234',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+        {
+          id: '442334',
+          img: productSecond,
+          rating: {
+            value: '4',
+            amount: '3 254',
+          },
+          isFavorite: false,
+          title: 'Макаронные изделия Макфа Триколлини свитки',
+          price: {
+            price: '120 руб.',
+            oldPrice: null,
+          },
+          button: 'В корзину',
+        },
+      ],
+    },
+  ],
+  reviews: {
+    title: 'Отзывы о лайме',
+    button: 'Написать отзыв',
     items: [
       {
         id: '1',
-        img: productFirst,
-        rating: {
-          value: '4',
-          amount: '3 253',
-        },
-        isFavorite: false,
-        title: 'Макаронные изделия Макфа Триколлини свитки',
-        price: {
-          price: '120 руб.',
-          oldPrice: '140 руб.',
-        },
-        button: 'В корзину',
+        name: 'Александр Петров',
+        text: 'Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок...',
       },
       {
-        id: '1',
-        img: productSecond,
-        rating: {
-          value: '4',
-          amount: '3 254',
-        },
-        isFavorite: false,
-        title: 'Макаронные изделия Макфа Триколлини свитки',
-        price: {
-          price: '120 руб.',
-          oldPrice: null,
-        },
-        button: 'В корзину',
+        id: '2',
+        name: 'Александр Петров',
+        text: 'Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок...',
+      },
+      {
+        id: '3',
+        name: 'Александр Петров',
+        text: 'Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок...',
+      },
+      {
+        id: '4',
+        name: 'Александр Петров',
+        text: 'Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок...',
+      },
+      {
+        id: '5',
+        name: 'Александр Петров',
+        text: 'Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок...',
       },
     ],
   },

@@ -10,7 +10,7 @@ const HeaderBottom = styled.div`
 const HeaderContainer = styled.div`
   position: relative;
   ${flexAlignCenter};
-
+  box-sizing: border-box;
   max-width: 1280px;
   padding: 13px 25px;
   padding-left: 166px;

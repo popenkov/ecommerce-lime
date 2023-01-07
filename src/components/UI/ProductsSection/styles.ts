@@ -2,6 +2,7 @@ import { flexAlignCenter, font } from '@src/styles/mixins';
 import styled, { css } from 'styled-components';
 
 const Container = styled.div`
+  position: relative;
   padding: 30px 20px;
   margin-bottom: 32px;
   background-color: ${({ theme }) => theme.color.white};
@@ -59,6 +60,10 @@ const Link = styled.a`
 const ItemsContainer = styled.div`
   display: flex;
   gap: 13px;
+
+  & .swiper {
+    width: 100%;
+  }
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
 `;
