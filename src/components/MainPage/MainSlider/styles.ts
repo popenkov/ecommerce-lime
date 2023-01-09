@@ -7,7 +7,7 @@ const Slider = styled.div`
     display: none;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

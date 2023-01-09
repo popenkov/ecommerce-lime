@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { box, flexAlignCenter, font } from "@src/styles/mixins";
 
 const Card = styled.div`
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -11,7 +11,7 @@ const CardHeader = styled.div`
   ${flexAlignCenter};
   margin-bottom: 5px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 const IconContainer = styled.span`
@@ -34,7 +34,7 @@ const IconContainer = styled.span`
     background-color: ${({ theme }) => theme.color.green};
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -43,7 +43,7 @@ const Title = styled.h3`
   color: ${({ theme }) => theme.color.black};
 
   text-align: left;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -52,7 +52,7 @@ const Text = styled.p`
   ${font({ size: "12", lineHeight: "15", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
   text-align: left;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

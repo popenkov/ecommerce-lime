@@ -8,7 +8,7 @@ const Container = styled.div`
   position: relative;
   margin-right: 15px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
   }
 `;

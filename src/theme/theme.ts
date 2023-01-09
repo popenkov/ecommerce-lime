@@ -17,10 +17,7 @@ export const theme: Theme = {
     xSmall: "374px",
     small: "576px",
     medium: "768px",
-    large: "1024px",
-    tabletLarge: "1168px",
-    tabletXLarge: "1260px",
-    xlarge: "1280px",
-    xxlarge: "1440px",
+    tablet: "1168px",
+    large: "1280px",
   },
 };

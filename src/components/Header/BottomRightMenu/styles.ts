@@ -6,13 +6,13 @@ const Container = styled.div`
   ${flexAlignCenter};
   margin-left: 34px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin-left: auto;
   }
 `;
 
 const IconContainer = styled.span`
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     & svg {
       width: 15px;
       height: 15px;
@@ -25,7 +25,7 @@ const Link = styled.a`
   ${flexAlignCenter};
   margin-right: 20px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin-right: 15px;
   }
 
@@ -36,7 +36,7 @@ const Link = styled.a`
   &:not(:last-child) ${IconContainer} {
     margin-right: 10px;
 
-    @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       margin-right: 0px;
     }
   }
@@ -46,7 +46,7 @@ const Text = styled.span`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
   }
 `;

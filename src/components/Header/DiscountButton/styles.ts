@@ -4,7 +4,7 @@ import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Button = styled.button`
   ${flexAlignCenter};
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -16,7 +16,7 @@ const PercentIcon = styled.span`
   color: ${({ theme }) => theme.color.black};
   border-radius: 10px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 4px 6px;
   }
 `;
@@ -25,7 +25,7 @@ const PercentText = styled.span`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
   }
 `;
@@ -40,7 +40,7 @@ const ShevronIcon = styled.span`
   & path {
     fill: ${({ theme }) => theme.color.yellow};
   }
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
   }
 `;

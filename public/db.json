@@ -1,0 +1,200 @@
+{
+  "header": {
+    "top": {
+      "leftPart": [
+        {
+          "id": "phone",
+          "text": "7756",
+          "href": "tel: 7756",
+          "icon": "PHONE",
+          "underlined": false
+        },
+        {
+          "id": "delivery",
+          "text": "Зона доставки",
+          "href": "/delivery",
+          "icon": "PIN",
+          "underlined": false
+        },
+        {
+          "id": "time",
+          "text": "17:00 - 17:45",
+          "href": "/time",
+          "icon": "CLOCK",
+          "underlined": false
+        }
+      ],
+      "rightPart": [
+        {
+          "id": "chief-lime",
+          "text": "Шеф-лайм",
+          "href": "/chief-lime",
+          "underlined": false
+        },
+        {
+          "id": "vacancies",
+          "text": "Вакансии",
+          "href": "/vacancies",
+          "underlined": false
+        },
+        {
+          "id": "faq",
+          "text": "Вопрос-ответ",
+          "href": "/faq",
+          "underlined": false
+        },
+        {
+          "id": "bonuses",
+          "text": "Бонусная программа",
+          "href": "/bonuses",
+          "underlined": true
+        }
+      ]
+    },
+    "bottomLinks": [
+      {
+        "id": "account",
+        "text": "Кабинет",
+        "icon": "ACCOUNT",
+        "href": "/account"
+      },
+      {
+        "id": "favorites",
+        "text": "Избранное",
+        "icon": "FAVORITES",
+        "href": "/favorites"
+      },
+      {
+        "id": "cart",
+        "text": "Корзина",
+        "icon": "CART",
+        "href": "/cart"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": {
+      "years": "© 2001–2021 ООО «Лайм»",
+      "rights": "Все права защищены. «Лайм» является зарегистрированным товарным знаком Lime Holding SA.",
+      "agreement": {
+        "text": "Политика Конфиденциальности",
+        "href": "/#"
+      }
+    },
+    "links": [
+      {
+        "title": "О компании",
+        "items": [
+          {
+            "id": "1",
+            "text": "Доставка и оплата",
+            "href": "#"
+          },
+          {
+            "id": "2",
+            "text": "Вопрос-ответ",
+            "href": "#"
+          },
+          {
+            "id": "3",
+            "text": "Поставщикам",
+            "href": "#"
+          },
+          {
+            "id": "4",
+            "text": "Контакты",
+            "href": "#"
+          },
+          {
+            "id": "5",
+            "text": "Новости",
+            "href": "#"
+          },
+          {
+            "id": "6",
+            "text": "Политика",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Покупателям",
+        "items": [
+          {
+            "id": "1",
+            "text": "Бонусная система",
+            "href": "#"
+          },
+          {
+            "id": "2",
+            "text": "Как вернуть",
+            "href": "#"
+          },
+          {
+            "id": "3",
+            "text": "Как заказать",
+            "href": "#"
+          },
+          {
+            "id": "4",
+            "text": "Программа лояльности",
+            "href": "#"
+          },
+          {
+            "id": "5",
+            "text": "Акции",
+            "href": "#"
+          },
+          {
+            "id": "6",
+            "text": "Шеф-лайм",
+            "href": "#"
+          }
+        ]
+      }
+    ],
+    "contacts": {
+      "title": "Круглосуточная поддержка",
+      "phone": {
+        "id": "1",
+        "icon": "PHONE",
+        "text": "7756",
+        "href": "tel: 7756"
+      },
+      "app": [
+        {
+          "id": "1",
+          "icon": "APPSTORE",
+          "text": "Скачать в AppStore",
+          "href": "#"
+        },
+        {
+          "id": "2",
+          "icon": "PLAYMARKET",
+          "text": "Скачать в Play Market",
+          "href": "#"
+        }
+      ],
+      "social": [
+        {
+          "id": "1",
+          "icon": "FACEBOOK",
+          "text": "",
+          "href": "#"
+        },
+        {
+          "id": "2",
+          "icon": "YOUTUBE",
+          "text": "",
+          "href": "#"
+        },
+        {
+          "id": "3",
+          "icon": "FACEBOOK",
+          "text": "",
+          "href": "#"
+        }
+      ]
+    }
+  }
+}

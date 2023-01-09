@@ -14,11 +14,8 @@ export type Breakpoints = {
   xSmall: string;
   small: string;
   medium: string;
+  tablet: string;
   large: string;
-  tabletLarge: string;
-  tabletXLarge: string;
-  xlarge: string;
-  xxlarge: string;
 };
 
 export interface Theme {

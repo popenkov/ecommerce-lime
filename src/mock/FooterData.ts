@@ -19,7 +19,8 @@ export type LinkType = {
   id: string;
   text: string;
   href: string;
-  icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
+  icon?: string;
+  //   icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
 };
 
 export type LinksType = {
@@ -34,7 +35,7 @@ export type ContactsType = {
   social: LinkType[];
 };
 
-type FooterDataType = {
+export type FooterDataType = {
   copyright: CopyrightType;
   links: LinksType[];
 
@@ -80,20 +81,23 @@ export const FooterData: FooterDataType = {
     title: "Круглосуточная поддержка",
     phone: {
       id: "1",
-      icon: PhoneIcon,
+      icon: "",
+      //   icon: PhoneIcon,
       text: "7756",
       href: "tel: 7756",
     },
     app: [
       {
         id: "1",
-        icon: AppStoreIcon,
+        icon: "",
+        // icon: AppStoreIcon,
         text: "Скачать в AppStore",
         href: "#",
       },
       {
         id: "2",
-        icon: PlayMarketIcon,
+        icon: "",
+        // icon: PlayMarketIcon,
         text: "Скачать в Play Market",
         href: "#",
       },
@@ -101,19 +105,22 @@ export const FooterData: FooterDataType = {
     social: [
       {
         id: "1",
-        icon: FacebookIcon,
+        icon: "",
+        // icon: FacebookIcon,
         text: "",
         href: "#",
       },
       {
         id: "2",
-        icon: YoutubeIcon,
+        icon: "",
+        // icon: YoutubeIcon,
         text: "",
         href: "#",
       },
       {
         id: "3",
-        icon: FacebookIcon,
+        icon: "",
+        // icon: FacebookIcon,
         text: "",
         href: "#",
       },

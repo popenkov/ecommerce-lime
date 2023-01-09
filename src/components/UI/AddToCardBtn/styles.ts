@@ -8,7 +8,7 @@ const Button = styled.button`
   justify-content: center;
   ${font({ size: "10", lineHeight: "12", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -28,7 +28,7 @@ const PlusContainer = styled.span<{ isHovered: boolean }>`
       border-bottom-right-radius: 0;
     `};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -47,7 +47,7 @@ const TextContainer = styled.span<{ isHovered: boolean }>`
       border-bottom-right-radius: 5px;
     `};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

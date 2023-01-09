@@ -3,6 +3,7 @@ import { FC } from "react";
 import { HeaderLinkType } from "@src/mock/HeaderData";
 
 import { Styled } from "./styles";
+import { ICONS } from "@src/utils/IconsMap";
 
 type BottomRightMenuProps = { data: HeaderLinkType[] };
 
@@ -10,7 +11,8 @@ export const BottomRightMenu: FC<BottomRightMenuProps> = ({ data }) => {
   return (
     <Styled.Container>
       {data.map((item) => {
-        const Icon = item.icon || null;
+        const key = item.icon as keyof typeof ICONS;
+        const Icon = typeof item.icon === "string" ? ICONS[key] : null;
         return (
           <Styled.Link key={item.id}>
             {Icon && (

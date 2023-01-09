@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -17,7 +17,7 @@ const Title = styled.h3`
   color: ${({ theme }) => theme.color.white};
   opacity: 0.3;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -27,7 +27,7 @@ const Link = styled.a`
   color: ${({ theme }) => theme.color.white};
   text-decoration: none;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

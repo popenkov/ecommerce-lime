@@ -17,14 +17,14 @@ export const Main: FC = () => {
   return (
     <Styled.PageContainer>
       <Styled.MainContainer>
-        <MainSlider />
+        {/* <MainSlider />
         <Advantages />
         <News />
         {products.map((products) => {
           return <ProductsSection data={products} key={products.title} />;
         })}
         <Reviews data={reviews} />
-        <Feedback />
+        <Feedback /> */}
       </Styled.MainContainer>
       <Sidebar />
     </Styled.PageContainer>

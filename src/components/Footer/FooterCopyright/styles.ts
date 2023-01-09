@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { font } from "@src/styles/mixins";
 
 const Container = styled.div`
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
 const LogoContainer = styled.div`
   margin-bottom: 36px;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -23,7 +23,7 @@ const Text = styled.p`
     margin-bottom: 13px;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -31,7 +31,7 @@ const Link = styled.a`
   ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.green};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

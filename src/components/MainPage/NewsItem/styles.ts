@@ -6,7 +6,7 @@ const News = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -17,7 +17,7 @@ const Image = styled.img`
   object-fit: cover;
   border-radius: 10px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -27,7 +27,7 @@ const Title = styled.h3`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   text-align: left;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -47,14 +47,14 @@ const Text = styled.p`
     height: 82px;
     background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
   }
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 const Link = styled.a`
   ${font({ size: "12", lineHeight: "15", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
   opacity: 0.5;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

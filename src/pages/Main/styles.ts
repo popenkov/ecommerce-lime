@@ -8,14 +8,14 @@ const PageContainer = styled.main`
 
   margin: 0 auto;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 const MainContainer = styled.main`
   flex: 1;
   max-width: calc(100% - 220px);
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

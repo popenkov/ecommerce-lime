@@ -4,7 +4,7 @@ import { flexAlignCenter } from "@src/styles/mixins";
 
 const HeaderTop = styled.div`
   background-color: ${({ theme }) => theme.color.greyBg};
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     background-color: ${({ theme }) => theme.color.white};
     height: 0px;
   }
@@ -19,7 +19,7 @@ const HeaderContainer = styled.div`
   padding: 13px 25px;
 
   margin: 0 auto;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

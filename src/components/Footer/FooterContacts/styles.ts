@@ -6,7 +6,7 @@ const Container = styled.div`
   width: 243px;
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -15,7 +15,7 @@ const Title = styled.h3`
   ${font({ size: "14", lineHeight: "32", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.white};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -30,7 +30,7 @@ const Phone = styled.a`
     margin-right: 0;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -44,7 +44,7 @@ const IconContainer = styled.span`
     height: 26px;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -52,7 +52,7 @@ const PhoneNumber = styled.span`
   ${font({ size: "42", lineHeight: "51", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.white};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -66,7 +66,7 @@ const Text = styled.p`
     margin-bottom: 20px;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -77,21 +77,21 @@ const Link = styled.a`
     margin-right: 11px;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
 const DownloadsContainer = styled.div`
   margin-bottom: 32px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
 const SocialsContainer = styled.div`
   ${flexAlignCenter};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

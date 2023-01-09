@@ -12,12 +12,12 @@ const Reviews = styled.section`
   background: #f8f8f8;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
 const LeaveReviewSection = styled.div`
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -25,7 +25,7 @@ const Title = styled.h3`
   margin-bottom: 15px;
   ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -35,7 +35,7 @@ const Button = styled.button`
   padding: 8px 26px;
   background-color: ${({ theme }) => theme.color.green};
   border-radius: 10px;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -48,7 +48,7 @@ const ReviewItemsContainer = styled.div`
   & .swiper-slide {
     width: 159px;
   }
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

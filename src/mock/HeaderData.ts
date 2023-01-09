@@ -11,7 +11,8 @@ export type HeaderLinkType = {
   id: string;
   text: string;
   href: string;
-  icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
+  icon?: string;
+  //   icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
   underlined?: boolean;
 };
 
@@ -19,7 +20,7 @@ type HeaderLinkContainerType = {
   [key: string]: HeaderLinkType[];
 };
 
-type HeaderDataType = {
+export type HeaderDataType = {
   top: HeaderLinkContainerType;
   bottomLinks: HeaderLinkType[];
 };
@@ -31,21 +32,21 @@ export const HeaderData: HeaderDataType = {
         id: "phone",
         text: "7756",
         href: "tel: 7756",
-        icon: PhoneIcon,
+        // icon: PhoneIcon,
         underlined: false,
       },
       {
         id: "delivery",
         text: "Зона доставки",
         href: "/delivery",
-        icon: PinIcon,
+        // icon: PinIcon,
         underlined: false,
       },
       {
         id: "time",
         text: "17:00 - 17:45",
         href: "/time",
-        icon: ClockIcon,
+        // icon: ClockIcon,
         underlined: false,
       },
     ],
@@ -84,19 +85,19 @@ export const HeaderData: HeaderDataType = {
     {
       id: "account",
       text: "Кабинет",
-      icon: AccountIcon,
+      //   icon: AccountIcon,
       href: "/account",
     },
     {
       id: "favorites",
       text: "Избранное",
-      icon: FavoritesIcon,
+      //   icon: FavoritesIcon,
       href: "/favorites",
     },
     {
       id: "cart",
       text: "Корзина",
-      icon: CartIcon,
+      //   icon: CartIcon,
       href: "/cart",
     },
   ],

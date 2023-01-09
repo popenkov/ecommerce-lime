@@ -4,7 +4,7 @@ import { box, fullscreenFixed } from "@src/styles/mixins";
 
 const NavigationContainer = styled.div`
   display: none;
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     position: absolute;
     top: 50%;
     left: 0;
@@ -23,7 +23,7 @@ const NavigationBtnOverlay = styled.button`
 const buttonCommon = css`
   display: none;
 
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     cursor: pointer;
     width: 27px;
     height: 72px;

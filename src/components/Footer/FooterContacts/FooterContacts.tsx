@@ -4,21 +4,28 @@ import { DownloadButton } from "@src/components/UI";
 import { ContactsType } from "@src/mock/FooterData";
 
 import { Styled } from "./styles";
+import { ICONS } from "@src/utils/IconsMap";
 
 type FooterContactsProps = {
   data: ContactsType;
 };
+
+const renderIcon = (Icon: any) => {
+  return <Icon />;
+};
+
 export const FooterContacts: FC<FooterContactsProps> = ({ data }) => {
   const { title, phone, app, social } = data;
+  const key = phone.icon as keyof typeof ICONS;
+  const Icon = typeof phone.icon === "string" ? (ICONS[key] as React.ElementType) : null;
+
   return (
     <Styled.Container>
       <Styled.Title>{title}</Styled.Title>
 
       {phone.icon && (
         <Styled.Phone>
-          <Styled.IconContainer>
-            <phone.icon />
-          </Styled.IconContainer>
+          <Styled.IconContainer>{renderIcon(Icon)}</Styled.IconContainer>
           <Styled.PhoneNumber>{phone.text}</Styled.PhoneNumber>
         </Styled.Phone>
       )}
@@ -30,7 +37,8 @@ export const FooterContacts: FC<FooterContactsProps> = ({ data }) => {
 
       <Styled.SocialsContainer>
         {social.map((item) => {
-          const Icon = item.icon || null;
+          const key = item.icon as keyof typeof ICONS;
+          const Icon = typeof item.icon === "string" ? ICONS[key] : null;
           return (
             <Styled.Link key={item.id}>
               {Icon && (

@@ -15,7 +15,7 @@ const Card = styled.div<{ img: string; color: string }>`
   background-position: right;
   background-repeat: no-repeat;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

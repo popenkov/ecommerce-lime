@@ -11,7 +11,7 @@ const Feedback = styled.div`
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -22,7 +22,7 @@ const Title = styled.h2`
   color: ${({ theme }) => theme.color.black};
   text-transform: uppercase;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -32,7 +32,7 @@ const FormTitle = styled.p`
   ${font({ size: "14", lineHeight: "17", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

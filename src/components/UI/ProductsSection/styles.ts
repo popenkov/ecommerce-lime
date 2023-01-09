@@ -9,7 +9,7 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -20,7 +20,7 @@ const Header = styled.div`
 
   margin-bottom: 28px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -41,7 +41,7 @@ const Title = styled.h2<{ color?: string }>`
         background: ${color};
       }
     `};
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -65,7 +65,7 @@ const ItemsContainer = styled.div`
   & .swiper {
     width: 100%;
   }
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

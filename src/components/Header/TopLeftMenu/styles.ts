@@ -6,7 +6,7 @@ const Container = styled.div`
   ${flexAlignCenter};
   padding-left: 159px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
   }
 `;
@@ -21,14 +21,14 @@ const Link = styled.a`
     margin-right: 0;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
 const IconContainer = styled.span`
   margin-right: 10px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

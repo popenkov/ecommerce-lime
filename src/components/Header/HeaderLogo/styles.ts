@@ -9,7 +9,7 @@ const LogoContainer = styled.div`
 
   ${box(193)};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     left: 50%;
     top: -205%;
     transform: translateX(-50%);
@@ -18,41 +18,43 @@ const LogoContainer = styled.div`
 `;
 
 const Shadow = styled.div`
-  position: absolute;
-  top: -90px;
-  left: -34px;
+  //   position: absolute;
+  //   top: -90px;
+  //   left: -34px;
+  //   ${box(193)};
+  //   border-radius: 50%;
+  //   background-color: ${({ theme }) => theme.color.white};
+  //   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  //   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  //     ${box(135)};
+  //   }
+`;
+
+const Logo = styled.div`
   ${box(193)};
+  ${flexCenter};
+  position: absolute;
+  box-sizing: border-box;
+  left: -35px;
+  bottom: -74px;
+  z-index: 2;
+
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-    ${box(135)};
-  }
-`;
-
-const Logo = styled.div`
-  clip-path: circle(50% at 30% 10%);
-  ${box(193)};
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-
-  background-color: ${({ theme }) => theme.color.white};
-
   & svg {
-    margin-top: 14px;
-    margin-left: 18px;
+    margin-top: 59px;
+    margin-left: 24px;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-    align-items: center;
-    justify-content: center;
-    clip-path: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     ${box(135)};
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    bottom: -57px;
+    left: 50%;
+    transform: translateX(-50%);
 
     & svg {
       margin-top: 21px;

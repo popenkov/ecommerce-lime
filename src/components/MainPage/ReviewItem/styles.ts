@@ -6,7 +6,7 @@ const Item = styled.div`
   display: flex;
   flex-direction: column;
   width: 159px;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
@@ -20,14 +20,14 @@ const Name = styled.p`
     margin-right: 10px;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
 const Text = styled.p`
   ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

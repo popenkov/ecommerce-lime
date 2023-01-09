@@ -26,7 +26,8 @@ export type SlideType = {
 
 export type AdvantageType = {
   id: string;
-  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  icon?: string;
+  //   icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   title: string;
   text: string;
 };
@@ -139,25 +140,29 @@ export const MainPageData: MainPageDataType = {
   advantages: [
     {
       id: "1",
-      icon: ChiefIcon,
+      icon: "",
+      //   icon: ChiefIcon,
       title: "Качество продуктов",
       text: "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных",
     },
     {
       id: "2",
-      icon: OrderIcon,
+      icon: "",
+      //   icon: OrderIcon,
       title: "Легкий заказ",
       text: "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных",
     },
     {
       id: "3",
-      icon: BellIcon,
+      icon: "",
+      //   icon: BellIcon,
       title: "Доставка до двери",
       text: "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных",
     },
     {
       id: "4",
-      icon: RecommendIcon,
+      icon: "",
+      //   icon: RecommendIcon,
       title: "Выбор покупателей",
       text: "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных",
     },

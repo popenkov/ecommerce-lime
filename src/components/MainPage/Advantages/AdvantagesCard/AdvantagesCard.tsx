@@ -10,9 +10,7 @@ export const AdvantagesCard: FC<AdvantagesCardType> = ({ icon, title, text }) =>
   return (
     <Styled.Card>
       <Styled.CardHeader>
-        <Styled.IconContainer>
-          <Icon />
-        </Styled.IconContainer>
+        <Styled.IconContainer>{/* <Icon /> */}</Styled.IconContainer>
         <Styled.Title>{title}</Styled.Title>
       </Styled.CardHeader>
       <Styled.Text>{text}</Styled.Text>

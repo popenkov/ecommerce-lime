@@ -12,13 +12,13 @@ const Button = styled.button`
   & svg {
     margin-right: 15px;
 
-    @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       display: none;
       margin-right: 0;
     }
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     height: 24px;
     padding: 0;
     background-color: ${({ theme }) => theme.color.white};
@@ -27,7 +27,7 @@ const Button = styled.button`
 
 const MobileLine = styled.span`
   display: none;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: block;
     position: relative;
     width: 25px;
@@ -65,7 +65,7 @@ const Text = styled.span`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
   }
 `;

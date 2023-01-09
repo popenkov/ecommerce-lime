@@ -9,7 +9,6 @@ type AddToCardBtnProps = {
 };
 
 export const AddToCardBtn: FC<AddToCardBtnProps> = ({ text, isHovered, onClick }) => {
-  console.log(isHovered);
   return (
     <Styled.Button onClick={onClick}>
       <Styled.PlusContainer isHovered={isHovered}>+</Styled.PlusContainer>
