@@ -1,1 +1,1 @@
-export * from './FooterLinksWrapper';
+export * from "./FooterLinksWrapper";

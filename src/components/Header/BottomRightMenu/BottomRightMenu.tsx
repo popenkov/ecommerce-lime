@@ -1,7 +1,8 @@
-import { HeaderLinkType } from '@src/mock/HeaderData';
-import { FC } from 'react';
+import { FC } from "react";
 
-import { Styled } from './styles';
+import { HeaderLinkType } from "@src/mock/HeaderData";
+
+import { Styled } from "./styles";
 
 type BottomRightMenuProps = { data: HeaderLinkType[] };
 

@@ -1,8 +1,10 @@
-import { RatingType } from '@src/mock/MainPageData';
-import { FC, FunctionComponent, ReactNode, SVGProps } from 'react';
-import { ReactComponent as StarIcon } from '@src/assets/icons/star.svg';
-import { Styled } from './styles';
-import { Star } from '../Star';
+import { FC, FunctionComponent, ReactNode, SVGProps } from "react";
+
+import { ReactComponent as StarIcon } from "@src/assets/icons/star.svg";
+import { RatingType } from "@src/mock/MainPageData";
+
+import { Star } from "../Star";
+import { Styled } from "./styles";
 
 type RatingProps = {
   data: RatingType;

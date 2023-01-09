@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { flexAlignCenter } from '@src/styles/mixins';
+import { flexAlignCenter } from "@src/styles/mixins";
 
 const Footer = styled.div`
   padding: 50px 120px 50px 55px;

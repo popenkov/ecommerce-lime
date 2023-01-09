@@ -1,15 +1,12 @@
-import { LinkType } from '@src/mock/FooterData';
-import { FC } from 'react';
+import { FC } from "react";
 
-import { Styled } from './styles';
+import { LinkType } from "@src/mock/FooterData";
 
-type DownloadButtonType = Omit<LinkType, 'id'>;
+import { Styled } from "./styles";
 
-export const DownloadButton: FC<DownloadButtonType> = ({
-  text,
-  href,
-  icon,
-}) => {
+type DownloadButtonType = Omit<LinkType, "id">;
+
+export const DownloadButton: FC<DownloadButtonType> = ({ text, href, icon }) => {
   const Icon = icon as React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 
   return (

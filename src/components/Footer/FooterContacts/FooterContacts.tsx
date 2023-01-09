@@ -1,7 +1,9 @@
-import { DownloadButton } from '@src/components/UI';
-import { ContactsType } from '@src/mock/FooterData';
-import { FC } from 'react';
-import { Styled } from './styles';
+import { FC } from "react";
+
+import { DownloadButton } from "@src/components/UI";
+import { ContactsType } from "@src/mock/FooterData";
+
+import { Styled } from "./styles";
 
 type FooterContactsProps = {
   data: ContactsType;

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { width100 } from '../styles/mixins';
+import { width100 } from "../styles/mixins";
 
 export const Container = styled.div`
   ${width100};

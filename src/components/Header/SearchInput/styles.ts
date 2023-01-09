@@ -1,5 +1,6 @@
-import { box, flexCenter, font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { box, flexCenter, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   flex-grow: 1;
@@ -20,7 +21,7 @@ const Input = styled.input`
   border-radius: 10px;
 
   &:placeholder {
-    ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+    ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
     color: ${({ theme }) => theme.color.greyLightBg};
   }
 `;

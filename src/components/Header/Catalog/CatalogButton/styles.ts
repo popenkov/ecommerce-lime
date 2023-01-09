@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Button = styled.button`
   height: 45px;
@@ -37,7 +38,7 @@ const MobileLine = styled.span`
     border-radius: 100px;
 
     &::before {
-      content: '';
+      content: "";
       width: 25px;
       min-width: 25px;
       height: 3px;
@@ -48,7 +49,7 @@ const MobileLine = styled.span`
     }
 
     &::after {
-      content: '';
+      content: "";
       width: 25px;
       min-width: 25px;
       height: 3px;
@@ -61,7 +62,7 @@ const MobileLine = styled.span`
 `;
 
 const Text = styled.span`
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {

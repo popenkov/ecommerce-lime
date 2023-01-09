@@ -1,11 +1,11 @@
-import { NavigationButtons } from '@src/components/UI/ProductsSection/NavigationButton';
-import { ReviewsType } from '@src/mock/MainPageData';
-import { FC, useRef } from 'react';
+import { FC, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { ReviewItem } from '../ReviewItem';
+import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
+import { ReviewsType } from "@src/mock/MainPageData";
 
-import { Styled } from './styles';
+import { ReviewItem } from "../ReviewItem";
+import { Styled } from "./styles";
 
 type ReviewsProp = {
   data: ReviewsType;

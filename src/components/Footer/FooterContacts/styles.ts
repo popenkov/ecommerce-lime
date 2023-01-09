@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   width: 243px;
@@ -11,7 +12,7 @@ const Container = styled.div`
 
 const Title = styled.h3`
   margin-bottom: 4px;
-  ${font({ size: '14', lineHeight: '32', fontWeight: '500' })};
+  ${font({ size: "14", lineHeight: "32", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.white};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
@@ -22,7 +23,7 @@ const Phone = styled.a`
   ${flexAlignCenter};
   margin-right: 37px;
   margin-bottom: 25px;
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 
   &:last-child {
@@ -48,7 +49,7 @@ const IconContainer = styled.span`
 `;
 
 const PhoneNumber = styled.span`
-  ${font({ size: '42', lineHeight: '51', fontWeight: '700' })};
+  ${font({ size: "42", lineHeight: "51", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.white};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
@@ -56,7 +57,7 @@ const PhoneNumber = styled.span`
 `;
 
 const Text = styled.p`
-  ${font({ size: '12', lineHeight: '15', fontWeight: '500' })};
+  ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.white};
 
   opacity: 0.7;
@@ -70,7 +71,7 @@ const Text = styled.p`
 `;
 
 const Link = styled.a`
-  ${font({ size: '12', lineHeight: '15', fontWeight: '500' })};
+  ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
 
   &:not(:last-child) {
     margin-right: 11px;

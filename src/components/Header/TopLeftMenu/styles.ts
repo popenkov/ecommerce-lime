@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   ${flexAlignCenter};
@@ -13,7 +14,7 @@ const Container = styled.div`
 const Link = styled.a`
   ${flexAlignCenter};
   margin-right: 37px;
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.white};
 
   &:last-child {

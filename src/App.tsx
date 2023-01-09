@@ -1,11 +1,11 @@
-import { FC } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { FC } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import { AppLayout } from './layout';
-import { Main } from './pages/Main';
+import { AppLayout } from "./layout";
+import { Main } from "./pages/Main";
 
-import 'swiper/css';
-import 'swiper/css/effect-cards';
+import "swiper/css";
+import "swiper/css/effect-cards";
 
 const App: FC = () => {
   return (

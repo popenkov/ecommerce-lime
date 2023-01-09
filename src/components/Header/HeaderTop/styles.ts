@@ -1,5 +1,6 @@
-import { flexAlignCenter } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { flexAlignCenter } from "@src/styles/mixins";
 
 const HeaderTop = styled.div`
   background-color: ${({ theme }) => theme.color.greyBg};

@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import { Styled } from './styles';
+import { Styled } from "./styles";
 
 type AddToCardBtnProps = {
   text: string;
@@ -8,11 +8,7 @@ type AddToCardBtnProps = {
   onClick: () => void;
 };
 
-export const AddToCardBtn: FC<AddToCardBtnProps> = ({
-  text,
-  isHovered,
-  onClick,
-}) => {
+export const AddToCardBtn: FC<AddToCardBtnProps> = ({ text, isHovered, onClick }) => {
   console.log(isHovered);
   return (
     <Styled.Button onClick={onClick}>

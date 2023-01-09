@@ -1,11 +1,12 @@
-import { box, font } from '@src/styles/mixins';
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
+
+import { box, font } from "@src/styles/mixins";
 
 const Button = styled.button`
   height: 34px;
   display: flex;
   justify-content: center;
-  ${font({ size: '10', lineHeight: '12', fontWeight: '500' })};
+  ${font({ size: "10", lineHeight: "12", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
@@ -16,7 +17,7 @@ const PlusContainer = styled.span<{ isHovered: boolean }>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  ${font({ size: '24', lineHeight: '29', fontWeight: '400' })};
+  ${font({ size: "24", lineHeight: "29", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
   background-color: ${({ theme }) => theme.color.green};
   border-radius: 5px;
@@ -32,7 +33,7 @@ const PlusContainer = styled.span<{ isHovered: boolean }>`
 `;
 
 const TextContainer = styled.span<{ isHovered: boolean }>`
-  ${font({ size: '12', lineHeight: '15', fontWeight: '700' })};
+  ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   height: 34px;
   padding: 10px;

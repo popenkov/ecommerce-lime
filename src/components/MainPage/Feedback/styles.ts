@@ -1,12 +1,12 @@
-import { font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const Feedback = styled.div`
   display: flex;
   margin-bottom: 51px;
   padding: 31px 50px;
-  background: linear-gradient(90deg, #a1d214 0%, #87c04f 100%),
-    url(../../../assets/icons/question-bg.png);
+  background: linear-gradient(90deg, #a1d214 0%, #87c04f 100%), url(../../../assets/icons/question-bg.png);
 
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -18,7 +18,7 @@ const Feedback = styled.div`
 const Title = styled.h2`
   width: 160px;
   margin-right: 57px;
-  ${font({ size: '24', lineHeight: '36', fontWeight: '700' })};
+  ${font({ size: "24", lineHeight: "36", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   text-transform: uppercase;
 
@@ -29,7 +29,7 @@ const Title = styled.h2`
 const Form = styled.form``;
 
 const FormTitle = styled.p`
-  ${font({ size: '14', lineHeight: '17', fontWeight: '400' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
@@ -56,7 +56,7 @@ const FormInput = styled.input`
     background: white;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 110%;
       height: 110%;

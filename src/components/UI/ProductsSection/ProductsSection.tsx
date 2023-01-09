@@ -1,13 +1,15 @@
-import { ItemsType, MainPageData } from '@src/mock/MainPageData';
-import { FC, useEffect, useRef, useState } from 'react';
-import type { Swiper as SwiperType } from 'swiper';
-import { Navigation, Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Styled } from './styles';
-import { ReactComponent as ArrowIcon } from '@src/assets/icons/arrow-right.svg';
-import { Product } from '@src/components/Product';
-import { NavigationButtons } from './NavigationButton';
-import { onBeforeInit } from './utils';
+import { FC, useEffect, useRef, useState } from "react";
+import type { Swiper as SwiperType } from "swiper";
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
+import { Product } from "@src/components/Product";
+import { ItemsType, MainPageData } from "@src/mock/MainPageData";
+
+import { NavigationButtons } from "./NavigationButton";
+import { Styled } from "./styles";
+import { onBeforeInit } from "./utils";
 
 type ProductsSectionProps = {
   data: ItemsType;
@@ -38,8 +40,7 @@ export const ProductsSection: FC<ProductsSectionProps> = ({ data }) => {
           navigation={{
             nextEl: buttonNextRef.current,
             prevEl: buttonPrevRef.current,
-          }}
-        >
+          }}>
           {items.map((item) => {
             return (
               <SwiperSlide key={item.id}>

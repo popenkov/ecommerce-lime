@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-import { ReactComponent as Logo } from '../../../assets/images/header-logo.svg';
-import { Styled } from './styles';
+import { ReactComponent as Logo } from "../../../assets/images/header-logo.svg";
+import { Styled } from "./styles";
 
 export const HeaderLogo: FC = () => {
   return (

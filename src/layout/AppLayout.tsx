@@ -1,9 +1,9 @@
-import { Footer, Header } from '../components';
-import { FC, useEffect } from 'react';
-import { useLocation } from 'react-router';
-import { Outlet } from 'react-router-dom';
+import { FC, useEffect } from "react";
+import { useLocation } from "react-router";
+import { Outlet } from "react-router-dom";
 
-import { Container } from './styles';
+import { Footer, Header } from "../components";
+import { Container } from "./styles";
 
 export const AppLayout: FC = () => {
   const location = useLocation();

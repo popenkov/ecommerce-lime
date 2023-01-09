@@ -1,5 +1,6 @@
-import { box, flexCenter } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { box, flexCenter } from "@src/styles/mixins";
 
 const LogoContainer = styled.div`
   position: absolute;

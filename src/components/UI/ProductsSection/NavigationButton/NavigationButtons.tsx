@@ -1,17 +1,15 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import { ReactComponent as Shevron } from '@src/assets/icons/shevron-left.svg';
-import { Styled } from './styles';
+import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
+
+import { Styled } from "./styles";
 
 type NavigationButtonsProps = {
   prevRef: React.RefObject<HTMLButtonElement>;
   nextRef: React.RefObject<HTMLButtonElement>;
 };
 
-export const NavigationButtons: FC<NavigationButtonsProps> = ({
-  prevRef,
-  nextRef,
-}) => {
+export const NavigationButtons: FC<NavigationButtonsProps> = ({ prevRef, nextRef }) => {
   return (
     <Styled.NavigationContainer>
       <Styled.NavigationBtnOverlay ref={prevRef}>

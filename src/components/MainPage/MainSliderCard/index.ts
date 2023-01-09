@@ -1,1 +1,1 @@
-export * from './MainSliderCard';
+export * from "./MainSliderCard";

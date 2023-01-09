@@ -1,18 +1,13 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-import { ReactComponent as ArrowIcon } from '@src/assets/icons/arrow-right.svg';
-import { Styled } from './styles';
-import { SlideType } from '@src/mock/MainPageData';
+import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
+import { SlideType } from "@src/mock/MainPageData";
 
-type MainSliderCardType = Omit<SlideType, 'id'>;
+import { Styled } from "./styles";
 
-export const MainSliderCard: FC<MainSliderCardType> = ({
-  title,
-  subtitle,
-  image,
-  color,
-  link,
-}) => {
+type MainSliderCardType = Omit<SlideType, "id">;
+
+export const MainSliderCard: FC<MainSliderCardType> = ({ title, subtitle, image, color, link }) => {
   return (
     <Styled.Card img={image} color={color}>
       <Styled.Text>

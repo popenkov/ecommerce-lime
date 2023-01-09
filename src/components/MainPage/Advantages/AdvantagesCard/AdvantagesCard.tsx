@@ -1,14 +1,11 @@
-import { AdvantageType } from '@src/mock/MainPageData';
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import { Styled } from './styles';
+import { AdvantageType } from "@src/mock/MainPageData";
 
-type AdvantagesCardType = Omit<AdvantageType, 'id'>;
-export const AdvantagesCard: FC<AdvantagesCardType> = ({
-  icon,
-  title,
-  text,
-}) => {
+import { Styled } from "./styles";
+
+type AdvantagesCardType = Omit<AdvantageType, "id">;
+export const AdvantagesCard: FC<AdvantagesCardType> = ({ icon, title, text }) => {
   const Icon = icon;
   return (
     <Styled.Card>

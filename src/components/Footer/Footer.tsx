@@ -1,10 +1,11 @@
-import { FooterData } from '@src/mock/FooterData';
-import { FC } from 'react';
-import { FooterContacts } from './FooterContacts';
+import { FC } from "react";
 
-import { FooterCopyright } from './FooterCopyright';
-import { FooterLinksWrapper } from './FooterLinksWrapper';
-import { Styled } from './styles';
+import { FooterData } from "@src/mock/FooterData";
+
+import { FooterContacts } from "./FooterContacts";
+import { FooterCopyright } from "./FooterCopyright";
+import { FooterLinksWrapper } from "./FooterLinksWrapper";
+import { Styled } from "./styles";
 
 export const Footer: FC = () => {
   const data = FooterData;

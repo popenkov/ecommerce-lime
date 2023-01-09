@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from '@src/styles/mixins';
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   position: relative;
@@ -30,7 +31,7 @@ const Title = styled.h2<{ color?: string }>`
     color &&
     css`
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -8px;
         left: 0;
@@ -48,7 +49,7 @@ const Link = styled.a`
   ${flexAlignCenter};
   padding: 10px 13px 10px 23px;
   border-radius: 5px;
-  ${font({ size: '12', lineHeight: '15', fontWeight: '700' })};
+  ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   text-decoration: none;
 

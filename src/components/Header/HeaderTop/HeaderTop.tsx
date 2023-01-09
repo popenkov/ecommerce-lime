@@ -1,10 +1,11 @@
-import { HeaderLinkType } from '@src/mock/HeaderData';
-import { FC } from 'react';
-import { HeaderLogo } from '../HeaderLogo';
-import { TopLeftMenu } from '../TopLeftMenu';
-import { TopRightMenu } from '../TopRightMenu';
+import { FC } from "react";
 
-import { Styled } from './styles';
+import { HeaderLinkType } from "@src/mock/HeaderData";
+
+import { HeaderLogo } from "../HeaderLogo";
+import { TopLeftMenu } from "../TopLeftMenu";
+import { TopRightMenu } from "../TopRightMenu";
+import { Styled } from "./styles";
 
 type HeaderTopProps = {
   data: {

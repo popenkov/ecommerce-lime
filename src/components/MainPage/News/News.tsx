@@ -1,8 +1,10 @@
-import { MainPageData } from '@src/mock/MainPageData';
-import { FC } from 'react';
-import { Styled } from './styles';
-import { ReactComponent as ArrowIcon } from '@src/assets/icons/arrow-right.svg';
-import { NewsItem } from '../NewsItem';
+import { FC } from "react";
+
+import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
+import { MainPageData } from "@src/mock/MainPageData";
+
+import { NewsItem } from "../NewsItem";
+import { Styled } from "./styles";
 
 export const News: FC = () => {
   const { title, button, items, color } = MainPageData.news;

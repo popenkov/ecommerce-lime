@@ -1,5 +1,6 @@
-import { font } from '@src/styles/mixins';
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const Product = styled.div`
   position: relative;
@@ -26,7 +27,7 @@ const Photo = styled.img`
 
 const Title = styled.h2<{ color?: string }>`
   margin-bottom: 4px;
-  ${font({ size: '12', lineHeight: '15', fontWeight: '500' })};
+  ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
@@ -38,7 +39,7 @@ const Price = styled.div`
 `;
 
 const CurrentPrice = styled.span`
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
@@ -46,14 +47,14 @@ const CurrentPrice = styled.span`
 
 const NewPrice = styled.span`
   margin-right: 5px;
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.orange};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
 `;
 
 const OldPrice = styled.span`
-  ${font({ size: '10', lineHeight: '12', fontWeight: '500' })};
+  ${font({ size: "10", lineHeight: "12", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
   text-decoration: line-through;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {

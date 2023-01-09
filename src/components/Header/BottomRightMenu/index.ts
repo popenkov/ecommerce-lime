@@ -1,1 +1,1 @@
-export * from './BottomRightMenu';
+export * from "./BottomRightMenu";

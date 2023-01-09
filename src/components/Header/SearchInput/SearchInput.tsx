@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { ReactComponent as LoupeIcon } from '../../../assets/icons/loupe.svg';
+import { FC } from "react";
 
-import { Styled } from './styles';
+import { ReactComponent as LoupeIcon } from "../../../assets/icons/loupe.svg";
+import { Styled } from "./styles";
 
 export const SearchInput: FC = () => {
   return (

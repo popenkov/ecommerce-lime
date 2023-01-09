@@ -1,8 +1,9 @@
-import { MainPageData } from '@src/mock/MainPageData';
-import { FC } from 'react';
-import { AdvantagesCard } from './AdvantagesCard';
+import { FC } from "react";
 
-import { Styled } from './styles';
+import { MainPageData } from "@src/mock/MainPageData";
+
+import { AdvantagesCard } from "./AdvantagesCard";
+import { Styled } from "./styles";
 
 export const Advantages: FC = () => {
   const data = MainPageData.advantages;

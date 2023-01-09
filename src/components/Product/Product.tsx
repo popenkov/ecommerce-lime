@@ -1,24 +1,18 @@
-import { useHover } from '@src/hooks/useHover';
-import { ItemType } from '@src/mock/MainPageData';
-import { FC } from 'react';
-import { Rating } from '../UI';
-import { AddToCardBtn } from '../UI/AddToCardBtn';
+import { FC } from "react";
 
-import { Styled } from './styles';
+import { useHover } from "@src/hooks/useHover";
+import { ItemType } from "@src/mock/MainPageData";
 
-type ProductTypes = Omit<ItemType, 'id'>;
+import { Rating } from "../UI";
+import { AddToCardBtn } from "../UI/AddToCardBtn";
+import { Styled } from "./styles";
 
-export const Product: FC<ProductTypes> = ({
-  img,
-  rating,
-  isFavorite,
-  title,
-  price,
-  button,
-}) => {
+type ProductTypes = Omit<ItemType, "id">;
+
+export const Product: FC<ProductTypes> = ({ img, rating, isFavorite, title, price, button }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
   const handleAddToCardClick = () => {
-    console.log('yo');
+    console.log("yo");
   };
 
   return (
@@ -36,11 +30,7 @@ export const Product: FC<ProductTypes> = ({
           </>
         )}
       </Styled.Price>
-      <AddToCardBtn
-        text="В корзину"
-        onClick={handleAddToCardClick}
-        isHovered={isHovered}
-      />
+      <AddToCardBtn text="В корзину" onClick={handleAddToCardClick} isHovered={isHovered} />
     </Styled.Product>
   );
 };

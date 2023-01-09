@@ -1,9 +1,10 @@
-import { HeaderData } from '@src/mock/HeaderData';
-import { FC } from 'react';
-import { HeaderBottom } from './HeaderBottom';
-import { HeaderTop } from './HeaderTop';
+import { FC } from "react";
 
-import { Styled } from './styles';
+import { HeaderData } from "@src/mock/HeaderData";
+
+import { HeaderBottom } from "./HeaderBottom";
+import { HeaderTop } from "./HeaderTop";
+import { Styled } from "./styles";
 
 export const Header: FC = () => {
   const data = HeaderData;

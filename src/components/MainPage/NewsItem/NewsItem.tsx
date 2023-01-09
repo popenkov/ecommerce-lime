@@ -1,8 +1,10 @@
-import { SingleNewsType } from '@src/mock/MainPageData';
-import { FC } from 'react';
-import { Styled } from './styles';
+import { FC } from "react";
 
-type NewsItemProps = Omit<SingleNewsType, 'id'>;
+import { SingleNewsType } from "@src/mock/MainPageData";
+
+import { Styled } from "./styles";
+
+type NewsItemProps = Omit<SingleNewsType, "id">;
 
 export const NewsItem: FC<NewsItemProps> = ({ img, title, text, link }) => {
   return (

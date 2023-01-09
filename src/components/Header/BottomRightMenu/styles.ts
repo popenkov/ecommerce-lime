@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   ${flexAlignCenter};
@@ -42,7 +43,7 @@ const Link = styled.a`
 `;
 
 const Text = styled.span`
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {

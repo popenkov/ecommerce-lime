@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useRef, useState } from 'react';
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 
 export function useHover<T>(): [MutableRefObject<T>, boolean, any] {
   const [value, setValue] = useState<boolean>(false);
@@ -8,11 +8,11 @@ export function useHover<T>(): [MutableRefObject<T>, boolean, any] {
   useEffect(() => {
     const node: any = ref.current;
     if (node) {
-      node.addEventListener('mouseover', handleMouseOver);
-      node.addEventListener('mouseout', handleMouseOut);
+      node.addEventListener("mouseover", handleMouseOver);
+      node.addEventListener("mouseout", handleMouseOut);
       return () => {
-        node.removeEventListener('mouseover', handleMouseOver);
-        node.removeEventListener('mouseout', handleMouseOut);
+        node.removeEventListener("mouseover", handleMouseOver);
+        node.removeEventListener("mouseout", handleMouseOut);
       };
     }
   }, [ref.current]);

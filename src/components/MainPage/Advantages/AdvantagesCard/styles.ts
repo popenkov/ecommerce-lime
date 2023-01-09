@@ -1,5 +1,6 @@
-import { box, flexAlignCenter, font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { box, flexAlignCenter, font } from "@src/styles/mixins";
 
 const Card = styled.div`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
@@ -23,7 +24,7 @@ const IconContainer = styled.span`
     z-index: 1;
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: 0;
     right: 0;
@@ -38,7 +39,7 @@ const IconContainer = styled.span`
 `;
 
 const Title = styled.h3`
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 
   text-align: left;
@@ -48,7 +49,7 @@ const Title = styled.h3`
 
 const Text = styled.p`
   padding-left: 45px;
-  ${font({ size: '12', lineHeight: '15', fontWeight: '400' })};
+  ${font({ size: "12", lineHeight: "15", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
   text-align: left;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {

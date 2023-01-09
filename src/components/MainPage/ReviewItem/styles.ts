@@ -1,5 +1,6 @@
-import { font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const Item = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ const Item = styled.div`
 const Name = styled.p`
   display: flex;
   margin-bottom: 5px;
-  ${font({ size: '10', lineHeight: '24', fontWeight: '600' })};
+  ${font({ size: "10", lineHeight: "24", fontWeight: "600" })};
   color: ${({ theme }) => theme.color.black};
 
   & svg {
@@ -24,7 +25,7 @@ const Name = styled.p`
 `;
 
 const Text = styled.p`
-  ${font({ size: '12', lineHeight: '15', fontWeight: '500' })};
+  ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }

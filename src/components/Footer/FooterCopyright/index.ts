@@ -1,1 +1,1 @@
-export * from './FooterCopyright';
+export * from "./FooterCopyright";

@@ -1,5 +1,6 @@
-import { font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const Reviews = styled.section`
   display: flex;
@@ -22,14 +23,14 @@ const LeaveReviewSection = styled.div`
 
 const Title = styled.h3`
   margin-bottom: 15px;
-  ${font({ size: '18', lineHeight: '22', fontWeight: '700' })};
+  ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
 `;
 
 const Button = styled.button`
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   padding: 8px 26px;
   background-color: ${({ theme }) => theme.color.green};

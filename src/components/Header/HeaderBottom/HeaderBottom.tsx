@@ -1,12 +1,12 @@
-import { HeaderLinkType } from '@src/mock/HeaderData';
-import { FC } from 'react';
-import { BottomRightMenu } from '../BottomRightMenu';
-import { CatalogButton } from '../Catalog/CatalogButton';
-import { DiscountButton } from '../DiscountButton';
+import { FC } from "react";
 
-import { SearchInput } from '../SearchInput';
+import { HeaderLinkType } from "@src/mock/HeaderData";
 
-import { Styled } from './styles';
+import { BottomRightMenu } from "../BottomRightMenu";
+import { CatalogButton } from "../Catalog/CatalogButton";
+import { DiscountButton } from "../DiscountButton";
+import { SearchInput } from "../SearchInput";
+import { Styled } from "./styles";
 
 type HeaderBottomProps = {
   data: HeaderLinkType[];

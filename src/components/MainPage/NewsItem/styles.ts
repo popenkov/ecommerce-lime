@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from '@src/styles/mixins';
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const News = styled.div`
   display: flex;
@@ -23,7 +24,7 @@ const Image = styled.img`
 const Title = styled.h3`
   flex-grow: 1;
   margin-bottom: 13px;
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   text-align: left;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
@@ -32,13 +33,13 @@ const Title = styled.h3`
 
 const Text = styled.p`
   position: relative;
-  ${font({ size: '12', lineHeight: '15', fontWeight: '700' })};
+  ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   opacity: 0.7;
   text-align: left;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     bottom: 0;
@@ -50,7 +51,7 @@ const Text = styled.p`
   }
 `;
 const Link = styled.a`
-  ${font({ size: '12', lineHeight: '15', fontWeight: '400' })};
+  ${font({ size: "12", lineHeight: "15", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
   opacity: 0.5;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {

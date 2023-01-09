@@ -1,6 +1,8 @@
-import { LinksType } from '@src/mock/FooterData';
-import { FC } from 'react';
-import { Styled } from './styles';
+import { FC } from "react";
+
+import { LinksType } from "@src/mock/FooterData";
+
+import { Styled } from "./styles";
 
 type FooterLinksType = {
   data: LinksType;
