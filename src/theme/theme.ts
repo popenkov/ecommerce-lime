@@ -10,6 +10,7 @@ export const theme: Theme = {
     greyLightBg: '#f1f1f1',
     green: '#A1D214',
     orange: '#FF5C00',
+    yellow: '#FFC709',
   },
 
   breakpoints: {

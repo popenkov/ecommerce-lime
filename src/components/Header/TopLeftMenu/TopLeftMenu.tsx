@@ -1,4 +1,4 @@
-import { HeaderLinkType } from '@src/mock/Header';
+import { HeaderLinkType } from '@src/mock/HeaderData';
 import { FC } from 'react';
 
 import { Styled } from './styles';

@@ -5,6 +5,7 @@ const Container = styled.div`
   ${flexAlignCenter};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: none;
   }
 `;
 

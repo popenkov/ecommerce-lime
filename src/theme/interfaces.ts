@@ -7,6 +7,7 @@ export type Color = {
   greyLightBg: string;
   green: string;
   orange: string;
+  yellow: string;
 };
 
 export type Breakpoints = {

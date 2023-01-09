@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const HeaderBottom = styled.div`
   background-color: ${({ theme }) => theme.color.white};
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
 `;
@@ -17,6 +18,7 @@ const HeaderContainer = styled.div`
 
   margin: 0 auto;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    padding: 17px 13px 10px;
   }
 `;
 

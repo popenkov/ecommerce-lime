@@ -1,4 +1,4 @@
-import { HeaderLinkType } from '@src/mock/Header';
+import { HeaderLinkType } from '@src/mock/HeaderData';
 import { FC } from 'react';
 
 import { Styled } from './styles';
@@ -17,7 +17,7 @@ export const BottomRightMenu: FC<BottomRightMenuProps> = ({ data }) => {
                 <Icon />
               </Styled.IconContainer>
             )}
-            {item.text}
+            <Styled.Text>{item.text}</Styled.Text>
           </Styled.Link>
         );
       })}

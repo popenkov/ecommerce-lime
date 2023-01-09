@@ -8,15 +8,65 @@ const Button = styled.button`
   border-radius: 10px;
   background-color: ${({ theme }) => theme.color.green};
 
-  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
-  color: ${({ theme }) => theme.color.black};
-
   & svg {
     margin-right: 15px;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+      display: none;
+      margin-right: 0;
+    }
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    height: 24px;
+    padding: 0;
+    background-color: ${({ theme }) => theme.color.white};
   }
 `;
 
-export const Styled = { Button };
+const MobileLine = styled.span`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: block;
+    position: relative;
+    width: 25px;
+    min-width: 25px;
+    height: 3px;
+    box-sizing: content-box;
+    background-color: ${({ theme }) => theme.color.green};
+    border-radius: 100px;
+
+    &::before {
+      content: '';
+      width: 25px;
+      min-width: 25px;
+      height: 3px;
+      background-color: ${({ theme }) => theme.color.green};
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
+
+    &::after {
+      content: '';
+      width: 25px;
+      min-width: 25px;
+      height: 3px;
+      background-color: ${({ theme }) => theme.color.green};
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+  }
+`;
+
+const Text = styled.span`
+  ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
+  color: ${({ theme }) => theme.color.black};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: none;
+  }
+`;
+
+export const Styled = { Button, Text, MobileLine };

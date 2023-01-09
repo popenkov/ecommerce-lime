@@ -7,7 +7,8 @@ export const CatalogButton: FC = () => {
   return (
     <Styled.Button>
       <CatalogIcon />
-      Каталог
+      <Styled.MobileLine />
+      <Styled.Text> Каталог</Styled.Text>
     </Styled.Button>
   );
 };

@@ -84,7 +84,7 @@ export const HeaderData: HeaderDataType = {
     {
       id: 'account',
       text: 'Кабинет',
-      icon: PhoneIcon,
+      icon: AccountIcon,
       href: '/account',
     },
     {

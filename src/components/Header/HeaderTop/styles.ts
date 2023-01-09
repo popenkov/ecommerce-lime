@@ -4,6 +4,8 @@ import styled from 'styled-components';
 const HeaderTop = styled.div`
   background-color: ${({ theme }) => theme.color.greyBg};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    background-color: ${({ theme }) => theme.color.white};
+    height: 0px;
   }
 `;
 

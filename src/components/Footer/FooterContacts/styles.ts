@@ -2,6 +2,7 @@ import { flexAlignCenter, font } from '@src/styles/mixins';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  width: 243px;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
@@ -9,6 +10,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h3`
+  margin-bottom: 4px;
   ${font({ size: '14', lineHeight: '32', fontWeight: '500' })};
   color: ${({ theme }) => theme.color.white};
 
@@ -19,7 +21,7 @@ const Title = styled.h3`
 const Phone = styled.a`
   ${flexAlignCenter};
   margin-right: 37px;
-  margin-bottom: 53px;
+  margin-bottom: 25px;
   ${font({ size: '14', lineHeight: '17', fontWeight: '700' })};
   color: ${({ theme }) => theme.color.black};
 
@@ -32,7 +34,14 @@ const Phone = styled.a`
 `;
 
 const IconContainer = styled.span`
-  margin-right: 10px;
+  &:not(:last-child) {
+    margin-right: 23px;
+  }
+
+  & svg {
+    width: 26px;
+    height: 26px;
+  }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
@@ -64,7 +73,7 @@ const Link = styled.a`
   ${font({ size: '12', lineHeight: '15', fontWeight: '500' })};
 
   &:not(:last-child) {
-    margin-right: 13px;
+    margin-right: 11px;
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {

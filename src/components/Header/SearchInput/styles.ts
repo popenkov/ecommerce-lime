@@ -6,12 +6,16 @@ const Container = styled.div`
   display: flex;
   position: relative;
   margin-right: 15px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: none;
+  }
 `;
 
 const Input = styled.input`
   flex-grow: 1;
   background-color: ${({ theme }) => theme.color.greyLightBg};
-  padding: 14px 50px 14px 23px;
+  padding: 14px 42px 14px 23px;
   border: none;
   border-radius: 10px;
 
@@ -23,8 +27,8 @@ const Input = styled.input`
 
 const IconContainer = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 12px;
+  right: 10px;
 `;
 
 export const Styled = { Container, Input, IconContainer };

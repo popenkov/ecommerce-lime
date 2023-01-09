@@ -22,7 +22,6 @@ const Title = styled.h3`
 
 const Link = styled.a`
   display: block;
-  margin-bottom: 17px;
   ${font({ size: '14', lineHeight: '32', fontWeight: '500' })};
   color: ${({ theme }) => theme.color.white};
   text-decoration: none;

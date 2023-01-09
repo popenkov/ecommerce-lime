@@ -18,8 +18,8 @@ const Text = styled.p`
 
   opacity: 0.7;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  &:not(:last-of-type) {
+    margin-bottom: 13px;
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {

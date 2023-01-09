@@ -1,7 +1,8 @@
-import { HeaderLinkType } from '@src/mock/Header';
+import { HeaderLinkType } from '@src/mock/HeaderData';
 import { FC } from 'react';
 import { BottomRightMenu } from '../BottomRightMenu';
 import { CatalogButton } from '../Catalog/CatalogButton';
+import { DiscountButton } from '../DiscountButton';
 
 import { SearchInput } from '../SearchInput';
 
@@ -17,6 +18,7 @@ export const HeaderBottom: FC<HeaderBottomProps> = ({ data }) => {
       <Styled.HeaderContainer>
         <CatalogButton />
         <SearchInput />
+        <DiscountButton />
         <BottomRightMenu data={data} />
       </Styled.HeaderContainer>
     </Styled.HeaderBottom>

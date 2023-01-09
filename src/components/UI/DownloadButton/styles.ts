@@ -10,7 +10,7 @@ const Button = styled.button`
   border-radius: 10px;
 
   &:not(:last-child) {
-    margin-bottom: 11px;
+    margin-bottom: 6px;
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {

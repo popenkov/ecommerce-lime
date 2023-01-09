@@ -3,9 +3,10 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   ${flexAlignCenter};
-  margin-left: 166px;
+  padding-left: 159px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: none;
   }
 `;
 

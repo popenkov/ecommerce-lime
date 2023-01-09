@@ -29,7 +29,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "eslint:fix": "eslint -c ./.eslintrc.js \"./**/*.{js,jsx,ts,tsx}\" --fix"
+    "eslint:fix": "eslint -c ./.eslintrc.js \"./**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:css": "stylelint './src/*.js'",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "eslintConfig": {
     "extends": [
@@ -58,7 +60,9 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.31.10",
     "eslint-plugin-simple-import-sort": "^8.0.0",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0"
   },
   "babel": {
     "presets": [

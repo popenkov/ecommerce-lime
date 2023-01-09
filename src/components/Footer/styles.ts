@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { flexAlignCenter } from '@src/styles/mixins';
 
 const Footer = styled.div`
-  padding: 50px 129px;
+  padding: 50px 120px 50px 55px;
+
   background-color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
@@ -11,7 +12,7 @@ const Footer = styled.div`
 
 const FooterContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+
   gap: 20px;
   max-width: 1280px;
 
@@ -23,6 +24,7 @@ const FooterContainer = styled.div`
 
 const CopyrightContainer = styled.div`
   max-width: 259px;
+  margin-right: 52px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
 `;
@@ -30,13 +32,17 @@ const CopyrightContainer = styled.div`
 const LinksContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-
+  margin-top: 45px;
+  gap: 73px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
 `;
 
 const ContactsContainer = styled.div`
+  margin-top: 41px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
   }
 `;

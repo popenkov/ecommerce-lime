@@ -1,4 +1,4 @@
-import { HeaderData } from '@src/mock/Header';
+import { HeaderData } from '@src/mock/HeaderData';
 import { FC } from 'react';
 import { HeaderBottom } from './HeaderBottom';
 import { HeaderTop } from './HeaderTop';
