@@ -2,13 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import { baseApi, catalogApi } from "./services";
 
-import { catalogMenu } from "./slices";
+import { catalogMenu, cart } from "./slices";
 
 export const store = configureStore({
   reducer: {
     [baseApi.reducerPath]: baseApi.reducer,
     [catalogApi.reducerPath]: catalogApi.reducer,
     catalogMenu,
+    cart,
   },
   middleware: (getDefaultMiddleware) => [
     ...getDefaultMiddleware({
