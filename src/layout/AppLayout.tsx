@@ -4,7 +4,7 @@ import { useLocation } from "react-router";
 import { Outlet } from "react-router-dom";
 
 import { Footer, Header } from "../components";
-import { Container } from "./styles";
+import { Container, Content } from "./styles";
 
 export const AppLayout: FC = () => {
   const location = useLocation();
@@ -16,7 +16,9 @@ export const AppLayout: FC = () => {
     <Container>
       <Header />
       <CatalogMenu />
-      <Outlet />
+      <Content>
+        <Outlet />
+      </Content>
       <Footer />
     </Container>
   );

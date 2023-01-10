@@ -5,7 +5,8 @@ const PageContainer = styled.main`
   gap: 20px;
   padding: 0 20px;
   max-width: 1280px;
-
+  width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -13,9 +14,11 @@ const PageContainer = styled.main`
 `;
 const MainContainer = styled.main`
   flex: 1;
-  max-width: calc(100% - 220px);
+  width: calc(100% - 220px);
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100vw;
+    overflow-x: hidden;
   }
 `;
 

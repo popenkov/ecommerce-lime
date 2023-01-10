@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { AppLayout } from "./layout";
 import { Main } from "./pages/Main";
 
+import "react-perfect-scrollbar/dist/css/styles.css";
 import "react-redux-toastr/lib/css/react-redux-toastr.min.css";
 import "swiper/css";
 import "swiper/css/effect-cards";

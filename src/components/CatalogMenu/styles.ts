@@ -2,7 +2,7 @@ import { font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
 
 const CatalogBackground = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 116px;
   right: 0;
