@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { flexAlignCenter, font } from "@src/styles/mixins";
+import { absolutePseudoEl, box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
 const Button = styled.button`
   height: 45px;
@@ -61,6 +61,37 @@ const MobileLine = styled.span`
   }
 `;
 
+const CloseButton = styled.button`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    position: relative;
+    ${box(25)};
+    ${flexCenter};
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:before,
+    &:after {
+      ${absolutePseudoEl};
+      left: 15px;
+      height: 25px;
+      width: 3px;
+      border-radius: 100px;
+      background-color: ${({ theme }) => theme.color.black};
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+`;
+
 const Text = styled.span`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
@@ -70,4 +101,4 @@ const Text = styled.span`
   }
 `;
 
-export const Styled = { Button, Text, MobileLine };
+export const Styled = { Button, Text, MobileLine, CloseButton };

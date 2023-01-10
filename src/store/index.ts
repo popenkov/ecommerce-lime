@@ -1,18 +1,21 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { baseApi } from "./services";
-// import { headerAnimation, bookingData, burgerMenu, popup, datepicker, statusMessage, requestCall } from "./slices";
+import { baseApi, catalogApi } from "./services";
+
+import { catalogMenu } from "./slices";
 
 export const store = configureStore({
   reducer: {
     [baseApi.reducerPath]: baseApi.reducer,
-    // popup,
+    [catalogApi.reducerPath]: catalogApi.reducer,
+    catalogMenu,
   },
   middleware: (getDefaultMiddleware) => [
     ...getDefaultMiddleware({
       serializableCheck: false,
     }),
     baseApi.middleware,
+    catalogApi.middleware,
   ],
   devTools: process.env.NODE_ENV !== "production",
 });

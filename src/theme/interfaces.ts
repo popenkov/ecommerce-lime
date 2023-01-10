@@ -4,7 +4,9 @@ export type Color = {
   black: string;
   greyBg: string;
   greyBorder: string;
+  greyBorderLight: string;
   greyLightBg: string;
+  popupBackground: string;
   green: string;
   orange: string;
   yellow: string;

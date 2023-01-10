@@ -1,3 +1,4 @@
+import { CatalogMenu } from "@src/components/CatalogMenu";
 import { FC, useEffect } from "react";
 import { useLocation } from "react-router";
 import { Outlet } from "react-router-dom";
@@ -14,6 +15,7 @@ export const AppLayout: FC = () => {
   return (
     <Container>
       <Header />
+      <CatalogMenu />
       <Outlet />
       <Footer />
     </Container>

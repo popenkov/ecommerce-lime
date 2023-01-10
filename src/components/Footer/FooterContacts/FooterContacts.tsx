@@ -40,7 +40,7 @@ export const FooterContacts: FC<FooterContactsProps> = ({ data }) => {
           const key = item.icon as keyof typeof ICONS;
           const Icon = typeof item.icon === "string" ? ICONS[key] : null;
           return (
-            <Styled.Link key={item.id}>
+            <Styled.Link key={item.id} href={item.href}>
               {Icon && (
                 <Styled.IconContainer>
                   <Icon />

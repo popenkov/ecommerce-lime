@@ -18,6 +18,7 @@ const PercentIcon = styled.span`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 4px 6px;
+    border-radius: 5px;
   }
 `;
 
