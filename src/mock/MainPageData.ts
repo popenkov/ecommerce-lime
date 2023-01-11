@@ -61,12 +61,15 @@ export type RatingType = {
 export type ItemType = {
   id: string;
   img: string;
+  amount: number;
+  category: string;
   rating: RatingType;
+  unit: string;
   isFavorite: boolean;
   title: string;
   price: {
-    price: string;
-    oldPrice: string | null;
+    price: number;
+    oldPrice: number | null;
   };
   button: string;
 };
@@ -229,6 +232,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "4532341",
           img: productFirst,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 253",
@@ -236,14 +242,17 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
-            oldPrice: "140 руб.",
+            price: 120,
+            oldPrice: 140,
           },
           button: "В корзину",
         },
         {
           id: "132123",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -251,7 +260,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -259,6 +268,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "2111",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -266,7 +278,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -274,6 +286,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "3354534234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -281,7 +296,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -289,6 +304,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "44234234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -296,7 +314,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -304,6 +322,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "33545sdasd34234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -311,7 +332,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -319,6 +340,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "442334",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -326,7 +350,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -344,6 +368,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "4532341",
           img: productFirst,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 253",
@@ -351,14 +378,17 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
-            oldPrice: "140 руб.",
+            price: 120,
+            oldPrice: 140,
           },
           button: "В корзину",
         },
         {
           id: "132123",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -366,7 +396,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -374,6 +404,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "2111",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -381,7 +414,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -389,6 +422,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "3354534234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -396,7 +432,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -404,6 +440,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "44234234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -411,7 +450,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -419,6 +458,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "33545sdasd34234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -426,7 +468,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -434,6 +476,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "442334",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -441,7 +486,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -459,6 +504,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "4532341",
           img: productFirst,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 253",
@@ -466,14 +514,17 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
-            oldPrice: "140 руб.",
+            price: 120,
+            oldPrice: 140,
           },
           button: "В корзину",
         },
         {
           id: "132123",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Водичка",
           rating: {
             value: "4",
             amount: "3 254",
@@ -481,7 +532,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -489,6 +540,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "2111",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Водичка",
           rating: {
             value: "4",
             amount: "3 254",
@@ -496,7 +550,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -504,6 +558,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "3354534234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Водичка",
           rating: {
             value: "4",
             amount: "3 254",
@@ -511,7 +568,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -519,6 +576,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "44234234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Водичка",
           rating: {
             value: "4",
             amount: "3 254",
@@ -526,7 +586,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -534,6 +594,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "33545sdasd34234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Водичка",
           rating: {
             value: "4",
             amount: "3 254",
@@ -541,7 +604,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -549,6 +612,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "442334",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Водичка",
           rating: {
             value: "4",
             amount: "3 254",
@@ -556,7 +622,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -574,6 +640,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "4532341",
           img: productFirst,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 253",
@@ -581,14 +650,17 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
-            oldPrice: "140 руб.",
+            price: 120,
+            oldPrice: 140,
           },
           button: "В корзину",
         },
         {
           id: "132123",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -596,7 +668,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -604,6 +676,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "2111",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -611,7 +686,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -619,6 +694,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "3354534234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -626,7 +704,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -634,6 +712,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "44234234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -641,7 +722,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -649,6 +730,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "33545sdasd34234",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -656,7 +740,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",
@@ -664,6 +748,9 @@ export const MainPageData: MainPageDataType = {
         {
           id: "442334",
           img: productSecond,
+          amount: 1,
+          unit: "450г.",
+          category: "Бакалея",
           rating: {
             value: "4",
             amount: "3 254",
@@ -671,7 +758,7 @@ export const MainPageData: MainPageDataType = {
           isFavorite: false,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
-            price: "120 руб.",
+            price: 120,
             oldPrice: null,
           },
           button: "В корзину",

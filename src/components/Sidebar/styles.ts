@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Sidebar = styled.aside`
   ${flexColumnCenter};
+  justify-content: flex-start;
   position: sticky;
   width: 200px;
   height: calc(100vh - 116px);

@@ -6,13 +6,32 @@ import { ItemType } from "@src/mock/MainPageData";
 import { Rating } from "../UI";
 import { AddToCardBtn } from "../UI/AddToCardBtn";
 import { Styled } from "./styles";
+import { useActions } from "@src/hooks/useActions";
+import { useAppSelector } from "@src/hooks/useAppSelector";
 
-type ProductTypes = Omit<ItemType, "id">;
-
-export const Product: FC<ProductTypes> = ({ img, rating, isFavorite, title, price, button }) => {
+export const Product: FC<ItemType> = ({ id, category, img, rating, isFavorite, title, price, amount, unit }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
+  const { addItemToCart, removeItemfromCart } = useActions();
+  const { items } = useAppSelector((state) => state.cart);
+
+  const isItemInCart = Boolean(items.find((item) => item.id === id));
   const handleAddToCardClick = () => {
-    console.log("yo");
+    const itemDate = {
+      id,
+      img,
+      rating,
+      isFavorite,
+      title,
+      price,
+      amount,
+      unit,
+    };
+
+    addItemToCart(itemDate);
+  };
+
+  const handleRemoveFromCardClick = () => {
+    removeItemfromCart(id);
   };
 
   return (
@@ -30,7 +49,16 @@ export const Product: FC<ProductTypes> = ({ img, rating, isFavorite, title, pric
           </>
         )}
       </Styled.Price>
-      <AddToCardBtn text="В корзину" onClick={handleAddToCardClick} isHovered={isHovered} />
+      {!isItemInCart ? (
+        <AddToCardBtn text="В корзину" onClick={handleAddToCardClick} isHovered={isHovered} isAdded={isItemInCart} />
+      ) : (
+        <AddToCardBtn
+          text="В корзине"
+          onClick={handleRemoveFromCardClick}
+          isHovered={isHovered}
+          isAdded={isItemInCart}
+        />
+      )}
     </Styled.Product>
   );
 };

@@ -1,3 +1,4 @@
+import { useAppSelector } from "@src/hooks/useAppSelector";
 import { sidebarItems, popularItems } from "@src/mock/CartAside";
 import { FC } from "react";
 import { PopularItems } from "../PopularItems";
@@ -6,11 +7,13 @@ import { SidebarItems } from "../SidebarItems";
 import { Styled } from "./styles";
 
 export const OrderContent: FC = () => {
+  const { items } = useAppSelector((state) => state.cart);
+
   return (
     <Styled.Content>
-      {sidebarItems && (
+      {items && (
         <Styled.AddedItemsContainer>
-          <SidebarItems data={sidebarItems} />
+          <SidebarItems data={items} />
         </Styled.AddedItemsContainer>
       )}
       {popularItems && (
