@@ -1,16 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ItemType } from "@src/mock/MainPageData";
-import { isMetaProperty } from "typescript";
 
 interface cartState {
-  isLoading: boolean;
   items: ItemType[];
   totalPrice: number;
   totalCount: number;
 }
 
 const initialState: cartState = {
-  isLoading: false,
   items: [],
   totalPrice: 0,
   totalCount: 0,
@@ -41,16 +38,6 @@ export const cartSlice = createSlice({
     },
 
     addItemToCart: (state, action) => {
-      //   console.log(action.payload.id);
-      //   const id = action.payload.id;
-      //   const currentItem = state.items.find((item) => {
-      //     console.log(item);
-      //     return item.id === id;
-      //   });
-
-      //   console.log(currentItem);
-      //   const currentItem = state.items[id] ? [...state.items[id], state.items[id].amount + 1] : [action.payload];
-
       const newItems = [...state.items, action.payload];
 
       return {
@@ -62,6 +49,27 @@ export const cartSlice = createSlice({
         }, 0),
         totalPrice: newItems.reduce((sum, obj) => {
           return obj.price.price + sum;
+        }, 0),
+      };
+    },
+
+    changeItemAmount: (state, action) => {
+      const { id, currentAmount } = action.payload;
+      const currentItemIndex = state.items.findIndex((item) => item.id == id);
+      const items = [...state.items];
+      items[currentItemIndex] = { ...items[currentItemIndex], amount: currentAmount };
+
+      return {
+        ...state,
+
+        items: items,
+
+        totalCount: items.reduce((sum, item) => {
+          return item.amount + sum;
+        }, 0),
+
+        totalPrice: items.reduce((sum, item) => {
+          return item.price.price * item.amount + sum;
         }, 0),
       };
     },

@@ -12,6 +12,16 @@ import newsFourth from "@src/assets/images/news/news-4.jpg";
 import productFirst from "@src/assets/images/products/product-1.jpg";
 import productSecond from "@src/assets/images/products/product-2.jpg";
 
+// receipts
+import receiptFirst from "@src/assets/images/receipts/barbeque.jpg";
+import ingredientFirst from "@src/assets/images/receipts/ingredientFirst.jpg";
+import ingredientSecond from "@src/assets/images/receipts/ingredientSecond.jpg";
+import ingredientThird from "@src/assets/images/receipts/ingredientThird.jpg";
+
+import { ReactComponent as ClockIcon } from "@src/assets/icons/clock.svg";
+import { ReactComponent as PortionIcon } from "@src/assets/icons/portion.svg";
+import { FunctionComponent, SVGProps } from "react";
+
 export type SlideType = {
   id: string;
   title: string;
@@ -230,7 +240,7 @@ export const MainPageData: MainPageDataType = {
       },
       items: [
         {
-          id: "4532341",
+          id: "45d32341",
           img: productFirst,
           amount: 1,
           unit: "450г.",
@@ -248,7 +258,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "132123",
+          id: "1322123",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -266,7 +276,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "2111",
+          id: "211v1",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -284,7 +294,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "3354534234",
+          id: "33545342334",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -302,7 +312,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "44234234",
+          id: "442342234",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -338,7 +348,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "442334",
+          id: "4423x34",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -366,7 +376,7 @@ export const MainPageData: MainPageDataType = {
       },
       items: [
         {
-          id: "4532341",
+          id: "45s32341",
           img: productFirst,
           amount: 1,
           unit: "450г.",
@@ -384,7 +394,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "132123",
+          id: "1323123",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -402,7 +412,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "2111",
+          id: "2111z",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -420,7 +430,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "3354534234",
+          id: "335453242334",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -474,7 +484,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "442334",
+          id: "4a42334",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -502,7 +512,7 @@ export const MainPageData: MainPageDataType = {
       },
       items: [
         {
-          id: "4532341",
+          id: "4f532341",
           img: productFirst,
           amount: 1,
           unit: "450г.",
@@ -520,7 +530,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "132123",
+          id: "13d2123",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -538,7 +548,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "2111",
+          id: "2e111",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -556,7 +566,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "3354534234",
+          id: "335453423412",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -574,7 +584,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "44234234",
+          id: "44d2334234",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -610,7 +620,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "442334",
+          id: "44w2334",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -638,7 +648,7 @@ export const MainPageData: MainPageDataType = {
       },
       items: [
         {
-          id: "4532341",
+          id: "45323a41",
           img: productFirst,
           amount: 1,
           unit: "450г.",
@@ -656,7 +666,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "132123",
+          id: "13f2123",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -674,7 +684,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "2111",
+          id: "211s1",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -692,7 +702,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "3354534234",
+          id: "33545x34234",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -710,7 +720,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "44234234",
+          id: "442324234",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -746,7 +756,7 @@ export const MainPageData: MainPageDataType = {
           button: "В корзину",
         },
         {
-          id: "442334",
+          id: "4423f34",
           img: productSecond,
           amount: 1,
           unit: "450г.",
@@ -797,4 +807,153 @@ export const MainPageData: MainPageDataType = {
       },
     ],
   },
+};
+
+export type ChiefReceiptIngredientType = {
+  id: string;
+
+  text: string;
+  price: string;
+  img: string;
+};
+export type ChiefReceiptTagType = {
+  id: string;
+  icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+  text: string;
+};
+export type ChiefReceiptItemType = {
+  id: string;
+  title: string;
+  img: string;
+  tags: ChiefReceiptTagType[];
+  ingredients: ChiefReceiptIngredientType[];
+};
+
+export type ChiefReceiptsType = {
+  title: string;
+  subtitle: string;
+  items: ChiefReceiptItemType[];
+};
+
+export const ChiefReceiptsData: ChiefReceiptsType = {
+  title: "Рецепты от шеф-лайма!",
+  subtitle: "Соберите все необходимые продукты в один клик!",
+  items: [
+    {
+      id: "1",
+      title: "Курочка BARBEQUE",
+      img: receiptFirst,
+      tags: [
+        { id: "1", icon: ClockIcon, text: "15 минут" },
+        { id: "2", icon: PortionIcon, text: "4 порции" },
+      ],
+      ingredients: [
+        {
+          id: "1",
+          text: "Колбаска",
+          price: "5 руб",
+          img: ingredientFirst,
+        },
+        {
+          id: "2",
+          text: "Маслины без косточки",
+          price: "2,54 руб",
+          img: ingredientSecond,
+        },
+        {
+          id: "3",
+          text: "Хлебушек",
+          price: "1 руб",
+          img: ingredientThird,
+        },
+      ],
+    },
+    {
+      id: "2",
+      title: "Курочка BARBEQUE",
+      img: receiptFirst,
+      tags: [
+        { id: "1", icon: ClockIcon, text: "15 минут" },
+        { id: "2", icon: PortionIcon, text: "4 порции" },
+      ],
+      ingredients: [
+        {
+          id: "1",
+          text: "Колбаска",
+          price: "5 руб",
+          img: ingredientFirst,
+        },
+        {
+          id: "2",
+          text: "Маслины без косточки",
+          price: "2,54 руб",
+          img: ingredientSecond,
+        },
+        {
+          id: "3",
+          text: "Хлебушек",
+          price: "1 руб",
+          img: ingredientThird,
+        },
+      ],
+    },
+    {
+      id: "3",
+      title: "Курочка BARBEQUE",
+      img: receiptFirst,
+      tags: [
+        { id: "1", icon: ClockIcon, text: "15 минут" },
+        { id: "2", icon: PortionIcon, text: "4 порции" },
+      ],
+      ingredients: [
+        {
+          id: "1",
+          text: "Колбаска",
+          price: "5 руб",
+          img: ingredientFirst,
+        },
+        {
+          id: "2",
+          text: "Маслины без косточки",
+          price: "2,54 руб",
+          img: ingredientSecond,
+        },
+        {
+          id: "3",
+          text: "Хлебушек",
+          price: "1 руб",
+          img: ingredientThird,
+        },
+      ],
+    },
+    {
+      id: "4",
+      title: "Курочка BARBEQUE",
+      img: receiptFirst,
+      tags: [
+        { id: "1", icon: ClockIcon, text: "15 минут" },
+        { id: "2", icon: PortionIcon, text: "4 порции" },
+      ],
+      ingredients: [
+        {
+          id: "1",
+          text: "Колбаска",
+          price: "5 руб",
+          img: ingredientFirst,
+        },
+        {
+          id: "2",
+          text: "Маслины без косточки",
+          price: "2,54 руб",
+          img: ingredientSecond,
+        },
+        {
+          id: "3",
+          text: "Хлебушек",
+          price: "1 руб",
+          img: ingredientThird,
+        },
+      ],
+    },
+  ],
 };

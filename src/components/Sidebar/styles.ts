@@ -5,6 +5,7 @@ const Sidebar = styled.aside`
   ${flexColumnCenter};
   justify-content: flex-start;
   position: sticky;
+  z-index: 5;
   width: 200px;
   height: calc(100vh - 116px);
   top: 116px;

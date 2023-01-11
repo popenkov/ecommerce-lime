@@ -10,6 +10,7 @@ import { ProductsSection } from "@src/components/UI/ProductsSection";
 import { MainPageData } from "@src/mock/MainPageData";
 
 import { Styled } from "./styles";
+import { ChiefSection } from "@src/components/MainPage/ChiefSection";
 
 export const Main: FC = () => {
   const products = MainPageData.products;
@@ -25,6 +26,7 @@ export const Main: FC = () => {
         })}
         <Reviews data={reviews} />
         <Feedback />
+        <ChiefSection />
       </Styled.MainContainer>
       <Sidebar />
     </Styled.PageContainer>

@@ -1,4 +1,4 @@
-import { flexAlignCenter, flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
+import { absolutePseudoEl, box, flexAlignCenter, flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
 
 const Item = styled.div`
@@ -69,4 +69,42 @@ const AddToCartBtn = styled.button`
   color: ${({ theme }) => theme.color.black};
 `;
 
-export const Styled = { Item, Image, Description, Name, PriceContainer, PriceTitle, PriceValue, AddToCartBtn };
+const CloseButton = styled.button`
+  position: relative;
+  ${box(8)};
+  ${flexCenter};
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    ${absolutePseudoEl};
+    left: 6px;
+    height: 12px;
+    width: 1px;
+    border-radius: 100px;
+    background-color: ${({ theme }) => theme.color.black};
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+`;
+
+export const Styled = {
+  Item,
+  Image,
+  Description,
+  Name,
+  PriceContainer,
+  PriceTitle,
+  PriceValue,
+  AddToCartBtn,
+  CloseButton,
+};
