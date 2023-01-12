@@ -12,8 +12,8 @@ const Container = styled.div`
 
 const Link = styled.a<{ isActive?: boolean }>`
   ${flexAlignCenter};
-  margin-right: 37px;
-  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
+  margin-left: 37px;
+  ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.white};
 
   ${({ isActive }) =>

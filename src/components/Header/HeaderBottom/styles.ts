@@ -15,7 +15,7 @@ const HeaderContainer = styled.div`
   box-sizing: border-box;
   max-width: 1280px;
   padding: 13px 25px;
-  padding-left: 166px;
+  padding-left: 158px;
 
   margin: 0 auto;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

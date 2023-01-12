@@ -7,6 +7,7 @@ const Interview = styled.div<{ background: string }>`
   align-items: flex-end;
   justify-content: flex-start;
   width: 273px;
+  min-width: 273px;
   height: 357px;
   padding: 21px 25px;
 

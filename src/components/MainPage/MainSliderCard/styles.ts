@@ -4,7 +4,7 @@ import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Card = styled.div<{ img: string; color: string }>`
   box-sizing: border-box;
-  width: calc(100% - 178px);
+  width: calc(100% - 153px);
   max-width: 855px;
   min-height: 361px;
   padding: 62px 50px 39px;
@@ -24,6 +24,7 @@ const Text = styled.div`
   flex-direction: column;
   align-items: flex-start;
   max-width: 300px;
+  height: 260px;
 `;
 
 const Title = styled.h3`
@@ -34,7 +35,8 @@ const Title = styled.h3`
 `;
 
 const Description = styled.p`
-  margin-bottom: 53px;
+  flex-grow: 1;
+  margin-bottom: 23px;
   ${font({ size: "24", lineHeight: "29", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.white};
   text-align: left;

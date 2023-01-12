@@ -56,19 +56,22 @@
         "id": "account",
         "text": "Кабинет",
         "icon": "ACCOUNT",
-        "href": "/account"
+        "href": "/account",
+        "underlined": false
       },
       {
         "id": "favorites",
         "text": "Избранное",
         "icon": "FAVORITES",
-        "href": "/favorites"
+        "href": "/favorites",
+        "underlined": false
       },
       {
         "id": "cart",
         "text": "Корзина",
         "icon": "CART",
-        "href": "/cart"
+        "href": "/cart",
+        "underlined": true
       }
     ]
   },
@@ -647,6 +650,794 @@
       "icon": "ZOO",
       "name": "Зоотовары",
       "href": "#"
+    }
+  ],
+  "main-page": {
+    "slider": [
+      {
+        "id": "1",
+        "title": "ЛАЙМ ФРЕШ МАРКЕТ",
+        "subtitle": "Давайте знакомиться!",
+        "image": "imageFirst",
+        "color": " linear-gradient(90deg, #E53935 0%, #E35D5B 100%)",
+        "link": {
+          "title": "Узнать о нас",
+          "href": "#"
+        }
+      },
+      {
+        "id": "2",
+        "title": "ЛАЙМ ФРЕШ МАРКЕТ",
+        "subtitle": "Давайте знакомиться!",
+        "image": "imageFirst",
+        "color": "linear-gradient(90deg, #1A2980 0%, #26D0CE 100%)",
+        "link": {
+          "title": "Узнать о нас",
+          "href": "#"
+        }
+      },
+      {
+        "id": "3",
+        "title": "ЛАЙМ ФРЕШ МАРКЕТ",
+        "subtitle": "Давайте знакомиться!",
+        "image": "imageFirst",
+        "color": "linear-gradient(90deg, #C21500 0%, #FFC500 100%)",
+        "link": {
+          "title": "Узнать о нас",
+          "href": "#"
+        }
+      }
+    ],
+    "advantages": [
+      {
+        "id": "1",
+        "icon": "CHIEFADV",
+        "title": "Качество продуктов",
+        "text": "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных"
+      },
+      {
+        "id": "2",
+        "icon": "ORDER",
+        "title": "Легкий заказ",
+        "text": "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных"
+      },
+      {
+        "id": "3",
+        "icon": "BELL",
+        "title": "Доставка до двери",
+        "text": "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных"
+      },
+      {
+        "id": "4",
+        "icon": "RECOMMEND",
+        "title": "Выбор покупателей",
+        "text": "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных"
+      }
+    ],
+    "news": {
+      "title": "Новости Лайма",
+      "color": "#A1D214",
+      "button": {
+        "text": "Все новости",
+        "href": "#"
+      },
+      "items": [
+        {
+          "id": "1",
+          "img": "newsFirst",
+          "title": "Открытие нового магазина!",
+          "text": "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных",
+          "link": {
+            "title": "Читать дальше",
+            "href": "#"
+          }
+        },
+        {
+          "id": "2",
+          "img": "newsSecond",
+          "title": "Конкурс рецептов Лайма",
+          "text": "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных",
+          "link": {
+            "title": "Читать дальше",
+            "href": "#"
+          }
+        },
+        {
+          "id": "3",
+          "img": "newsThird",
+          "title": "Доставка теперь за 45 минут!",
+          "text": "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных",
+          "link": {
+            "title": "Читать дальше",
+            "href": "#"
+          }
+        },
+        {
+          "id": "4",
+          "img": "newsFourth",
+          "title": "Теперь и в Деливери!",
+          "text": "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных",
+          "link": {
+            "title": "Читать дальше",
+            "href": "#"
+          }
+        }
+      ]
+    },
+    "products": [
+      {
+        "title": "Акционные продукты",
+        "color": "linear-gradient(90deg, #FFA800 0%, #FFC709 100%), #A1D214;",
+        "button": {
+          "text": "Смотреть все",
+          "href": "#"
+        },
+        "items": [
+          {
+            "id": "45d32341",
+            "img": "productFirst",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 253"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": 140
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "1322123",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "211v1",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "33545342334",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "442342234",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "33545sdasd34234",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "4423x34",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          }
+        ]
+      },
+      {
+        "title": "Новинки",
+        "color": " linear-gradient(90deg, #00D1FF 0%, #17BADE 0.01%, #14D28E 100%), #A1D214",
+        "button": {
+          "text": "Смотреть все",
+          "href": "#"
+        },
+        "items": [
+          {
+            "id": "45s32341",
+            "img": "productFirst",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 253"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": 140
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "1323123",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "2111z",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "335453242334",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "44234234",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "33545sdasd34234",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "4a42334",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          }
+        ]
+      },
+      {
+        "title": "Выбор вегана",
+        "color": " linear-gradient(90deg, #76B852 0%, #8DC26F 100%), #A1D214;",
+        "button": {
+          "text": "Смотреть все",
+          "href": "#"
+        },
+        "items": [
+          {
+            "id": "4f532341",
+            "img": "productFirst",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 253"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": 140
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "13d2123",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Водичка",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "2e111",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Водичка",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "335453423412",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Водичка",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "44d2334234",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Водичка",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "33545sdasd34234",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Водичка",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "44w2334",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Водичка",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          }
+        ]
+      },
+      {
+        "title": "Популярные товары",
+        "color": "  linear-gradient(90deg, #FF5C00 0%, #FF9900 100%), #A1D214;",
+        "button": {
+          "text": "Смотреть все",
+          "href": "#"
+        },
+        "items": [
+          {
+            "id": "45323a41",
+            "img": "productFirst",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 253"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": 140
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "13f2123",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "211s1",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "33545x34234",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "442324234",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "33545sdasd34234",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          },
+          {
+            "id": "4423f34",
+            "img": "productSecond",
+            "amount": 1,
+            "unit": "450г.",
+            "category": "Бакалея",
+            "rating": {
+              "value": "4",
+              "amount": "3 254"
+            },
+            "isFavorite": false,
+            "title": "Макаронные изделия Макфа Триколлини свитки",
+            "price": {
+              "price": 120,
+              "oldPrice": null
+            },
+            "button": "В корзину"
+          }
+        ]
+      }
+    ],
+    "reviews": {
+      "title": "Отзывы о лайме",
+      "button": "Написать отзыв",
+      "items": [
+        {
+          "id": "1",
+          "name": "Александр Петров",
+          "text": "Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок..."
+        },
+        {
+          "id": "2",
+          "name": "Александр Петров",
+          "text": "Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок..."
+        },
+        {
+          "id": "3",
+          "name": "Александр Петров",
+          "text": "Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок..."
+        },
+        {
+          "id": "4",
+          "name": "Александр Петров",
+          "text": "Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок..."
+        },
+        {
+          "id": "5",
+          "name": "Александр Петров",
+          "text": "Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок..."
+        },
+        {
+          "id": "6",
+          "name": "Александр Петров",
+          "text": "Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок..."
+        },
+        {
+          "id": "7",
+          "name": "Александр Петров",
+          "text": "Спасибо! Все вовремя, качество хорошее, даже в в пробки привезли в указанный срок..."
+        }
+      ]
+    },
+    "chiefReceipts": {}
+  },
+  "popular-items": [
+    {
+      "id": "1",
+      "img": "productFirst",
+      "amount": 0,
+      "title": "Макаронные изделия Макфа триколлини",
+      "price": {
+        "price": 120,
+        "oldPrice": 140
+      },
+      "unit": "450г.",
+      "category": "Бакалея",
+      "rating": {
+        "value": "4",
+        "amount": "3 253"
+      },
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "img": "productFirst",
+      "amount": 0,
+      "title": "Макаронные изделия Макфа триколлини",
+      "price": {
+        "price": 120,
+        "oldPrice": 140
+      },
+      "unit": "450г.",
+      "category": "Бакалея",
+      "rating": {
+        "value": "4",
+        "amount": "3 253"
+      },
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "img": "productFirst",
+      "amount": 0,
+      "title": "Макаронные изделия Макфа триколлини",
+      "price": {
+        "price": 120,
+        "oldPrice": 140
+      },
+      "unit": "450г.",
+      "category": "Бакалея",
+      "rating": {
+        "value": "4",
+        "amount": "3 253"
+      },
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "img": "productFirst",
+      "amount": 0,
+      "title": "Макаронные изделия Макфа триколлини",
+      "price": {
+        "price": 120,
+        "oldPrice": 140
+      },
+      "unit": "450г.",
+      "category": "Бакалея",
+      "rating": {
+        "value": "4",
+        "amount": "3 253"
+      },
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "img": "productFirst",
+      "amount": 0,
+      "title": "Макаронные изделия Макфа триколлини",
+      "price": {
+        "price": 120,
+        "oldPrice": 140
+      },
+      "unit": "450г.",
+      "category": "Бакалея",
+      "rating": {
+        "value": "4",
+        "amount": "3 253"
+      },
+      "isFavorite": false
     }
   ]
 }

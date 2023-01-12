@@ -8,6 +8,7 @@ const Sidebar = styled.aside`
   z-index: 5;
   width: 200px;
   height: calc(100vh - 116px);
+
   top: 116px;
   right: 0;
   background-color: ${({ theme }) => theme.color.greyLightBg};

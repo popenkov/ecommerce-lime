@@ -1,5 +1,6 @@
 import { FC } from "react";
 
+import QuestionImg from "@src/assets/images/question-bg.png";
 import { Styled } from "./styles";
 
 const FeedbackData = [
@@ -28,12 +29,14 @@ export const Feedback: FC = () => {
             return (
               <Styled.FormInputContainer key={input.name}>
                 <Styled.FormInput name="test" id={input.name} value={input.name} type="radio" />
+                <Styled.FormShadow />
                 <Styled.FormLabel htmlFor={input.name}>{input.title}</Styled.FormLabel>
               </Styled.FormInputContainer>
             );
           })}
         </Styled.InputsContainer>
       </Styled.Form>
+      <Styled.QuestionImg src={QuestionImg} />
     </Styled.Feedback>
   );
 };

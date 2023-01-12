@@ -75,13 +75,13 @@ export type ItemType = {
   category: string;
   rating: RatingType;
   unit: string;
-  isFavorite: boolean;
+  isFavorite?: boolean;
   title: string;
   price: {
     price: number;
     oldPrice: number | null;
   };
-  button: string;
+  button?: string;
 };
 
 export type ItemsType = {
@@ -106,7 +106,7 @@ export type ReviewsType = {
   items: ReviewType[];
 };
 
-type MainPageDataType = {
+export type MainPageDataType = {
   slider: SlideType[];
   advantages: AdvantageType[];
   news: NewsType;
@@ -120,7 +120,7 @@ export const MainPageData: MainPageDataType = {
       id: "1",
       title: "ЛАЙМ ФРЕШ МАРКЕТ",
       subtitle: "Давайте знакомиться!",
-      image: imageFirst,
+      image: "imageFirst",
       color: " linear-gradient(90deg, #E53935 0%, #E35D5B 100%)",
       link: {
         title: "Узнать о нас",
@@ -131,7 +131,7 @@ export const MainPageData: MainPageDataType = {
       id: "2",
       title: "ЛАЙМ ФРЕШ МАРКЕТ",
       subtitle: "Давайте знакомиться!",
-      image: imageFirst,
+      image: "imageFirst",
       color: "linear-gradient(90deg, #1A2980 0%, #26D0CE 100%)",
       link: {
         title: "Узнать о нас",
@@ -142,7 +142,7 @@ export const MainPageData: MainPageDataType = {
       id: "3",
       title: "ЛАЙМ ФРЕШ МАРКЕТ",
       subtitle: "Давайте знакомиться!",
-      image: imageFirst,
+      image: "imageFirst",
       color: "linear-gradient(90deg, #C21500 0%, #FFC500 100%)",
       link: {
         title: "Узнать о нас",
@@ -190,7 +190,7 @@ export const MainPageData: MainPageDataType = {
     items: [
       {
         id: "1",
-        img: newsFirst,
+        img: "newsFirst",
         title: "Открытие нового магазина!",
         text: "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных",
         link: {
@@ -200,7 +200,7 @@ export const MainPageData: MainPageDataType = {
       },
       {
         id: "2",
-        img: newsSecond,
+        img: "newsSecond",
         title: "Конкурс рецептов Лайма",
         text: "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных",
         link: {
@@ -210,7 +210,7 @@ export const MainPageData: MainPageDataType = {
       },
       {
         id: "3",
-        img: newsThird,
+        img: "newsThird",
         title: "Доставка теперь за 45 минут!",
         text: "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных",
         link: {
@@ -220,7 +220,7 @@ export const MainPageData: MainPageDataType = {
       },
       {
         id: "4",
-        img: newsFourth,
+        img: "newsFourth",
         title: "Теперь и в Деливери!",
         text: "Выбирайте из 40 000 товаров: у нас есть фрукты и овощи, мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных  мясо и рыба, все для дома и товары для животных",
         link: {
@@ -241,7 +241,7 @@ export const MainPageData: MainPageDataType = {
       items: [
         {
           id: "45d32341",
-          img: productFirst,
+          img: "productFirst",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -259,7 +259,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "1322123",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -277,7 +277,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "211v1",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -295,7 +295,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "33545342334",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -313,7 +313,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "442342234",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -331,7 +331,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "33545sdasd34234",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -349,7 +349,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "4423x34",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -377,7 +377,7 @@ export const MainPageData: MainPageDataType = {
       items: [
         {
           id: "45s32341",
-          img: productFirst,
+          img: "productFirst",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -395,7 +395,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "1323123",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -413,7 +413,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "2111z",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -431,7 +431,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "335453242334",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -449,7 +449,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "44234234",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -467,7 +467,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "33545sdasd34234",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -485,7 +485,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "4a42334",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -513,7 +513,7 @@ export const MainPageData: MainPageDataType = {
       items: [
         {
           id: "4f532341",
-          img: productFirst,
+          img: "productFirst",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -531,7 +531,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "13d2123",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Водичка",
@@ -549,7 +549,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "2e111",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Водичка",
@@ -567,7 +567,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "335453423412",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Водичка",
@@ -585,7 +585,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "44d2334234",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Водичка",
@@ -603,7 +603,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "33545sdasd34234",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Водичка",
@@ -621,7 +621,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "44w2334",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Водичка",
@@ -649,7 +649,7 @@ export const MainPageData: MainPageDataType = {
       items: [
         {
           id: "45323a41",
-          img: productFirst,
+          img: "productFirst",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -667,7 +667,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "13f2123",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -685,7 +685,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "211s1",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -703,7 +703,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "33545x34234",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -721,7 +721,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "442324234",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -739,7 +739,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "33545sdasd34234",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",
@@ -757,7 +757,7 @@ export const MainPageData: MainPageDataType = {
         },
         {
           id: "4423f34",
-          img: productSecond,
+          img: "productSecond",
           amount: 1,
           unit: "450г.",
           category: "Бакалея",

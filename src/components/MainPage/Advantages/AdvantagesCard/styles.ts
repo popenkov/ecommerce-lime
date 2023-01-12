@@ -9,7 +9,7 @@ const Card = styled.div`
 
 const CardHeader = styled.div`
   ${flexAlignCenter};
-  margin-bottom: 5px;
+  margin-bottom: -3px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
@@ -27,8 +27,8 @@ const IconContainer = styled.span`
     content: "";
     position: absolute;
     z-index: 0;
-    right: 0;
-    top: 0;
+    right: -16px;
+    top: 3px;
     ${box(34)};
     border-radius: 50%;
     background-color: ${({ theme }) => theme.color.green};
@@ -39,6 +39,9 @@ const IconContainer = styled.span`
 `;
 
 const Title = styled.h3`
+  position: relative;
+  margin-top: -4px;
+  z-index: 1;
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 

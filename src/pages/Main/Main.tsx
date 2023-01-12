@@ -11,20 +11,23 @@ import { MainPageData } from "@src/mock/MainPageData";
 
 import { Styled } from "./styles";
 import { ChiefSection } from "@src/components/MainPage/ChiefSection";
+import { useGetMainPageDataQuery } from "@src/store/services";
 
 export const Main: FC = () => {
-  const products = MainPageData.products;
-  const reviews = MainPageData.reviews;
+  const { data } = useGetMainPageDataQuery();
   return (
     <Styled.PageContainer>
       <Styled.MainContainer>
-        <MainSlider />
-        <Advantages />
-        <News />
-        {products.map((products) => {
-          return <ProductsSection data={products} key={products.title} />;
-        })}
-        <Reviews data={reviews} />
+        {data?.slider && <MainSlider data={data.slider} />}
+        {data?.advantages && <Advantages data={data.advantages} />}
+        {data?.news && <News data={data.news} />}
+
+        {data?.products &&
+          data.products.map((products) => {
+            return <ProductsSection data={products} key={products.title} />;
+          })}
+        {data?.reviews && <Reviews data={data.reviews} />}
+
         <Feedback />
         <ChiefSection />
       </Styled.MainContainer>

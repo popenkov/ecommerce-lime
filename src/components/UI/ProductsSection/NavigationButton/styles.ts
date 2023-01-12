@@ -15,10 +15,7 @@ const NavigationContainer = styled.div`
   }
 `;
 
-const NavigationBtnOverlay = styled.button`
-  width: 50%;
-  height: 100%;
-`;
+const NavigationBtnOverlay = styled.button``;
 
 const buttonCommon = css`
   display: none;

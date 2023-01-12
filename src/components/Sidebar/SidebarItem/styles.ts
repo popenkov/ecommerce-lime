@@ -5,6 +5,7 @@ const Item = styled.div`
   display: flex;
   box-sizing: border-box;
   width: 100%;
+  max-width: 184px;
   margin-bottom: 4px;
   padding: 5px 10px;
   background-color: ${({ theme }) => theme.color.white};
@@ -15,6 +16,7 @@ const Item = styled.div`
 
 const Image = styled.img`
   width: 29px;
+  min-width: 29px;
   height: 50px;
   margin-right: 12px;
   object-fit: contain;

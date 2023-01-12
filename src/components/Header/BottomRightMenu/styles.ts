@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { flexAlignCenter, font } from "@src/styles/mixins";
 
@@ -12,6 +12,7 @@ const Container = styled.div`
 `;
 
 const IconContainer = styled.span`
+  margin-right: 11px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     & svg {
       width: 15px;
@@ -20,10 +21,24 @@ const IconContainer = styled.span`
   }
 `;
 
-const Link = styled.a`
+const Link = styled.a<{ isUnderlined?: boolean }>`
+  position: relative;
   cursor: pointer;
   ${flexAlignCenter};
   margin-right: 20px;
+
+  ${({ isUnderlined }) =>
+    isUnderlined &&
+    css`
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -23px;
+        width: 100%;
+        height: 3px;
+        background-color: ${({ theme }) => theme.color.green};
+      }
+    `};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin-right: 15px;
@@ -33,13 +48,13 @@ const Link = styled.a`
     margin-right: 0;
   }
 
-  &:not(:last-child) ${IconContainer} {
+  /* &:not(:last-child) ${IconContainer} {
     margin-right: 10px;
 
     @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       margin-right: 0px;
     }
-  }
+  } */
 `;
 
 const Text = styled.span`

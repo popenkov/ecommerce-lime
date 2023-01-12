@@ -8,11 +8,14 @@ import { AddToCardBtn } from "../UI/AddToCardBtn";
 import { Styled } from "./styles";
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
+import { IMAGES } from "@src/utils/ImagesMap";
 
 export const Product: FC<ItemType> = ({ id, category, img, rating, isFavorite, title, price, amount, unit }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
   const { addItemToCart, removeItemfromCart } = useActions();
   const { items } = useAppSelector((state) => state.cart);
+
+  const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
 
   const isItemInCart = Boolean(items.find((item) => item.id === id));
   const handleAddToCardClick = () => {
@@ -36,16 +39,16 @@ export const Product: FC<ItemType> = ({ id, category, img, rating, isFavorite, t
 
   return (
     <Styled.Product ref={hoverRef}>
-      <Styled.Photo src={img} />
+      <Styled.Photo src={imageToDraw} />
       <Rating data={rating} />
       <Styled.Title>{title}</Styled.Title>
       <Styled.Price>
         {!price.oldPrice ? (
-          <Styled.CurrentPrice>{price.price}</Styled.CurrentPrice>
+          <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
         ) : (
           <>
-            <Styled.NewPrice>{price.price}</Styled.NewPrice>
-            <Styled.OldPrice>{price.oldPrice}</Styled.OldPrice>
+            <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
+            <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
           </>
         )}
       </Styled.Price>

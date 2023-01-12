@@ -21,7 +21,7 @@ const Product = styled.div`
 const Photo = styled.img`
   width: 100%;
   height: 134px;
-  margin-bottom: 8px;
+  margin-bottom: -5px;
   object-fit: contain;
 `;
 
@@ -34,6 +34,7 @@ const Title = styled.h2<{ color?: string }>`
 `;
 
 const Price = styled.div`
+  margin-bottom: 7px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;

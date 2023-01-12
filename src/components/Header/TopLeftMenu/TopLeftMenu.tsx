@@ -13,8 +13,9 @@ export const TopLeftMenu: FC<TopLeftMenuProps> = ({ data }) => {
       {data.map((item) => {
         const key = item.icon as keyof typeof ICONS;
         const Icon = typeof item.icon === "string" ? ICONS[key] : null;
+        const isPhone = item.id === "phone";
         return (
-          <Styled.Link key={item.id}>
+          <Styled.Link key={item.id} isPhone={isPhone}>
             {Icon && (
               <Styled.IconContainer>
                 <Icon />

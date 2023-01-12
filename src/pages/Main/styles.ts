@@ -3,13 +3,15 @@ import styled from "styled-components";
 const PageContainer = styled.main`
   display: flex;
   gap: 20px;
-  padding: 0 20px;
+
+  padding-left: 20px;
   max-width: 1280px;
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 0 20px;
   }
 `;
 const MainContainer = styled.main`

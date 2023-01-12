@@ -29,6 +29,12 @@ import { ReactComponent as CondimentIcon } from "@src/assets/icons/menu/condimen
 import { ReactComponent as ZooIcon } from "@src/assets/icons/menu/zoo.svg";
 import { ReactComponent as SaladIcon } from "@src/assets/icons/menu/salad.svg";
 
+// advantages icon
+import { ReactComponent as ChiefAdvIcon } from "@src/assets/icons/chief.svg";
+import { ReactComponent as OrderIcon } from "@src/assets/icons/order.svg";
+import { ReactComponent as BellIcon } from "@src/assets/icons/reception-bell.svg";
+import { ReactComponent as RecommendIcon } from "@src/assets/icons/recommended.svg";
+
 export const ICONS = {
   PHONE: PhoneIcon,
   PIN: PinIcon,
@@ -56,4 +62,9 @@ export const ICONS = {
   COMDIMENT: CondimentIcon,
   ZOO: ZooIcon,
   SALAD: SaladIcon,
+
+  CHIEFADV: ChiefAdvIcon,
+  ORDER: OrderIcon,
+  BELL: BellIcon,
+  RECOMMEND: RecommendIcon,
 };

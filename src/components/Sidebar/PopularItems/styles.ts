@@ -20,7 +20,33 @@ const PopularItems = styled(PerfectScrollbar)`
   gap: 4px;
   flex-wrap: nowrap;
   overflow-x: scroll;
+  overflow-y: hidden;
   width: 200px;
+  padding-bottom: 10px;
+
+  & .ps__rail-x {
+    bottom: 0px;
+    height: 2px;
+    background: #c7c7c7;
+    opacity: 0.3;
+    border-radius: 5px;
+  }
+
+  & .ps__thumb-x {
+    cursor: pointer;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: ${({ theme }) => theme.color.white};
+
+    border-radius: 5px;
+  }
+
+  & .ps__rail-x:hover > .ps__thumb-x {
+    width: 40px;
+    height: 2px;
+    background: ${({ theme }) => theme.color.white};
+  }
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;

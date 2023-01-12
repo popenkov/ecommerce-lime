@@ -1,5 +1,5 @@
 import { useAppSelector } from "@src/hooks/useAppSelector";
-import { sidebarItems, popularItems } from "@src/mock/CartAside";
+import { useGetPopularItemsDataQuery } from "@src/store/services";
 import { FC } from "react";
 import { PopularItems } from "../PopularItems";
 import { SidebarItems } from "../SidebarItems";
@@ -8,6 +8,7 @@ import { Styled } from "./styles";
 
 export const OrderContent: FC = () => {
   const { items } = useAppSelector((state) => state.cart);
+  const { data: popularItems } = useGetPopularItemsDataQuery();
 
   return (
     <Styled.Content>

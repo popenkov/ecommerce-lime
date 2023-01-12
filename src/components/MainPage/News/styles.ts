@@ -2,11 +2,11 @@ import styled, { css } from "styled-components";
 
 import { flexAlignCenter, font } from "@src/styles/mixins";
 
-const Container = styled.div`
-  margin-bottom: 32px;
-  padding: 30px 20px;
+const Container = styled.section`
+  padding: 30px 20px 44px;
+  padding-right: 0;
   background-color: ${({ theme }) => theme.color.white};
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
   border-radius: 10px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
@@ -17,13 +17,15 @@ const Header = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 
 const Title = styled.h2<{ color?: string }>`
+  ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
+  color: ${({ theme }) => theme.color.black};
   position: relative;
   ${({ color }) =>
     color &&
@@ -45,14 +47,14 @@ const Title = styled.h2<{ color?: string }>`
 
 const Link = styled.a`
   ${flexAlignCenter};
-  padding: 10px 13px 10px 23px;
+  margin-top: 23px;
   border-radius: 5px;
-  ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+  ${font({ size: "14", lineHeight: "12", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
   text-decoration: none;
 
   & svg {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 `;
 

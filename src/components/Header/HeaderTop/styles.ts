@@ -16,7 +16,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
 
   max-width: 1280px;
-  padding: 13px 25px;
+  padding: 10px 25px;
 
   margin: 0 auto;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

@@ -4,7 +4,7 @@ import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Rating = styled.div`
   ${flexAlignCenter};
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;

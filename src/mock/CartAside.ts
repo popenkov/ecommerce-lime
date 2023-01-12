@@ -76,7 +76,7 @@ export const sidebarItems: CategoryItem[] = [
 export const popularItems: CartItem[] = [
   {
     id: "1",
-    img: productFirst,
+    img: "productFirst",
     amount: 0,
     name: "Макаронные изделия Макфа триколлини",
     price: "120 руб.",
@@ -84,7 +84,7 @@ export const popularItems: CartItem[] = [
   },
   {
     id: "2",
-    img: productFirst,
+    img: "productFirst",
     amount: 0,
     name: "Макаронные изделия Макфа триколлини",
     price: "120 руб.",
@@ -92,7 +92,7 @@ export const popularItems: CartItem[] = [
   },
   {
     id: "3",
-    img: productFirst,
+    img: "productFirst",
     amount: 0,
     name: "Макаронные изделия Макфа триколлини",
     price: "120 руб.",
@@ -100,7 +100,7 @@ export const popularItems: CartItem[] = [
   },
   {
     id: "4",
-    img: productFirst,
+    img: "productFirst",
     amount: 0,
     name: "Макаронные изделия Макфа триколлини",
     price: "120 руб.",
@@ -108,7 +108,7 @@ export const popularItems: CartItem[] = [
   },
   {
     id: "5",
-    img: productFirst,
+    img: "productFirst",
     amount: 0,
     name: "Макаронные изделия Макфа триколлини",
     price: "120 руб.",

@@ -3,7 +3,11 @@ import styled from "styled-components";
 
 const Content = styled.div`
   ${flexColumnCenter};
+  justify-content: flex-start;
+  height: 100%;
   padding: 6px;
+
+  overflow-y: auto;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }

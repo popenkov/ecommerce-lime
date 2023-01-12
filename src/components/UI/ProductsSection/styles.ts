@@ -2,13 +2,14 @@ import styled, { css } from "styled-components";
 
 import { flexAlignCenter, font } from "@src/styles/mixins";
 
-const Container = styled.div`
+const Container = styled.section`
   position: relative;
-  padding: 30px 20px;
-  margin-bottom: 32px;
+  padding: 0px 20px 16px;
+  margin-bottom: 46px;
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
@@ -33,7 +34,7 @@ const Title = styled.h2<{ color?: string }>`
       &::after {
         content: "";
         position: absolute;
-        bottom: -8px;
+        bottom: -12px;
         left: 0;
         width: 100%;
         height: 4px;
@@ -47,14 +48,14 @@ const Title = styled.h2<{ color?: string }>`
 
 const Link = styled.a`
   ${flexAlignCenter};
-  padding: 10px 13px 10px 23px;
+  margin-top: 15px;
   border-radius: 5px;
-  ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+  ${font({ size: "14", lineHeight: "12", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
   text-decoration: none;
 
   & svg {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 `;
 

@@ -1,13 +1,17 @@
 import { FC } from "react";
 
 import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
-import { MainPageData } from "@src/mock/MainPageData";
+import { NewsType } from "@src/mock/MainPageData";
 
 import { NewsItem } from "../NewsItem";
 import { Styled } from "./styles";
 
-export const News: FC = () => {
-  const { title, button, items, color } = MainPageData.news;
+type NewsProps = {
+  data: NewsType;
+};
+
+export const News: FC<NewsProps> = ({ data }) => {
+  const { title, button, items, color } = data;
   return (
     <Styled.Container>
       <Styled.Header>

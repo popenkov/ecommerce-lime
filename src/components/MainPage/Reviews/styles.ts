@@ -7,11 +7,15 @@ const Reviews = styled.section`
   justify-content: space-between;
   align-items: center;
   height: 118px;
+  box-sizing: border-box;
+  margin-top: -15px;
   margin-bottom: 40px;
-  padding: 15px 26px;
+  padding: 15px 32px;
+  padding-right: 0;
   background: #f8f8f8;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
@@ -44,7 +48,7 @@ const ReviewItemsContainer = styled.div`
   display: flex;
   gap: 36px;
   width: calc(100% - 220px);
-
+  background: linear-gradient(270deg, #f8f8f8 7.68%, rgba(235, 235, 235, 0) 21%);
   & .swiper-slide {
     width: 159px;
   }

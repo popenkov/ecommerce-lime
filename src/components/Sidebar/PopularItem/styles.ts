@@ -14,6 +14,7 @@ const PopularItem = styled.div`
 
 const Image = styled.img`
   width: 29px;
+  min-width: 29px;
   height: 50px;
   margin-right: 8px;
   object-fit: contain;

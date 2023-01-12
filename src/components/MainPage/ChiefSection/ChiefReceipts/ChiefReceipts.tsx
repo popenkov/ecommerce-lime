@@ -6,6 +6,7 @@ import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
+import { Receipt } from "../Receipt";
 
 export const ChiefReceipts: FC = () => {
   const { title, subtitle, items } = ChiefReceiptsData;
@@ -20,19 +21,20 @@ export const ChiefReceipts: FC = () => {
       <Styled.ReceiptItems>
         <Swiper
           modules={[Navigation]}
-          spaceBetween={3}
-          slidesPerView={3}
+          spaceBetween={9}
+          slidesPerView="auto"
           onInit={(swiper: SwiperType) => {
             onBeforeInit(swiper, buttonPrevRef, buttonNextRef);
           }}
           navigation={{
             nextEl: buttonNextRef.current,
             prevEl: buttonPrevRef.current,
-          }}>
+          }}
+          loop>
           {items.map((item) => {
             return (
               <SwiperSlide key={item.id}>
-                <h1>{item.title}</h1>
+                <Receipt {...item} />
               </SwiperSlide>
             );
           })}

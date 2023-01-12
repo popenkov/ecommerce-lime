@@ -4,6 +4,7 @@ import { absolutePseudoEl, box, flexAlignCenter, flexCenter, font } from "@src/s
 
 const Button = styled.button`
   height: 45px;
+  ${flexAlignCenter};
   margin-right: 15px;
   padding: 13px 18px;
   border-radius: 10px;
