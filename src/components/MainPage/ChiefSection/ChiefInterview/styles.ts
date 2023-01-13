@@ -17,14 +17,17 @@ const Interview = styled.div<{ background: string }>`
   border: 1px solid rgba(51, 51, 51, 0.05);
   border-radius: 10px;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: calc(100% - 26px);
+    margin: 0 auto;
+    height: 240px;
+  }
+
   ${({ background }) =>
     background &&
     css`
       background-image: url(${background});
     `};
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 const Description = styled.div`

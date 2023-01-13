@@ -11,7 +11,7 @@ const PageContainer = styled.main`
   margin: 0 auto;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0 20px;
+    padding: 0;
   }
 `;
 const MainContainer = styled.main`

@@ -30,6 +30,14 @@ const PlusContainer = styled.span<{ isHovered: boolean; isAdded: boolean }>`
   background-color: ${({ theme }) => theme.color.green};
 
   border-radius: 5px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${box(27)};
+    ${font({ size: "22", lineHeight: "27", fontWeight: "400" })};
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   ${({ isHovered }) =>
     isHovered &&
     css`
@@ -42,9 +50,6 @@ const PlusContainer = styled.span<{ isHovered: boolean; isAdded: boolean }>`
     css`
       background-color: ${({ theme }) => theme.color.white};
     `};
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 const TextContainer = styled.span<{ isHovered: boolean; isAdded: boolean }>`
@@ -53,6 +58,15 @@ const TextContainer = styled.span<{ isHovered: boolean; isAdded: boolean }>`
   height: 34px;
   padding: 10px;
   box-sizing: border-box;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: 27px;
+    padding: 6px 11px;
+    ${font({ size: "10", lineHeight: "12", fontWeight: "700" })};
+    background-color: ${({ theme }) => theme.color.green};
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 
   ${({ isHovered }) =>
     isHovered &&
@@ -70,9 +84,6 @@ const TextContainer = styled.span<{ isHovered: boolean; isAdded: boolean }>`
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     `};
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 export const Styled = {

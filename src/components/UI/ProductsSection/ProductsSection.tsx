@@ -10,6 +10,8 @@ import { ItemsType, MainPageData } from "@src/mock/MainPageData";
 import { NavigationButtons } from "./NavigationButton";
 import { Styled } from "./styles";
 import { onBeforeInit } from "./utils";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
 
 type ProductsSectionProps = {
   data: ItemsType;
@@ -21,19 +23,23 @@ export const ProductsSection: FC<ProductsSectionProps> = ({ data }) => {
   const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
   const buttonNextRef = useRef<HTMLButtonElement | null>(null);
 
+  const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
+
+  const linkText = !isAdaptive ? button.text : button.textMobile;
+
   return (
     <Styled.Container>
       <Styled.Header>
         <Styled.Title color={color}>{title}</Styled.Title>
         <Styled.Link href={button.href}>
-          {button.text} <ArrowIcon />
+          {linkText} <ArrowIcon />
         </Styled.Link>
       </Styled.Header>
       <Styled.ItemsContainer>
         <Swiper
           modules={[Navigation]}
-          spaceBetween={3}
-          slidesPerView={6}
+          spaceBetween={12}
+          slidesPerView="auto"
           onInit={(swiper: SwiperType) => {
             onBeforeInit(swiper, buttonPrevRef, buttonNextRef);
           }}
@@ -49,6 +55,7 @@ export const ProductsSection: FC<ProductsSectionProps> = ({ data }) => {
             );
           })}
         </Swiper>
+        <Styled.Shadow />
         <NavigationButtons prevRef={buttonPrevRef} nextRef={buttonNextRef} />
       </Styled.ItemsContainer>
     </Styled.Container>

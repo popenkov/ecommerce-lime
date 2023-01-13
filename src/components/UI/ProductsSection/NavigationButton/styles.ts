@@ -5,10 +5,11 @@ import { box, fullscreenFixed } from "@src/styles/mixins";
 const NavigationContainer = styled.div`
   display: none;
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 104%;
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
+    left: -2%;
+    right: -2%;
 
     z-index: 1;
     display: flex;

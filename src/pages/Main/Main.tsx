@@ -23,10 +23,15 @@ export const Main: FC = () => {
         {data?.news && <News data={data.news} />}
 
         {data?.products &&
-          data.products.map((products) => {
+          data.products.slice(0, 2).map((products) => {
             return <ProductsSection data={products} key={products.title} />;
           })}
         {data?.reviews && <Reviews data={data.reviews} />}
+
+        {data?.products &&
+          data.products.slice(2, 4).map((products) => {
+            return <ProductsSection data={products} key={products.title} />;
+          })}
 
         <Feedback />
         <ChiefSection />

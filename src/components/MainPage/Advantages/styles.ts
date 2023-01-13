@@ -7,6 +7,8 @@ const Advantages = styled.div`
   margin-left: 35px;
   margin-right: 30px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    gap: 20px;
+    margin: 0 11px 5px;
   }
 `;
 

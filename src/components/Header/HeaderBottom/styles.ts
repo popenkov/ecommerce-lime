@@ -19,7 +19,8 @@ const HeaderContainer = styled.div`
 
   margin: 0 auto;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 17px 13px 10px;
+    padding: 7px 13px 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
 `;
 

@@ -2,6 +2,7 @@ import { box, flexAlignCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
 
 const Ingredient = styled.div`
+  position: relative;
   ${box(33)};
 
   background-color: ${({ theme }) => theme.color.white};

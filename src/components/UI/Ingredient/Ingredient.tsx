@@ -5,13 +5,12 @@ import { Tooltip } from "react-tooltip";
 
 import { Styled } from "./styles";
 
-type IngredientProps = Omit<ChiefReceiptIngredientType, "id">;
-
 export const Ingredient: FC<ChiefReceiptIngredientType> = ({ id, text, price, img }) => {
+  const tooltipId = `ingredient-item/${id}/${Math.random()}`;
   return (
     <Styled.Ingredient>
-      <Styled.Img id={`ingredient-item/${id}`} src={img} alt={text} />
-      <Tooltip anchorId={`ingredient-item/${id}`}>
+      <Styled.Img id={tooltipId} src={img} alt={text} />
+      <Tooltip anchorId={tooltipId}>
         <span className="tooltip-text">{text} </span> <span className="tooltip-price">{price}</span>
       </Tooltip>
     </Styled.Ingredient>

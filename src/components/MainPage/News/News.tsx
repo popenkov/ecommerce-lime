@@ -5,6 +5,8 @@ import { NewsType } from "@src/mock/MainPageData";
 
 import { NewsItem } from "../NewsItem";
 import { Styled } from "./styles";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
 
 type NewsProps = {
   data: NewsType;
@@ -12,6 +14,9 @@ type NewsProps = {
 
 export const News: FC<NewsProps> = ({ data }) => {
   const { title, button, items, color } = data;
+
+  const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
+
   return (
     <Styled.Container>
       <Styled.Header>
@@ -20,11 +25,19 @@ export const News: FC<NewsProps> = ({ data }) => {
           {button.text} <ArrowIcon />
         </Styled.Link>
       </Styled.Header>
-      <Styled.ItemsContainer>
-        {items.map((item) => {
-          return <NewsItem {...item} key={item.id} />;
-        })}
-      </Styled.ItemsContainer>
+      {!isAdaptive ? (
+        <Styled.ItemsContainer>
+          {items.map((item) => {
+            return <NewsItem {...item} key={item.id} />;
+          })}
+        </Styled.ItemsContainer>
+      ) : (
+        <Styled.ItemsMobileContainer>
+          {items.map((item) => {
+            return <NewsItem {...item} key={item.id} />;
+          })}
+        </Styled.ItemsMobileContainer>
+      )}
     </Styled.Container>
   );
 };

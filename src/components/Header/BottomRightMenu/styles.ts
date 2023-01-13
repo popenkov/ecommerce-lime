@@ -37,6 +37,10 @@ const Link = styled.a<{ isUnderlined?: boolean }>`
         width: 100%;
         height: 3px;
         background-color: ${({ theme }) => theme.color.green};
+
+        @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+          height: 0;
+        }
       }
     `};
 

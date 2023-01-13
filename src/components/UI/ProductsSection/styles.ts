@@ -11,6 +11,9 @@ const Container = styled.section`
   border-radius: 10px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 0px 15px 16px;
+    margin-bottom: 21px;
+    box-shadow: unset;
   }
 `;
 
@@ -22,6 +25,7 @@ const Header = styled.div`
   margin-bottom: 28px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 19px;
   }
 `;
 
@@ -40,9 +44,16 @@ const Title = styled.h2<{ color?: string }>`
         height: 4px;
         border-radius: 10px;
         background: ${color};
+
+        @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+          height: 2px;
+          bottom: -8px;
+        }
       }
     `};
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
   }
 `;
 
@@ -54,19 +65,51 @@ const Link = styled.a`
   color: ${({ theme }) => theme.color.black};
   text-decoration: none;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-top: 16px;
+    ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+  }
+
   & svg {
     margin-left: 16px;
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      margin-left: 6px;
+    }
   }
 `;
 
 const ItemsContainer = styled.div`
+  position: relative;
   display: flex;
   gap: 13px;
 
   & .swiper {
     width: 100%;
   }
+  & .swiper-slide {
+    width: 142px;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      width: 105px;
+    }
+  }
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  }
+`;
+
+const Shadow = styled.div`
+  position: absolute;
+  z-index: 1;
+  right: -1px;
+  top: 0;
+  width: 142px;
+  height: 100%;
+  background: linear-gradient(270deg, #ffffff 27.68%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 10px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
   }
 `;
 
@@ -76,4 +119,5 @@ export const Styled = {
   Title,
   Link,
   ItemsContainer,
+  Shadow,
 };

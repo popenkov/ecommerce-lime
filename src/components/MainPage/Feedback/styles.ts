@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { flexCenter, font } from "@src/styles/mixins";
+import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
 const Feedback = styled.section`
   position: relative;
@@ -13,7 +13,22 @@ const Feedback = styled.section`
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    width: calc(100% - 26px);
+    box-sizing: border-box;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-bottom: 35px;
+    padding: 16px 14px;
+  }
+`;
+
+const Header = styled.div`
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 `;
 
@@ -24,7 +39,19 @@ const Title = styled.h2`
   color: ${({ theme }) => theme.color.black};
   text-transform: uppercase;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    width: 42%;
+    margin-right: 20px;
+    ${font({ size: "18", lineHeight: "24", fontWeight: "700" })};
+  }
+`;
+
+const MobileTitle = styled.span`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: inline;
+    ${font({ size: "14", lineHeight: "17", fontWeight: "400" })};
+    color: ${({ theme }) => theme.color.black};
   }
 `;
 
@@ -33,14 +60,21 @@ const Form = styled.form``;
 const FormTitle = styled.p`
   ${font({ size: "14", lineHeight: "17", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
+  margin-bottom: 22px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: none;
   }
 `;
 
 const InputsContainer = styled.div`
   display: flex;
   gap: 19px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    flex-direction: column;
+    gap: 8px;
+  }
 `;
 
 const FormInputContainer = styled.div`
@@ -65,6 +99,7 @@ const FormLabel = styled.label`
 const FormInput = styled.input`
   opacity: 0;
   z-index: 1;
+  position: absolute;
   cursor: pointer;
   &:checked ~ ${FormShadow} {
     background: white;
@@ -83,6 +118,13 @@ const FormInput = styled.input`
       background-color: rgba(255, 255, 255, 0.5);
 
       border-radius: 5px;
+
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+        width: 104%;
+        height: 120%;
+        top: -8%;
+        left: -2%;
+      }
     }
   }
 `;
@@ -94,11 +136,17 @@ const QuestionImg = styled.img`
   bottom: -15px;
   right: 15px;
   opacity: 0.5;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: none;
+  }
 `;
 
 export const Styled = {
   Feedback,
+  Header,
   Title,
+  MobileTitle,
   Form,
   FormTitle,
   InputsContainer,

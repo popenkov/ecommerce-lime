@@ -11,6 +11,8 @@ const Image = styled.img`
   border-radius: 10px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: 98px;
+    margin-bottom: 13px;
   }
 `;
 
@@ -20,7 +22,9 @@ const Title = styled.h3`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   text-align: left;
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 6px;
   }
 `;
 
@@ -41,6 +45,10 @@ const Text = styled.p`
   line-clamp: 6;
   box-orient: vertical;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -59,6 +67,7 @@ const Link = styled.a`
   color: ${({ theme }) => theme.color.black};
   opacity: 0.5;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-top: 0;
   }
 `;
 
@@ -76,6 +85,8 @@ const News = styled.div`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 135px;
+    flex-shrink: 0;
   }
 `;
 

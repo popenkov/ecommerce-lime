@@ -10,6 +10,8 @@ import { MainSliderCard } from "../MainSliderCard";
 import { Styled } from "./styles";
 import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
 
 type MainSliderProps = {
   data: SlideType[];
@@ -19,12 +21,25 @@ export const MainSlider: FC<MainSliderProps> = ({ data }) => {
   const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
   const buttonNextRef = useRef<HTMLButtonElement | null>(null);
 
+  const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
+
+  const sliderCardEffect = isAdaptive ? undefined : "cards";
+  const centeredSlide = isAdaptive ? true : false;
+  const hasLoop = isAdaptive ? true : false;
   return (
     <>
-      {data && (
+      {data && typeof isAdaptive === "boolean" && (
         <Styled.Slider>
           <Swiper
-            effect={"cards"}
+            effect={sliderCardEffect}
+            cardsEffect={{
+              rotate: false,
+              perSlideOffset: 20,
+            }}
+            spaceBetween={8}
+            slidesPerView={1.2}
+            centeredSlides={centeredSlide}
+            loop={hasLoop}
             grabCursor={true}
             modules={[EffectCards, Navigation, Pagination]}
             onInit={(swiper: SwiperType) => {

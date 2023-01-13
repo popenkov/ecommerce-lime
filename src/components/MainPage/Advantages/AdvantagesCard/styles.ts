@@ -12,6 +12,8 @@ const CardHeader = styled.div`
   margin-bottom: -3px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column;
+    max-width: 60px;
   }
 `;
 const IconContainer = styled.span`
@@ -35,6 +37,8 @@ const IconContainer = styled.span`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-right: 0px;
+    margin-bottom: 13px;
   }
 `;
 
@@ -47,6 +51,8 @@ const Title = styled.h3`
 
   text-align: left;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${font({ size: "8", lineHeight: "10", fontWeight: "700" })};
+    text-align: center;
   }
 `;
 
@@ -56,6 +62,7 @@ const Text = styled.p`
   color: ${({ theme }) => theme.color.black};
   text-align: left;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
   }
 `;
 

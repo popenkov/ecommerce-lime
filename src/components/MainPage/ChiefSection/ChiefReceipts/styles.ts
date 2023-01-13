@@ -8,7 +8,10 @@ const Container = styled.article`
   flex: 1;
   margin-bottom: 40px;
   padding: 15px 14px;
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    margin-bottom: 0;
   }
 `;
 

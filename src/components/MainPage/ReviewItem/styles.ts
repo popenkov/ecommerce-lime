@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 import { font } from "@src/styles/mixins";
 
 const Item = styled.div`
@@ -7,6 +9,7 @@ const Item = styled.div`
   flex-direction: column;
   width: 159px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
   }
 `;
 
@@ -31,8 +34,17 @@ const Text = styled.p`
   }
 `;
 
+const MoreLink = styled(Link)`
+  margin-left: 5px;
+  ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
+  color: ${({ theme }) => theme.color.green};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  }
+`;
+
 export const Styled = {
   Item,
   Name,
   Text,
+  MoreLink,
 };

@@ -5,6 +5,7 @@ import { flexAlignCenter, font } from "@src/styles/mixins";
 const Card = styled.div<{ img: string; color: string }>`
   box-sizing: border-box;
   width: calc(100% - 153px);
+  width: 83%;
   max-width: 855px;
   min-height: 361px;
   padding: 62px 50px 39px;
@@ -16,6 +17,10 @@ const Card = styled.div<{ img: string; color: string }>`
   background-repeat: no-repeat;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    max-width: unset;
+    min-height: 119px;
+    padding: 11px 16px;
   }
 `;
 
@@ -25,6 +30,10 @@ const Text = styled.div`
   align-items: flex-start;
   max-width: 300px;
   height: 260px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: unset;
+  }
 `;
 
 const Title = styled.h3`
@@ -32,6 +41,11 @@ const Title = styled.h3`
   ${font({ size: "42", lineHeight: "51", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.white};
   text-align: left;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 9px;
+    ${font({ size: "24", lineHeight: "29", fontWeight: "700" })};
+  }
 `;
 
 const Description = styled.p`
@@ -40,6 +54,11 @@ const Description = styled.p`
   ${font({ size: "24", lineHeight: "29", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.white};
   text-align: left;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 0;
+    ${font({ size: "12", lineHeight: "15", fontWeight: "400" })};
+  }
 `;
 
 const Link = styled.a`
@@ -50,6 +69,10 @@ const Link = styled.a`
   ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   text-decoration: none;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
 
   & svg {
     margin-left: 24px;

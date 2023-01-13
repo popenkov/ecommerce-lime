@@ -21,7 +21,10 @@ const FeedbackData = [
 export const Feedback: FC = () => {
   return (
     <Styled.Feedback>
-      <Styled.Title>ПОМОГИТЕ НАМ СТАТЬ ЛУЧШЕ</Styled.Title>
+      <Styled.Header>
+        <Styled.Title>ПОМОГИТЕ НАМ СТАТЬ ЛУЧШЕ</Styled.Title>
+        <Styled.MobileTitle>Удобно ли вам совершать покупки через наш Онлайн-Каталог?</Styled.MobileTitle>
+      </Styled.Header>
       <Styled.Form>
         <Styled.FormTitle>Удобно ли вам совершать покупки через наш Онлайн-Каталог?</Styled.FormTitle>
         <Styled.InputsContainer>

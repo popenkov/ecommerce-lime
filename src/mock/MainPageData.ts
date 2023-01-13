@@ -89,6 +89,7 @@ export type ItemsType = {
   color: string;
   button: {
     text: string;
+    textMobile: string;
     href: string;
   };
   items: ItemType[];
@@ -236,6 +237,7 @@ export const MainPageData: MainPageDataType = {
       color: "linear-gradient(90deg, #FFA800 0%, #FFC709 100%), #A1D214;",
       button: {
         text: "Смотреть все",
+        textMobile: "Все",
         href: "#",
       },
       items: [
@@ -372,6 +374,7 @@ export const MainPageData: MainPageDataType = {
       color: " linear-gradient(90deg, #00D1FF 0%, #17BADE 0.01%, #14D28E 100%), #A1D214",
       button: {
         text: "Смотреть все",
+        textMobile: "Все",
         href: "#",
       },
       items: [
@@ -508,6 +511,7 @@ export const MainPageData: MainPageDataType = {
       color: " linear-gradient(90deg, #76B852 0%, #8DC26F 100%), #A1D214;",
       button: {
         text: "Смотреть все",
+        textMobile: "Все",
         href: "#",
       },
       items: [
@@ -644,6 +648,7 @@ export const MainPageData: MainPageDataType = {
       color: "  linear-gradient(90deg, #FF5C00 0%, #FF9900 100%), #A1D214;",
       button: {
         text: "Смотреть все",
+        textMobile: "Все",
         href: "#",
       },
       items: [

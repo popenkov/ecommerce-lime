@@ -15,6 +15,8 @@ const Product = styled.div`
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   }
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 105px;
+    padding: 0;
   }
 `;
 
@@ -23,13 +25,23 @@ const Photo = styled.img`
   height: 134px;
   margin-bottom: -5px;
   object-fit: contain;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: 106px;
+    margin-bottom: -7px;
+  }
 `;
 
 const Title = styled.h2<{ color?: string }>`
   margin-bottom: 4px;
   ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: -1px;
+    ${font({ size: "10", lineHeight: "12", fontWeight: "500" })};
   }
 `;
 
@@ -43,6 +55,7 @@ const CurrentPrice = styled.span`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${font({ size: "11", lineHeight: "13", fontWeight: "700" })};
   }
 `;
 
@@ -51,6 +64,7 @@ const NewPrice = styled.span`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.orange};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${font({ size: "11", lineHeight: "13", fontWeight: "700" })};
   }
 `;
 
@@ -58,7 +72,9 @@ const OldPrice = styled.span`
   ${font({ size: "10", lineHeight: "12", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
   text-decoration: line-through;
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${font({ size: "8", lineHeight: "10", fontWeight: "500" })};
   }
 `;
 
