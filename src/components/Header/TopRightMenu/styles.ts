@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { flexAlignCenter, font } from "@src/styles/mixins";
+import { Link as RouterLink } from "react-router-dom";
 
 const Container = styled.div`
   ${flexAlignCenter};
@@ -10,7 +11,7 @@ const Container = styled.div`
   }
 `;
 
-const Link = styled.a<{ isActive?: boolean }>`
+const Link = styled(RouterLink)<{ isActive?: boolean }>`
   ${flexAlignCenter};
   margin-left: 37px;
   ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};

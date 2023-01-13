@@ -14,7 +14,7 @@ export const BottomRightMenu: FC<BottomRightMenuProps> = ({ data }) => {
         const key = item.icon as keyof typeof ICONS;
         const Icon = typeof item.icon === "string" ? ICONS[key] : null;
         return (
-          <Styled.Link key={item.id} isUnderlined={item.underlined}>
+          <Styled.Link to={item.href} key={item.id} isUnderlined={item.underlined}>
             {Icon && (
               <Styled.IconContainer>
                 <Icon />

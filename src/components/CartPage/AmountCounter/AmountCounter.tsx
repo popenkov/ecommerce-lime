@@ -32,9 +32,10 @@ export const AmountCounter: FC<AmountCounterType> = ({ amount, id }) => {
   };
   return (
     <Styled.Counter>
-      <Styled.Increment onClick={handleValueIncrease}>+</Styled.Increment>
-      <Styled.Value>{currentAmount}</Styled.Value>
       <Styled.Decrement onClick={handleValueDecrease}>-</Styled.Decrement>
+      <Styled.Value>{currentAmount}</Styled.Value>
+
+      <Styled.Increment onClick={handleValueIncrease}>+</Styled.Increment>
     </Styled.Counter>
   );
 };

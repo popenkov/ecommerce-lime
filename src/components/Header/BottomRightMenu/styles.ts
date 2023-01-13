@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-
+import { Link as RouterLink } from "react-router-dom";
 import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Container = styled.div`
@@ -21,7 +21,7 @@ const IconContainer = styled.span`
   }
 `;
 
-const Link = styled.a<{ isUnderlined?: boolean }>`
+const Link = styled(RouterLink)<{ isUnderlined?: boolean }>`
   position: relative;
   cursor: pointer;
   ${flexAlignCenter};

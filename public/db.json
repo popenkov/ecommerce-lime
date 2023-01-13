@@ -790,6 +790,20 @@
               "price": 120,
               "oldPrice": 140
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -808,6 +822,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -826,6 +854,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -844,6 +886,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -862,6 +918,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -880,6 +950,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -898,6 +982,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           }
         ]
@@ -927,6 +1025,20 @@
               "price": 120,
               "oldPrice": 140
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -945,6 +1057,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -963,6 +1089,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -981,6 +1121,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -999,6 +1153,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1017,6 +1185,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1035,6 +1217,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           }
         ]
@@ -1064,6 +1260,20 @@
               "price": 120,
               "oldPrice": 140
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1082,6 +1292,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1100,6 +1324,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1118,6 +1356,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1136,6 +1388,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1154,6 +1420,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1172,6 +1452,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           }
         ]
@@ -1201,6 +1495,20 @@
               "price": 120,
               "oldPrice": 140
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1219,6 +1527,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1237,6 +1559,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1255,6 +1591,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1273,6 +1623,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1291,6 +1655,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           },
           {
@@ -1309,6 +1687,20 @@
               "price": 120,
               "oldPrice": null
             },
+            "energy": [
+              {
+                "name": "Б",
+                "value": "12"
+              },
+              {
+                "name": "Ж",
+                "value": "33"
+              },
+              {
+                "name": "У",
+                "value": "44"
+              }
+            ],
             "button": "В корзину"
           }
         ]

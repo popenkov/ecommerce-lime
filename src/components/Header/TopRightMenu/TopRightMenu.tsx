@@ -11,7 +11,7 @@ export const TopRightMenu: FC<TopRightMenuProps> = ({ data }) => {
     <Styled.Container>
       {data.map((item) => {
         return (
-          <Styled.Link key={item.id} isActive={item.underlined}>
+          <Styled.Link to={item.href} key={item.id} isActive={item.underlined}>
             {item.text}
           </Styled.Link>
         );

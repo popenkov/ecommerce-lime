@@ -67,6 +67,11 @@ export type RatingType = {
   value: string;
   amount: string;
 };
+export type EnergyType = [
+  { name: string; value: string },
+  { name: string; value: string },
+  { name: string; value: string }
+];
 
 export type ItemType = {
   id: string;
@@ -81,6 +86,7 @@ export type ItemType = {
     price: number;
     oldPrice: number | null;
   };
+  energy: EnergyType;
   button?: string;
 };
 
@@ -257,6 +263,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: 140,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -275,6 +286,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -293,6 +309,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -311,6 +332,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -329,6 +355,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -347,6 +378,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -365,6 +401,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
       ],
@@ -394,6 +435,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: 140,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -412,6 +458,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -430,6 +481,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -448,6 +504,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -466,6 +527,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -484,6 +550,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -502,6 +573,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
       ],
@@ -531,6 +607,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: 140,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -549,6 +630,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -567,6 +653,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -585,6 +676,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -603,6 +699,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -621,6 +722,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -639,6 +745,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
       ],
@@ -668,6 +779,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: 140,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -686,6 +802,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -704,6 +825,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -722,6 +848,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -740,6 +871,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -758,6 +894,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
         {
@@ -776,6 +917,11 @@ export const MainPageData: MainPageDataType = {
             price: 120,
             oldPrice: null,
           },
+          energy: [
+            { name: "Б", value: "12" },
+            { name: "Ж", value: "33" },
+            { name: "У", value: "44" },
+          ],
           button: "В корзину",
         },
       ],
