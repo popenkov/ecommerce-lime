@@ -85,6 +85,7 @@ export type ItemType = {
   price: {
     price: number;
     oldPrice: number | null;
+    discount: number | null;
   };
   energy: EnergyType;
   button?: string;
@@ -257,11 +258,12 @@ export const MainPageData: MainPageDataType = {
             value: "4",
             amount: "3 253",
           },
-          isFavorite: false,
+          isFavorite: true,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
             price: 120,
             oldPrice: 140,
+            discount: 15,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -280,11 +282,12 @@ export const MainPageData: MainPageDataType = {
             value: "4",
             amount: "3 254",
           },
-          isFavorite: false,
+          isFavorite: true,
           title: "Макаронные изделия Макфа Триколлини свитки",
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -308,6 +311,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -331,6 +335,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -354,6 +359,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -377,6 +383,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -400,6 +407,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -434,6 +442,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: 140,
+            discount: 15,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -457,6 +466,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -480,6 +490,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -503,6 +514,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -526,6 +538,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -549,6 +562,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -572,6 +586,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -606,6 +621,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: 140,
+            discount: 15,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -629,6 +645,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -652,6 +669,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -675,6 +693,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -698,6 +717,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -721,6 +741,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -744,6 +765,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -778,6 +800,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: 140,
+            discount: 15,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -801,6 +824,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -824,6 +848,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -847,6 +872,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -870,6 +896,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -893,6 +920,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },
@@ -916,6 +944,7 @@ export const MainPageData: MainPageDataType = {
           price: {
             price: 120,
             oldPrice: null,
+            discount: null,
           },
           energy: [
             { name: "Б", value: "12" },

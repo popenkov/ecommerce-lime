@@ -784,24 +784,25 @@
               "value": "4",
               "amount": "3 253"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": 140
+              "oldPrice": 140,
+              "discount": 15
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -820,20 +821,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -848,24 +850,25 @@
               "value": "4",
               "amount": "3 254"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -880,24 +883,25 @@
               "value": "4",
               "amount": "3 254"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -916,20 +920,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -948,20 +953,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -980,20 +986,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1019,24 +1026,25 @@
               "value": "4",
               "amount": "3 253"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": 140
+              "oldPrice": 140,
+              "discount": 15
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1051,24 +1059,25 @@
               "value": "4",
               "amount": "3 254"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1087,20 +1096,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1119,20 +1129,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1151,20 +1162,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1179,24 +1191,25 @@
               "value": "4",
               "amount": "3 254"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1215,20 +1228,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1254,24 +1268,25 @@
               "value": "4",
               "amount": "3 253"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": 140
+              "oldPrice": 140,
+              "discount": 15
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1290,20 +1305,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1322,20 +1338,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1350,24 +1367,25 @@
               "value": "4",
               "amount": "3 254"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1386,20 +1404,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1418,20 +1437,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1446,24 +1466,25 @@
               "value": "4",
               "amount": "3 254"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1489,24 +1510,25 @@
               "value": "4",
               "amount": "3 253"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": 140
+              "oldPrice": 140,
+              "discount": 15
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1525,20 +1547,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1557,20 +1580,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1585,24 +1609,25 @@
               "value": "4",
               "amount": "3 254"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1621,20 +1646,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1653,20 +1679,21 @@
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1681,24 +1708,25 @@
               "value": "4",
               "amount": "3 254"
             },
-            "isFavorite": false,
+            "isFavorite": true,
             "title": "Макаронные изделия Макфа Триколлини свитки",
             "price": {
               "price": 120,
-              "oldPrice": null
+              "oldPrice": null,
+              "discount": null
             },
             "energy": [
               {
                 "name": "Б",
-                "value": "12"
+                "value": "12 г"
               },
               {
                 "name": "Ж",
-                "value": "33"
+                "value": "33 г"
               },
               {
                 "name": "У",
-                "value": "44"
+                "value": "44 г"
               }
             ],
             "button": "В корзину"
@@ -1765,7 +1793,7 @@
         "value": "4",
         "amount": "3 253"
       },
-      "isFavorite": false
+      "isFavorite": true
     },
     {
       "id": "2",
@@ -1799,7 +1827,7 @@
         "value": "4",
         "amount": "3 253"
       },
-      "isFavorite": false
+      "isFavorite": true
     },
     {
       "id": "4",

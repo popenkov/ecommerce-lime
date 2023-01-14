@@ -5,7 +5,7 @@ const PageContainer = styled.main`
   display: flex;
   gap: 20px;
 
-  padding-left: 20px;
+  padding: 0px 24px 0px 33px;
   max-width: 1280px;
   width: 100%;
   box-sizing: border-box;
@@ -24,7 +24,8 @@ const Items = styled.div`
 `;
 
 const Title = styled.h2`
-  margin-bottom: 38px;
+  padding-left: 30px;
+  margin-bottom: 27px;
   ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -32,6 +33,13 @@ const Title = styled.h2`
 `;
 
 const AddedItems = styled.div`
+  width: 100%;
+  margin-bottom: 40px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  }
+`;
+
+const Recommendation = styled.div`
   width: 100%;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -46,4 +54,4 @@ const Data = styled.div`
   }
 `;
 
-export const Styled = { PageContainer, Items, Title, Data, AddedItems };
+export const Styled = { PageContainer, Items, Title, Data, AddedItems, Recommendation };

@@ -2,6 +2,7 @@ export type Color = {
   background: string;
   white: string;
   black: string;
+  lightGrey: string;
   greyBg: string;
   greyBorder: string;
   greyBorderLight: string;

@@ -5,6 +5,7 @@ export const theme: Theme = {
     background: " #E5E5E5",
     white: "#ffffff",
     black: "#333333",
+    lightGrey: "#B4B4B4",
     greyBg: "#5F5F5F",
     greyBorder: "rgba(255, 255, 255, 0.3)",
     greyBorderLight: "rgba(51, 51, 51, .1)",

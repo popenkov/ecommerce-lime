@@ -1,9 +1,11 @@
 import { useActions } from "@src/hooks/useActions";
 import { ItemType } from "@src/mock/MainPageData";
 import { IMAGES } from "@src/utils/ImagesMap";
-import React, { FC } from "react";
+import { FC } from "react";
 import { AmountCounter } from "../AmountCounter";
 import { Styled } from "./styles";
+
+import { ReactComponent as FavoritesIcon } from "@src/assets/icons/favorites.svg";
 
 export const CartItem: FC<ItemType> = ({
   id,
@@ -23,9 +25,13 @@ export const CartItem: FC<ItemType> = ({
   const handleRemoveFromCardClick = () => {
     removeItemfromCart(id);
   };
+
   return (
     <Styled.Item>
-      <Styled.Photo src={imageToDraw} />
+      <Styled.PhotoContainer>
+        <Styled.Photo src={imageToDraw} />
+        {price.discount && <Styled.DiscountPhotoTag>-{price.discount}%</Styled.DiscountPhotoTag>}
+      </Styled.PhotoContainer>
       <Styled.Title>{title}</Styled.Title>
       {energy && (
         <Styled.EnergyContainer>
@@ -45,11 +51,19 @@ export const CartItem: FC<ItemType> = ({
           <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
         ) : (
           <>
-            <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
             <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
+            <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
+
+            <Styled.DiscountTag>-{price.discount}%</Styled.DiscountTag>
           </>
         )}
       </Styled.Price>
+
+      <Styled.FavoritesContainer isFavorite={isFavorite}>
+        <FavoritesIcon />
+      </Styled.FavoritesContainer>
+
+      <Styled.CloseButton onClick={handleRemoveFromCardClick} />
     </Styled.Item>
   );
 };
