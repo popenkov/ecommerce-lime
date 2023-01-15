@@ -17,7 +17,12 @@ const Label = styled.label`
   color: ${({ theme }) => theme.color.black};
 `;
 
-const Placeholder = styled.span<{ isInputFilled?: boolean; isInputRequired?: boolean; hasInputValue?: boolean }>`
+const Placeholder = styled.span<{
+  isInputFilled?: boolean;
+  isInputRequired?: boolean;
+  hasInputValue?: boolean;
+  touched?: boolean;
+}>`
   position: absolute;
   top: 14px;
   left: 20px;
@@ -26,6 +31,16 @@ const Placeholder = styled.span<{ isInputFilled?: boolean; isInputRequired?: boo
 
   ${(props) =>
     props.isInputFilled &&
+    css`
+      top: -23px;
+      left: 20px;
+
+      ${font({ size: "12", lineHeight: "20", fontWeight: "400" })}
+      color: ${({ theme }) => theme.color.grey};
+    `}
+
+  ${(props) =>
+    props.touched &&
     css`
       top: -23px;
       left: 20px;

@@ -9,6 +9,7 @@ interface IFieldProps {
   error?: FieldError | undefined;
   isPhone?: boolean;
   hasValue?: boolean;
+  touched?: boolean;
 }
 
 type TypeInputPropsField = InputHTMLAttributes<HTMLInputElement> & IFieldProps;
@@ -16,7 +17,7 @@ type TypeInputPropsField = InputHTMLAttributes<HTMLInputElement> & IFieldProps;
 interface IField extends TypeInputPropsField {}
 
 export const FormInput = forwardRef<HTMLInputElement, IField>(
-  ({ placeholder, hasValue, error, type = "text", required, isPhone, ...rest }, ref) => {
+  ({ placeholder, hasValue, error, type = "text", required, isPhone, touched, ...rest }, ref) => {
     const [isFilled, setIsFilled] = useState(false);
     const hasError = Boolean(error);
     const minInputLengthPhone = 1;
@@ -56,7 +57,7 @@ export const FormInput = forwardRef<HTMLInputElement, IField>(
             />
           )}
 
-          <Styled.Placeholder isInputFilled={isFilled || hasValue} isInputRequired={required}>
+          <Styled.Placeholder isInputFilled={isFilled || hasValue} touched={touched} isInputRequired={required}>
             {placeholder}
           </Styled.Placeholder>
         </Styled.Label>

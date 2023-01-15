@@ -10,6 +10,8 @@ export type RequestFormType = {
   floor: string;
   flat: string;
   time: string;
+  paymentMethod: string;
+  comments?: string;
 };
 
 export const validationSchema = yup.object({

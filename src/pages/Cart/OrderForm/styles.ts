@@ -48,6 +48,19 @@ const AddressSection = styled.div`
 const SavedAddresses = styled.div``;
 const NewAddress = styled.div``;
 
+const PaymentMethods = styled.div`
+  display: flex;
+  gap: 16px;
+`;
+
+const EnergyContainer = styled.div``;
+
+const SubmitButton = styled.button`
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+`;
+
 export const Styled = {
   Container,
   Contacts,
@@ -57,4 +70,7 @@ export const Styled = {
   AddressSection,
   SavedAddresses,
   NewAddress,
+  SubmitButton,
+  PaymentMethods,
+  EnergyContainer,
 };

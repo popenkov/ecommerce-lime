@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, Controller, useForm } from "react-hook-form";
-import * as yup from "yup";
-import ReactDatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 import { Styled } from "./styles";
 import { RequestFormType, validationSchema } from "./utils";
 import { FormInput } from "@src/components/UI/FormInput";
 import { FormRadioButton } from "@src/components/UI/FormRadioButton";
+import { CustomDateTimePicker } from "@src/components/UI/DateTimePicker";
+import { PaymentMethods } from "./PaymentMethods";
+import { EnergieCalculator } from "./EnergieCalculator";
 
 export const OrderForm: FC = () => {
   const savedText = "ул.Пимена-панчанки, д. 12, под. 4, кв. 312";
@@ -78,37 +78,33 @@ export const OrderForm: FC = () => {
                 <FormInput {...register("flat")} placeholder={"Квартира"} error={errors.floor} required />
               </Styled.InputWrapper>
             </Styled.InputsContainer>
-            <FormInput {...register("time")} placeholder={"Выберите дату и время доставки"} error={errors.time} />
+            {/* <FormInput {...register("time")} placeholder={"Выберите дату и время доставки"} error={errors.time} /> */}
             <Controller
-              as={
-                <ReactDatePicker
-                  dateFormat="d MMM yyyy"
-                  minDate={new Date()}
-                  selected={new Date()}
-                  showTimeSelect={false}
-                  todayButton="Today"
-                  customInput={
-                    <FormInput
-                      {...register("time")}
-                      placeholder={"Выберите дату и время доставки"}
-                      error={errors.time}
-                    />
-                  }
-                  dropdownMode="select"
-                  isClearable
-                  placeholderText="Click to select time"
-                  shouldCloseOnSelect
-                />
-              }
-              errors={errors}
-              //   name="expiryAt"
-              onChange={([selected] as  any) => {
-                return { value: selected };
-              }}
-              //   required
+              control={control}
+              name="time"
+              rules={{ required: true }} //optional
+              render={({
+                field: { onChange, name, value },
+                fieldState: { invalid, isDirty }, //optional
+                formState: { errors }, //optional, but necessary if you want to show an error message
+              }) => (
+                <>
+                  <CustomDateTimePicker placeholder={"Выберите дату и время доставки"} />
+                  {errors && errors[name] && errors[name]?.type === "required" && <span>your error message !</span>}
+                </>
+              )}
             />
           </Styled.NewAddress>
         </Styled.AddressSection>
+
+        <Styled.PaymentMethods>
+          <PaymentMethods control={control} register={register} errors={errors} />
+        </Styled.PaymentMethods>
+
+        <Styled.EnergyContainer>
+          <EnergieCalculator />
+        </Styled.EnergyContainer>
+        <Styled.SubmitButton type="submit">Submit</Styled.SubmitButton>
       </form>
     </Styled.Container>
   );
