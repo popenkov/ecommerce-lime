@@ -10,7 +10,18 @@ import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { IMAGES } from "@src/utils/ImagesMap";
 
-export const Product: FC<ItemType> = ({ id, category, img, rating, isFavorite, title, price, amount, unit }) => {
+export const Product: FC<ItemType> = ({
+  id,
+  category,
+  img,
+  rating,
+  isFavorite,
+  title,
+  price,
+  amount,
+  unit,
+  energy,
+}) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
   const { addItemToCart, removeItemfromCart } = useActions();
   const { items } = useAppSelector((state) => state.cart);
@@ -28,6 +39,7 @@ export const Product: FC<ItemType> = ({ id, category, img, rating, isFavorite, t
       price,
       amount,
       unit,
+      energy,
     };
 
     addItemToCart(itemDate);
@@ -55,12 +67,7 @@ export const Product: FC<ItemType> = ({ id, category, img, rating, isFavorite, t
       {!isItemInCart ? (
         <AddToCardBtn text="В корзину" onClick={handleAddToCardClick} isHovered={isHovered} isAdded={isItemInCart} />
       ) : (
-        <AddToCardBtn
-          text="В корзине"
-          onClick={handleRemoveFromCardClick}
-          isHovered={isHovered}
-          isAdded={isItemInCart}
-        />
+        <Styled.LinkToCard to="/cart"> В корзину</Styled.LinkToCard>
       )}
     </Styled.Product>
   );

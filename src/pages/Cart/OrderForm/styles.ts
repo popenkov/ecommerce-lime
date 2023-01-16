@@ -8,11 +8,13 @@ const Container = styled.section`
 const Contacts = styled.div`
   margin-bottom: 15px;
   padding: 23px;
+
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
+
 const SectionTitle = styled.h3`
   margin-bottom: 32px;
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })}
@@ -27,12 +29,16 @@ const InputsContainer = styled.div`
   flex-wrap: nowrap;
   gap: 16px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column;
+    gap: 0;
   }
 `;
 
 const InputWrapper = styled.div`
-  margin-bottom: 29px;
+  margin-bottom: 30px;
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 35px;
   }
 `;
 
@@ -45,7 +51,22 @@ const AddressSection = styled.div`
   }
 `;
 
-const SavedAddresses = styled.div``;
+const AddressTitle = styled.h3`
+  margin-bottom: 20px;
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })}
+  color: ${({ theme }) => theme.color.black};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  }
+`;
+
+const SavedAddresses = styled.div`
+  margin-bottom: 20px;
+
+  & label {
+    margin-bottom: 15px;
+  }
+`;
+
 const NewAddress = styled.div``;
 
 const PaymentMethods = styled.div`
@@ -53,7 +74,13 @@ const PaymentMethods = styled.div`
   gap: 16px;
 `;
 
-const EnergyContainer = styled.div``;
+const EnergyContainer = styled.div`
+  margin-bottom: 17px;
+`;
+
+const TotalValueContainer = styled.div`
+  margin-bottom: 15px;
+`;
 
 const SubmitButton = styled.button`
   opacity: 0;
@@ -68,9 +95,11 @@ export const Styled = {
   InputsContainer,
   InputWrapper,
   AddressSection,
+  AddressTitle,
   SavedAddresses,
   NewAddress,
   SubmitButton,
   PaymentMethods,
   EnergyContainer,
+  TotalValueContainer,
 };

@@ -16,6 +16,7 @@ const Link = styled(RouterLink)<{ isActive?: boolean }>`
   margin-left: 37px;
   ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.white};
+  text-decoration: none;
 
   ${({ isActive }) =>
     isActive &&

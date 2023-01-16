@@ -10,6 +10,7 @@ const Logo = styled.div`
   left: -35px;
   bottom: -74px;
   z-index: 3;
+  text-decoration: none;
 
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.white};

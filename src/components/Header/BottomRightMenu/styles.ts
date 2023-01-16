@@ -26,6 +26,7 @@ const Link = styled(RouterLink)<{ isUnderlined?: boolean }>`
   cursor: pointer;
   ${flexAlignCenter};
   margin-right: 20px;
+  text-decoration: none;
 
   ${({ isUnderlined }) =>
     isUnderlined &&

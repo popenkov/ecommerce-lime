@@ -2,7 +2,7 @@ import { font } from "@src/styles/mixins";
 import styled from "styled-components";
 
 const EnergieCalculator = styled.div`
-  padding: 13px 26px;
+  padding: 16px 26px;
   background-color: ${({ theme }) => theme.color.greyLightBg};
   border-radius: 5px;
 `;
@@ -13,11 +13,35 @@ const Title = styled.h3`
   margin-bottom: 18px;
 `;
 
-const ItemsContainer = styled.div``;
+const ItemsContainer = styled.div`
+  display: flex;
+  gap: 61px;
+`;
 
-const EnergyItem = styled.div``;
+const EnergyItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${font({ size: "14", lineHeight: "14", fontWeight: "400" })};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  }
+`;
+const EnergyKey = styled.span`
+  margin-bottom: 10px;
+  color: ${({ theme }) => theme.color.lightGrey};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  }
+`;
+const EnergyValue = styled.span`
+  color: ${({ theme }) => theme.color.black};
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  }
+`;
 
 export const Styled = {
   EnergieCalculator,
   Title,
+  ItemsContainer,
+  EnergyItem,
+  EnergyKey,
+  EnergyValue,
 };

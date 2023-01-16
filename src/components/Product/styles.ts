@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
-import { font } from "@src/styles/mixins";
+import { flexCenter, font } from "@src/styles/mixins";
+import { Link } from "react-router-dom";
 
 const Product = styled.div`
   position: relative;
@@ -78,6 +79,18 @@ const OldPrice = styled.span`
   }
 `;
 
+const LinkToCard = styled(Link)`
+  box-sizing: border-box;
+  ${flexCenter};
+  height: 34px;
+  padding: 10px;
+  ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+  color: ${({ theme }) => theme.color.black};
+  border: 1px solid ${({ theme }) => theme.color.green};
+  border-radius: 5px;
+  text-decoration: none;
+`;
+
 export const Styled = {
   Product,
   Photo,
@@ -86,4 +99,5 @@ export const Styled = {
   CurrentPrice,
   NewPrice,
   OldPrice,
+  LinkToCard,
 };

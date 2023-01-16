@@ -6,7 +6,8 @@ import { box, flexCenter, font } from "@src/styles/mixins";
 const CheckboxLabel = styled.label`
   position: relative;
   width: 100%;
-  padding: 15px;
+  ${flexCenter};
+  padding: 15px 9px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
@@ -31,10 +32,11 @@ const CheckboxWrapper = styled.div`
     &::before {
       content: "";
       position: absolute;
+      z-index: 2;
       background-image: url(${CheckIcon});
       ${box(20)};
-      top: -8px;
-      left: -9px;
+      top: -12px;
+      left: -12px;
     }
   }
 `;

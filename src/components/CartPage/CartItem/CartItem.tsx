@@ -32,32 +32,41 @@ export const CartItem: FC<ItemType> = ({
         <Styled.Photo src={imageToDraw} />
         {price.discount && <Styled.DiscountPhotoTag>-{price.discount}%</Styled.DiscountPhotoTag>}
       </Styled.PhotoContainer>
-      <Styled.Title>{title}</Styled.Title>
-      {energy && (
-        <Styled.EnergyContainer>
-          {energy.map((item) => {
-            return (
-              <Styled.EnergyItem key={item.name}>
-                <Styled.EnergyKey>{item.name}</Styled.EnergyKey>
-                <Styled.EnergyValue>{item.value}</Styled.EnergyValue>
-              </Styled.EnergyItem>
-            );
-          })}
-        </Styled.EnergyContainer>
-      )}
-      <AmountCounter amount={amount} id={id} />
-      <Styled.Price>
-        {!price.oldPrice ? (
-          <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
-        ) : (
-          <>
-            <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
-            <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
 
-            <Styled.DiscountTag>-{price.discount}%</Styled.DiscountTag>
-          </>
+      <Styled.DescriptionContainer>
+        <Styled.Title>{title}</Styled.Title>
+        {energy && (
+          <Styled.EnergyContainer>
+            {energy.map((item) => {
+              return (
+                <Styled.EnergyItem key={item.name}>
+                  <Styled.EnergyKey>{item.name}</Styled.EnergyKey>
+                  <Styled.EnergyValue>{item.value}</Styled.EnergyValue>
+                </Styled.EnergyItem>
+              );
+            })}
+          </Styled.EnergyContainer>
         )}
-      </Styled.Price>
+
+        <Styled.CountNPriceContainer>
+          <Styled.AmountCounterContainer>
+            <AmountCounter amount={amount} id={id} />
+          </Styled.AmountCounterContainer>
+
+          <Styled.Price>
+            {!price.oldPrice ? (
+              <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
+            ) : (
+              <>
+                <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
+                <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
+
+                <Styled.DiscountTag>-{price.discount}%</Styled.DiscountTag>
+              </>
+            )}
+          </Styled.Price>
+        </Styled.CountNPriceContainer>
+      </Styled.DescriptionContainer>
 
       <Styled.FavoritesContainer isFavorite={isFavorite}>
         <FavoritesIcon />

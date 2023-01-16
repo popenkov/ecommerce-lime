@@ -1,16 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ItemType } from "@src/mock/MainPageData";
+import { EnergyType, ItemType } from "@src/mock/MainPageData";
+import { calculateEnergie } from "@src/utils/CalculateEnergy";
 
 interface cartState {
   items: ItemType[];
   totalPrice: number;
+  discountAmount: number;
   totalCount: number;
+
+  energy: EnergyType[];
 }
 
 const initialState: cartState = {
   items: [],
   totalPrice: 0,
+  discountAmount: 0,
   totalCount: 0,
+  energy: [],
 };
 
 export const cartSlice = createSlice({
@@ -34,6 +40,10 @@ export const cartSlice = createSlice({
         totalPrice: newItems.reduce((sum, obj) => {
           return obj.price.price + sum;
         }, 0),
+        discountAmount: newItems.reduce((sum, obj) => {
+          return obj.price.oldPrice ? Math.abs((obj.price.price - obj.price.oldPrice) * obj.amount + sum) : 0 + sum;
+        }, 0),
+        energy: calculateEnergie(newItems),
       };
     },
 
@@ -50,6 +60,10 @@ export const cartSlice = createSlice({
         totalPrice: newItems.reduce((sum, obj) => {
           return obj.price.price + sum;
         }, 0),
+        discountAmount: newItems.reduce((sum, obj) => {
+          return obj.price.oldPrice ? Math.abs((obj.price.price - obj.price.oldPrice) * obj.amount + sum) : 0 + sum;
+        }, 0),
+        energy: calculateEnergie(newItems),
       };
     },
 
@@ -71,6 +85,11 @@ export const cartSlice = createSlice({
         totalPrice: items.reduce((sum, item) => {
           return item.price.price * item.amount + sum;
         }, 0),
+        discountAmount: items.reduce((sum, obj) => {
+          return obj.price.oldPrice ? Math.abs((obj.price.price - obj.price.oldPrice) * obj.amount + sum) : 0 + sum;
+        }, 0),
+
+        energy: calculateEnergie(items),
       };
     },
   },

@@ -9,6 +9,7 @@ import { FormRadioButton } from "@src/components/UI/FormRadioButton";
 import { CustomDateTimePicker } from "@src/components/UI/DateTimePicker";
 import { PaymentMethods } from "./PaymentMethods";
 import { EnergieCalculator } from "./EnergieCalculator";
+import { TotalValue } from "./TotalValue";
 
 export const OrderForm: FC = () => {
   const savedText = "ул.Пимена-панчанки, д. 12, под. 4, кв. 312";
@@ -30,7 +31,7 @@ export const OrderForm: FC = () => {
 
   return (
     <Styled.Container>
-      <form onSubmit={handleSubmit(handleFormSubmit)}>
+      <form onSubmit={handleSubmit(handleFormSubmit)} id="order-form">
         <Styled.Contacts>
           <Styled.SectionTitle>Контактные данные</Styled.SectionTitle>
           <Styled.InputsContainer>
@@ -45,7 +46,7 @@ export const OrderForm: FC = () => {
         </Styled.Contacts>
 
         <Styled.AddressSection>
-          <Styled.SectionTitle>Контактные данные</Styled.SectionTitle>
+          <Styled.AddressTitle>Адрес доставки</Styled.AddressTitle>
           <Styled.SavedAddresses>
             <Controller
               name="savedAddress"
@@ -72,13 +73,13 @@ export const OrderForm: FC = () => {
                 <FormInput {...register("entrance")} placeholder={"Подъезд"} error={errors.entrance} required />
               </Styled.InputWrapper>
               <Styled.InputWrapper>
-                <FormInput {...register("floor")} placeholder={"Подъезд"} error={errors.floor} required />
+                <FormInput {...register("floor")} placeholder={"Этаж"} error={errors.floor} required />
               </Styled.InputWrapper>
               <Styled.InputWrapper>
                 <FormInput {...register("flat")} placeholder={"Квартира"} error={errors.floor} required />
               </Styled.InputWrapper>
             </Styled.InputsContainer>
-            {/* <FormInput {...register("time")} placeholder={"Выберите дату и время доставки"} error={errors.time} /> */}
+
             <Controller
               control={control}
               name="time"
@@ -104,6 +105,10 @@ export const OrderForm: FC = () => {
         <Styled.EnergyContainer>
           <EnergieCalculator />
         </Styled.EnergyContainer>
+
+        <Styled.TotalValueContainer>
+          <TotalValue />
+        </Styled.TotalValueContainer>
         <Styled.SubmitButton type="submit">Submit</Styled.SubmitButton>
       </form>
     </Styled.Container>

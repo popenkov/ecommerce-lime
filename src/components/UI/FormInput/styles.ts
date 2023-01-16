@@ -24,8 +24,8 @@ const Placeholder = styled.span<{
   touched?: boolean;
 }>`
   position: absolute;
-  top: 14px;
-  left: 20px;
+  top: 8px;
+  left: 14px;
   ${font({ size: "12", lineHeight: "15", fontWeight: "400" })}
   color: rgba(0, 0, 0, 0.5);
 
@@ -33,7 +33,7 @@ const Placeholder = styled.span<{
     props.isInputFilled &&
     css`
       top: -23px;
-      left: 20px;
+      left: 12px;
 
       ${font({ size: "12", lineHeight: "20", fontWeight: "400" })}
       color: ${({ theme }) => theme.color.grey};
@@ -43,7 +43,7 @@ const Placeholder = styled.span<{
     props.touched &&
     css`
       top: -23px;
-      left: 20px;
+      left: 12px;
 
       ${font({ size: "12", lineHeight: "20", fontWeight: "400" })}
       color: ${({ theme }) => theme.color.grey};
@@ -58,24 +58,27 @@ const Placeholder = styled.span<{
         height: 4px;
         border-radius: 50%;
         top: -23px;
-        right: -9px;
+        left: 12px;
+
         background-color: ${({ theme }) => theme.color.red};
       }
     `}
 `;
 
 const Input = styled.input<{ hasInputError?: boolean; hasInputIcon?: boolean }>`
-  width: calc(100% - 40px);
-  padding: 8px 15px;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 6px 14px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 
-  ${font({ size: "16", lineHeight: "24", fontWeight: "400" })}
+  ${font({ size: "12", lineHeight: "15", fontWeight: "400" })}
   color: ${({ theme }) => theme.color.black};
 
   &:focus-within ~ ${Placeholder} {
     top: -23px;
-    left: 20px;
+    left: 9px;
 
     ${font({ size: "12", lineHeight: "20", fontWeight: "400" })}
     color: ${({ theme }) => theme.color.grey};

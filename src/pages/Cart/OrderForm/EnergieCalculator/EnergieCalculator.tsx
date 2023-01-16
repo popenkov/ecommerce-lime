@@ -1,26 +1,27 @@
-import React, { FC } from "react";
+import { useAppSelector } from "@src/hooks/useAppSelector";
+import { FC } from "react";
 import { Styled } from "./styles";
 
-const energieData = [
-  {
-    name: "Белки",
-    value: "550.5 г",
-  },
-  {
-    name: "Жиры",
-    value: "2000 г",
-  },
-  {
-    name: "Углеводы",
-    value: "900.9 г",
-  },
-];
-
 export const EnergieCalculator: FC = () => {
+  const { energy } = useAppSelector((state) => state.cart);
+
   return (
-    <Styled.EnergieCalculator>
-      EnergieCalculator
-      <Styled.Title>Калькулятор БЖУ в корзине</Styled.Title>
-    </Styled.EnergieCalculator>
+    <>
+      {energy.length > 0 && (
+        <Styled.EnergieCalculator>
+          <Styled.Title>Калькулятор БЖУ в корзине</Styled.Title>
+          <Styled.ItemsContainer>
+            {energy.map((item) => {
+              return (
+                <Styled.EnergyItem key={item.name}>
+                  <Styled.EnergyKey>{item.name}</Styled.EnergyKey>
+                  <Styled.EnergyValue>{item.value}</Styled.EnergyValue>
+                </Styled.EnergyItem>
+              );
+            })}
+          </Styled.ItemsContainer>
+        </Styled.EnergieCalculator>
+      )}
+    </>
   );
 };

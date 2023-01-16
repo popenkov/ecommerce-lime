@@ -11,7 +11,6 @@ const renderIcon = (Icon: any) => {
 
 type AdvantagesCardType = Omit<AdvantageType, "id">;
 export const AdvantagesCard: FC<AdvantagesCardType> = ({ icon, title, text }) => {
-  console.log(icon);
   const key = icon as keyof typeof ICONS;
   const Icon = typeof icon === "string" ? ICONS[key] : null;
   return (

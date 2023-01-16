@@ -49,23 +49,27 @@ const PaymentMethodsData = [
 export const PaymentMethods: FC<PaymentMethodsProps> = ({ control, register, errors }) => {
   return (
     <Styled.PaymentMethods>
-      {PaymentMethodsData.map((item) => {
-        return (
-          <Controller
-            key={item.id}
-            name={item.name as "paymentMethod"}
-            control={control}
-            defaultValue=""
-            render={({ field: { value, onChange }, fieldState: { error } }) => (
-              <FormRadioButton name={item.name} id={item.id} value={item.value} text={item.text} />
-            )}
-          />
-        );
-      })}
+      <Styled.SectionTitle>Оплата заказа</Styled.SectionTitle>
+      <Styled.InputsContainer>
+        {PaymentMethodsData.map((item) => {
+          return (
+            <Styled.InputWrapper key={item.id}>
+              <Controller
+                name={item.name as "paymentMethod"}
+                control={control}
+                defaultValue=""
+                render={({ field: { value, onChange }, fieldState: { error } }) => (
+                  <FormRadioButton name={item.name} id={item.id} value={item.value} text={item.text} />
+                )}
+              />
+            </Styled.InputWrapper>
+          );
+        })}
+      </Styled.InputsContainer>
 
-      <Styled.InputWrapper>
-        <FormInput {...register("comments")} placeholder={"Комментарий к заказу"} error={errors.comments} required />
-      </Styled.InputWrapper>
+      {/* <Styled.InputWrapper> */}
+      <FormInput {...register("comments")} placeholder={"Комментарий к заказу"} error={errors.comments} required />
+      {/* </Styled.InputWrapper> */}
     </Styled.PaymentMethods>
   );
 };

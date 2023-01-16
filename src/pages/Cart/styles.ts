@@ -1,4 +1,5 @@
 import { font } from "@src/styles/mixins";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const PageContainer = styled.main`
@@ -12,7 +13,10 @@ const PageContainer = styled.main`
   margin: 0 auto;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0;
+    flex-direction: column;
+
+    margin-top: 142px;
+    padding: 0 13px;
   }
 `;
 const Items = styled.div`
@@ -24,11 +28,23 @@ const Items = styled.div`
 `;
 
 const Title = styled.h2`
-  padding-left: 30px;
+  padding-left: 25px;
   margin-bottom: 27px;
   ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const MobileTitle = styled.h2`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: block;
+
+    margin-bottom: 27px;
+    ${font({ size: "24", lineHeight: "29", fontWeight: "700" })};
+    color: ${({ theme }) => theme.color.black};
   }
 `;
 
@@ -36,6 +52,7 @@ const AddedItems = styled.div`
   width: 100%;
   margin-bottom: 40px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 28px;
   }
 `;
 
@@ -43,6 +60,7 @@ const Recommendation = styled.div`
   width: 100%;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
   }
 `;
 
@@ -54,4 +72,30 @@ const Data = styled.div`
   }
 `;
 
-export const Styled = { PageContainer, Items, Title, Data, AddedItems, Recommendation };
+const EmptyCart = styled.div`
+  width: 100%;
+  padding: 60px 30px 120px;
+
+  ${font({ size: "24", lineHeight: "29", fontWeight: "700" })};
+  color: ${({ theme }) => theme.color.black};
+  opacity: 0.7;
+`;
+
+const EmptyCartLink = styled(Link)`
+  display: block;
+  margin-top: 10px;
+  ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
+  color: ${({ theme }) => theme.color.green};
+`;
+
+export const Styled = {
+  PageContainer,
+  Items,
+  Title,
+  MobileTitle,
+  Data,
+  AddedItems,
+  Recommendation,
+  EmptyCart,
+  EmptyCartLink,
+};
