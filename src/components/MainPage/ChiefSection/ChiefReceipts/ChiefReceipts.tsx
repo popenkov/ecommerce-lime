@@ -1,4 +1,4 @@
-import { ChiefReceiptsData } from "@src/mock/MainPageData";
+import { ChiefReceiptItemType, ChiefReceiptsData } from "@src/mock/MainPageData";
 import { FC, useRef } from "react";
 import { Styled } from "./styles";
 import type { Swiper as SwiperType } from "swiper";
@@ -9,9 +9,21 @@ import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
 import { Receipt } from "../Receipt";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
+import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 
-export const ChiefReceipts: FC = () => {
-  const { title, subtitle, items } = ChiefReceiptsData;
+type ChiefReceptsType = {
+  title: string;
+  subtitle: string;
+  button?: {
+    text: string;
+    href: string;
+  };
+  items: ChiefReceiptItemType[];
+  isSmall?: boolean;
+  hasAllItemsLink?: boolean;
+};
+
+export const ChiefReceipts: FC<ChiefReceptsType> = ({ title, subtitle, items, button, isSmall, hasAllItemsLink }) => {
   const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
   const buttonNextRef = useRef<HTMLButtonElement | null>(null);
 
@@ -22,8 +34,14 @@ export const ChiefReceipts: FC = () => {
   return (
     <Styled.Container>
       <Styled.Header>
-        <Styled.Title>{title}</Styled.Title>
-        <Styled.Subtitle>{subtitle}</Styled.Subtitle>
+        <Styled.Title isSmall={isSmall}>{title}</Styled.Title>
+        {!hasAllItemsLink ? (
+          <Styled.Subtitle>{subtitle}</Styled.Subtitle>
+        ) : (
+          <Styled.Link to={button?.href || "#"}>
+            {button?.text} <ArrowIcon />
+          </Styled.Link>
+        )}
       </Styled.Header>
       <Styled.ReceiptItems>
         <Swiper
@@ -42,7 +60,7 @@ export const ChiefReceipts: FC = () => {
           {items.map((item) => {
             return (
               <SwiperSlide key={item.id}>
-                <Receipt {...item} />
+                <Receipt {...item} isSmall={isSmall} />
               </SwiperSlide>
             );
           })}
@@ -51,4 +69,8 @@ export const ChiefReceipts: FC = () => {
       </Styled.ReceiptItems>
     </Styled.Container>
   );
+};
+
+ChiefReceipts.defaultProps = {
+  hasAllItemsLink: false,
 };

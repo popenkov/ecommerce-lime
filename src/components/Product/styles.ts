@@ -21,6 +21,11 @@ const Product = styled.div`
   }
 `;
 
+const LinkContainer = styled(Link)`
+  display: block;
+  text-decoration: none;
+`;
+
 const Photo = styled.img`
   width: 100%;
   height: 134px;
@@ -93,6 +98,7 @@ const LinkToCard = styled(Link)`
 
 export const Styled = {
   Product,
+  LinkContainer,
   Photo,
   Title,
   Price,

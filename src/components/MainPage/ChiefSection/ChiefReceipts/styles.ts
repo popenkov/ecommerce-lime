@@ -1,8 +1,8 @@
 import { flexAlignCenter, font } from "@src/styles/mixins";
-import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
+import styled, { css } from "styled-components";
 
 const Container = styled.article`
-  width: calc(100% - 294px);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -22,10 +22,18 @@ const Header = styled.div`
   margin-bottom: 28px;
 `;
 
-const Title = styled.h2`
+const Title = styled.h2<{ isSmall?: boolean }>`
   position: relative;
   ${font({ size: "18", lineHeight: "24", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
+
+  ${({ isSmall }) =>
+    isSmall &&
+    css`
+      ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      }
+    `};
 
   &::after {
     content: "";
@@ -61,4 +69,25 @@ const ReceiptItems = styled.div`
   }
 `;
 
-export const Styled = { Container, Header, Title, Subtitle, ReceiptItems };
+const Link = styled(RouterLink)`
+  ${flexAlignCenter};
+  margin-top: 15px;
+  border-radius: 5px;
+  ${font({ size: "12", lineHeight: "15", fontWeight: "400" })};
+  color: ${({ theme }) => theme.color.black};
+  text-decoration: none;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-top: 16px;
+    ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+  }
+
+  & svg {
+    margin-left: 16px;
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      margin-left: 6px;
+    }
+  }
+`;
+
+export const Styled = { Container, Header, Title, Subtitle, ReceiptItems, Link };

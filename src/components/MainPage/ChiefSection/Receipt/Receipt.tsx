@@ -5,10 +5,12 @@ import { FC } from "react";
 import { Styled } from "./styles";
 
 type ReceiptProps = Omit<ChiefReceiptItemType, "id">;
-
-export const Receipt: FC<ReceiptProps> = ({ title, img, tags, ingredients }) => {
+type isSmallProps = {
+  isSmall?: boolean;
+};
+export const Receipt: FC<ReceiptProps & isSmallProps> = ({ title, img, tags, ingredients, isSmall }) => {
   return (
-    <Styled.Receipt>
+    <Styled.Receipt isSmall={isSmall}>
       <Styled.Title>{title}</Styled.Title>
       <Styled.ImgContainer>
         <Styled.Img src={img} alt={title} />

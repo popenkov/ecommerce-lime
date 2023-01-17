@@ -1002,7 +1002,11 @@ export type ChiefReceiptItemType = {
   title: string;
   img: string;
   tags: ChiefReceiptTagType[];
-  ingredients: ChiefReceiptIngredientType[];
+  ingredients?: ChiefReceiptIngredientType[];
+  button?: {
+    text: string;
+    href: string;
+  };
 };
 
 export type ChiefReceiptsType = {

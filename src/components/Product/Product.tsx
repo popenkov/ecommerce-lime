@@ -9,6 +9,8 @@ import { Styled } from "./styles";
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { IMAGES } from "@src/utils/ImagesMap";
+import { Routes } from "react-router";
+import { ROUTE } from "@src/utils/Routes";
 
 export const Product: FC<ItemType> = ({
   id,
@@ -51,23 +53,25 @@ export const Product: FC<ItemType> = ({
 
   return (
     <Styled.Product ref={hoverRef}>
-      <Styled.Photo src={imageToDraw} />
-      <Rating data={rating} />
-      <Styled.Title>{title}</Styled.Title>
-      <Styled.Price>
-        {!price.oldPrice ? (
-          <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
-        ) : (
-          <>
-            <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
-            <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
-          </>
-        )}
-      </Styled.Price>
+      <Styled.LinkContainer to={ROUTE.PRODUCT}>
+        <Styled.Photo src={imageToDraw} />
+        <Rating data={rating} />
+        <Styled.Title>{title}</Styled.Title>
+        <Styled.Price>
+          {!price.oldPrice ? (
+            <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
+          ) : (
+            <>
+              <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
+              <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
+            </>
+          )}
+        </Styled.Price>
+      </Styled.LinkContainer>
       {!isItemInCart ? (
         <AddToCardBtn text="В корзину" onClick={handleAddToCardClick} isHovered={isHovered} isAdded={isItemInCart} />
       ) : (
-        <Styled.LinkToCard to="/cart"> В корзину</Styled.LinkToCard>
+        <Styled.LinkToCard to={ROUTE.CART}> В корзину</Styled.LinkToCard>
       )}
     </Styled.Product>
   );

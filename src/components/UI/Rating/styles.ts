@@ -22,6 +22,17 @@ const Stars = styled.div`
   }
 `;
 
+const StarsValue = styled.span`
+  ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
+  color: ${({ theme }) => theme.color.yellow};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${font({ size: "9", lineHeight: "11", fontWeight: "500" })};
+    color: ${({ theme }) => theme.color.yellow};
+    opacity: 0.5;
+    margin-top: 5px;
+  }
+`;
 const Value = styled.span`
   ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
@@ -37,5 +48,6 @@ const Value = styled.span`
 export const Styled = {
   Rating,
   Stars,
+  StarsValue,
   Value,
 };

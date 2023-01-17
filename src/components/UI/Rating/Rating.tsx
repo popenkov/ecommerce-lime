@@ -8,12 +8,14 @@ import { Styled } from "./styles";
 
 type RatingProps = {
   data: RatingType;
+  showStarsValue?: boolean;
+  showReviewsValue?: boolean;
 };
 
-export const Rating: FC<RatingProps> = ({ data }) => {
+export const Rating: FC<RatingProps> = ({ data, showStarsValue, showReviewsValue }) => {
   const { value, amount } = data;
 
-  const valueNumber = Number(value);
+  const valueNumber = Math.floor(Number(value));
   const MAX_STAR_AMOUNT = 5;
 
   return (
@@ -24,7 +26,13 @@ export const Rating: FC<RatingProps> = ({ data }) => {
           return <Star key={index} isActive={isActive} />;
         })}
       </Styled.Stars>
-      <Styled.Value>{amount}</Styled.Value>
+      {showStarsValue && <Styled.StarsValue>{value}</Styled.StarsValue>}
+      {showReviewsValue && <Styled.Value>{amount}</Styled.Value>}
     </Styled.Rating>
   );
+};
+
+Rating.defaultProps = {
+  showStarsValue: false,
+  showReviewsValue: true,
 };

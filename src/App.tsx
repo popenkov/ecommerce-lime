@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import { Cart } from "./pages";
 import { ROUTE } from "./utils/Routes";
+import { ProductPage } from "./pages/ProductPage";
 
 const App: FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: FC = () => {
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Main />} />
           <Route path={ROUTE.CART} element={<Cart />} />
+          <Route path={ROUTE.PRODUCT} element={<ProductPage />} />
 
           <Route path="*" element={<p> Not found</p>} />
         </Route>

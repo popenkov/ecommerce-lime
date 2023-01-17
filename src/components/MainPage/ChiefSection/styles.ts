@@ -11,4 +11,8 @@ const Container = styled.section`
   }
 `;
 
-export const Styled = { Container };
+const ReceiptsContainer = styled.div`
+  width: calc(100% - 294px);
+`;
+
+export const Styled = { Container, ReceiptsContainer };
