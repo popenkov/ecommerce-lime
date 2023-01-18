@@ -67,7 +67,14 @@ export type RatingType = {
   value: string;
   amount: string;
 };
-export type EnergyType = { id: string; name: string; value: number };
+export type EnergyType = { id: string; name: string; value: number | string };
+
+export type PriceType = {
+  price: number;
+  oldPrice?: number | null;
+  discount?: number | null;
+  unit?: string;
+};
 
 export type ItemType = {
   id: string;
@@ -78,11 +85,7 @@ export type ItemType = {
   unit: string;
   isFavorite?: boolean;
   title: string;
-  price: {
-    price: number;
-    oldPrice: number | null;
-    discount: number | null;
-  };
+  price: PriceType;
   energy: EnergyType[];
   button?: string;
 };
@@ -997,22 +1000,31 @@ export type ChiefReceiptTagType = {
   icon: FunctionComponent<SVGProps<SVGSVGElement>>;
   text: string;
 };
+
+export type ShowAllLink = {
+  text: string;
+  href: string;
+};
+
 export type ChiefReceiptItemType = {
   id: string;
   title: string;
   img: string;
   tags: ChiefReceiptTagType[];
   ingredients?: ChiefReceiptIngredientType[];
-  button?: {
-    text: string;
-    href: string;
-  };
+  button?: ShowAllLink;
 };
 
 export type ChiefReceiptsType = {
   title: string;
   subtitle: string;
+  button?: ShowAllLink;
   items: ChiefReceiptItemType[];
+  buttonText?: string;
+  buttonHref?: string;
+  isSmall?: boolean;
+  hasAllItemsLink?: boolean;
+  isOverflowVisible?: boolean;
 };
 
 export const ChiefReceiptsData: ChiefReceiptsType = {

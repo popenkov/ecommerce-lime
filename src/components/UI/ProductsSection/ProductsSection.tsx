@@ -15,9 +15,10 @@ import { theme } from "@src/theme";
 
 type ProductsSectionProps = {
   data: ItemsType;
+  hideLink?: boolean;
 };
 
-export const ProductsSection: FC<ProductsSectionProps> = ({ data }) => {
+export const ProductsSection: FC<ProductsSectionProps> = ({ data, hideLink }) => {
   const { title, button, color, items } = data;
 
   const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
@@ -31,14 +32,14 @@ export const ProductsSection: FC<ProductsSectionProps> = ({ data }) => {
     <Styled.Container>
       <Styled.Header>
         <Styled.Title color={color}>{title}</Styled.Title>
-        <Styled.Link href={button.href}>
+        <Styled.Link href={button.href} hideLink={hideLink}>
           {linkText} <ArrowIcon />
         </Styled.Link>
       </Styled.Header>
       <Styled.ItemsContainer>
         <Swiper
           modules={[Navigation]}
-          spaceBetween={12}
+          spaceBetween={2}
           slidesPerView="auto"
           onInit={(swiper: SwiperType) => {
             onBeforeInit(swiper, buttonPrevRef, buttonNextRef);

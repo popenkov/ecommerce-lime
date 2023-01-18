@@ -19,6 +19,7 @@ const Interview = styled.div<{ background: string }>`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: calc(100% - 26px);
+
     margin: 0 auto;
     height: 240px;
   }
@@ -32,6 +33,10 @@ const Interview = styled.div<{ background: string }>`
 
 const Description = styled.div`
   position: relative;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+  }
 `;
 
 const DescriptionTitle = styled.h3`

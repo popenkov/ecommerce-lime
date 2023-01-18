@@ -60,19 +60,20 @@ const Receipt = styled.div<{ isSmall?: boolean }>`
   ${({ isSmall }) =>
     isSmall &&
     css`
-      height: 200px;
+      height: 138px;
       padding-bottom: 0;
 
       ${Title} {
+        margin: 0;
         position: absolute;
-        bottom: 0;
-        left: 0;
+        bottom: 7px;
+        left: 7px;
         z-index: 3;
       }
       ${Img} {
         position: relative;
-        width: 281.03px;
-        height: 200px;
+        width: 280px;
+        height: 138px;
       }
 
       ${ImgContainer} {
@@ -81,7 +82,8 @@ const Receipt = styled.div<{ isSmall?: boolean }>`
           content: "";
           position: absolute;
           width: 100%;
-          height: 200px;
+          height: 138px;
+          bottom: 0;
           left: 0;
           z-index: 2;
           background: linear-gradient(180deg, rgba(255, 255, 255, 0) 43.23%, #ffffff 100%);

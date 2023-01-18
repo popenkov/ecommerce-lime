@@ -13,6 +13,10 @@ const Container = styled.section`
 
 const ReceiptsContainer = styled.div`
   width: calc(100% - 294px);
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    width: 100%;
+  }
 `;
 
 export const Styled = { Container, ReceiptsContainer };

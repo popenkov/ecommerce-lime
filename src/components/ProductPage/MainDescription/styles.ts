@@ -9,11 +9,16 @@ const MainDescription = styled.div`
 `;
 const Description = styled.div`
   box-sizing: border-box;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   padding: 28px 62px 17px 22px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin: 0 15px;
+    padding: 8px 11px 11px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 19px;
   }
 `;
 
@@ -22,6 +27,7 @@ const Title = styled.h2`
   ${font({ size: "24", lineHeight: "29", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
   }
 `;
 
@@ -47,12 +53,19 @@ const ExpireDateValue = styled.span`
 
 const RatingContainer = styled.div`
   margin-bottom: 18px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 12px;
+  }
 `;
 
 const PriceContainer = styled.div`
   width: 100%;
   ${flexAlignCenter}
   margin-bottom: 18px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 12px;
+  }
 `;
 
 const Price = styled.div`
@@ -68,6 +81,10 @@ const PriceValue = styled.span`
 const PriceUnit = styled.span`
   ${font({ size: "12", lineHeight: "15", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const CoinsContainer = styled.div``;
@@ -105,6 +122,10 @@ const EnergyItem = styled.div`
 
 const EnergyName = styled.span`
   color: ${({ theme }) => theme.color.lightGrey};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-right: 3px;
+  }
 `;
 
 const EnergyValue = styled.span`
@@ -113,7 +134,8 @@ const EnergyValue = styled.span`
 
 const ReceiptsContainer = styled.div`
   width: 100%;
-  max-width: 454px;
+
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 `;
 
 export const Styled = {

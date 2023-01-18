@@ -2,19 +2,6 @@ import { flexAlignCenter, font } from "@src/styles/mixins";
 import { Link as RouterLink } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-const Container = styled.article`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin-bottom: 40px;
-  padding: 15px 14px;
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 100%;
-    margin-bottom: 0;
-  }
-`;
-
 const Header = styled.div`
   width: 100%;
   ${flexAlignCenter};
@@ -52,13 +39,23 @@ const Subtitle = styled.span`
   color: ${({ theme }) => theme.color.black};
 `;
 
-const ReceiptItems = styled.div`
+const ReceiptItems = styled.div<{ isOverflowVisible?: boolean }>`
   position: relative;
   display: flex;
   gap: 13px;
 
   & .swiper {
     width: 100%;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      ${({ isOverflowVisible }) =>
+        isOverflowVisible &&
+        css`
+          @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+            overflow: visible;
+          }
+        `};
+    }
   }
 
   & .swiper-slide {
@@ -80,6 +77,7 @@ const Link = styled(RouterLink)`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin-top: 16px;
     ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+    text-transform: capitalize;
   }
 
   & svg {
@@ -87,6 +85,33 @@ const Link = styled(RouterLink)`
     @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       margin-left: 6px;
     }
+  }
+`;
+
+const Container = styled.article<{ isSmall?: boolean }>`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 40px;
+  padding: 15px 14px;
+
+  ${({ isSmall }) =>
+    isSmall &&
+    css`
+      padding: 14px 10px;
+      margin-bottom: 0;
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      }
+
+      & ${Header} {
+        margin-bottom: 10px;
+      }
+    `};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    margin-bottom: 0;
+    box-sizing: border-box;
   }
 `;
 

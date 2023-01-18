@@ -10,51 +10,30 @@ import "swiper/css/thumbs";
 
 import { Styled } from "./styles";
 
-import productMain from "@src/assets/images/product/product-main.jpg";
-import productThumb from "@src/assets/images/product/product-thumb.jpg";
-
-const sliderData = {
-  main: [
-    {
-      id: "1",
-      text: "test",
-      img: productMain,
-    },
-    {
-      id: "2",
-      text: "test",
-      img: productMain,
-    },
-  ],
-  thumb: [
-    {
-      id: "1",
-      text: "test",
-      img: productThumb,
-    },
-    {
-      id: "2",
-      text: "test",
-      img: productThumb,
-    },
-  ],
-};
+import { productDetailedData } from "@src/mock/ProductDetailed";
+import { FavoritesButton } from "@src/components/UI/FavoritesButton/FavoritesButton";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
 
 export const ProductSlider: FC = () => {
+  const { main, thumb, isFavorite } = productDetailedData.sliderImages;
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+
+  const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
+  const thumbSliderDirection = !isAdaptive ? "vertical" : "horizontal";
+  const thumbSliderSpaceBetween = !isAdaptive ? 10 : 40;
 
   return (
     <Styled.Container>
       <Styled.ThumbSlider>
         <Swiper
           onSwiper={setThumbsSwiper}
-          spaceBetween={10}
-          slidesPerView={4}
-          freeMode={true}
+          spaceBetween={thumbSliderSpaceBetween}
+          slidesPerView="auto"
           watchSlidesProgress={true}
-          direction={"vertical"}
-          modules={[FreeMode, Navigation, Thumbs]}>
-          {sliderData?.thumb?.map((item) => (
+          direction={thumbSliderDirection}
+          modules={[Navigation, Thumbs]}>
+          {thumb?.map((item) => (
             <SwiperSlide key={item.id}>
               <Styled.ThumbImage src={item.img} alt={item.text} />
             </SwiperSlide>
@@ -66,13 +45,17 @@ export const ProductSlider: FC = () => {
           slidesPerView={1}
           thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
           modules={[FreeMode, Thumbs]}>
-          {sliderData?.main.length > 0 &&
-            sliderData.main.map((item) => (
+          {main.length > 0 &&
+            main.map((item) => (
               <SwiperSlide key={item.id}>
                 <Styled.MainImage src={item.img} alt={item.text} />
               </SwiperSlide>
             ))}
         </Swiper>
+
+        <Styled.FavoritesButtonContainer>
+          <FavoritesButton isFavorite={isFavorite} />
+        </Styled.FavoritesButtonContainer>
       </Styled.MainSlider>
     </Styled.Container>
   );

@@ -18,6 +18,7 @@ const Container = styled.section`
 `;
 
 const Header = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,8 +30,17 @@ const Header = styled.div`
   }
 `;
 
-const Title = styled.h2<{ color?: string }>`
+const Title = styled.h2<{ color?: string; hideLink?: boolean }>`
   position: relative;
+  ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
+
+  ${({ hideLink }) =>
+    hideLink &&
+    css`
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+        width: 100%;
+      }
+    `};
 
   ${({ color }) =>
     color &&
@@ -51,13 +61,9 @@ const Title = styled.h2<{ color?: string }>`
         }
       }
     `};
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
-  }
 `;
 
-const Link = styled.a`
+const Link = styled.a<{ hideLink?: boolean }>`
   ${flexAlignCenter};
   margin-top: 15px;
   border-radius: 5px;
@@ -66,8 +72,17 @@ const Link = styled.a`
   text-decoration: none;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    position: absolute;
+    top: 0;
+    right: 0;
     margin-top: 16px;
     ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+
+    ${({ hideLink }) =>
+      hideLink &&
+      css`
+        display: none;
+      `};
   }
 
   & svg {
@@ -90,7 +105,7 @@ const ItemsContainer = styled.div`
     width: 142px;
 
     @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-      width: 105px;
+      width: 115px;
     }
   }
 

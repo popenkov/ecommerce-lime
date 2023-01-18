@@ -11,39 +11,47 @@ import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
 import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 
-type ChiefReceptsType = {
+type ChiefReceiptsProps = {
   title: string;
   subtitle: string;
-  button?: {
-    text: string;
-    href: string;
-  };
   items: ChiefReceiptItemType[];
+  buttonText?: string;
+  buttonHref?: string;
   isSmall?: boolean;
   hasAllItemsLink?: boolean;
+  isOverflowVisible?: boolean;
 };
 
-export const ChiefReceipts: FC<ChiefReceptsType> = ({ title, subtitle, items, button, isSmall, hasAllItemsLink }) => {
+export const ChiefReceipts: FC<ChiefReceiptsProps> = ({
+  title,
+  subtitle,
+  items,
+  buttonHref,
+  buttonText,
+  isSmall,
+  hasAllItemsLink,
+  isOverflowVisible,
+}) => {
   const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
   const buttonNextRef = useRef<HTMLButtonElement | null>(null);
 
-  const isAdaptive = useMediaQuery(theme.breakpoints.medium);
+  const isAdaptive = useMediaQuery(theme.breakpoints.small);
 
   const centeredSlide = isAdaptive ? true : false;
-  const slidesPerView = isAdaptive ? 1.2 : "auto";
+  const slidesPerView = isAdaptive ? 1.1 : "auto";
   return (
-    <Styled.Container>
+    <Styled.Container isSmall={isSmall}>
       <Styled.Header>
         <Styled.Title isSmall={isSmall}>{title}</Styled.Title>
         {!hasAllItemsLink ? (
           <Styled.Subtitle>{subtitle}</Styled.Subtitle>
-        ) : (
-          <Styled.Link to={button?.href || "#"}>
-            {button?.text} <ArrowIcon />
+        ) : buttonText ? (
+          <Styled.Link to={buttonHref || "#"}>
+            {buttonText} <ArrowIcon />
           </Styled.Link>
-        )}
+        ) : null}
       </Styled.Header>
-      <Styled.ReceiptItems>
+      <Styled.ReceiptItems isOverflowVisible={isOverflowVisible}>
         <Swiper
           modules={[Navigation]}
           spaceBetween={12}

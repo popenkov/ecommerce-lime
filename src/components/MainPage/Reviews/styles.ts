@@ -60,6 +60,7 @@ const Button = styled.button`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-grow: 1;
     padding: 8px 12px;
+    max-width: 200px;
   }
 `;
 

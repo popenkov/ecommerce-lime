@@ -8,7 +8,10 @@ const Breadcrumbs = styled.div`
   margin: 0 auto;
   margin-bottom: 25px;
   padding: 12px 0px 4px;
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 31px;
+    padding: 17px 0px 4px;
   }
 `;
 
