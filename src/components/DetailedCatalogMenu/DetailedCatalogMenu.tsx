@@ -1,4 +1,4 @@
-import { CatalogChildrenType } from "@src/mock/CatalogMenuData";
+import { CatalogChildrenType } from "@src/types/CatalogMenuTypes";
 import { FC } from "react";
 
 import { Styled } from "./styles";

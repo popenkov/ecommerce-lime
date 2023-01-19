@@ -1,9 +1,8 @@
 import { FC } from "react";
 
-import { SingleNewsType } from "@src/mock/MainPageData";
-
 import { Styled } from "./styles";
 import { IMAGES } from "@src/utils/ImagesMap";
+import { SingleNewsType } from "@src/types/MainPageTypes";
 
 type NewsItemProps = Omit<SingleNewsType, "id">;
 

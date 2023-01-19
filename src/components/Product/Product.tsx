@@ -1,7 +1,6 @@
 import { FC } from "react";
 
 import { useHover } from "@src/hooks/useHover";
-import { ItemType } from "@src/mock/MainPageData";
 
 import { Rating } from "../UI";
 import { AddToCardBtn } from "../UI/AddToCardBtn";
@@ -11,6 +10,7 @@ import { useAppSelector } from "@src/hooks/useAppSelector";
 import { IMAGES } from "@src/utils/ImagesMap";
 import { Routes } from "react-router";
 import { ROUTE } from "@src/utils/Routes";
+import { ItemType } from "@src/types/commonTypes";
 
 export const Product: FC<ItemType> = ({
   id,

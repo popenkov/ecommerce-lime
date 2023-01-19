@@ -1,16 +1,15 @@
 import { FC } from "react";
 
-import { AdvantageType } from "@src/mock/MainPageData";
-
 import { Styled } from "./styles";
 import { ICONS } from "@src/utils/IconsMap";
+import { AdvantageType } from "@src/types/MainPageTypes";
 
 const renderIcon = (Icon: any) => {
   return <Icon />;
 };
 
-type AdvantagesCardType = Omit<AdvantageType, "id">;
-export const AdvantagesCard: FC<AdvantagesCardType> = ({ icon, title, text }) => {
+type AdvantagesCardProps = Omit<AdvantageType, "id">;
+export const AdvantagesCard: FC<AdvantagesCardProps> = ({ icon, title, text }) => {
   const key = icon as keyof typeof ICONS;
   const Icon = typeof icon === "string" ? ICONS[key] : null;
   return (

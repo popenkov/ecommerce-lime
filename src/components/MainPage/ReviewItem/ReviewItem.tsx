@@ -1,14 +1,13 @@
 import { FC } from "react";
 
 import { ReactComponent as AccountIcon } from "@src/assets/icons/person.svg";
-import { ReviewType } from "@src/mock/MainPageData";
 
 import { Styled } from "./styles";
-import { Link } from "react-router-dom";
+import { ReviewType } from "@src/types/MainPageTypes";
 
-type ReviewItemType = Omit<ReviewType, "id">;
+type ReviewItemProps = Omit<ReviewType, "id">;
 
-export const ReviewItem: FC<ReviewItemType> = ({ name, text }) => {
+export const ReviewItem: FC<ReviewItemProps> = ({ name, text }) => {
   return (
     <Styled.Item>
       <Styled.Name>

@@ -1,38 +1,9 @@
-export type LinkType = {
-  id: string;
-  name: string;
-  href: string;
-  isActive?: boolean;
-};
+import { CatalogPageType } from "@src/types/CatalogPageTypes";
 
-export type CheckboxType = {
-  id: string;
-  text: string;
-  inputName: string;
-  inputValue: string;
-  isChecked?: boolean;
-};
+import bannerImg from "@src/assets/images/catalog/banner-img.png";
+import deliveryImg from "@src/assets/images/catalog/delivery-img.png";
 
-type RangeType = {
-  minPrice: number;
-  maxPrice: number;
-};
-
-type FilterType = {
-  title: string;
-  type: string;
-  items?: LinkType[] | CheckboxType[];
-  range?: RangeType;
-};
-
-type CatalogType = {
-  searchQuery: string;
-  searchAmount: number;
-  filters: FilterType[];
-  taps: LinkType[];
-};
-
-export const catalogData: CatalogType = {
+export const catalogData: CatalogPageType = {
   searchQuery: "Питьевая вода",
   searchAmount: 128,
   filters: [
@@ -42,38 +13,38 @@ export const catalogData: CatalogType = {
       items: [
         {
           id: "1",
-          name: "Кексы",
+          text: "Кексы",
           href: "#",
         },
         {
           id: "2",
-          name: "Пироги",
+          text: "Пироги",
           href: "#",
         },
         {
           id: "3",
-          name: "Восточные сладости  ",
+          text: "Восточные сладости  ",
           href: "#",
         },
         {
           id: "4",
-          name: "Круассаны",
+          text: "Круассаны",
           href: "#",
           isActive: true,
         },
         {
           id: "5",
-          name: "Печенье",
+          text: "Печенье",
           href: "#",
         },
         {
           id: "6",
-          name: "Сдобы",
+          text: "Сдобы",
           href: "#",
         },
         {
           id: "7",
-          name: "Слойки",
+          text: "Слойки",
           href: "#",
         },
       ],
@@ -136,23 +107,331 @@ export const catalogData: CatalogType = {
   taps: [
     {
       id: "1",
-      name: "5 — 12 руб",
+      text: "5 — 12 руб",
       href: "#",
     },
     {
       id: "2",
-      name: "Кексы",
+      text: "Кексы",
       href: "#",
     },
     {
       id: "3",
-      name: "5 — 12 руб",
+      text: "5 — 12 руб",
       href: "#",
     },
     {
       id: "4",
-      name: "Кексы",
+      text: "Кексы",
       href: "#",
     },
   ],
+  products: [
+    {
+      id: "45d32341",
+      img: "productFirst",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 253",
+      },
+      isFavorite: true,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: 140,
+        discount: 15,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "1322123",
+      img: "productSecond",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 254",
+      },
+      isFavorite: true,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: null,
+        discount: null,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "211v1",
+      img: "productSecond",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 254",
+      },
+      isFavorite: false,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: null,
+        discount: null,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "33545342334",
+      img: "productSecond",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 254",
+      },
+      isFavorite: false,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: null,
+        discount: null,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+  ],
+  banner: {
+    subtitle: "Закажите домой!",
+    title: "Скидка 10%",
+    background: "linear-gradient(274.46deg, #FFA41C 43.99%, #FFC500 66.94%)",
+    img: bannerImg,
+  },
+  productsSecond: [
+    {
+      id: "2341",
+      img: "productFirst",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 253",
+      },
+      isFavorite: true,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: 140,
+        discount: 15,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "123",
+      img: "productSecond",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 254",
+      },
+      isFavorite: true,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: null,
+        discount: null,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "2v1",
+      img: "productSecond",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 254",
+      },
+      isFavorite: false,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: null,
+        discount: null,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "3352334",
+      img: "productSecond",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 254",
+      },
+      isFavorite: false,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: null,
+        discount: null,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "45d32341",
+      img: "productFirst",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 253",
+      },
+      isFavorite: true,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: 140,
+        discount: 15,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "1322123",
+      img: "productSecond",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 254",
+      },
+      isFavorite: true,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: null,
+        discount: null,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "211v1",
+      img: "productSecond",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 254",
+      },
+      isFavorite: false,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: null,
+        discount: null,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+    {
+      id: "33545342334",
+      img: "productSecond",
+      amount: 1,
+      unit: "450г.",
+      category: "Бакалея",
+      rating: {
+        value: "4",
+        amount: "3 254",
+      },
+      isFavorite: false,
+      title: "Макаронные изделия Макфа Триколлини свитки",
+      price: {
+        price: 120,
+        oldPrice: null,
+        discount: null,
+      },
+      energy: [
+        { id: "proteins", name: "Белки", value: 12 },
+        { id: "fats", name: "Жиры", value: 23 },
+        { id: "carbohydrate", name: "Углеводы", value: 12 },
+      ],
+      button: "Добавить в корзину",
+    },
+  ],
+  delivery: {
+    title: "Доставка продуктов на дом",
+    text: "Онлайн-магазин «Лайм» — компания с 20-летним опытом доставки товаров на дом или офис. В нашем интернет-магазине представлен широкий ассортимент продуктов питания и сопутствующих товаров. Каждое наименование проходит тщательный контроль качества, а каждый заказ бережно собирается на специализированном складе.На складе строго соблюдаются нормы товарного соседства и контроль сроков годности, а для сохранности продуктов во время транспортировки используются только современные автомобили, обеспечивающие необходимый температурный режим. Благодаря круглосуточной доставке, в том числе и в день заказа, и удобным временным интервалам получения Лайм гарантирует высокий уровень сервиса.",
+    background: "#EBEBEB",
+    img: deliveryImg,
+    link: {
+      href: "#",
+      text: "Показать больше",
+    },
+  },
 };

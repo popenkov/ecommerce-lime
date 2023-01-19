@@ -7,76 +7,9 @@ import { ReactComponent as PortionIcon } from "@src/assets/icons/portion.svg";
 import productMain from "@src/assets/images/product/product-main.jpg";
 import productThumb from "@src/assets/images/product/product-thumb.jpg";
 
-import { ChiefReceiptsType, EnergyType, PriceType, RatingType } from "./MainPageData";
-import { boolean } from "yup";
+// import { ChiefReceiptsType, EnergyType, PriceType, RatingType } from "./MainPageData";
 
-export type DescriptionItemType = {
-  id: string;
-  title: string;
-  text: string;
-};
-
-type DescriptionType = {
-  title: string;
-  color: string;
-  description: DescriptionItemType[];
-};
-
-type CoinsType = {
-  amount: number;
-};
-
-type OverviewType = {
-  title: string;
-  expireDate: string;
-  rating: RatingType;
-  price: PriceType;
-  coins: CoinsType;
-  energy: EnergyType[];
-  receipts: ChiefReceiptsType;
-};
-
-type ReviewsFilterType = {
-  id: string;
-  text: string;
-  isActive: boolean;
-};
-
-type ReviewsType = {
-  title: string;
-  color: string;
-  subtitle: { value: number; text: string };
-  filter: ReviewsFilterType[];
-  reviews: CustomersReviewsItemType[];
-};
-
-export type CustomersReviewsItemType = {
-  id: string;
-  name: string;
-  rating: RatingType;
-  date: string;
-  text: string;
-  useFullReactions: string;
-};
-
-type SlideItemType = {
-  id: string;
-  text: string;
-  img: string;
-};
-
-type SliderImagesType = {
-  main: SlideItemType[];
-  thumb: SlideItemType[];
-  isFavorite: boolean;
-};
-
-type ProductDetailedType = {
-  sliderImages: SliderImagesType;
-  overview: OverviewType;
-  descripion: DescriptionType;
-  reviews: ReviewsType;
-};
+import { ProductDetailedType } from "@src/types/ProductPageTypes";
 
 export const productDetailedData: ProductDetailedType = {
   sliderImages: {

@@ -1,10 +1,10 @@
 import { FC } from "react";
 
 import { DownloadButton } from "@src/components/UI";
-import { ContactsType } from "@src/mock/FooterData";
 
 import { Styled } from "./styles";
 import { ICONS } from "@src/utils/IconsMap";
+import { ContactsType } from "@src/types/FooterTypes";
 
 type FooterContactsProps = {
   data: ContactsType;
@@ -30,7 +30,7 @@ export const FooterContacts: FC<FooterContactsProps> = ({ data }) => {
         </Styled.Phone>
       )}
       <Styled.DownloadsContainer>
-        {app.map((item, index) => {
+        {app.map((item) => {
           return <DownloadButton {...item} key={item.id} />;
         })}
       </Styled.DownloadsContainer>

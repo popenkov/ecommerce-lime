@@ -1,6 +1,9 @@
 import { Accordion } from "@src/components/UI/Accordion";
 import { FormCheckbox } from "@src/components/UI/FormCheckbox";
-import { catalogData, CheckboxType, LinkType } from "@src/mock/CatalogData";
+import { RangeSlider } from "@src/components/UI/RangeSlider";
+import { catalogData } from "@src/mock/CatalogData";
+import { CheckboxType } from "@src/types/CatalogPageTypes";
+import { LinkType } from "@src/types/commonTypes";
 import { FC, useState } from "react";
 
 import Slider from "react-rangeslider";
@@ -28,22 +31,19 @@ export const Filter: FC = () => {
           renderData = data.map((link) => {
             return (
               <Styled.FilterLink to={link.href} key={link.id} isActive={link.isActive}>
-                {link.name}
+                {link.text}
               </Styled.FilterLink>
             );
           });
         } else if (type === "range") {
           return (
-            <Slider
-              key={filter.type}
-              min={filter?.range?.minPrice}
-              max={filter?.range?.minPrice}
-              value={rangeValue}
-              onChange={handleRangeChange}
-            />
-            // <div class="slidecontainer" id="bigslider">
-            //   <input type="range" min="1" max="100" className="slider" />
-            // </div>
+            <Styled.RangeSliderContainer key={filter.type}>
+              <RangeSlider
+                min={0}
+                max={1000}
+                onChange={({ min, max }: { min: number; max: number }) => console.log(`min = ${min}, max = ${max}`)}
+              />
+            </Styled.RangeSliderContainer>
           );
         } else if (type === "checkboxes") {
           const data = filter?.items as CheckboxType[];

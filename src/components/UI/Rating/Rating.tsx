@@ -1,10 +1,10 @@
 import { FC, FunctionComponent, ReactNode, SVGProps } from "react";
 
 import { ReactComponent as StarIcon } from "@src/assets/icons/star.svg";
-import { RatingType } from "@src/mock/MainPageData";
 
 import { Star } from "../Star";
 import { Styled } from "./styles";
+import { RatingType } from "@src/types/commonTypes";
 
 type RatingProps = {
   data: RatingType;

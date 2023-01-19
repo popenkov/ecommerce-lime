@@ -2,9 +2,11 @@ import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
 
 const MainDescription = styled.div`
+  width: 47%;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
   }
 `;
 const Description = styled.div`

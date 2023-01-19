@@ -1,11 +1,11 @@
 import { useActions } from "@src/hooks/useActions";
-import { ItemType } from "@src/mock/MainPageData";
 import { IMAGES } from "@src/utils/ImagesMap";
 import { FC } from "react";
 import { AmountCounter } from "../AmountCounter";
 import { Styled } from "./styles";
 
 import { ReactComponent as FavoritesIcon } from "@src/assets/icons/favorites.svg";
+import { ItemType } from "@src/types/commonTypes";
 
 export const CartItem: FC<ItemType> = ({
   id,

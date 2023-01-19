@@ -1,4 +1,3 @@
-import { ChiefReceiptItemType, ChiefReceiptsData } from "@src/mock/MainPageData";
 import { FC, useRef } from "react";
 import { Styled } from "./styles";
 import type { Swiper as SwiperType } from "swiper";
@@ -10,6 +9,7 @@ import { Receipt } from "../Receipt";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
 import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
+import { ChiefReceiptItemType } from "@src/types/MainPageTypes";
 
 type ChiefReceiptsProps = {
   title: string;

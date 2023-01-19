@@ -1,6 +1,5 @@
+import { CopyrightType } from "@src/types/FooterTypes";
 import { FC } from "react";
-
-import { CopyrightType } from "@src/mock/FooterData";
 
 import { ReactComponent as Logo } from "../../../assets/images/footer-logo.svg";
 import { Styled } from "./styles";

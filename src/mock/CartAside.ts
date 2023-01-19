@@ -1,22 +1,9 @@
 import productFirst from "@src/assets/images/products/product-1.jpg";
 import productSecond from "@src/assets/images/products/product-2.jpg";
-import { ItemsType } from "./MainPageData";
+import { ItemsType } from "@src/types/MainPageTypes";
+import { SidebarItem, SidebarItemsSection } from "@src/types/SidebarCartTypes";
 
-export type CategoryItem = {
-  title: string;
-  items: CartItem[];
-};
-
-export type CartItem = {
-  id: string;
-  img: string;
-  amount: number;
-  name: string;
-  price: string;
-  unit: string;
-};
-
-export const sidebarItems: CategoryItem[] = [
+export const sidebarItems: SidebarItemsSection[] = [
   {
     title: "Бакалея",
     items: [
@@ -74,7 +61,7 @@ export const sidebarItems: CategoryItem[] = [
   },
 ];
 
-export const popularItems: CartItem[] = [
+export const popularItems: SidebarItem[] = [
   {
     id: "1",
     img: "productFirst",

@@ -1,4 +1,4 @@
-import { ItemType } from "@src/mock/MainPageData";
+import { ItemType } from "@src/types/commonTypes";
 import { FC } from "react";
 import { SidebarItem } from "../SidebarItem/SidebarItem";
 

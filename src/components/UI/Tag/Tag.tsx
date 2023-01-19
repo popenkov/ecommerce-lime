@@ -1,5 +1,5 @@
-import { ChiefReceiptTagType } from "@src/mock/MainPageData";
-import React, { FC } from "react";
+import { ChiefReceiptTagType } from "@src/types/MainPageTypes";
+import { FC } from "react";
 
 import { Styled } from "./styles";
 

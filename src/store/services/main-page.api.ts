@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { CartItem } from "@src/mock/CartAside";
+import { ItemType } from "@src/types/commonTypes";
+import { MainPageDataType } from "@src/types/MainPageTypes";
 
-import { ItemType, MainPageDataType } from "@src/mock/MainPageData";
 const mainPagePath = "/main-page";
 export const mainPageApi = createApi({
   reducerPath: "mainPageApi",

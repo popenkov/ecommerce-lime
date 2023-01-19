@@ -1,15 +1,14 @@
+import { AdvantageType } from "@src/types/MainPageTypes";
 import { FC } from "react";
-
-import { AdvantageType } from "@src/mock/MainPageData";
 
 import { AdvantagesCard } from "./AdvantagesCard";
 import { Styled } from "./styles";
 
-type AdvantagesType = {
+type AdvantagesProps = {
   data: AdvantageType[];
 };
 
-export const Advantages: FC<AdvantagesType> = ({ data }) => {
+export const Advantages: FC<AdvantagesProps> = ({ data }) => {
   return (
     <Styled.Advantages>
       {data.map((item) => {

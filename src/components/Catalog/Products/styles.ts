@@ -9,9 +9,26 @@ const Products = styled.div`
 const TapsContainer = styled.div`
   ${flexAlignCenter}
   gap: 10px;
+  margin-bottom: 16px;
+`;
+
+const ItemsContainer = styled.div`
+  ${flexAlignCenter}
+  flex-wrap: wrap;
+`;
+
+const BannerContainer = styled.div`
+  margin-bottom: 28px;
+`;
+
+const DeliveryContainer = styled.div`
+  margin-bottom: 28px;
 `;
 
 export const Styled = {
   Products,
   TapsContainer,
+  ItemsContainer,
+  BannerContainer,
+  DeliveryContainer,
 };

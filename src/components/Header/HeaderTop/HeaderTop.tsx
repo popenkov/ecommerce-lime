@@ -1,6 +1,5 @@
+import { LinkType } from "@src/types/commonTypes";
 import { FC } from "react";
-
-import { HeaderLinkType } from "@src/mock/HeaderData";
 
 import { HeaderLogo } from "../HeaderLogo";
 import { TopLeftMenu } from "../TopLeftMenu";
@@ -9,7 +8,7 @@ import { Styled } from "./styles";
 
 type HeaderTopProps = {
   data: {
-    [key: string]: HeaderLinkType[];
+    [key: string]: LinkType[];
   };
 };
 

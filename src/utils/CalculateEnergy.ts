@@ -1,4 +1,4 @@
-import { ItemType } from "@src/mock/MainPageData";
+import { ItemType } from "@src/types/commonTypes";
 
 export const calculateEnergie = (newItems: ItemType[]) => {
   const energyArr: any = [];

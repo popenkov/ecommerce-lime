@@ -1,6 +1,5 @@
+import { LinkType } from "@src/types/commonTypes";
 import { FC } from "react";
-
-import { HeaderLinkType } from "@src/mock/HeaderData";
 
 import { BottomRightMenu } from "../BottomRightMenu";
 import { CatalogButton } from "../Catalog/CatalogButton";
@@ -9,7 +8,7 @@ import { SearchInput } from "../SearchInput";
 import { Styled } from "./styles";
 
 type HeaderBottomProps = {
-  data: HeaderLinkType[];
+  data: LinkType[];
 };
 
 export const HeaderBottom: FC<HeaderBottomProps> = ({ data }) => {

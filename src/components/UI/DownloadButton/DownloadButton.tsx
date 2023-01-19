@@ -1,9 +1,10 @@
 import { FC, FunctionComponent, SVGProps } from "react";
 
-import { LinkType } from "@src/mock/FooterData";
+// import { LinkType } from "@src/mock/FooterData";
 
 import { Styled } from "./styles";
 import { ICONS } from "@src/utils/IconsMap";
+import { LinkType } from "@src/types/commonTypes";
 
 type DownloadButtonType = Omit<LinkType, "id">;
 

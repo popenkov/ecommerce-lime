@@ -1,14 +1,13 @@
 import { FC } from "react";
 
-import { LinksType } from "@src/mock/FooterData";
-
 import { Styled } from "./styles";
+import { FooterLinksType } from "@src/types/FooterTypes";
 
-type FooterLinksType = {
-  data: LinksType;
+type FooterLinksProps = {
+  data: FooterLinksType;
 };
 
-export const FooterLinksWrapper: FC<FooterLinksType> = ({ data }) => {
+export const FooterLinksWrapper: FC<FooterLinksProps> = ({ data }) => {
   return (
     <Styled.Container>
       <Styled.Title>{data.title}</Styled.Title>

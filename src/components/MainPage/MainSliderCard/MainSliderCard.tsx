@@ -1,12 +1,12 @@
 import { FC } from "react";
 
 import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
-import { SlideType } from "@src/mock/MainPageData";
 
 import { Styled } from "./styles";
 import { IMAGES } from "@src/utils/ImagesMap";
+import { MainSliderType } from "@src/types/MainPageTypes";
 
-type MainSliderCardType = Omit<SlideType, "id">;
+type MainSliderCardType = Omit<MainSliderType, "id">;
 
 export const MainSliderCard: FC<MainSliderCardType> = ({ title, subtitle, image, color, link }) => {
   const imageToDraw: string = IMAGES[image as keyof typeof IMAGES];

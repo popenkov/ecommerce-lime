@@ -4,13 +4,12 @@ import type { Swiper as SwiperType } from "swiper";
 import { Navigation } from "swiper";
 
 import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
-import { ReviewsType } from "@src/mock/MainPageData";
-
 import { ReviewItem } from "../ReviewItem";
 import { Styled } from "./styles";
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
+import { ReviewsType } from "@src/types/MainPageTypes";
 
 type ReviewsProp = {
   data: ReviewsType;

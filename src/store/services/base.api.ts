@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { FooterDataType } from "@src/mock/FooterData";
 
-import { HeaderDataType } from "@src/mock/HeaderData";
+import { FooterDataType } from "@src/types/FooterTypes";
+import { HeaderDataType } from "@src/types/HeaderTypes";
 
 export const baseApi = createApi({
   reducerPath: "baseApi",

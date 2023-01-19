@@ -6,24 +6,7 @@ import { ReactComponent as FavoritesIcon } from "@src/assets/icons/favorites.svg
 import { ReactComponent as PinIcon } from "@src/assets/icons/map-pin.svg";
 import { ReactComponent as AccountIcon } from "@src/assets/icons/person.svg";
 import { ReactComponent as PhoneIcon } from "@src/assets/icons/phone.svg";
-
-export type HeaderLinkType = {
-  id: string;
-  text: string;
-  href: string;
-  icon?: string;
-  //   icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
-  underlined?: boolean;
-};
-
-type HeaderLinkContainerType = {
-  [key: string]: HeaderLinkType[];
-};
-
-export type HeaderDataType = {
-  top: HeaderLinkContainerType;
-  bottomLinks: HeaderLinkType[];
-};
+import { HeaderDataType } from "@src/types/HeaderTypes";
 
 export const HeaderData: HeaderDataType = {
   top: {

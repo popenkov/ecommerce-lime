@@ -1,11 +1,10 @@
 import { FC } from "react";
 
-import { HeaderLinkType } from "@src/mock/HeaderData";
-
 import { Styled } from "./styles";
 import { ICONS } from "@src/utils/IconsMap";
+import { LinkType } from "@src/types/commonTypes";
 
-type BottomRightMenuProps = { data: HeaderLinkType[] };
+type BottomRightMenuProps = { data: LinkType[] };
 
 export const BottomRightMenu: FC<BottomRightMenuProps> = ({ data }) => {
   return (

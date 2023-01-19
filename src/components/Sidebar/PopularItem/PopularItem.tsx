@@ -1,17 +1,17 @@
 import { useActions } from "@src/hooks/useActions";
-import { CartItem } from "@src/mock/CartAside";
-import { ItemType } from "@src/mock/MainPageData";
+import { ItemType } from "@src/types/commonTypes";
+
+// import { ItemType } from "@src/mock/MainPageData";
+import { SidebarItem } from "@src/types/SidebarCartTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
 import React, { FC } from "react";
 
 import { Styled } from "./styles";
 
-type PopularItemProps = Omit<CartItem, "id">;
-
 export const PopularItem: FC<ItemType> = ({ id, img, title, rating, isFavorite, price, amount, unit }) => {
   const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
 
-  const { addItemToCart, removeItemfromCart } = useActions();
+  const { addItemToCart } = useActions();
 
   const handleAddToCardClick = () => {
     const itemDate = {

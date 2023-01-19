@@ -1,11 +1,9 @@
-import { CartItem } from "@src/mock/CartAside";
-import { ItemType } from "@src/mock/MainPageData";
+import { ItemType } from "@src/types/commonTypes";
 import { FC } from "react";
 import { PopularItem } from "../PopularItem/PopularItem";
 import { Styled } from "./styles";
 
 type PopularItemsProps = {
-  //   data: CartItem[];
   data: ItemType[];
 };
 

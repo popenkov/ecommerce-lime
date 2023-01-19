@@ -1,6 +1,6 @@
 import { useActions } from "@src/hooks/useActions";
+import { ItemType } from "@src/types/commonTypes";
 
-import { ItemType } from "@src/mock/MainPageData";
 import { IMAGES } from "@src/utils/ImagesMap";
 import { FC } from "react";
 import { AmountCounter } from "../AmountCounter";

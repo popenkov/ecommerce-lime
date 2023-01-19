@@ -4,17 +4,16 @@ import { EffectCards } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 
-import { MainPageData, SlideType } from "@src/mock/MainPageData";
-
 import { MainSliderCard } from "../MainSliderCard";
 import { Styled } from "./styles";
 import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
+import { MainSliderType } from "@src/types/MainPageTypes";
 
 type MainSliderProps = {
-  data: SlideType[];
+  data: MainSliderType[];
 };
 
 export const MainSlider: FC<MainSliderProps> = ({ data }) => {

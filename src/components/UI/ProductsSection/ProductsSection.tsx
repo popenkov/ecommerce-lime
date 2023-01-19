@@ -5,13 +5,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 import { Product } from "@src/components/Product";
-import { ItemsType, MainPageData } from "@src/mock/MainPageData";
+// import { ItemsType, MainPageData } from "@src/mock/MainPageData";
 
 import { NavigationButtons } from "./NavigationButton";
 import { Styled } from "./styles";
 import { onBeforeInit } from "./utils";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
+import { ItemsType } from "@src/types/MainPageTypes";
 
 type ProductsSectionProps = {
   data: ItemsType;

@@ -1,46 +1,4 @@
-import { FunctionComponent, SVGProps } from "react";
-
-import { ReactComponent as AppStoreIcon } from "@src/assets/icons/app-store.svg";
-import { ReactComponent as FacebookIcon } from "@src/assets/icons/facebook.svg";
-import { ReactComponent as PhoneIcon } from "@src/assets/icons/phone.svg";
-import { ReactComponent as PlayMarketIcon } from "@src/assets/icons/play-market.svg";
-import { ReactComponent as YoutubeIcon } from "@src/assets/icons/youtube.svg";
-
-export type CopyrightType = {
-  years: string;
-  rights: string;
-  agreement: {
-    text: string;
-    href: string;
-  };
-};
-
-export type LinkType = {
-  id: string;
-  text: string;
-  href: string;
-  icon?: string;
-  //   icon?: FunctionComponent<SVGProps<SVGSVGElement>>;
-};
-
-export type LinksType = {
-  title: string;
-  items: LinkType[];
-};
-
-export type ContactsType = {
-  title: string;
-  phone: LinkType;
-  app: LinkType[];
-  social: LinkType[];
-};
-
-export type FooterDataType = {
-  copyright: CopyrightType;
-  links: LinksType[];
-
-  contacts: ContactsType;
-};
+import { FooterDataType } from "@src/types/FooterTypes";
 
 export const FooterData: FooterDataType = {
   copyright: {

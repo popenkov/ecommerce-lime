@@ -1,8 +1,8 @@
 import { Styled } from "./styles";
 import { FC } from "react";
-import { CustomersReviewsItemType } from "@src/mock/ProductDetailed";
 import { Rating } from "@src/components/UI";
 import { ReviewReaction } from "../ReviewReaction";
+import { CustomersReviewsItemType } from "@src/types/ProductPageTypes";
 
 export const ReviewItem: FC<CustomersReviewsItemType> = ({ id, name, rating, date, text, useFullReactions }) => {
   return (

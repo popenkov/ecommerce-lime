@@ -1,4 +1,3 @@
-import { CatalogItemType } from "@src/mock/CatalogMenuData";
 import { FC } from "react";
 import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
 import { ICONS } from "@src/utils/IconsMap";
@@ -7,8 +6,8 @@ import { Styled } from "./styles";
 import { DetailedCatalogMenu } from "@src/components/DetailedCatalogMenu";
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
+import { CatalogItemType } from "@src/types/CatalogMenuTypes";
 
-type CatalogItemInterface = Omit<CatalogItemType, "id">;
 type CatalogItem = {
   onClick: () => void;
   showDetailed: boolean;

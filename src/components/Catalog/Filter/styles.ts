@@ -10,6 +10,10 @@ const Filter = styled.div`
 
 const FilterContainer = styled.div``;
 
+const RangeSliderContainer = styled.div`
+  margin: 20px 0 60px;
+`;
+
 const FilterLink = styled(Link)<{ isActive?: boolean }>`
   display: block;
   ${font({ size: "14", lineHeight: "32", fontWeight: "600" })};
@@ -26,5 +30,6 @@ const FilterLink = styled(Link)<{ isActive?: boolean }>`
 export const Styled = {
   Filter,
   FilterContainer,
+  RangeSliderContainer,
   FilterLink,
 };
