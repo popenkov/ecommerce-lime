@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import { baseApi, catalogApi, mainPageApi } from "./services";
 
-import { catalogMenu, cart } from "./slices";
+import { catalogMenu, cart, favorites } from "./slices";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +11,7 @@ export const store = configureStore({
     [mainPageApi.reducerPath]: mainPageApi.reducer,
     catalogMenu,
     cart,
+    favorites,
   },
   middleware: (getDefaultMiddleware) => [
     ...getDefaultMiddleware({

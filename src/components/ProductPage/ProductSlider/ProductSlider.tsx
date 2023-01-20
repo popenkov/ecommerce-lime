@@ -33,7 +33,7 @@ export const ProductSlider: FC = () => {
           watchSlidesProgress={true}
           direction={thumbSliderDirection}
           modules={[Navigation, Thumbs]}>
-          {thumb?.map((item) => (
+          {thumb?.map((item: any) => (
             <SwiperSlide key={item.id}>
               <Styled.ThumbImage src={item.img} alt={item.text} />
             </SwiperSlide>
@@ -46,7 +46,7 @@ export const ProductSlider: FC = () => {
           thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
           modules={[FreeMode, Thumbs]}>
           {main.length > 0 &&
-            main.map((item) => (
+            main.map((item: any) => (
               <SwiperSlide key={item.id}>
                 <Styled.MainImage src={item.img} alt={item.text} />
               </SwiperSlide>

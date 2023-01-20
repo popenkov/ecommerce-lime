@@ -12,6 +12,7 @@ import { Cart } from "./pages";
 import { ROUTE } from "./utils/Routes";
 import { ProductPage } from "./pages/ProductPage";
 import { Catalog } from "./pages/Catalog";
+import { FavoritesPage } from "./pages/Favorites";
 
 const App: FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: FC = () => {
           <Route path={ROUTE.CART} element={<Cart />} />
           <Route path={ROUTE.PRODUCT} element={<ProductPage />} />
           <Route path={ROUTE.CATALOG} element={<Catalog />} />
+          <Route path={ROUTE.FAVORITES} element={<FavoritesPage />} />
 
           <Route path="*" element={<p> Not found</p>} />
         </Route>

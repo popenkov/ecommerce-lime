@@ -28,12 +28,19 @@ export const CatalogProduct: FC<ItemType> = ({
   button,
 }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
-  const { addItemToCart, removeItemfromCart } = useActions();
-  const { items } = useAppSelector((state) => state.cart);
+  const { addItemToCart, addItemToFavorites, removeItemfromFavorites } = useActions();
+  const { items: cartItem } = useAppSelector((state) => state.cart);
+  const { items: favoriteItem } = useAppSelector((state) => state.favorites);
 
   const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
 
-  const isItemInCart = Boolean(items.find((item) => item.id === id));
+  const isItemInCart = Boolean(cartItem.find((item) => item.id === id));
+  const isItemFavorite = Boolean(favoriteItem.find((item) => item.id === id));
+
+  const isAdaptive = useMediaQuery(theme.breakpoints.large);
+
+  const buttonText = !isAdaptive ? button?.text : button?.mobileText;
+
   const handleAddToCardClick = () => {
     const itemDate = {
       id,
@@ -50,45 +57,60 @@ export const CatalogProduct: FC<ItemType> = ({
     addItemToCart(itemDate);
   };
 
-  const isAdaptive = useMediaQuery(theme.breakpoints.large);
+  const handleAddToFavoritesClick = () => {
+    const itemDate = {
+      id,
+      img,
+      rating,
+      isFavorite,
+      title,
+      price,
+      amount,
+      unit,
+      energy,
+    };
 
-  const buttonText = !isAdaptive ? button?.text : button?.mobileText;
+    console.log(isItemFavorite);
+
+    isItemFavorite ? removeItemfromFavorites(id) : addItemToFavorites(itemDate);
+  };
 
   return (
     <Styled.Product ref={hoverRef}>
+      <Styled.PhotoContainer>
+        <Styled.FavoritesButtonContainer onClick={handleAddToFavoritesClick}>
+          <FavoritesButton isFavorite={isFavorite as boolean} isSmall />
+        </Styled.FavoritesButtonContainer>
+        <Styled.Photo src={imageToDraw} />
+      </Styled.PhotoContainer>
+      <Rating data={rating} showStarsValue showReviewsValue={false} />
       <Styled.LinkContainer to={ROUTE.PRODUCT}>
-        <Styled.PhotoContainer>
-          <Styled.FavoritesButtonContainer>
-            <FavoritesButton isFavorite={isFavorite as boolean} isSmall />
-          </Styled.FavoritesButtonContainer>
-          <Styled.Photo src={imageToDraw} />
-        </Styled.PhotoContainer>
-        <Rating data={rating} showStarsValue showReviewsValue={false} />
         <Styled.Title>{title}</Styled.Title>
-
-        {energy && (
-          <Styled.EnergieContainer>
-            {energy.map((item) => {
-              return (
-                <Styled.EnergyItem key={item.id}>
-                  <Styled.EnergyName>{item.name}</Styled.EnergyName>
-                  <Styled.EnergyValue>{item.value}</Styled.EnergyValue>
-                </Styled.EnergyItem>
-              );
-            })}
-          </Styled.EnergieContainer>
-        )}
-        <Styled.Price>
-          {!price.oldPrice ? (
-            <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
-          ) : (
-            <>
-              <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
-              <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
-            </>
-          )}
-        </Styled.Price>
       </Styled.LinkContainer>
+
+      {energy && (
+        <Styled.EnergieContainer>
+          {energy.map((item) => {
+            return (
+              <Styled.EnergyItem key={item.id}>
+                <Styled.EnergyName>{item.name}</Styled.EnergyName>
+                <Styled.EnergyValue>{item.value}</Styled.EnergyValue>
+              </Styled.EnergyItem>
+            );
+          })}
+        </Styled.EnergieContainer>
+      )}
+      <Styled.Price>
+        {!price.oldPrice ? (
+          <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
+        ) : (
+          <>
+            <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
+            <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
+          </>
+        )}
+      </Styled.Price>
+
       {!isItemInCart ? (
         <AddToCardBtnNew
           text={buttonText}

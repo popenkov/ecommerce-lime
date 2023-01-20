@@ -1,12 +1,13 @@
 import { bindActionCreators } from "@reduxjs/toolkit";
 
-import { catalogMenuActions, cartActions } from "../store/slices";
+import { catalogMenuActions, cartActions, favoritesActions } from "../store/slices";
 
 import { useAppDispatch } from "./useAppDispatch";
 
 const allActions = {
   ...catalogMenuActions,
   ...cartActions,
+  ...favoritesActions,
 };
 
 export const useActions = () => {

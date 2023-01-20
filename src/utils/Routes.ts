@@ -3,4 +3,5 @@ export const ROUTE = {
   CART: "/cart",
   PRODUCT: "/product",
   CATALOG: "/catalog",
+  FAVORITES: "/favorites",
 };
