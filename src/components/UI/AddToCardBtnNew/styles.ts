@@ -16,13 +16,6 @@ const TextContainer = styled.span`
   color: ${({ theme }) => theme.color.black};
 
   box-sizing: border-box;
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    height: 27px;
-    padding: 6px 11px;
-    ${font({ size: "10", lineHeight: "12", fontWeight: "700" })};
-    background-color: ${({ theme }) => theme.color.green};
-  }
 `;
 
 const Button = styled.button<{ isAdded: boolean; isHovered: boolean }>`

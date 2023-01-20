@@ -7,6 +7,8 @@ export type Color = {
   greyBorder: string;
   greyBorderLight: string;
   greyLightBg: string;
+  greyTrack: string;
+  greyFont: string;
   popupBackground: string;
   green: string;
   orange: string;

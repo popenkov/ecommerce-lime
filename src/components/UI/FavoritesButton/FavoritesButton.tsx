@@ -5,9 +5,10 @@ import { Styled } from "./styles";
 
 type FavoritesButtonProps = {
   isFavorite: boolean;
+  isSmall?: boolean;
 };
 
-export const FavoritesButton: FC<FavoritesButtonProps> = ({ isFavorite }) => {
+export const FavoritesButton: FC<FavoritesButtonProps> = ({ isFavorite, isSmall }) => {
   const [isItemFavorite, setIsItemFavorite] = useState(isFavorite);
 
   const handleFavoriteClick = () => {
@@ -15,7 +16,7 @@ export const FavoritesButton: FC<FavoritesButtonProps> = ({ isFavorite }) => {
   };
 
   return (
-    <Styled.FavoritesButton onClick={handleFavoriteClick} isActive={isItemFavorite}>
+    <Styled.FavoritesButton onClick={handleFavoriteClick} isActive={isItemFavorite} isSmall={isSmall}>
       <FavoritesIcon />
     </Styled.FavoritesButton>
   );

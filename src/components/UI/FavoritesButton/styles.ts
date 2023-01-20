@@ -1,7 +1,7 @@
 import { box, flexCenter } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
 
-const FavoritesButton = styled.button<{ isActive: boolean }>`
+const FavoritesButton = styled.button<{ isActive: boolean; isSmall?: boolean }>`
   ${box(45)};
   ${flexCenter};
   background-color: ${({ theme }) => theme.color.greyLightBg};
@@ -15,6 +15,17 @@ const FavoritesButton = styled.button<{ isActive: boolean }>`
       stroke: rgba(51, 51, 51, 0.3);
     }
   }
+
+  ${({ isSmall }) =>
+    isSmall &&
+    css`
+      ${box(20)};
+      background-color: unset;
+      & svg path {
+        fill: #c8c8c8;
+        opacity: 0.3;
+      }
+    `};
 
   ${({ isActive }) =>
     isActive &&

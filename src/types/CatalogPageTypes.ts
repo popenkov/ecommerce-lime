@@ -5,6 +5,7 @@ export type CheckboxType = {
   text: string;
   inputName: string;
   inputValue: string;
+  amount?: number;
   isChecked?: boolean;
 };
 

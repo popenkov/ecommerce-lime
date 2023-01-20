@@ -12,13 +12,17 @@ const Confirmation = styled.div`
 const ConfirmationWrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
-  max-width: 200px;
+  max-width: 321px;
   padding: 12px 8px;
   border-radius: 0px 0px 10px 10px;
   background-color: ${({ theme }) => theme.color.white};
 
   ${font({ size: "14", lineHeight: "17", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    width: 200px;
+  }
 `;
 
 const PriceContainer = styled.div`

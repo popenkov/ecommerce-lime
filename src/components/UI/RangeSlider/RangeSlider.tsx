@@ -40,38 +40,43 @@ export const RangeSlider: FC<any> = ({ min, max, onChange }) => {
 
   return (
     <Styled.Container>
-      <Styled.ThumbLeft
-        type="range"
-        min={min}
-        max={max}
-        value={minVal}
-        onChange={(event) => {
-          const value = Math.min(Number(event.target.value), maxVal - 1);
-          setMinVal(value);
-          minValRef.current = value;
-        }}
-
-        // style={{ zIndex: minVal > max - 100 && "5" }}
-      />
-      <Styled.ThumbRight
-        type="range"
-        min={min}
-        max={max}
-        value={maxVal}
-        onChange={(event) => {
-          const value = Math.max(Number(event.target.value), minVal + 1);
-          setMaxVal(value);
-          maxValRef.current = value;
-        }}
-      />
+      <Styled.ThumbsContainer>
+        <Styled.ThumbLeft
+          type="range"
+          min={min}
+          max={max}
+          value={minVal}
+          onChange={(event) => {
+            const value = Math.min(Number(event.target.value), maxVal - 1);
+            setMinVal(value);
+            minValRef.current = value;
+          }}
+          //   style={{ zIndex: minVal > max - 100 && "5" }}
+        />
+        <Styled.ThumbRight
+          type="range"
+          min={min}
+          max={max}
+          value={maxVal}
+          onChange={(event) => {
+            const value = Math.max(Number(event.target.value), minVal + 1);
+            setMaxVal(value);
+            maxValRef.current = value;
+          }}
+        />
+      </Styled.ThumbsContainer>
 
       <Styled.Slider>
         <Styled.InputsContainer>
           <Styled.LeftValue type="text" value={minVal} />
+          <Styled.InputsDivider />
           <Styled.RightValue type="text" value={maxVal} />
         </Styled.InputsContainer>
-        <Styled.Track />
-        <Styled.Range ref={range} />
+
+        <Styled.RangeSliderContainer>
+          <Styled.Track />
+          <Styled.Range ref={range} />
+        </Styled.RangeSliderContainer>
       </Styled.Slider>
     </Styled.Container>
   );

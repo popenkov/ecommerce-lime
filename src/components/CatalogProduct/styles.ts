@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Product = styled.div`
   position: relative;
   width: 25%;
-  max-width: 213px;
   box-sizing: border-box;
   padding: 10px;
   background-color: ${({ theme }) => theme.color.white};
@@ -17,7 +16,7 @@ const Product = styled.div`
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   }
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 115px;
+    width: calc(50% - 7px);
     padding: 5px;
   }
 `;
@@ -29,6 +28,18 @@ const LinkContainer = styled(Link)`
 
 const PhotoContainer = styled.div`
   position: relative;
+`;
+
+const FavoritesButtonContainer = styled.span`
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    top: -4px;
+    left: 10px;
+  }
 `;
 
 const Photo = styled.img`
@@ -130,6 +141,7 @@ export const Styled = {
   Product,
   LinkContainer,
   PhotoContainer,
+  FavoritesButtonContainer,
   Photo,
   Title,
   Price,

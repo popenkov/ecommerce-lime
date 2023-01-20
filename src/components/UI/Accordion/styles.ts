@@ -1,4 +1,4 @@
-import { font } from "@src/styles/mixins";
+import { flexAlignCenter, font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
 
 const Accordion = styled.div`
@@ -8,12 +8,34 @@ const Accordion = styled.div`
 `;
 
 const Header = styled.div`
+  ${flexAlignCenter};
+  justify-content: space-between;
   padding-bottom: 7px;
-  ${font({ size: "14", lineHeight: "17", fontWeight: "400" })};
-  color: ${({ theme }) => theme.color.black};
+  margin-bottom: 5px;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
+`;
+
+const Title = styled.h3`
+  ${font({ size: "14", lineHeight: "17", fontWeight: "400" })};
+  color: ${({ theme }) => theme.color.black};
+`;
+
+const IconContainer = styled.div<{ isOpen: boolean }>`
+  transform: rotate(90deg);
+  margin-right: 7px;
+
+  & svg path {
+    fill: ${({ theme }) => theme.color.lightGrey};
+  }
+
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      transform: rotate(-90deg);
+    `};
 `;
 
 const Body = styled.div<{ isOpen: boolean }>`
@@ -38,4 +60,6 @@ export const Styled = {
   Accordion,
   Header,
   Body,
+  IconContainer,
+  Title,
 };

@@ -23,14 +23,13 @@ export const catalogData: CatalogPageType = {
         },
         {
           id: "3",
-          text: "Восточные сладости  ",
+          text: "сладости  ",
           href: "#",
         },
         {
           id: "4",
           text: "Круассаны",
           href: "#",
-          isActive: true,
         },
         {
           id: "5",
@@ -63,24 +62,28 @@ export const catalogData: CatalogPageType = {
           text: "Кексы",
           inputName: "brands",
           inputValue: "keksy",
+          amount: 12,
         },
         {
           id: "2",
           text: "Пироги",
           inputName: "brands",
           inputValue: "pirogi",
+          amount: 432,
         },
         {
           id: "3",
-          text: "Восточные сладости",
+          text: "Сладости",
           inputName: "brands",
           inputValue: "vostok-sladosti",
+          amount: 54,
         },
         {
           id: "4",
           text: "Круассаны",
           inputName: "brands",
           inputValue: "cruassans",
+          amount: 14,
           isChecked: true,
         },
         {
@@ -88,18 +91,21 @@ export const catalogData: CatalogPageType = {
           text: "Печенье",
           inputName: "brands",
           inputValue: "cookies",
+          amount: 12,
         },
         {
           id: "6",
           text: "Сдобы",
           inputName: "brands",
           inputValue: "sdoby",
+          amount: 2,
         },
         {
           id: "7",
           text: "Слойки",
           inputName: "brands",
           inputValue: "sloyki",
+          amount: 16,
         },
       ],
     },
@@ -149,7 +155,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "1322123",
@@ -173,7 +179,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "211v1",
@@ -197,7 +203,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "33545342334",
@@ -221,7 +227,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
   ],
   banner: {
@@ -253,7 +259,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "123",
@@ -277,7 +283,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "2v1",
@@ -301,7 +307,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "3352334",
@@ -325,7 +331,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "45d32341",
@@ -349,7 +355,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "1322123",
@@ -373,7 +379,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "211v1",
@@ -397,7 +403,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
     {
       id: "33545342334",
@@ -421,7 +427,7 @@ export const catalogData: CatalogPageType = {
         { id: "fats", name: "Жиры", value: 23 },
         { id: "carbohydrate", name: "Углеводы", value: 12 },
       ],
-      button: "Добавить в корзину",
+      button: { text: "Добавить в корзину", mobileText: "В корзину" },
     },
   ],
   delivery: {

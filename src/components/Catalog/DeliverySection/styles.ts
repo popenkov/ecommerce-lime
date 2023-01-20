@@ -1,4 +1,5 @@
 import { font } from "@src/styles/mixins";
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 const Delivery = styled.div<{ background: string; img: string }>`
@@ -14,9 +15,19 @@ const Delivery = styled.div<{ background: string; img: string }>`
       background: url(${img}), ${background};
       background-repeat: no-repeat;
       background-position: right;
+
+      @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+        background: ${background};
+      }
     `};
 
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    padding: 23px 26px;
+    background-position-x: 140%;
+  }
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 22px 18px;
   }
 `;
 
@@ -34,9 +45,16 @@ const Title = styled.span`
 `;
 
 const Text = styled.span`
+  margin-bottom: 13px;
   ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
   color: ${({ theme }) => theme.color.black};
   opacity: 0.7;
+`;
+
+const ShowMoreLink = styled(Link)`
+  ${font({ size: "12", lineHeight: "15", fontWeight: "500" })};
+  color: ${({ theme }) => theme.color.black};
+  opacity: 0.3;
 `;
 
 export const Styled = {
@@ -44,4 +62,5 @@ export const Styled = {
   TextContainer,
   Title,
   Text,
+  ShowMoreLink,
 };

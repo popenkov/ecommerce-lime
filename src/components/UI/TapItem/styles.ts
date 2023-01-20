@@ -2,6 +2,7 @@ import { absolutePseudoEl, box, flexAlignCenter, flexCenter, font } from "@src/s
 import styled from "styled-components";
 
 const Tap = styled.div`
+  cursor: pointer;
   ${flexAlignCenter};
   padding: 6px 10px;
   background-color: ${({ theme }) => theme.color.greyLightBg};

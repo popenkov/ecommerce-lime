@@ -7,10 +7,12 @@ import { Styled } from "./styles";
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { IMAGES } from "@src/utils/ImagesMap";
-import { Routes } from "react-router";
 import { ROUTE } from "@src/utils/Routes";
 import { ItemType } from "@src/types/commonTypes";
 import { AddToCardBtnNew } from "../UI/AddToCardBtnNew";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
+import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
 
 export const CatalogProduct: FC<ItemType> = ({
   id,
@@ -48,14 +50,17 @@ export const CatalogProduct: FC<ItemType> = ({
     addItemToCart(itemDate);
   };
 
-  const handleRemoveFromCardClick = () => {
-    removeItemfromCart(id);
-  };
+  const isAdaptive = useMediaQuery(theme.breakpoints.large);
+
+  const buttonText = !isAdaptive ? button?.text : button?.mobileText;
 
   return (
     <Styled.Product ref={hoverRef}>
       <Styled.LinkContainer to={ROUTE.PRODUCT}>
         <Styled.PhotoContainer>
+          <Styled.FavoritesButtonContainer>
+            <FavoritesButton isFavorite={isFavorite as boolean} isSmall />
+          </Styled.FavoritesButtonContainer>
           <Styled.Photo src={imageToDraw} />
         </Styled.PhotoContainer>
         <Rating data={rating} showStarsValue showReviewsValue={false} />
@@ -86,7 +91,7 @@ export const CatalogProduct: FC<ItemType> = ({
       </Styled.LinkContainer>
       {!isItemInCart ? (
         <AddToCardBtnNew
-          text={button || "В корзину"}
+          text={buttonText}
           onClick={handleAddToCardClick}
           isHovered={isHovered}
           isAdded={isItemInCart}

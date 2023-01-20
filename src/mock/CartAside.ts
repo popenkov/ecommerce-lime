@@ -135,7 +135,7 @@ export const RecommendatedItems: ItemsType = {
         { id: "fats", name: "Ж", value: 23 },
         { id: "carbohydrate", name: "У", value: 12 },
       ],
-      button: "В корзину",
+      button: { text: "В корзину", mobileText: "В корзину" },
     },
     {
       id: "1322123",
@@ -159,7 +159,7 @@ export const RecommendatedItems: ItemsType = {
         { id: "fats", name: "Ж", value: 23 },
         { id: "carbohydrate", name: "У", value: 12 },
       ],
-      button: "В корзину",
+      button: { text: "В корзину", mobileText: "В корзину" },
     },
     {
       id: "211v1",
@@ -183,7 +183,7 @@ export const RecommendatedItems: ItemsType = {
         { id: "fats", name: "Ж", value: 23 },
         { id: "carbohydrate", name: "У", value: 12 },
       ],
-      button: "В корзину",
+      button: { text: "В корзину", mobileText: "В корзину" },
     },
     {
       id: "33545342334",
@@ -207,7 +207,7 @@ export const RecommendatedItems: ItemsType = {
         { id: "fats", name: "Ж", value: 23 },
         { id: "carbohydrate", name: "У", value: 12 },
       ],
-      button: "В корзину",
+      button: { text: "В корзину", mobileText: "В корзину" },
     },
     {
       id: "442342234",
@@ -231,7 +231,7 @@ export const RecommendatedItems: ItemsType = {
         { id: "fats", name: "Ж", value: 23 },
         { id: "carbohydrate", name: "У", value: 12 },
       ],
-      button: "В корзину",
+      button: { text: "В корзину", mobileText: "В корзину" },
     },
     {
       id: "33545sdasd34234",
@@ -255,7 +255,7 @@ export const RecommendatedItems: ItemsType = {
         { id: "fats", name: "Ж", value: 23 },
         { id: "carbohydrate", name: "У", value: 12 },
       ],
-      button: "В корзину",
+      button: { text: "В корзину", mobileText: "В корзину" },
     },
     {
       id: "4423x34",
@@ -279,7 +279,7 @@ export const RecommendatedItems: ItemsType = {
         { id: "fats", name: "Ж", value: 23 },
         { id: "carbohydrate", name: "У", value: 12 },
       ],
-      button: "В корзину",
+      button: { text: "В корзину", mobileText: "В корзину" },
     },
   ],
 };

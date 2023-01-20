@@ -5,11 +5,15 @@ const Item = styled.div`
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  max-width: 184px;
+
   margin-bottom: 4px;
   padding: 5px 10px;
   background-color: ${({ theme }) => theme.color.white};
   border-radius: 5px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    max-width: 184px;
+  }
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;

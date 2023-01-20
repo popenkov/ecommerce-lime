@@ -11,6 +11,8 @@ export const theme: Theme = {
     greyBorderLight: "rgba(51, 51, 51, .1)",
     greyLightBg: "#f1f1f1",
     popupBackground: "rgba(51, 51, 51, 0.7)",
+    greyTrack: "#eeeeee",
+    greyFont: "#9B9B9B",
     green: "#A1D214",
     orange: "#FF5C00",
     yellow: "#FFC709",

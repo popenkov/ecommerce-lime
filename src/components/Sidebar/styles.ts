@@ -6,7 +6,7 @@ const Sidebar = styled.aside`
   justify-content: flex-start;
   position: sticky;
   z-index: 5;
-  width: 200px;
+  width: 321px;
   height: calc(100vh - 116px);
 
   top: 116px;
@@ -14,6 +14,11 @@ const Sidebar = styled.aside`
   background-color: ${({ theme }) => theme.color.greyLightBg};
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    width: 200px;
+  }
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
     height: calc(100vh - 59px);

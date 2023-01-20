@@ -170,7 +170,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "1322123",
@@ -194,7 +194,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "211v1",
@@ -218,7 +218,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "33545342334",
@@ -242,7 +242,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "442342234",
@@ -266,7 +266,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "33545sdasd34234",
@@ -290,7 +290,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "4423x34",
@@ -314,7 +314,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
       ],
     },
@@ -349,7 +349,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "1323123",
@@ -373,7 +373,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "2111z",
@@ -397,7 +397,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "335453242334",
@@ -421,7 +421,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "44234234",
@@ -445,7 +445,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "33545sdasd34234",
@@ -469,7 +469,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "4a42334",
@@ -493,7 +493,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
       ],
     },
@@ -528,7 +528,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "13d2123",
@@ -552,7 +552,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "2e111",
@@ -576,7 +576,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "335453423412",
@@ -600,7 +600,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "44d2334234",
@@ -624,7 +624,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "33545sdasd34234",
@@ -648,7 +648,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "44w2334",
@@ -672,7 +672,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
       ],
     },
@@ -707,7 +707,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "13f2123",
@@ -731,7 +731,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "211s1",
@@ -755,7 +755,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "33545x34234",
@@ -779,7 +779,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "442324234",
@@ -803,7 +803,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "33545sdasd34234",
@@ -827,7 +827,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
         {
           id: "4423f34",
@@ -851,7 +851,7 @@ export const MainPageData: MainPageDataType = {
             { id: "fats", name: "Ж", value: 23 },
             { id: "carbohydrate", name: "У", value: 12 },
           ],
-          button: "В корзину",
+          button: { text: "В корзину", mobileText: "В корзину" },
         },
       ],
     },

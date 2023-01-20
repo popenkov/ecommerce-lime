@@ -21,8 +21,12 @@ const PopularItems = styled(PerfectScrollbar)`
   flex-wrap: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 200px;
+  width: 321px;
   padding-bottom: 10px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    width: 200px;
+  }
 
   & .ps__rail-x {
     bottom: 0px;

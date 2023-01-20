@@ -9,7 +9,12 @@ export type ItemType = {
   title: string;
   price: PriceType;
   energy: EnergyType[];
-  button?: string;
+  button: ButtonType;
+};
+
+export type ButtonType = {
+  text: string;
+  mobileText: string;
 };
 
 export type PriceType = {
