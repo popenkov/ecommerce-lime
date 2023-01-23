@@ -1,7 +1,8 @@
 import { FC } from "react";
 
-import { Styled } from "./styles";
 import { LinkType } from "@src/types/commonTypes";
+
+import { Styled } from "./styles";
 
 type TopRightMenuProps = { data: LinkType[] };
 

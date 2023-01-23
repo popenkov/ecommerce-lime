@@ -1,11 +1,18 @@
-import { box, flexAlignCenter, font } from "@src/styles/mixins";
 import { Link } from "react-router-dom";
-import styled, { css } from "styled-components";
-import { boolean } from "yup";
+import styled from "styled-components";
+
+import { box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
 const Filter = styled.div`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    display: none;
+    position: fixed;
+    z-index: 4;
+    inset: 0;
+    top: 132px;
+    padding: 0 13px;
+    padding-bottom: 50px;
+    overflow-y: scroll;
+    background-color: ${({ theme }) => theme.color.white};
   }
 `;
 
@@ -66,6 +73,52 @@ const MobileButtonAmount = styled.span`
   color: ${({ theme }) => theme.color.black};
 `;
 
+const MobileFilterButtons = styled.div`
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    top: auto;
+
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+const MobileCancelButton = styled.button`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${box(40)};
+    ${flexCenter};
+    box-sizing: border-box;
+
+    background-color: ${({ theme }) => theme.color.orange};
+    color: ${({ theme }) => theme.color.white};
+    ${font({ size: "26", lineHeight: "34", fontWeight: "400" })};
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+`;
+
+const MobileSubmitButton = styled.button`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex: 1;
+    ${flexCenter};
+    width: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: ${({ theme }) => theme.color.green};
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+`;
+
 export const Styled = {
   MobileFilterButton,
   Filter,
@@ -77,4 +130,7 @@ export const Styled = {
   MobileButtonIcon,
   MobileButtonText,
   MobileButtonAmount,
+  MobileFilterButtons,
+  MobileCancelButton,
+  MobileSubmitButton,
 };

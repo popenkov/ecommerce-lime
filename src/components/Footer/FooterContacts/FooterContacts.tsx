@@ -1,10 +1,10 @@
 import { FC } from "react";
 
 import { DownloadButton } from "@src/components/UI";
+import { ContactsType } from "@src/types/FooterTypes";
+import { ICONS } from "@src/utils/IconsMap";
 
 import { Styled } from "./styles";
-import { ICONS } from "@src/utils/IconsMap";
-import { ContactsType } from "@src/types/FooterTypes";
 
 type FooterContactsProps = {
   data: ContactsType;

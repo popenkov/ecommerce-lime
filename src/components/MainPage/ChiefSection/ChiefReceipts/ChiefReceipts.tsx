@@ -1,15 +1,17 @@
 import { FC, useRef } from "react";
-import { Styled } from "./styles";
 import type { Swiper as SwiperType } from "swiper";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
-import { Receipt } from "../Receipt";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
-import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 import { ChiefReceiptItemType } from "@src/types/MainPageTypes";
+
+import { Receipt } from "../Receipt";
+import { Styled } from "./styles";
 
 type ChiefReceiptsProps = {
   title: string;

@@ -1,5 +1,6 @@
-import { LinkType } from "@src/types/commonTypes";
 import { FC } from "react";
+
+import { LinkType } from "@src/types/commonTypes";
 
 import { BottomRightMenu } from "../BottomRightMenu";
 import { CatalogButton } from "../Catalog/CatalogButton";

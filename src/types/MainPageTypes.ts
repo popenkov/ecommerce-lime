@@ -1,4 +1,5 @@
 import { FunctionComponent, SVGProps } from "react";
+
 import { ItemType } from "./commonTypes";
 
 export type MainSliderType = {

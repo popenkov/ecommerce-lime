@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import { EnergyType, ItemType } from "@src/types/commonTypes";
 import { calculateEnergie } from "@src/utils/CalculateEnergy";
 

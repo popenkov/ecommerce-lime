@@ -1,7 +1,8 @@
 import { FC } from "react";
 
-import { Styled } from "./styles";
 import { FooterLinksType } from "@src/types/FooterTypes";
+
+import { Styled } from "./styles";
 
 type FooterLinksProps = {
   data: FooterLinksType;

@@ -1,7 +1,6 @@
-import { CatalogPageType } from "@src/types/CatalogPageTypes";
-
 import bannerImg from "@src/assets/images/catalog/banner-img.png";
 import deliveryImg from "@src/assets/images/catalog/delivery-img.png";
+import { CatalogPageType } from "@src/types/CatalogPageTypes";
 
 export const catalogData: CatalogPageType = {
   searchQuery: "Питьевая вода",
@@ -132,6 +131,7 @@ export const catalogData: CatalogPageType = {
       href: "#",
     },
   ],
+
   products: [
     {
       id: "45d32341",
@@ -436,6 +436,7 @@ export const catalogData: CatalogPageType = {
     background: "#EBEBEB",
     img: deliveryImg,
     link: {
+      id: "link",
       href: "#",
       text: "Показать больше",
     },

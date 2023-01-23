@@ -1,11 +1,13 @@
 import { FC } from "react";
+
+import { RecommendatedItems } from "@src/mock/CartAside";
+
+import { ProductsSection } from "../UI";
 import { DetailedDescription } from "./DetailedDescription";
 import { MainDescription } from "./MainDescription";
 import { ProductPreviews } from "./ProductPreviews";
 import { ProductSlider } from "./ProductSlider";
 import { Styled } from "./styles";
-import { RecommendatedItems } from "@src/mock/CartAside";
-import { ProductsSection } from "../UI";
 
 export const ProductDetailed: FC = () => {
   return (

@@ -1,25 +1,11 @@
-import { ReactComponent as ChiefIcon } from "@src/assets/icons/chief.svg";
-import { ReactComponent as OrderIcon } from "@src/assets/icons/order.svg";
-import { ReactComponent as BellIcon } from "@src/assets/icons/reception-bell.svg";
-import { ReactComponent as RecommendIcon } from "@src/assets/icons/recommended.svg";
-import imageFirst from "@src/assets/images/main-slider/slider-img-1.png";
-import imageSecond from "@src/assets/images/main-slider/slider-img-2.png";
-import imageThird from "@src/assets/images/main-slider/slider-img-3.png";
-import newsFirst from "@src/assets/images/news/news-1.jpg";
-import newsSecond from "@src/assets/images/news/news-2.jpg";
-import newsThird from "@src/assets/images/news/news-3.jpg";
-import newsFourth from "@src/assets/images/news/news-4.jpg";
-import productFirst from "@src/assets/images/products/product-1.jpg";
-import productSecond from "@src/assets/images/products/product-2.jpg";
+import { ReactComponent as ClockIcon } from "@src/assets/icons/clock.svg";
+import { ReactComponent as PortionIcon } from "@src/assets/icons/portion.svg";
 
 // receipts
 import receiptFirst from "@src/assets/images/receipts/barbeque.jpg";
 import ingredientFirst from "@src/assets/images/receipts/ingredientFirst.jpg";
 import ingredientSecond from "@src/assets/images/receipts/ingredientSecond.jpg";
 import ingredientThird from "@src/assets/images/receipts/ingredientThird.jpg";
-
-import { ReactComponent as ClockIcon } from "@src/assets/icons/clock.svg";
-import { ReactComponent as PortionIcon } from "@src/assets/icons/portion.svg";
 import { ChiefReceiptsType, MainPageDataType } from "@src/types/MainPageTypes";
 
 export const MainPageData: MainPageDataType = {

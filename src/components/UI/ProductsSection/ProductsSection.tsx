@@ -1,18 +1,17 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 import { Product } from "@src/components/Product";
-// import { ItemsType, MainPageData } from "@src/mock/MainPageData";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
+import { ItemsType } from "@src/types/MainPageTypes";
 
 import { NavigationButtons } from "./NavigationButton";
 import { Styled } from "./styles";
 import { onBeforeInit } from "./utils";
-import { useMediaQuery } from "@src/hooks/useMediaQuery";
-import { theme } from "@src/theme";
-import { ItemsType } from "@src/types/MainPageTypes";
 
 type ProductsSectionProps = {
   data: ItemsType;
@@ -40,7 +39,7 @@ export const ProductsSection: FC<ProductsSectionProps> = ({ data, hideLink }) =>
       <Styled.ItemsContainer>
         <Swiper
           modules={[Navigation]}
-          spaceBetween={2}
+          spaceBetween={12}
           slidesPerView="auto"
           onInit={(swiper: SwiperType) => {
             onBeforeInit(swiper, buttonPrevRef, buttonNextRef);

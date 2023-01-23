@@ -1,5 +1,6 @@
-import { ChiefReceiptTagType } from "@src/types/MainPageTypes";
 import { FC } from "react";
+
+import { ChiefReceiptTagType } from "@src/types/MainPageTypes";
 
 import { Styled } from "./styles";
 

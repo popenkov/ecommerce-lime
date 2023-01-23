@@ -1,6 +1,7 @@
+import { FC } from "react";
+
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
-import { FC } from "react";
 
 import { ReactComponent as CatalogIcon } from "../../../../assets/icons/catalog.svg";
 import { Styled } from "./styles";

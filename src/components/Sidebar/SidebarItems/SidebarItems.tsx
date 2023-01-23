@@ -1,7 +1,8 @@
-import { ItemType } from "@src/types/commonTypes";
 import { FC } from "react";
-import { SidebarItem } from "../SidebarItem/SidebarItem";
 
+import { ItemType } from "@src/types/commonTypes";
+
+import { SidebarItem } from "../SidebarItem/SidebarItem";
 import { Styled } from "./styles";
 
 type SidebarItemsProps = {

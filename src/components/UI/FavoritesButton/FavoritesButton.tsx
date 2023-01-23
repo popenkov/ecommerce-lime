@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 
 import { ReactComponent as FavoritesIcon } from "@src/assets/icons/favorites.svg";
+
 import { Styled } from "./styles";
 
 type FavoritesButtonProps = {

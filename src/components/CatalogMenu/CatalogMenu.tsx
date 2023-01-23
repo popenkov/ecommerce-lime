@@ -1,8 +1,9 @@
+import { FC, useEffect, useState } from "react";
+
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { useGetCatalogMenuDataQuery } from "@src/store/services";
-import { FC, useEffect, useState } from "react";
-import { CatalogItem } from "./CatalogItem";
 
+import { CatalogItem } from "./CatalogItem";
 import { Styled } from "./styles";
 
 export const CatalogMenu: FC = () => {

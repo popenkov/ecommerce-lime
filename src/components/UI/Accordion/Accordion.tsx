@@ -1,5 +1,7 @@
 import { FC, useState } from "react";
+
 import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
+
 import { Styled } from "./styles";
 
 export const Accordion: FC<any> = ({ title, children }) => {

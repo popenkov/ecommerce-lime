@@ -1,9 +1,10 @@
-import { FormInput } from "@src/components/UI/FormInput";
-import { FormRadioButton } from "@src/components/UI/FormRadioButton";
 import { FC } from "react";
 import { Control, Controller, FieldErrorsImpl, UseFormRegister } from "react-hook-form";
-import { RequestFormType } from "../utils";
 
+import { FormInput } from "@src/components/UI/FormInput";
+import { FormRadioButton } from "@src/components/UI/FormRadioButton";
+
+import { RequestFormType } from "../utils";
 import { Styled } from "./styles";
 type PaymentMethodsProps = {
   control: Control<RequestFormType, any>;

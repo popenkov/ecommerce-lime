@@ -1,18 +1,18 @@
 import { FC } from "react";
 
-import { useHover } from "@src/hooks/useHover";
-
-import { Rating } from "../UI";
-import { Styled } from "./styles";
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
-import { IMAGES } from "@src/utils/ImagesMap";
-import { ROUTE } from "@src/utils/Routes";
-import { ItemType } from "@src/types/commonTypes";
-import { AddToCardBtnNew } from "../UI/AddToCardBtnNew";
+import { useHover } from "@src/hooks/useHover";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
+import { ItemType } from "@src/types/commonTypes";
+import { IMAGES } from "@src/utils/ImagesMap";
+import { ROUTE } from "@src/utils/Routes";
+
+import { Rating } from "../UI";
+import { AddToCardBtnNew } from "../UI/AddToCardBtnNew";
 import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
+import { Styled } from "./styles";
 
 export const CatalogProduct: FC<ItemType> = ({
   id,
@@ -68,9 +68,8 @@ export const CatalogProduct: FC<ItemType> = ({
       amount,
       unit,
       energy,
+      button,
     };
-
-    console.log(isItemFavorite);
 
     isItemFavorite ? removeItemfromFavorites(id) : addItemToFavorites(itemDate);
   };

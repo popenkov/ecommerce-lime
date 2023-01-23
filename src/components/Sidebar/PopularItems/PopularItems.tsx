@@ -1,5 +1,7 @@
-import { ItemType } from "@src/types/commonTypes";
 import { FC } from "react";
+
+import { ItemType } from "@src/types/commonTypes";
+
 import { PopularItem } from "../PopularItem/PopularItem";
 import { Styled } from "./styles";
 

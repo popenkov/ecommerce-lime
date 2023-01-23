@@ -1,5 +1,6 @@
-import { font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { flexCenter, font } from "@src/styles/mixins";
 
 const PageContainer = styled.main`
   display: flex;
@@ -99,6 +100,19 @@ const ProductsContainer = styled.div`
   }
 `;
 
+const EmptyContainer = styled.div`
+  width: 100%;
+  height: calc(100% - 300px);
+  ${flexCenter}
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    min-height: 400px;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+`;
+
 export const Styled = {
   PageContainer,
   MainContainer,
@@ -108,4 +122,5 @@ export const Styled = {
   ResultsContainer,
   FiltersContainer,
   ProductsContainer,
+  EmptyContainer,
 };

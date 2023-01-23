@@ -1,8 +1,10 @@
 import { FC } from "react";
+
+import { useGetHeaderDataQuery } from "@src/store/services";
+
 import { HeaderBottom } from "./HeaderBottom";
 import { HeaderTop } from "./HeaderTop";
 import { Styled } from "./styles";
-import { useGetHeaderDataQuery } from "@src/store/services";
 
 export const Header: FC = () => {
   const { data } = useGetHeaderDataQuery();

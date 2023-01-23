@@ -1,5 +1,7 @@
-import { useAppSelector } from "@src/hooks/useAppSelector";
 import { FC } from "react";
+
+import { useAppSelector } from "@src/hooks/useAppSelector";
+
 import { Styled } from "./styles";
 
 export const EnergieCalculator: FC = () => {

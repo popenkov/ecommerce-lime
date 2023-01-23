@@ -1,7 +1,9 @@
+import { FC } from "react";
+
 import { Ingredient } from "@src/components/UI/Ingredient";
 import { Tag } from "@src/components/UI/Tag";
 import { ChiefReceiptItemType } from "@src/types/MainPageTypes";
-import { FC } from "react";
+
 import { Styled } from "./styles";
 
 type ReceiptProps = Omit<ChiefReceiptItemType, "id">;

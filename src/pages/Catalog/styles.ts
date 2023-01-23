@@ -1,5 +1,6 @@
-import { font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const PageContainer = styled.main`
   display: flex;

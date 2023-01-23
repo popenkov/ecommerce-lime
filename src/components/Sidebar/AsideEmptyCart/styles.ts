@@ -1,6 +1,7 @@
-import { flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+import { flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   ${flexColumnCenter};

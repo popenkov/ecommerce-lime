@@ -1,6 +1,7 @@
-import { font } from "@src/styles/mixins";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const Delivery = styled.div<{ background: string; img: string }>`
   width: 100%;

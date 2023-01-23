@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { box, flexCenter, font } from "@src/styles/mixins";
+import { box, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   flex-grow: 1;

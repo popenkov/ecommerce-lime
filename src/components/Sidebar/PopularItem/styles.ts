@@ -1,5 +1,6 @@
-import { flexAlignCenter, flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const PopularItem = styled.div`
   display: flex;
@@ -8,8 +9,6 @@ const PopularItem = styled.div`
   padding: 4px 10px;
   background-color: ${({ theme }) => theme.color.white};
   border-radius: 5px;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 const Image = styled.img`

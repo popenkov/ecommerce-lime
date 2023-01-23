@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState, useRef, FC } from "react";
+
 import { Styled } from "./styles";
 // import "./multiRangeSlider.css";
 

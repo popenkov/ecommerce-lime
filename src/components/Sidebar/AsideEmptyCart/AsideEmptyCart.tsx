@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import { ReactComponent as DietIcon } from "@src/assets/icons/diet.svg";
+
 import { Styled } from "./styles";
 
 const data = {

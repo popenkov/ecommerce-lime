@@ -1,5 +1,6 @@
-import { LinkType } from "@src/types/commonTypes";
 import { FC } from "react";
+
+import { LinkType } from "@src/types/commonTypes";
 
 import { Styled } from "./styles";
 
@@ -8,7 +9,7 @@ export const TapItem: FC<LinkType> = ({ text, href }) => {
     console.log("deleted");
   };
   const handleFilterTapClick = () => {
-    console.log(`click on ${text}`);
+    console.log(`click on ${text}/${href}`);
   };
   return (
     <Styled.Tap>

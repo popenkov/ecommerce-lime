@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Reaction = styled.div`
   ${flexAlignCenter}

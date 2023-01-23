@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
-import { Link } from "react-router-dom";
 
 const Product = styled.div`
   position: relative;

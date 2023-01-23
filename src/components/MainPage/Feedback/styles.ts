@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
+import { flexCenter, font } from "@src/styles/mixins";
 
 const Feedback = styled.section`
   position: relative;

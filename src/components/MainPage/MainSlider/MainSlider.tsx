@@ -1,16 +1,17 @@
 import { FC, useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
 import { EffectCards } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import { MainSliderCard } from "../MainSliderCard";
-import { Styled } from "./styles";
 import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
 import { MainSliderType } from "@src/types/MainPageTypes";
+
+import { MainSliderCard } from "../MainSliderCard";
+import { Styled } from "./styles";
 
 type MainSliderProps = {
   data: MainSliderType[];

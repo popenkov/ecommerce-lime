@@ -1,6 +1,6 @@
-import { box, flexAlignCenter, font } from "@src/styles/mixins";
+import styled from "styled-components";
 
-import styled, { css } from "styled-components";
+import { flexAlignCenter } from "@src/styles/mixins";
 
 const Form = styled.form`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

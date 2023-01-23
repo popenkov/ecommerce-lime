@@ -1,10 +1,11 @@
+import React, { FC } from "react";
+
 import { useActions } from "@src/hooks/useActions";
 import { ItemType } from "@src/types/commonTypes";
 
 // import { ItemType } from "@src/mock/MainPageData";
 import { SidebarItem } from "@src/types/SidebarCartTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
-import React, { FC } from "react";
 
 import { Styled } from "./styles";
 

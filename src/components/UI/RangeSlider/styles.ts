@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-import { box, flexAlignCenter, font } from "@src/styles/mixins";
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   position: relative;
@@ -15,6 +15,7 @@ const Slider = styled.div`
   width: 100%;
   max-width: 172px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    max-width: 320px;
   }
 `;
 
@@ -119,6 +120,10 @@ const ThumbLeft = styled.input`
 
   z-index: 3;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 320px;
+  }
+
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
@@ -145,6 +150,10 @@ const ThumbRight = styled.input`
   outline: none;
 
   z-index: 4;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 320px;
+  }
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;

@@ -1,5 +1,6 @@
-import { CatalogDeliveryType } from "@src/types/CatalogPageTypes";
 import { FC } from "react";
+
+import { CatalogDeliveryType } from "@src/types/CatalogPageTypes";
 
 import { Styled } from "./styles";
 

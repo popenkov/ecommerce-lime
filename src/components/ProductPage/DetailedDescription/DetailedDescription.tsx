@@ -1,7 +1,9 @@
 import { FC, useState } from "react";
+
 import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
-import { Styled } from "./styles";
 import { productDetailedData } from "@src/mock/ProductDetailed";
+
+import { Styled } from "./styles";
 
 export const DetailedDescription: FC = () => {
   const { color, title, description } = productDetailedData.descripion;

@@ -1,5 +1,6 @@
-import { box } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { box } from "@src/styles/mixins";
 
 const Slider = styled.div`
   position: relative;

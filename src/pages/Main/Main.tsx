@@ -2,16 +2,15 @@ import { FC } from "react";
 
 import { Sidebar } from "@src/components";
 import { Advantages } from "@src/components/MainPage/Advantages";
+import { ChiefSection } from "@src/components/MainPage/ChiefSection";
 import { Feedback } from "@src/components/MainPage/Feedback";
 import { MainSlider } from "@src/components/MainPage/MainSlider";
 import { News } from "@src/components/MainPage/News";
 import { Reviews } from "@src/components/MainPage/Reviews";
 import { ProductsSection } from "@src/components/UI/ProductsSection";
-import { MainPageData } from "@src/mock/MainPageData";
+import { useGetMainPageDataQuery } from "@src/store/services";
 
 import { Styled } from "./styles";
-import { ChiefSection } from "@src/components/MainPage/ChiefSection";
-import { useGetMainPageDataQuery } from "@src/store/services";
 
 export const Main: FC = () => {
   const { data } = useGetMainPageDataQuery();

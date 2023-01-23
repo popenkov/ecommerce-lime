@@ -1,6 +1,7 @@
-import { font } from "@src/styles/mixins";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const PageContainer = styled.main`
   display: flex;
@@ -69,6 +70,7 @@ const Data = styled.div`
   max-width: 376px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    max-width: unset;
   }
 `;
 

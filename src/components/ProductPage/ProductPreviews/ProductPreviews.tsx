@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Styled } from "./styles";
+
 import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
-import { ReviewItem } from "../ReviewItem";
 import { productDetailedData } from "@src/mock/ProductDetailed";
+
+import { ReviewItem } from "../ReviewItem";
+import { Styled } from "./styles";
 
 export const ProductPreviews = () => {
   const { color, title, subtitle, filter, reviews } = productDetailedData.reviews;

@@ -1,6 +1,5 @@
-import styled, { css } from "styled-components";
-
 import PerfectScrollbar from "react-perfect-scrollbar";
+import styled, { css } from "styled-components";
 
 import { flexAlignCenter, font } from "@src/styles/mixins";
 

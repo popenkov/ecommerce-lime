@@ -1,12 +1,13 @@
 import { FC } from "react";
-import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
-import { ICONS } from "@src/utils/IconsMap";
 
-import { Styled } from "./styles";
+import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
 import { DetailedCatalogMenu } from "@src/components/DetailedCatalogMenu";
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { CatalogItemType } from "@src/types/CatalogMenuTypes";
+import { ICONS } from "@src/utils/IconsMap";
+
+import { Styled } from "./styles";
 
 type CatalogItem = {
   onClick: () => void;

@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const Banner = styled.div<{ background: string; img: string }>`
   width: 100%;
@@ -15,9 +16,6 @@ const Banner = styled.div<{ background: string; img: string }>`
       background-repeat: no-repeat;
       background-position: right;
     `};
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 const TextContainer = styled.div`

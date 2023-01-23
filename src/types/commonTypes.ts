@@ -32,7 +32,7 @@ export type RatingType = {
 export type LinkType = {
   text: string;
   href: string;
-  id?: string;
+  id: string;
   icon?: string;
   isActive?: boolean;
   underlined?: boolean;

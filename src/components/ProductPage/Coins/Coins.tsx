@@ -2,8 +2,9 @@ import { FC } from "react";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
-import LimeLogo from "@src/assets/images/product/lime-logo.png";
 import QuestionImg from "@src/assets/icons/question-icon.svg";
+import LimeLogo from "@src/assets/images/product/lime-logo.png";
+
 import { Styled } from "./styles";
 
 type CoinsType = {

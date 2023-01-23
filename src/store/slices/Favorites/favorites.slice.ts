@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import { EnergyType, ItemType } from "@src/types/commonTypes";
 import { calculateEnergie } from "@src/utils/CalculateEnergy";
 
@@ -21,7 +22,6 @@ export const favoritesSlice = createSlice({
     },
     removeItemfromFavorites: (state, action) => {
       const id = action.payload;
-      console.log(id);
       const newItems = state.items.filter((item) => {
         return item.id != id;
       });

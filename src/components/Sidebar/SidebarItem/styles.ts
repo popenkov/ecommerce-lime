@@ -1,5 +1,6 @@
-import { absolutePseudoEl, box, flexAlignCenter, flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { absolutePseudoEl, box, flexAlignCenter, flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
 
 const Item = styled.div`
   display: flex;

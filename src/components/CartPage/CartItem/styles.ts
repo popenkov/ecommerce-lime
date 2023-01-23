@@ -1,5 +1,6 @@
-import { absolutePseudoEl, box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
+
+import { absolutePseudoEl, box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
 const Item = styled.div`
   position: relative;
@@ -201,7 +202,7 @@ const DiscountTag = styled.span`
   }
 `;
 
-const FavoritesContainer = styled.button<{ isFavorite?: boolean }>`
+const FavoritesButton = styled.button<{ isFavorite?: boolean }>`
   cursor: pointer;
   flex: 1;
   display: flex;
@@ -281,6 +282,6 @@ export const Styled = {
   NewPrice,
   OldPrice,
   DiscountTag,
-  FavoritesContainer,
+  FavoritesButton,
   CloseButton,
 };

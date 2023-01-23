@@ -1,9 +1,10 @@
+import { FC } from "react";
+
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { useGetPopularItemsDataQuery } from "@src/store/services";
-import { FC } from "react";
+
 import { PopularItems } from "../PopularItems";
 import { SidebarItems } from "../SidebarItems";
-
 import { Styled } from "./styles";
 
 export const OrderContent: FC = () => {

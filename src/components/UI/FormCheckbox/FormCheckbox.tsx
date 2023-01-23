@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import { Styled } from "./styles";
-
 import { ReactComponent as CheckedIcon } from "@src/assets/icons/checkbox.svg";
+
+import { Styled } from "./styles";
 
 type FormCheckboxType = {
   name: string;

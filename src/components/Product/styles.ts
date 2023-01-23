@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 import { flexCenter, font } from "@src/styles/mixins";
-import { Link } from "react-router-dom";
 
 const Product = styled.div`
   position: relative;
@@ -53,8 +53,6 @@ const Title = styled.h2<{ color?: string }>`
 
 const Price = styled.div`
   margin-bottom: 7px;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 const CurrentPrice = styled.span`
@@ -94,6 +92,11 @@ const LinkToCard = styled(Link)`
   border: 1px solid ${({ theme }) => theme.color.green};
   border-radius: 5px;
   text-decoration: none;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 6px 11px;
+    height: 27px;
+  }
 `;
 
 export const Styled = {

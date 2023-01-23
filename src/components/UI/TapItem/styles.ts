@@ -1,5 +1,6 @@
-import { absolutePseudoEl, box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { absolutePseudoEl, box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
 const Tap = styled.div`
   cursor: pointer;

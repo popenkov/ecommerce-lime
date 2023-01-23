@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { box, flexCenter, font } from "@src/styles/mixins";
 

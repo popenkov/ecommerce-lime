@@ -1,5 +1,6 @@
-import { CatalogChildrenType } from "@src/types/CatalogMenuTypes";
 import { FC } from "react";
+
+import { CatalogChildrenType } from "@src/types/CatalogMenuTypes";
 
 import { Styled } from "./styles";
 

@@ -1,13 +1,9 @@
 import { FC } from "react";
 
 import { ReactComponent as CartIcon } from "@src/assets/icons/cart.svg";
-import { Styled } from "./styles";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 
-const data = {
-  sum: "120,85",
-  amount: "12",
-};
+import { Styled } from "./styles";
 
 export const OrderConfirmation: FC = () => {
   const { items, totalPrice, totalCount } = useAppSelector((state) => state.cart);

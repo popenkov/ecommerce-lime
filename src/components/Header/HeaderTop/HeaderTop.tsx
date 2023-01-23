@@ -1,5 +1,6 @@
-import { LinkType } from "@src/types/commonTypes";
 import { FC } from "react";
+
+import { LinkType } from "@src/types/commonTypes";
 
 import { HeaderLogo } from "../HeaderLogo";
 import { TopLeftMenu } from "../TopLeftMenu";

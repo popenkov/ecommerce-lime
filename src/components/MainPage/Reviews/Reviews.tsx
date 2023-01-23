@@ -1,15 +1,16 @@
 import { FC, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
-import { ReviewItem } from "../ReviewItem";
-import { Styled } from "./styles";
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
 import { ReviewsType } from "@src/types/MainPageTypes";
+
+import { ReviewItem } from "../ReviewItem";
+import { Styled } from "./styles";
 
 type ReviewsProp = {
   data: ReviewsType;

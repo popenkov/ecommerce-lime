@@ -1,5 +1,6 @@
+import styled from "styled-components";
+
 import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
-import styled, { css } from "styled-components";
 
 const MainDescription = styled.div`
   width: 47%;
@@ -37,21 +38,13 @@ const ExpireDate = styled.div`
   ${flexAlignCenter};
   ${font({ size: "10", lineHeight: "24", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 const ExpireDateTitle = styled.span`
   color: ${({ theme }) => theme.color.lightGrey};
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
-const ExpireDateValue = styled.span`
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
-`;
+const ExpireDateValue = styled.span``;
 
 const RatingContainer = styled.div`
   margin-bottom: 18px;

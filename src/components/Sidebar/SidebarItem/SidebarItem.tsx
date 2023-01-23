@@ -1,10 +1,10 @@
+import { FC } from "react";
+
 import { useActions } from "@src/hooks/useActions";
 import { ItemType } from "@src/types/commonTypes";
-
 import { IMAGES } from "@src/utils/ImagesMap";
-import { FC } from "react";
-import { AmountCounter } from "../AmountCounter";
 
+import { AmountCounter } from "../AmountCounter";
 import { Styled } from "./styles";
 
 export const SidebarItem: FC<ItemType> = ({ id, img, amount, title, price, unit }) => {

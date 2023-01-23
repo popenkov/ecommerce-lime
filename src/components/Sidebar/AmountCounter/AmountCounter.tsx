@@ -1,5 +1,6 @@
-import { useActions } from "@src/hooks/useActions";
 import { FC, useEffect, useState } from "react";
+
+import { useActions } from "@src/hooks/useActions";
 
 import { Styled } from "./styles";
 

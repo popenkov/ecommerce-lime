@@ -1,5 +1,6 @@
-import { box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
+
+import { box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
 const Title = styled.h3`
   margin-bottom: 12px;

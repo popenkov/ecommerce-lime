@@ -1,19 +1,18 @@
 import { FC, useState } from "react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import type { Swiper as SwiperType } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import { Styled } from "./styles";
-
-import { productDetailedData } from "@src/mock/ProductDetailed";
 import { FavoritesButton } from "@src/components/UI/FavoritesButton/FavoritesButton";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { productDetailedData } from "@src/mock/ProductDetailed";
 import { theme } from "@src/theme";
+
+import { Styled } from "./styles";
 
 export const ProductSlider: FC = () => {
   const { main, thumb, isFavorite } = productDetailedData.sliderImages;

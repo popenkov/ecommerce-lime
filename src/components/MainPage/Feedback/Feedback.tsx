@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import QuestionImg from "@src/assets/images/question-bg.png";
+
 import { Styled } from "./styles";
 
 const FeedbackData = [

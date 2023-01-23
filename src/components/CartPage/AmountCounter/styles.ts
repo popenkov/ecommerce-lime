@@ -1,5 +1,6 @@
-import { box, flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { box, flexCenter, font } from "@src/styles/mixins";
 
 const Counter = styled.div`
   display: flex;

@@ -1,5 +1,4 @@
-import styled, { css } from "styled-components";
-import Swiper from "swiper";
+import styled from "styled-components";
 
 const Container = styled.div`
   width: 47%;

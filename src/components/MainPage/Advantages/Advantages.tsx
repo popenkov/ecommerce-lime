@@ -1,5 +1,6 @@
-import { AdvantageType } from "@src/types/MainPageTypes";
 import { FC } from "react";
+
+import { AdvantageType } from "@src/types/MainPageTypes";
 
 import { AdvantagesCard } from "./AdvantagesCard";
 import { Styled } from "./styles";

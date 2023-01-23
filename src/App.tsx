@@ -2,17 +2,17 @@ import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { AppLayout } from "./layout";
-import { Main } from "./pages/Main";
 
 import "react-perfect-scrollbar/dist/css/styles.css";
 import "react-redux-toastr/lib/css/react-redux-toastr.min.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { Cart } from "./pages";
-import { ROUTE } from "./utils/Routes";
-import { ProductPage } from "./pages/ProductPage";
 import { Catalog } from "./pages/Catalog";
 import { FavoritesPage } from "./pages/Favorites";
+import { Main } from "./pages/Main";
+import { ProductPage } from "./pages/ProductPage";
+import { ROUTE } from "./utils/Routes";
 
 const App: FC = () => {
   return (

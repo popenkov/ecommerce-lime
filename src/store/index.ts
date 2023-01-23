@@ -1,7 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import { baseApi, catalogApi, mainPageApi } from "./services";
-
 import { catalogMenu, cart, favorites } from "./slices";
 
 export const store = configureStore({

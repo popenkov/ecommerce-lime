@@ -1,9 +1,10 @@
-import { useAppSelector } from "@src/hooks/useAppSelector";
 import { FC } from "react";
+
+import { useAppSelector } from "@src/hooks/useAppSelector";
+
 import { AsideEmptyCart } from "./AsideEmptyCart";
 import { OrderConfirmation } from "./OrderConfirmation";
 import { OrderContent } from "./OrderContent";
-
 import { Styled } from "./styles";
 
 export const Sidebar: FC = () => {

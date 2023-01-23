@@ -1,9 +1,11 @@
+import { FC } from "react";
+
 import { ProductsSection } from "@src/components";
 import { CartItem } from "@src/components/CartPage";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { RecommendatedItems } from "@src/mock/CartAside";
 import { ROUTE } from "@src/utils/Routes";
-import { FC } from "react";
+
 import { OrderForm } from "./OrderForm";
 import { Styled } from "./styles";
 

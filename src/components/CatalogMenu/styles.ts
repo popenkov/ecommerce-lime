@@ -1,9 +1,10 @@
-import { font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const CatalogBackground = styled.div`
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 116px;
   right: 0;
   bottom: 0;

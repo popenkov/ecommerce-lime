@@ -1,5 +1,4 @@
 import { FC, useState } from "react";
-
 import Pagination from "react-js-pagination";
 
 import { Styled } from "./styles";

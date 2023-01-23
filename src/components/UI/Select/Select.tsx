@@ -1,13 +1,13 @@
 import { FC } from "react";
 import ReactSelect, { ActionMeta, MultiValue, SingleValue } from "react-select";
 import makeAnimated from "react-select/animated";
-import { SelectOptionType, SelectProps } from "./select.interface";
 
+import { SelectOptionType, SelectProps } from "./select.interface";
 import { Styled } from "./styles";
 
 const animatedComponents = makeAnimated();
 
-export const Select: FC<SelectProps> = ({ defaultValue, options, placeholder, field, error, getSelectedValue }) => {
+export const Select: FC<SelectProps> = ({ defaultValue, options, placeholder, field, error }) => {
   const handleSelectChange = (
     newValue: SingleValue<SelectOptionType> | MultiValue<SelectOptionType>,
     action: ActionMeta<SelectOptionType>

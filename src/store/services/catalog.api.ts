@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+
 import { CatalogItemType } from "@src/types/CatalogMenuTypes";
 
 export const catalogApi = createApi({

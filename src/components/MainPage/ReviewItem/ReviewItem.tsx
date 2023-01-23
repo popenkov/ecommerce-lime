@@ -1,9 +1,9 @@
 import { FC } from "react";
 
 import { ReactComponent as AccountIcon } from "@src/assets/icons/person.svg";
+import { ReviewType } from "@src/types/MainPageTypes";
 
 import { Styled } from "./styles";
-import { ReviewType } from "@src/types/MainPageTypes";
 
 type ReviewItemProps = Omit<ReviewType, "id">;
 

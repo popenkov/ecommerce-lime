@@ -1,12 +1,13 @@
-import { ChiefReceipts } from "@src/components/MainPage/ChiefSection/ChiefReceipts";
-
-import { Rating } from "@src/components/UI";
 import { FC } from "react";
+
+import { ChiefReceipts } from "@src/components/MainPage/ChiefSection/ChiefReceipts";
+import { Rating } from "@src/components/UI";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { productDetailedData } from "@src/mock/ProductDetailed";
+import { theme } from "@src/theme";
+
 import { Coins } from "../Coins";
 import { Styled } from "./styles";
-import { productDetailedData } from "@src/mock/ProductDetailed";
-import { useMediaQuery } from "@src/hooks/useMediaQuery";
-import { theme } from "@src/theme";
 
 export const MainDescription: FC = () => {
   const { title, expireDate, rating, price, coins, energy, receipts } = productDetailedData.overview;

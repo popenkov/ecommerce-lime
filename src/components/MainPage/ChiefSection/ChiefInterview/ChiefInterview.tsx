@@ -1,6 +1,7 @@
 import { FC } from "react";
-import PortraitImg from "@src/assets/images/chief/portrait.jpg";
+
 import { ReactComponent as PlayIcon } from "@src/assets/icons/play-icon.svg";
+import PortraitImg from "@src/assets/images/chief/portrait.jpg";
 
 import { Styled } from "./styles";
 

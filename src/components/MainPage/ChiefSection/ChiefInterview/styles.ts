@@ -1,5 +1,6 @@
-import { box, font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
+
+import { box, font } from "@src/styles/mixins";
 
 const Interview = styled.div<{ background: string }>`
   box-sizing: border-box;

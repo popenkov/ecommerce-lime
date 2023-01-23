@@ -1,8 +1,9 @@
 import { FC } from "react";
 
-import { Styled } from "./styles";
-import { ICONS } from "@src/utils/IconsMap";
 import { AdvantageType } from "@src/types/MainPageTypes";
+import { ICONS } from "@src/utils/IconsMap";
+
+import { Styled } from "./styles";
 
 const renderIcon = (Icon: any) => {
   return <Icon />;

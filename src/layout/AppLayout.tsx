@@ -1,7 +1,8 @@
-import { CatalogMenu } from "@src/components/CatalogMenu";
 import { FC, useEffect } from "react";
 import { useLocation } from "react-router";
 import { Outlet } from "react-router-dom";
+
+import { CatalogMenu } from "@src/components/CatalogMenu";
 
 import { Footer, Header } from "../components";
 import { Container, Content } from "./styles";

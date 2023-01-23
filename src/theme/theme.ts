@@ -13,6 +13,7 @@ export const theme: Theme = {
     popupBackground: "rgba(51, 51, 51, 0.7)",
     greyTrack: "#eeeeee",
     greyFont: "#9B9B9B",
+    greyIcon: "#C8C8C8",
     green: "#A1D214",
     orange: "#FF5C00",
     yellow: "#FFC709",

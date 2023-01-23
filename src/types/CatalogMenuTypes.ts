@@ -1,20 +1,3 @@
-import { FunctionComponent, SVGProps } from "react";
-
-import { ReactComponent as ChiefIcon } from "@src/assets/icons/menu/chef.svg";
-import { ReactComponent as FlourIcon } from "@src/assets/icons/menu/flour.svg";
-import { ReactComponent as GroceriesIcon } from "@src/assets/icons/menu/groceries.svg";
-import { ReactComponent as SteakIcon } from "@src/assets/icons/menu/steak.svg";
-import { ReactComponent as MilkIcon } from "@src/assets/icons/menu/milk.svg";
-import { ReactComponent as DumplingIcon } from "@src/assets/icons/menu/dumpling.svg";
-import { ReactComponent as WaterIcon } from "@src/assets/icons/menu/water.svg";
-import { ReactComponent as ToastIcon } from "@src/assets/icons/menu/toast.svg";
-import { ReactComponent as TeaIcon } from "@src/assets/icons/menu/tea.svg";
-import { ReactComponent as GrainIcon } from "@src/assets/icons/menu/grain.svg";
-import { ReactComponent as GingerbreadIcon } from "@src/assets/icons/menu/gingerbread.svg";
-import { ReactComponent as CookingIcon } from "@src/assets/icons/menu/cooking.svg";
-import { ReactComponent as CondimentIcon } from "@src/assets/icons/menu/condiment.svg";
-import { ReactComponent as ZooIcon } from "@src/assets/icons/menu/zoo.svg";
-
 export type CatalogChildType = {
   id: string;
   name: string;

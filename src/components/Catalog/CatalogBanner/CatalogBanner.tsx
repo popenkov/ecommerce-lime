@@ -1,5 +1,6 @@
-import { CatalogBannerType } from "@src/types/CatalogPageTypes";
 import { FC } from "react";
+
+import { CatalogBannerType } from "@src/types/CatalogPageTypes";
 
 import { Styled } from "./styles";
 

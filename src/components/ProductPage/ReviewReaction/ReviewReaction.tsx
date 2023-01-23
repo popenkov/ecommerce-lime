@@ -1,5 +1,7 @@
 import React, { FC } from "react";
+
 import { ReactComponent as ThumbUpIcon } from "@src/assets/icons/thumb-up.svg";
+
 import { Styled } from "./styles";
 
 type ReviewReactionType = {

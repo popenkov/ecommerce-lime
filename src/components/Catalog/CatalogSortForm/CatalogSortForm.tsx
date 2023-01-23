@@ -1,45 +1,24 @@
-import { Select } from "@src/components/UI/Select/Select";
-import { SelectOptionType } from "@src/components/UI/Select/select.interface";
 import { FC, useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import { Styled } from "./styles";
+import { Select } from "@src/components/UI/Select/Select";
+import { SelectOptionType } from "@src/components/UI/Select/select.interface";
+import { SortingType } from "@src/types/sortingTypes";
 
-const itemsAmountOptions: SelectOptionType[] = [
-  {
-    value: "20",
-    label: "По 20 товаров",
-  },
-  {
-    value: "40",
-    label: "По 40 товаров",
-  },
-  {
-    value: "80",
-    label: "По 80 товаров",
-  },
-];
-const sortingOptions: SelectOptionType[] = [
-  {
-    value: "default",
-    label: "По популярности",
-  },
-  {
-    value: "desc",
-    label: "По убыванию",
-  },
-  {
-    value: "incr",
-    label: "По возрастанию",
-  },
-];
+import { Styled } from "./styles";
 
 type FormValues = {
   itemsAmount: string;
   sort: string;
 };
 
-export const CatalogSortForm: FC = () => {
+type CatalogSortFormProps = {
+  sortData: SortingType;
+};
+
+export const CatalogSortForm: FC<CatalogSortFormProps> = ({ sortData }) => {
+  const { itemsAmountOptions, sortingOptions } = sortData;
+
   const { handleSubmit, watch, formState, control } = useForm<FormValues>({
     mode: "onChange",
   });

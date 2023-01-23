@@ -1,5 +1,6 @@
-import { flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
 
 const Content = styled.div`
   ${flexColumnCenter};

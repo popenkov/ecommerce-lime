@@ -1,15 +1,16 @@
-import { FC } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { FC } from "react";
 import { SubmitHandler, Controller, useForm } from "react-hook-form";
 
-import { Styled } from "./styles";
-import { RequestFormType, validationSchema } from "./utils";
+import { CustomDateTimePicker } from "@src/components/UI/DateTimePicker";
 import { FormInput } from "@src/components/UI/FormInput";
 import { FormRadioButton } from "@src/components/UI/FormRadioButton";
-import { CustomDateTimePicker } from "@src/components/UI/DateTimePicker";
-import { PaymentMethods } from "./PaymentMethods";
+
 import { EnergieCalculator } from "./EnergieCalculator";
+import { PaymentMethods } from "./PaymentMethods";
+import { Styled } from "./styles";
 import { TotalValue } from "./TotalValue";
+import { RequestFormType, validationSchema } from "./utils";
 
 export const OrderForm: FC = () => {
   const savedText = "ул.Пимена-панчанки, д. 12, под. 4, кв. 312";

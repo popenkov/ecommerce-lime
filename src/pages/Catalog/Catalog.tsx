@@ -1,13 +1,13 @@
 import { FC } from "react";
 
 import { Sidebar } from "@src/components";
-
-import { Styled } from "./styles";
+import { Filter } from "@src/components/Catalog/Filter";
+import { Products } from "@src/components/Catalog/Products";
 import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
 import { catalogData } from "@src/mock/CatalogData";
 import { numberDeclination } from "@src/utils/numberDeclination";
-import { Filter } from "@src/components/Catalog/Filter";
-import { Products } from "@src/components/Catalog/Products";
+
+import { Styled } from "./styles";
 
 export const Catalog: FC = () => {
   const { searchAmount, searchQuery } = catalogData;

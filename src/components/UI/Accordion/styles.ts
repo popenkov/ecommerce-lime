@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Accordion = styled.div`
   width: 100%;

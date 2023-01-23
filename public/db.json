@@ -56,22 +56,19 @@
         "id": "account",
         "text": "Кабинет",
         "icon": "ACCOUNT",
-        "href": "/account",
-        "underlined": false
+        "href": "/account"
       },
       {
         "id": "favorites",
         "text": "Избранное",
         "icon": "FAVORITES",
-        "href": "/favorites",
-        "underlined": false
+        "href": "/favorites"
       },
       {
         "id": "cart",
         "text": "Корзина",
         "icon": "CART",
-        "href": "/cart",
-        "underlined": true
+        "href": "/cart"
       }
     ]
   },

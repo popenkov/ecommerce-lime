@@ -1,16 +1,19 @@
+import { FC } from "react";
+
 import { CatalogProduct } from "@src/components/CatalogProduct";
 import { CustomPagination } from "@src/components/UI/CustomPagination";
-// import { Pagination } from "@src/components/UI/Pagination";
 import { TapItem } from "@src/components/UI/TapItem";
 import { catalogData } from "@src/mock/CatalogData";
-import { FC, useState } from "react";
+import { sortData } from "@src/mock/sortingData";
+
 import { CatalogBanner } from "../CatalogBanner";
 import { CatalogSortForm } from "../CatalogSortForm";
 import { DeliverySection } from "../DeliverySection";
-
 import { Styled } from "./styles";
+
 export const Products: FC = () => {
   const { taps, products, banner, productsSecond, delivery } = catalogData;
+  const sorting = sortData;
 
   const lastPage = 20;
   const maxLength = 7;
@@ -26,7 +29,7 @@ export const Products: FC = () => {
   return (
     <Styled.Products>
       <Styled.SortingContainer>
-        <CatalogSortForm />
+        <CatalogSortForm sortData={sorting} />
       </Styled.SortingContainer>
 
       <Styled.TapsContainer>

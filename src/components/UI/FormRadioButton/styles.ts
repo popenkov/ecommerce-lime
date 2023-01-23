@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import CheckIcon from "@src/assets/icons/check-green.svg";
 
+import CheckIcon from "@src/assets/icons/check-green.svg";
 import { box, flexCenter, font } from "@src/styles/mixins";
 
 const CheckboxLabel = styled.label`

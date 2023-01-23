@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+
 import { ItemType } from "@src/types/commonTypes";
 import { MainPageDataType } from "@src/types/MainPageTypes";
 

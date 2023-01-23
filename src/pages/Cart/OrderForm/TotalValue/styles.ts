@@ -1,6 +1,7 @@
-import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+
+import { flexCenter, font } from "@src/styles/mixins";
 
 const TotalValue = styled.div`
   padding: 20px 26px;

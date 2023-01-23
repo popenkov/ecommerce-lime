@@ -1,6 +1,7 @@
-import { flexAlignCenter, font } from "@src/styles/mixins";
 import { Link as RouterLink } from "react-router-dom";
 import styled, { css } from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Header = styled.div`
   width: 100%;

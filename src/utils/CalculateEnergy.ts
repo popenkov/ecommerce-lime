@@ -1,7 +1,7 @@
-import { ItemType } from "@src/types/commonTypes";
+import { EnergyType, ItemType } from "@src/types/commonTypes";
 
 export const calculateEnergie = (newItems: ItemType[]) => {
-  const energyArr: any = [];
+  const energyArr: EnergyType[][] = [];
 
   newItems.forEach((obj) => {
     const itemAmount = obj.amount;
@@ -10,10 +10,12 @@ export const calculateEnergie = (newItems: ItemType[]) => {
     }
   });
 
+  console.log(energyArr);
+
   const proteins = energyArr.reduce(
     (acc: number, obj: any) =>
       acc +
-      obj.find((item: any) => {
+      obj.find((item: EnergyType) => {
         return item.id === "proteins";
       }).value,
     0
@@ -22,7 +24,7 @@ export const calculateEnergie = (newItems: ItemType[]) => {
   const fats = energyArr.reduce(
     (acc: number, obj: any) =>
       acc +
-      obj.find((item: any) => {
+      obj.find((item: EnergyType) => {
         return item.id === "fats";
       }).value,
     0
@@ -31,7 +33,7 @@ export const calculateEnergie = (newItems: ItemType[]) => {
   const carbohydrate = energyArr.reduce(
     (acc: number, obj: any) =>
       acc +
-      obj.find((item: any) => {
+      obj.find((item: EnergyType) => {
         return item.id === "carbohydrate";
       }).value,
 

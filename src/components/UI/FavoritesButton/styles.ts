@@ -1,5 +1,6 @@
-import { box, flexCenter } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
+
+import { box, flexCenter } from "@src/styles/mixins";
 
 const FavoritesButton = styled.button<{ isActive: boolean; isSmall?: boolean }>`
   ${box(45)};

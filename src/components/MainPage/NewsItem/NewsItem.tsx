@@ -1,8 +1,9 @@
 import { FC } from "react";
 
-import { Styled } from "./styles";
-import { IMAGES } from "@src/utils/ImagesMap";
 import { SingleNewsType } from "@src/types/MainPageTypes";
+import { IMAGES } from "@src/utils/ImagesMap";
+
+import { Styled } from "./styles";
 
 type NewsItemProps = Omit<SingleNewsType, "id">;
 

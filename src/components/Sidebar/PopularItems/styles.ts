@@ -1,6 +1,7 @@
-import { flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
-import styled from "styled-components";
 import PerfectScrollbar from "react-perfect-scrollbar";
+import styled from "styled-components";
+
+import { font } from "@src/styles/mixins";
 
 const PopularContainer = styled.div`
   margin-bottom: 10px;
@@ -10,9 +11,6 @@ const PopularTitle = styled.h3`
   margin-bottom: 8px;
   ${font({ size: "6", lineHeight: "7", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 const PopularItems = styled(PerfectScrollbar)`
@@ -50,8 +48,6 @@ const PopularItems = styled(PerfectScrollbar)`
     width: 40px;
     height: 2px;
     background: ${({ theme }) => theme.color.white};
-  }
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 `;
 

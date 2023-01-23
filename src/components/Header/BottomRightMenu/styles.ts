@@ -1,6 +1,7 @@
-import styled, { css } from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
-import { flexAlignCenter, font } from "@src/styles/mixins";
+import styled, { css } from "styled-components";
+
+import { box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   ${flexAlignCenter};
@@ -12,7 +13,12 @@ const Container = styled.div`
 `;
 
 const IconContainer = styled.span`
+  position: relative;
   margin-right: 11px;
+  & svg path {
+    fill: ${({ theme }) => theme.color.greyIcon};
+  }
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     & svg {
       width: 15px;
@@ -21,7 +27,27 @@ const IconContainer = styled.span`
   }
 `;
 
-const Link = styled(RouterLink)<{ isUnderlined?: boolean }>`
+const MobileCartCounter = styled.span`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${box(14)};
+    ${flexCenter};
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    box-sizing: border-box;
+
+    padding: 3px;
+    background: ${({ theme }) => theme.color.white};
+    border: 1px solid ${({ theme }) => theme.color.green};
+    border-radius: 50%;
+
+    ${font({ size: "8", lineHeight: "10", fontWeight: "400" })};
+    color: ${({ theme }) => theme.color.black};
+  }
+`;
+
+const Link = styled(RouterLink)<{ isUnderlined?: boolean; isCartPage: boolean }>`
   position: relative;
   cursor: pointer;
   ${flexAlignCenter};
@@ -31,6 +57,12 @@ const Link = styled(RouterLink)<{ isUnderlined?: boolean }>`
   ${({ isUnderlined }) =>
     isUnderlined &&
     css`
+      & ${IconContainer} {
+        & svg path {
+          fill: ${({ theme }) => theme.color.green};
+        }
+      }
+
       &::after {
         content: "";
         position: absolute;
@@ -46,20 +78,32 @@ const Link = styled(RouterLink)<{ isUnderlined?: boolean }>`
     `};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin-right: 15px;
+    margin-right: 0;
+    box-sizing: border-box;
+    ${box(44)};
+    ${flexCenter};
+    border-radius: 5px;
+
+    & ${IconContainer} {
+      margin: 0;
+    }
+
+    ${({ isCartPage }) =>
+      isCartPage &&
+      css`
+        background-color: ${({ theme }) => theme.color.green};
+        border-radius: 5px;
+        & ${IconContainer} {
+          & svg path {
+            fill: ${({ theme }) => theme.color.black};
+          }
+        }
+      `};
   }
 
   &:last-child {
     margin-right: 0;
   }
-
-  /* &:not(:last-child) ${IconContainer} {
-    margin-right: 10px;
-
-    @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-      margin-right: 0px;
-    }
-  } */
 `;
 
 const Text = styled.span`
@@ -71,4 +115,4 @@ const Text = styled.span`
   }
 `;
 
-export const Styled = { Container, Link, IconContainer, Text };
+export const Styled = { Container, Link, IconContainer, Text, MobileCartCounter };

@@ -1,29 +1,17 @@
 import { FC } from "react";
 
+import { useActions } from "@src/hooks/useActions";
+import { useAppSelector } from "@src/hooks/useAppSelector";
 import { useHover } from "@src/hooks/useHover";
+import { ItemType } from "@src/types/commonTypes";
+import { IMAGES } from "@src/utils/ImagesMap";
+import { ROUTE } from "@src/utils/Routes";
 
 import { Rating } from "../UI";
 import { AddToCardBtn } from "../UI/AddToCardBtn";
 import { Styled } from "./styles";
-import { useActions } from "@src/hooks/useActions";
-import { useAppSelector } from "@src/hooks/useAppSelector";
-import { IMAGES } from "@src/utils/ImagesMap";
-import { Routes } from "react-router";
-import { ROUTE } from "@src/utils/Routes";
-import { ItemType } from "@src/types/commonTypes";
 
-export const Product: FC<ItemType> = ({
-  id,
-  category,
-  img,
-  rating,
-  isFavorite,
-  title,
-  price,
-  amount,
-  unit,
-  energy,
-}) => {
+export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, price, amount, unit, energy }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
   const { addItemToCart, removeItemfromCart } = useActions();
   const { items } = useAppSelector((state) => state.cart);
@@ -45,10 +33,6 @@ export const Product: FC<ItemType> = ({
     };
 
     addItemToCart(itemDate);
-  };
-
-  const handleRemoveFromCardClick = () => {
-    removeItemfromCart(id);
   };
 
   return (
