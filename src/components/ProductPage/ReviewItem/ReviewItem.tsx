@@ -6,7 +6,7 @@ import { CustomersReviewsItemType } from "@src/types/ProductPageTypes";
 import { ReviewReaction } from "../ReviewReaction";
 import { Styled } from "./styles";
 
-export const ReviewItem: FC<CustomersReviewsItemType> = ({ id, name, rating, date, text, useFullReactions }) => {
+export const ReviewItem: FC<CustomersReviewsItemType> = ({ name, rating, date, text, useFullReactions }) => {
   return (
     <Styled.Review>
       <Styled.Header>

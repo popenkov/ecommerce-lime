@@ -2,12 +2,12 @@ import { FC } from "react";
 
 import { ReactComponent as FavoritesIcon } from "@src/assets/icons/favorites.svg";
 import { useActions } from "@src/hooks/useActions";
+import { useAppSelector } from "@src/hooks/useAppSelector";
 import { ItemType } from "@src/types/commonTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
 
 import { AmountCounter } from "../AmountCounter";
 import { Styled } from "./styles";
-import { useAppSelector } from "@src/hooks/useAppSelector";
 
 export const CartItem: FC<ItemType> = ({ id, img, rating, energy, isFavorite, title, price, amount, unit, button }) => {
   const { removeItemfromCart, addItemToFavorites, removeItemfromFavorites } = useActions();

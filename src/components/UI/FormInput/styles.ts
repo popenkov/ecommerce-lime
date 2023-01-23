@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { absolutePseudoEl, box, font } from "@src/styles/mixins";
+import { absolutePseudoEl, font } from "@src/styles/mixins";
 
 const Container = styled.div`
   box-sizing: border-box;

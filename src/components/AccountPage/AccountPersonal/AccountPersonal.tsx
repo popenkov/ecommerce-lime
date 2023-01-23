@@ -1,12 +1,13 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FC } from "react";
 import { SubmitHandler, Controller, useForm } from "react-hook-form";
-import { UserForm, validationSchema } from "./utils";
 
-import { Styled } from "./styles";
 import { FormInput } from "@src/components/UI/FormInput";
 import { FormRadioButton } from "@src/components/UI/FormRadioButton";
 import { LoyalCard } from "@src/components/UI/LoyalCard";
+
+import { Styled } from "./styles";
+import { UserForm, validationSchema } from "./utils";
 
 const userData = {
   street: "ул.Пимена-панчанки, д. 12, под. 4, кв. 312",

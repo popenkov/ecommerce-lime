@@ -20,7 +20,6 @@ type CatalogProductProps = {
 
 export const CatalogProduct: FC<ItemType & CatalogProductProps> = ({
   id,
-  category,
   img,
   rating,
   isFavorite,

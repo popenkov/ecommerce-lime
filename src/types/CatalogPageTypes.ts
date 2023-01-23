@@ -1,5 +1,3 @@
-import { SelectOptionType } from "@src/components/UI/Select/select.interface";
-
 import { ItemType, LinkType } from "./commonTypes";
 
 export type CheckboxType = {

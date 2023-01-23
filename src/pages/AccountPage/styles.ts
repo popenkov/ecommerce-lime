@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 import { flexCenter, font } from "@src/styles/mixins";
-import { Link } from "react-router-dom";
 
 const PageContainer = styled.main`
   display: flex;
@@ -44,7 +44,8 @@ const LinksContainer = styled.div`
   margin-top: -12px;
   margin-bottom: 45px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin: 37px 13px 18px;
+    gap: 19px;
+    margin: 20px 13px 34px;
     display: flex;
     flex-direction: column;
   }
@@ -55,6 +56,9 @@ const AccountLink = styled(Link)<{ isActive: boolean }>`
   ${font({ size: "24", lineHeight: "29", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   opacity: 0.3;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  }
 
   ${({ isActive }) =>
     isActive &&
@@ -70,7 +74,7 @@ const AccountLink = styled(Link)<{ isActive: boolean }>`
         background-color: ${({ theme }) => theme.color.green};
 
         @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-          height: 0;
+          bottom: -9px;
         }
       }
     `};

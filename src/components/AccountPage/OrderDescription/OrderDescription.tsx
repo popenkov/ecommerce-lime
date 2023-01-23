@@ -1,6 +1,8 @@
-import { Styled } from "./styles";
 import React, { FC } from "react";
+
 import { OrderHistoryType } from "@src/types/OrderHistoryTypes";
+
+import { Styled } from "./styles";
 
 type OrderDescriptionType = Omit<OrderHistoryType, "products" | "link">;
 

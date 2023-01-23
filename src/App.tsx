@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
 
+import { AccountHistory, AccountPersonal, AccountSettings } from "@src/components/AccountPage";
+
 import { AppLayout } from "./layout";
 
 import "react-perfect-scrollbar/dist/css/styles.css";
@@ -8,13 +10,12 @@ import "react-redux-toastr/lib/css/react-redux-toastr.min.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { Cart } from "./pages";
+import { AccountPage } from "./pages/AccountPage";
 import { Catalog } from "./pages/Catalog";
 import { FavoritesPage } from "./pages/Favorites";
 import { Main } from "./pages/Main";
 import { ProductPage } from "./pages/ProductPage";
 import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
-import { AccountPage } from "./pages/AccountPage";
-import { AccountHistory, AccountPersonal, AccountSettings } from "@src/components/AccountPage";
 
 const App: FC = () => {
   return (

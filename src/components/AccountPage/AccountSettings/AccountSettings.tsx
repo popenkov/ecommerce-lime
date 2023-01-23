@@ -1,14 +1,13 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FC } from "react";
 import { SubmitHandler, Controller, useForm } from "react-hook-form";
-import { UserForm, validationSchema } from "./utils";
 
-import { Styled } from "./styles";
-import { FormInput } from "@src/components/UI/FormInput";
-import { FormRadioButton } from "@src/components/UI/FormRadioButton";
-import { LoyalCard } from "@src/components/UI/LoyalCard";
 import { FormCheckbox } from "@src/components/UI/FormCheckbox";
+import { FormInput } from "@src/components/UI/FormInput";
+
 import { NotificationsForm, notificationValidationSchema } from "../AccountPersonal/utils";
+import { Styled } from "./styles";
+import { UserForm, validationSchema } from "./utils";
 
 export const AccountSettings: FC = () => {
   const {

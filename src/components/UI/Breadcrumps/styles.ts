@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { box, font } from "@src/styles/mixins";
+import { font } from "@src/styles/mixins";
 
 const Breadcrumbs = styled.div`
   width: calc(100% - 25px);

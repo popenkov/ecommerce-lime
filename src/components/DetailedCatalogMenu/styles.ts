@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { flexAlignCenter, font } from "@src/styles/mixins";
+import { font } from "@src/styles/mixins";
 
 const DetailedCatalog = styled.div`
   width: 338px;

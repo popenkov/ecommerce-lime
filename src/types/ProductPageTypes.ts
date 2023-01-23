@@ -1,13 +1,8 @@
-import { boolean } from "yup";
-
 import { ReactComponent as ClockIcon } from "@src/assets/icons/clock.svg";
 import { ReactComponent as PortionIcon } from "@src/assets/icons/portion.svg";
 import productMain from "@src/assets/images/product/product-main.jpg";
 import productThumb from "@src/assets/images/product/product-thumb.jpg";
 import receiptFirst from "@src/assets/images/receipts/barbeque.jpg";
-import ingredientFirst from "@src/assets/images/receipts/ingredientFirst.jpg";
-import ingredientSecond from "@src/assets/images/receipts/ingredientSecond.jpg";
-import ingredientThird from "@src/assets/images/receipts/ingredientThird.jpg";
 
 import { EnergyType, PriceType, RatingType } from "./commonTypes";
 import { ChiefReceiptsType } from "./MainPageTypes";

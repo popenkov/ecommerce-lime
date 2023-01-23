@@ -28,6 +28,7 @@ const SectionTitle = styled.h3`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })}
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-left: 0;
   }
 `;
 

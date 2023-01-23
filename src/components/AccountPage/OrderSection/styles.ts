@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import PerfectScrollbar from "react-perfect-scrollbar";
+import styled from "styled-components";
+
 import { flexCenter, font } from "@src/styles/mixins";
-import { Link } from "react-router-dom";
 
 const OrderSection = styled.article`
   display: flex;
@@ -10,10 +10,15 @@ const OrderSection = styled.article`
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column;
   }
 `;
 
 const OrderData = styled.div``;
+
+const ItemsContainer = styled.div`
+  position: relative;
+`;
 
 const OrderProducts = styled(PerfectScrollbar)`
   position: relative;
@@ -25,6 +30,8 @@ const OrderProducts = styled(PerfectScrollbar)`
     flex-wrap: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     & .ps__rail-x {
       bottom: 0px;
@@ -72,6 +79,10 @@ const Shadow = styled.div`
 
   background: linear-gradient(270deg, #ffffff 27.68%, rgba(255, 255, 255, 0) 100%);
   border-radius: 10px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const ShowAllLButton = styled.button`
@@ -100,6 +111,7 @@ const LinkIconContainer = styled.span`
 export const Styled = {
   OrderSection,
   OrderData,
+  ItemsContainer,
   OrderProducts,
   ProductContainer,
   Shadow,

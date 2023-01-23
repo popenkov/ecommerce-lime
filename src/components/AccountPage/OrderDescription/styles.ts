@@ -13,6 +13,7 @@ const OrderDescription = styled.div`
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
   }
 `;
 
@@ -39,6 +40,10 @@ const Address = styled.span`
   flex-grow: 1;
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })}
   color: ${({ theme }) => theme.color.black};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 32px;
+  }
 `;
 
 const PriceContainer = styled.div`

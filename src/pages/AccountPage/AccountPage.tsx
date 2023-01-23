@@ -1,11 +1,10 @@
 import { FC } from "react";
-
-import { Sidebar } from "@src/components";
-
-import { Styled } from "./styles";
 import { Outlet, useLocation } from "react-router";
 
+import { Sidebar } from "@src/components";
 import { ACCOUNT_ROUTES } from "@src/utils/Routes";
+
+import { Styled } from "./styles";
 
 const linksData = [
   {

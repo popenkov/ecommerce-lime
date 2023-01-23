@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-import { theme } from "@src/theme";
-
 import { font, width100 } from "./mixins";
 
 export const GlobalStyle = createGlobalStyle`

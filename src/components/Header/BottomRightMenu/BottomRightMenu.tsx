@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { useLocation } from "react-router";
 
+import { useAppSelector } from "@src/hooks/useAppSelector";
 import { LinkType } from "@src/types/commonTypes";
 import { ICONS } from "@src/utils/IconsMap";
 
 import { Styled } from "./styles";
-import { useAppSelector } from "@src/hooks/useAppSelector";
 
 type BottomRightMenuProps = { data: LinkType[] };
 

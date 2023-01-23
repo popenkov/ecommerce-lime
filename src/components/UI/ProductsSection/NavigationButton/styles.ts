@@ -1,7 +1,5 @@
 import styled, { css } from "styled-components";
 
-import { box, fullscreenFixed } from "@src/styles/mixins";
-
 const NavigationContainer = styled.div`
   display: none;
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {

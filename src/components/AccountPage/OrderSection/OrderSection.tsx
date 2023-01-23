@@ -1,12 +1,18 @@
-import { Styled } from "./styles";
 import { FC, useState } from "react";
-import { OrderHistoryType } from "@src/types/OrderHistoryTypes";
-import { OrderDescription } from "../OrderDescription";
-import { CatalogProduct } from "@src/components/CatalogProduct";
-import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 
-export const OrderSection: FC<OrderHistoryType> = ({ id, date, time, address, price, products, link }) => {
+import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
+import { CatalogProduct } from "@src/components/CatalogProduct";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
+import { OrderHistoryType } from "@src/types/OrderHistoryTypes";
+
+import { OrderDescription } from "../OrderDescription";
+import { Styled } from "./styles";
+
+export const OrderSection: FC<OrderHistoryType> = ({ id, date, time, address, price, products }) => {
   const orderDescriptionProps = { id, date, time, address, price };
+
+  const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
 
   const [areItemsShown, setAreItemsShown] = useState(false);
 
@@ -14,7 +20,9 @@ export const OrderSection: FC<OrderHistoryType> = ({ id, date, time, address, pr
   const isBtnToShow = products.length > productsLimit;
   const buttonText = !areItemsShown ? "Смотреть все" : "Свернуть";
 
-  const itemsToDraw = products.length > productsLimit && !areItemsShown ? products.slice(0, 3) : products;
+  const itemsToDraw =
+    products.length > productsLimit && !areItemsShown && !isAdaptive ? products.slice(0, 3) : products;
+  const productWidth = !isAdaptive ? "33%" : "49%";
 
   const handleShowAllClick = () => {
     setAreItemsShown((prev) => !prev);
@@ -25,9 +33,10 @@ export const OrderSection: FC<OrderHistoryType> = ({ id, date, time, address, pr
       <Styled.OrderData>
         <OrderDescription {...orderDescriptionProps} />
       </Styled.OrderData>
+
       <Styled.OrderProducts>
         {itemsToDraw.map((item) => {
-          return <CatalogProduct {...item} width={"33%"} key={item.id} />;
+          return <CatalogProduct {...item} width={productWidth} key={item.id} />;
         })}
         <Styled.Shadow>
           {isBtnToShow && (

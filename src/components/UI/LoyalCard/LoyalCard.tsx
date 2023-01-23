@@ -1,5 +1,7 @@
 import { FC } from "react";
+
 import { ReactComponent as Logo } from "@src/assets/images/header-logo.svg";
+
 import { Styled } from "./styles";
 
 type LoyalCardType = {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { box, flexCenter, flexColumnCenter, font } from "@src/styles/mixins";
+import { box, flexCenter, font } from "@src/styles/mixins";
 
 const Confirmation = styled.div`
   flex: 1;

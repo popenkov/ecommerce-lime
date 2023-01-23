@@ -1,10 +1,11 @@
-import { CatalogSortForm } from "@src/components/Catalog/CatalogSortForm";
 import { FC } from "react";
+
+import { CatalogSortForm } from "@src/components/Catalog/CatalogSortForm";
+import { historyData } from "@src/mock/OrdersHistoryData";
 import { sortData } from "@src/mock/sortingData";
 
-import { Styled } from "./styles";
-import { historyData } from "@src/mock/OrdersHistoryData";
 import { OrderSection } from "../OrderSection";
+import { Styled } from "./styles";
 
 export const AccountHistory: FC = () => {
   const data = historyData;

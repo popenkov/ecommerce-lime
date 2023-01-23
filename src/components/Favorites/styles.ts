@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
+import { flexAlignCenter, flexCenter } from "@src/styles/mixins";
 
 const Products = styled.div`
   position: relative;

@@ -28,6 +28,7 @@ const SectionTitle = styled.h3`
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })}
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-left: 0;
   }
 `;
 
@@ -53,6 +54,7 @@ const InputWrapper = styled.div<{ width?: string }>`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin-bottom: 35px;
+    width: 100%;
   }
 `;
 
@@ -69,10 +71,17 @@ const SavedAddresses = styled.div`
   display: flex;
   align-items: center;
   gap: 14px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column;
+  }
 `;
 
 const SavedAddressItem = styled.div`
   width: 49%;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+  }
 `;
 
 const NewAddressButton = styled.button`
@@ -84,6 +93,10 @@ const NewAddressButton = styled.button`
   padding: 16px 25px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    justify-content: center;
+    width: 100%;
+  }
 `;
 
 const NewAddressPlus = styled.span`
@@ -113,6 +126,10 @@ const LoyalCardsSection = styled.div`
 const LoyalCardsContainer = styled.div`
   display: flex;
   gap: 21px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const AddCardButton = styled.button`
