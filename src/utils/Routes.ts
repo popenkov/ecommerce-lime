@@ -4,4 +4,14 @@ export const ROUTE = {
   PRODUCT: "/product",
   CATALOG: "/catalog",
   FAVORITES: "/favorites",
+  ACCOUNT: "/account",
+  PERSONAL: "/personal",
+  SETTINGS: "/settings",
+  HISTORY: "/history",
+};
+
+export const ACCOUNT_ROUTES = {
+  ACCOUNT_PERSONAL: `${ROUTE.ACCOUNT}${ROUTE.PERSONAL}`,
+  ACCOUNT_SETTINGS: `${ROUTE.ACCOUNT}${ROUTE.SETTINGS}`,
+  ACCOUNT_HISTORY: `${ROUTE.ACCOUNT}${ROUTE.HISTORY}`,
 };

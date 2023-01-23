@@ -56,7 +56,7 @@
         "id": "account",
         "text": "Кабинет",
         "icon": "ACCOUNT",
-        "href": "/account"
+        "href": "/account/personal"
       },
       {
         "id": "favorites",

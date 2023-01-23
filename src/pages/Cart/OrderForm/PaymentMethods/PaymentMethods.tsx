@@ -68,9 +68,7 @@ export const PaymentMethods: FC<PaymentMethodsProps> = ({ control, register, err
         })}
       </Styled.InputsContainer>
 
-      {/* <Styled.InputWrapper> */}
       <FormInput {...register("comments")} placeholder={"Комментарий к заказу"} error={errors.comments} required />
-      {/* </Styled.InputWrapper> */}
     </Styled.PaymentMethods>
   );
 };

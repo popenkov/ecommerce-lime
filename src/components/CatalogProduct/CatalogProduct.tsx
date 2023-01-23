@@ -14,7 +14,11 @@ import { AddToCardBtnNew } from "../UI/AddToCardBtnNew";
 import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
 import { Styled } from "./styles";
 
-export const CatalogProduct: FC<ItemType> = ({
+type CatalogProductProps = {
+  width?: string;
+};
+
+export const CatalogProduct: FC<ItemType & CatalogProductProps> = ({
   id,
   category,
   img,
@@ -26,6 +30,7 @@ export const CatalogProduct: FC<ItemType> = ({
   unit,
   energy,
   button,
+  width,
 }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
   const { addItemToCart, addItemToFavorites, removeItemfromFavorites } = useActions();
@@ -75,7 +80,7 @@ export const CatalogProduct: FC<ItemType> = ({
   };
 
   return (
-    <Styled.Product ref={hoverRef}>
+    <Styled.Product ref={hoverRef} width={width}>
       <Styled.PhotoContainer>
         <Styled.FavoritesButtonContainer onClick={handleAddToFavoritesClick}>
           <FavoritesButton isFavorite={isFavorite as boolean} isSmall />

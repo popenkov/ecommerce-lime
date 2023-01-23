@@ -12,7 +12,9 @@ import { Catalog } from "./pages/Catalog";
 import { FavoritesPage } from "./pages/Favorites";
 import { Main } from "./pages/Main";
 import { ProductPage } from "./pages/ProductPage";
-import { ROUTE } from "./utils/Routes";
+import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
+import { AccountPage } from "./pages/AccountPage";
+import { AccountHistory, AccountPersonal, AccountSettings } from "@src/components/AccountPage";
 
 const App: FC = () => {
   return (
@@ -24,6 +26,11 @@ const App: FC = () => {
           <Route path={ROUTE.PRODUCT} element={<ProductPage />} />
           <Route path={ROUTE.CATALOG} element={<Catalog />} />
           <Route path={ROUTE.FAVORITES} element={<FavoritesPage />} />
+          <Route path={ROUTE.ACCOUNT} element={<AccountPage />}>
+            <Route path={ACCOUNT_ROUTES.ACCOUNT_PERSONAL} element={<AccountPersonal />} />
+            <Route path={ACCOUNT_ROUTES.ACCOUNT_SETTINGS} element={<AccountSettings />} />
+            <Route path={ACCOUNT_ROUTES.ACCOUNT_HISTORY} element={<AccountHistory />} />
+          </Route>
 
           <Route path="*" element={<p> Not found</p>} />
         </Route>

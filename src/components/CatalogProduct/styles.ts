@@ -1,16 +1,23 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
-const Product = styled.div`
+const Product = styled.div<{ width?: string }>`
   position: relative;
   width: 25%;
+
   box-sizing: border-box;
   padding: 10px;
   background-color: ${({ theme }) => theme.color.white};
   border-radius: 10px;
-  margin-bottom: 28px;
+
+  ${({ width }) =>
+    Boolean(width) &&
+    css`
+      width: 100%;
+      max-width: ${width};
+    `};
 
   &:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);

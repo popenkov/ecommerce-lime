@@ -42,6 +42,10 @@ const ItemsContainer = styled.div`
   }
 `;
 
+const ProductContainer = styled.div`
+  margin-bottom: 28px;
+`;
+
 const BannerContainer = styled.div`
   margin-bottom: 28px;
 
@@ -90,6 +94,7 @@ export const Styled = {
   SortingContainer,
   TapsContainer,
   ItemsContainer,
+  ProductContainer,
   BannerContainer,
   PaginationContainer,
   LoadNewItemsBtn,
