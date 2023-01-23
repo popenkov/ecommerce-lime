@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { font } from "@src/styles/mixins";
 
@@ -12,7 +12,9 @@ const PersonalContainer = styled.section`
 
 const FormSection = styled.div`
   margin-bottom: 15px;
-  padding: 23px;
+  margin-bottom: 43px;
+  padding: 34px 27px 24px;
+  padding: 20px 27px 7px;
 
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -22,6 +24,7 @@ const FormSection = styled.div`
 
 const SectionTitle = styled.h3`
   margin-bottom: 32px;
+  margin-left: 14px;
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })}
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -39,9 +42,14 @@ const InputsContainer = styled.div`
   }
 `;
 
-const InputWrapper = styled.div`
-  margin-bottom: 30px;
-  flex: 1;
+const InputWrapper = styled.div<{ width?: string }>`
+  margin-bottom: 39px;
+
+  ${({ width }) =>
+    width &&
+    css`
+      width: ${width};
+    `};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin-bottom: 35px;
@@ -49,7 +57,7 @@ const InputWrapper = styled.div`
 `;
 
 const AddressTitle = styled.h3`
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   ${font({ size: "14", lineHeight: "17", fontWeight: "700" })}
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -57,10 +65,14 @@ const AddressTitle = styled.h3`
 `;
 
 const SavedAddresses = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   display: flex;
   align-items: center;
   gap: 14px;
+`;
+
+const SavedAddressItem = styled.div`
+  width: 49%;
 `;
 
 const NewAddressButton = styled.button`
@@ -90,6 +102,12 @@ const SubmitButton = styled.button`
   opacity: 0;
   visibility: hidden;
   position: absolute;
+`;
+
+const LoyalCardsSection = styled.div`
+  margin-bottom: 43px;
+
+  padding: 20px 27px 7px;
 `;
 
 const LoyalCardsContainer = styled.div`
@@ -130,11 +148,13 @@ export const Styled = {
   InputWrapper,
   AddressTitle,
   SavedAddresses,
+  SavedAddressItem,
   NewAddress,
   NewAddressButton,
   NewAddressPlus,
   NewAddressText,
   SubmitButton,
+  LoyalCardsSection,
   LoyalCardsContainer,
   AddCardButton,
   AddCardPlus,

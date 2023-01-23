@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const OrderSection = styled.article`
   display: flex;
+  margin-bottom: 15px;
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -73,7 +74,10 @@ const Shadow = styled.div`
   border-radius: 10px;
 `;
 
-const ShowAllLink = styled(Link)`
+const ShowAllLButton = styled.button`
+  position: absolute;
+  top: 137px;
+  right: -35px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -99,7 +103,7 @@ export const Styled = {
   OrderProducts,
   ProductContainer,
   Shadow,
-  ShowAllLink,
+  ShowAllLButton,
   LinkIconContainer,
   LinkText,
 };

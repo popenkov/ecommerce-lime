@@ -10,7 +10,6 @@ export const AccountHistory: FC = () => {
   const data = historyData;
   return (
     <Styled.SectionContainer>
-      History
       <Styled.SortContainer>
         <CatalogSortForm sortData={sortData} />
       </Styled.SortContainer>

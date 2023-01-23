@@ -12,6 +12,7 @@ const PageContainer = styled.main`
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
+  margin-top: 150px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.large}) {
     max-width: 1280px;
@@ -38,11 +39,10 @@ const MainContainer = styled.div`
 
 const LinksContainer = styled.div`
   ${flexCenter};
-  gap: 42px;
+  gap: 47px;
   margin-left: 10px;
   margin-top: -12px;
-  margin-bottom: 29px;
-
+  margin-bottom: 45px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin: 37px 13px 18px;
     display: flex;
@@ -64,7 +64,7 @@ const AccountLink = styled(Link)<{ isActive: boolean }>`
         content: "";
         position: absolute;
         left: 0;
-        bottom: -23px;
+        bottom: -17px;
         width: 100%;
         height: 3px;
         background-color: ${({ theme }) => theme.color.green};

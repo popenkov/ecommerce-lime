@@ -32,7 +32,6 @@ export const AccountPersonal: FC = () => {
 
   return (
     <Styled.PersonalContainer>
-      AccountPersonal
       <form onSubmit={handleSubmit(handleFormSubmit)} id="order-form">
         <Styled.FormSection>
           <Styled.SectionTitle>Контактные данные</Styled.SectionTitle>
@@ -64,14 +63,16 @@ export const AccountPersonal: FC = () => {
           <Styled.AddressTitle>Адрес доставки</Styled.AddressTitle>
           {userData.street && (
             <Styled.SavedAddresses>
-              <Controller
-                name="savedAddress"
-                control={control}
-                defaultValue=""
-                render={({ field: { value, onChange }, fieldState: { error } }) => (
-                  <FormRadioButton name="savedAddress" id="savedAddress" isChecked text={userData.street} />
-                )}
-              />
+              <Styled.SavedAddressItem>
+                <Controller
+                  name="savedAddress"
+                  control={control}
+                  defaultValue=""
+                  render={({ field: { value, onChange }, fieldState: { error } }) => (
+                    <FormRadioButton name="savedAddress" id="savedAddress" isChecked text={userData.street} />
+                  )}
+                />
+              </Styled.SavedAddressItem>
 
               <Styled.NewAddressButton>
                 <Styled.NewAddressPlus>+</Styled.NewAddressPlus>
@@ -81,30 +82,29 @@ export const AccountPersonal: FC = () => {
           )}
 
           <Styled.NewAddress>
-            <Styled.InputWrapper>
-              <FormInput
-                {...register("address")}
-                placeholder={"Начните вводить новый адрес"}
-                error={errors.name}
-                required
-              />
-            </Styled.InputWrapper>
-
             <Styled.InputsContainer>
-              <Styled.InputWrapper>
+              <Styled.InputWrapper width={"49%"}>
+                <FormInput
+                  {...register("address")}
+                  placeholder={"Начните вводить новый адрес"}
+                  error={errors.name}
+                  required
+                />
+              </Styled.InputWrapper>
+              <Styled.InputWrapper width={"12%"}>
                 <FormInput {...register("entrance")} placeholder={"Подъезд"} error={errors.entrance} required />
               </Styled.InputWrapper>
-              <Styled.InputWrapper>
+              <Styled.InputWrapper width={"12%"}>
                 <FormInput {...register("floor")} placeholder={"Этаж"} error={errors.floor} required />
               </Styled.InputWrapper>
-              <Styled.InputWrapper>
+              <Styled.InputWrapper width={"12%"}>
                 <FormInput {...register("flat")} placeholder={"Квартира"} error={errors.floor} required />
               </Styled.InputWrapper>
             </Styled.InputsContainer>
           </Styled.NewAddress>
         </Styled.FormSection>
 
-        <Styled.FormSection>
+        <Styled.LoyalCardsSection>
           <Styled.AddressTitle>Карта лояльности</Styled.AddressTitle>
           <Styled.LoyalCardsContainer>
             <Styled.AddCardButton>
@@ -113,7 +113,7 @@ export const AccountPersonal: FC = () => {
             </Styled.AddCardButton>
             <LoyalCard number={userData.cardNumber} />
           </Styled.LoyalCardsContainer>
-        </Styled.FormSection>
+        </Styled.LoyalCardsSection>
       </form>
     </Styled.PersonalContainer>
   );

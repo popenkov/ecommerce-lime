@@ -10,7 +10,9 @@ const SectionContainer = styled.section`
   }
 `;
 
-const SortContainer = styled.div``;
+const SortContainer = styled.div`
+  margin-bottom: 21px;
+`;
 
 const HistoryContainer = styled.section``;
 

@@ -47,7 +47,6 @@ export const AccountSettings: FC = () => {
 
   return (
     <Styled.PersonalContainer>
-      AccountSettings
       <form onSubmit={handleSubmit(handleFormSubmit)} id="change-password-form">
         <Styled.FormSection>
           <Styled.SectionTitle>Смена пароля</Styled.SectionTitle>
