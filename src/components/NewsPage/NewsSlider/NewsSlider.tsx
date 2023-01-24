@@ -23,9 +23,6 @@ export const NewsSlider: FC<NewsSliderProps> = ({ data }) => {
 
   const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
 
-  const sliderCardEffect = isAdaptive ? undefined : "cards";
-  const centeredSlide = isAdaptive ? true : false;
-
   return (
     <>
       {data && (

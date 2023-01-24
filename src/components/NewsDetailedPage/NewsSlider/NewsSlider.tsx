@@ -23,12 +23,14 @@ export const NewsSlider: FC<NewsSliderProps> = ({ data }) => {
 
   const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
 
+  const spaceBetweenValue = !isAdaptive ? 36 : 10;
+
   return (
     <>
       {data && (
         <Styled.Slider>
           <Swiper
-            spaceBetween={36}
+            spaceBetween={spaceBetweenValue}
             slidesPerView={1}
             centeredSlides
             loop

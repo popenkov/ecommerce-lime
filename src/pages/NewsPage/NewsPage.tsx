@@ -10,12 +10,17 @@ import { NewsSlider } from "@src/components/NewsPage/NewsSlider";
 import FilterItem from "@src/components/NewsPage/FilterItem/FilterItem";
 import { News } from "@src/components/MainPage/News";
 import { NewsItem } from "@src/components/MainPage/NewsItem";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
+import { Select } from "@src/components/UI/Select/Select";
 
 export const NewsPage: FC = () => {
   const location = useLocation();
   const currentLocation = location.pathname;
 
-  const { title, slider, filters, news } = newsData;
+  const { title, slider, filters, mobileFilters, news } = newsData;
+
+  const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
 
   return (
     <Styled.PageContainer>
@@ -28,12 +33,17 @@ export const NewsPage: FC = () => {
         <Styled.ContentContainer>
           <NewsSlider data={slider} />
 
-          <Styled.FilterContainer>
-            {filters.map((item) => {
-              return <FilterItem {...item} key={item.id} />;
-            })}
-          </Styled.FilterContainer>
-
+          {!isAdaptive ? (
+            <Styled.FilterContainer>
+              {filters.map((item) => {
+                return <FilterItem {...item} key={item.id} />;
+              })}
+            </Styled.FilterContainer>
+          ) : (
+            <Styled.FilterContainer>
+              <Select defaultValue={mobileFilters[0]} options={mobileFilters} />
+            </Styled.FilterContainer>
+          )}
           <Styled.NewsContainer>
             {news.map((item) => {
               return (

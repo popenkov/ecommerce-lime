@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { box } from "@src/styles/mixins";
 
 const Slider = styled.div`
-  max-width: 97%;
   max-width: 76%;
 
   position: relative;
@@ -13,10 +12,10 @@ const Slider = styled.div`
   margin: 0 auto;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    max-width: 88%;
     margin-left: 0;
-    margin-top: 68px;
-    margin-bottom: 15px;
-    padding-bottom: 20px;
+
+    margin-bottom: 41px;
 
     overflow-x: visible;
 
@@ -96,6 +95,10 @@ const SlideImg = styled.img`
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: 198px;
+  }
 `;
 
 export const Styled = { Slider, SlideImg };

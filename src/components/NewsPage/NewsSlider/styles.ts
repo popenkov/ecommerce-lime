@@ -10,12 +10,11 @@ const Slider = styled.div`
   margin-left: 11px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin-left: 0;
-    margin-top: 68px;
-    margin-bottom: 15px;
+    width: calc(100% - 26px);
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 22px;
     padding-bottom: 20px;
-
-    overflow-x: visible;
 
     & .swiper,
     & .swiper-wrapper {
@@ -23,7 +22,6 @@ const Slider = styled.div`
       overflow: visible;
     }
     & .swiper-wrapper {
-      padding: 0 20px;
       overflow: visible;
     }
   }
@@ -42,7 +40,7 @@ const Slider = styled.div`
     gap: 4px;
 
     @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-      bottom: -13px;
+      bottom: -17px;
       left: 50%;
       right: unset;
       transform: translateX(-50%);

@@ -14,6 +14,7 @@ const LinkText = styled.span`
 `;
 
 const SocialItem = styled.a`
+  cursor: pointer;
   box-sizing: border-box;
   padding: 7px;
   ${flexCenter}

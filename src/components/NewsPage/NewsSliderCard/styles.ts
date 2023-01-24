@@ -18,7 +18,7 @@ const Card = styled.div<{ img: string; color?: string }>`
     width: 100%;
     max-width: unset;
     min-height: 119px;
-    padding: 11px 16px;
+    padding: 22px 16px 30px;
   }
 `;
 
@@ -41,7 +41,7 @@ const Title = styled.h3`
   text-align: left;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin-bottom: 9px;
+    margin-bottom: 24px;
     ${font({ size: "24", lineHeight: "29", fontWeight: "700" })};
   }
 `;
@@ -54,8 +54,7 @@ const Description = styled.p`
   text-align: left;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin-bottom: 0;
-    ${font({ size: "12", lineHeight: "15", fontWeight: "400" })};
+    display: none;
   }
 `;
 
@@ -69,7 +68,6 @@ const Link = styled.a`
   text-decoration: none;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    display: none;
   }
 
   & svg {

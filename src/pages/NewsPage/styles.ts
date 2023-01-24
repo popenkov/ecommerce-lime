@@ -42,7 +42,7 @@ const SectionHeader = styled.div`
   margin-top: -12px;
   margin-bottom: 19px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin: 20px 13px 34px;
+    margin: 20px 13px 23px;
   }
 `;
 
@@ -54,7 +54,9 @@ const SectionTitle = styled.h2`
   color: ${({ theme }) => theme.color.black};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-top: -17px;
     margin-right: 0;
+    margin-left: 0;
     margin-bottom: 5px;
   }
 `;
@@ -91,10 +93,11 @@ const NewsContainer = styled.div`
   margin: -13px;
   margin-bottom: 232px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    flex-direction: column;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    /* flex-direction: column; */
     gap: 0;
     margin: 0;
+    margin-bottom: 42px;
   }
 `;
 
@@ -102,6 +105,10 @@ const NewsItemContainer = styled.div`
   width: calc(25% - 26px);
 
   margin: 19px 13px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    width: calc(50% - 26px);
+  }
 `;
 
 export const Styled = {

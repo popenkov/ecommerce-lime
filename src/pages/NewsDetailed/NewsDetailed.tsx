@@ -21,17 +21,17 @@ export const NewsDetailed: FC = () => {
     <Styled.PageContainer>
       <Styled.MainContainer>
         <Breadcrumbs />
-        <Styled.MobileTitle></Styled.MobileTitle>
+        <Styled.MobileTitle>Новости лайма</Styled.MobileTitle>
         <Styled.NewsImageContainer background={imageToDraw}>
           <Styled.NewsImageTitle>{title}</Styled.NewsImageTitle>
         </Styled.NewsImageContainer>
 
         <Styled.ContentContainer>
-          <Styled.TextParagraph>{text.paragraphFirst}</Styled.TextParagraph>
-          <Styled.TextParagraph>{text.paragraphSecond}</Styled.TextParagraph>
+          <Styled.TextParagraphFirst>{text.paragraphFirst}</Styled.TextParagraphFirst>
           <Styled.SliderContainer>
             <NewsSlider data={slider} />
           </Styled.SliderContainer>
+          <Styled.TextParagraphSecond>{text.paragraphSecond}</Styled.TextParagraphSecond>
 
           <Styled.ShareContainer>
             {socialMedia.map((item) => {

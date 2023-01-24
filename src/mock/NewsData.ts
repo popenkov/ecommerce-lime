@@ -1,9 +1,11 @@
+import { SelectOptionType } from "@src/components/UI/Select/select.interface";
 import { LargeSliderType, LinkType, SingleNewsType } from "@src/types/commonTypes";
 
 type NewsDataType = {
   title: string;
   slider: LargeSliderType[];
   filters: LinkType[];
+  mobileFilters: SelectOptionType[];
   news: SingleNewsType[];
 };
 
@@ -67,6 +69,20 @@ export const newsData: NewsDataType = {
       id: "5",
       text: "Столица не спит",
       href: "/news/1",
+    },
+  ],
+  mobileFilters: [
+    {
+      value: "all",
+      label: "Все новости",
+    },
+    {
+      value: "40",
+      label: "Столица не спит",
+    },
+    {
+      value: "80",
+      label: "По 80 товаров",
     },
   ],
   news: [

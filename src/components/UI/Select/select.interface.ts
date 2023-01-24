@@ -20,8 +20,8 @@ export interface ISelect extends IFieldProps {
 }
 
 export type SelectProps = {
-  field: any;
-  error: any;
+  field?: any;
+  error?: any;
   getSelectedValue?: any;
   placeholder?: string;
   defaultValue?: SelectOptionType;
