@@ -2,6 +2,7 @@ import { FC } from "react";
 
 import { Ingredient } from "@src/components/UI/Ingredient";
 import { Tag } from "@src/components/UI/Tag";
+import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 
 import { Styled } from "./styles";
 import { ChiefReceiptItemType } from "@src/types/commonTypes";
@@ -10,7 +11,7 @@ type ReceiptProps = Omit<ChiefReceiptItemType, "id">;
 type isSmallProps = {
   isSmall?: boolean;
 };
-export const Receipt: FC<ReceiptProps & isSmallProps> = ({ title, img, tags, ingredients, isSmall }) => {
+export const Receipt: FC<ChiefReceiptItemType & isSmallProps> = ({ id, title, img, tags, ingredients, isSmall }) => {
   return (
     <Styled.Receipt isSmall={isSmall}>
       <Styled.Title>{title}</Styled.Title>
@@ -21,6 +22,12 @@ export const Receipt: FC<ReceiptProps & isSmallProps> = ({ title, img, tags, ing
             return <Tag {...tag} key={tag.id} />;
           })}
         </Styled.TagsContainer>
+        <Styled.ShowReceiptBackground>
+          <Styled.ShowReceiptText>
+            Смотреть рецепт
+            <ArrowIcon />
+          </Styled.ShowReceiptText>
+        </Styled.ShowReceiptBackground>
       </Styled.ImgContainer>
       {ingredients && (
         <Styled.IngredientsContainer>

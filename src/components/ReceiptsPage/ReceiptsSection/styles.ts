@@ -117,6 +117,10 @@ const ShevronIcon = styled.span<{ isActive?: boolean }>`
       isActive &&
       css`
         transform: rotateZ(270deg);
+        & path {
+            fill: color: ${({ theme }) => theme.color.green};
+        }
+
       `};
   }
   & path {
