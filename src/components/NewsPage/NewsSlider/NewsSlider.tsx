@@ -9,15 +9,15 @@ import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
 
-import { MainSliderCard } from "../MainSliderCard";
 import { Styled } from "./styles";
 import { LargeSliderType } from "@src/types/commonTypes";
+import { NewsSliderCard } from "../NewsSliderCard";
 
-type MainSliderProps = {
+type NewsSliderProps = {
   data: LargeSliderType[];
 };
 
-export const MainSlider: FC<MainSliderProps> = ({ data }) => {
+export const NewsSlider: FC<NewsSliderProps> = ({ data }) => {
   const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
   const buttonNextRef = useRef<HTMLButtonElement | null>(null);
 
@@ -25,23 +25,16 @@ export const MainSlider: FC<MainSliderProps> = ({ data }) => {
 
   const sliderCardEffect = isAdaptive ? undefined : "cards";
   const centeredSlide = isAdaptive ? true : false;
-  const hasLoop = isAdaptive ? true : false;
+
   return (
     <>
-      {data && typeof isAdaptive === "boolean" && (
+      {data && (
         <Styled.Slider>
           <Swiper
-            effect={sliderCardEffect}
-            cardsEffect={{
-              rotate: false,
-              perSlideOffset: 20,
-            }}
             spaceBetween={8}
-            slidesPerView={1.2}
-            centeredSlides={centeredSlide}
-            loop={hasLoop}
-            grabCursor={true}
-            modules={[EffectCards, Navigation, Pagination]}
+            slidesPerView={1}
+            loop
+            modules={[Navigation, Pagination]}
             onInit={(swiper: SwiperType) => {
               onBeforeInit(swiper, buttonPrevRef, buttonNextRef);
             }}
@@ -55,7 +48,7 @@ export const MainSlider: FC<MainSliderProps> = ({ data }) => {
             {data.map((slide) => {
               return (
                 <SwiperSlide key={slide.id}>
-                  <MainSliderCard {...slide} />
+                  <NewsSliderCard {...slide} />
                 </SwiperSlide>
               );
             })}

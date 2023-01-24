@@ -2,27 +2,9 @@ import { FC } from "react";
 import { Outlet, useLocation } from "react-router";
 
 import { Sidebar } from "@src/components";
-import { ACCOUNT_ROUTES } from "@src/utils/Routes";
 
 import { Styled } from "./styles";
-
-const linksData = [
-  {
-    id: "1",
-    text: "Личная информация",
-    href: ACCOUNT_ROUTES.ACCOUNT_PERSONAL,
-  },
-  {
-    id: "2",
-    text: "Настройки",
-    href: ACCOUNT_ROUTES.ACCOUNT_SETTINGS,
-  },
-  {
-    id: "3",
-    text: "История покупок",
-    href: ACCOUNT_ROUTES.ACCOUNT_HISTORY,
-  },
-];
+import { accountNavData } from "@src/mock/AccountData";
 
 export const AccountPage: FC = () => {
   const location = useLocation();
@@ -32,7 +14,7 @@ export const AccountPage: FC = () => {
     <Styled.PageContainer>
       <Styled.MainContainer>
         <Styled.LinksContainer>
-          {linksData.map((link) => {
+          {accountNavData.map((link) => {
             const isActive = currentLocation.includes(link.href);
             return (
               <Styled.AccountLink to={link.href} key={link.id} isActive={isActive}>

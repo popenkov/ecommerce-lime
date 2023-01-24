@@ -35,6 +35,12 @@ import { ReactComponent as YoutubeIcon } from "@src/assets/icons/youtube.svg";
 
 // advantages icon
 
+// news soacal
+import { ReactComponent as TelegramIcon } from "@src/assets/icons/telegram.svg";
+import { ReactComponent as WhatsappIcon } from "@src/assets/icons/whatsapp.svg";
+import { ReactComponent as InstagramIcon } from "@src/assets/icons/instagram.svg";
+import { ReactComponent as VKIcon } from "@src/assets/icons/vkontakte.svg";
+
 export const ICONS = {
   PHONE: PhoneIcon,
   PIN: PinIcon,
@@ -67,4 +73,9 @@ export const ICONS = {
   ORDER: OrderIcon,
   BELL: BellIcon,
   RECOMMEND: RecommendIcon,
+
+  TelegramIcon: TelegramIcon,
+  WhatsappIcon: WhatsappIcon,
+  InstagramIcon: InstagramIcon,
+  VKIcon: VKIcon,
 };

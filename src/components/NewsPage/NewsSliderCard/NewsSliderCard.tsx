@@ -9,7 +9,7 @@ import { LargeSliderType } from "@src/types/commonTypes";
 
 type MainSliderCardType = Omit<LargeSliderType, "id">;
 
-export const MainSliderCard: FC<MainSliderCardType> = ({ title, subtitle, image, color, link }) => {
+export const NewsSliderCard: FC<MainSliderCardType> = ({ title, subtitle, image, color, link }) => {
   const imageToDraw: string = IMAGES[image as keyof typeof IMAGES];
 
   return (

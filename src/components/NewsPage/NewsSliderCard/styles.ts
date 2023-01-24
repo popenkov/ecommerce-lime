@@ -4,15 +4,13 @@ import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Card = styled.div<{ img: string; color?: string }>`
   box-sizing: border-box;
-  width: calc(100% - 153px);
-  width: 83%;
-  max-width: 855px;
+  width: 100%;
   min-height: 361px;
   padding: 62px 50px 39px;
   border-radius: 10px;
   background: ${({ img }) => (img ? `url(${img})` : "unset")},
     ${({ color, theme }) => (color ? color : theme.color.white)};
-  background-size: contain;
+  background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
 

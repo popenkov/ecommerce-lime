@@ -38,4 +38,43 @@ export type LinkType = {
   underlined?: boolean;
 };
 
+export type ImageType = {
+  id: string;
+  img: string;
+  alt: string;
+};
+
+export type LargeSliderType = {
+  id: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  color?: string;
+  link: {
+    title: string;
+    href: string;
+  };
+};
+
+export type NewsType = {
+  title: string;
+  color: string;
+  button: {
+    text: string;
+    href: string;
+  };
+  items: SingleNewsType[];
+};
+
+export type SingleNewsType = {
+  id: string;
+  img: string;
+  title: string;
+  text: string;
+  link: {
+    title: string;
+    href: string;
+  };
+};
+
 export type EnergyType = { id: string; name: string; value: number | string };

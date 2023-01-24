@@ -16,10 +16,12 @@ import { FavoritesPage } from "./pages/Favorites";
 import { Main } from "./pages/Main";
 import { ProductPage } from "./pages/ProductPage";
 import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
+import { NewsPage } from "./pages/NewsPage";
+import { NewsDetailed } from "./pages/NewsDetailed";
 
 const App: FC = () => {
   return (
-    <div className="App">
+    <div>
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Main />} />
@@ -32,6 +34,8 @@ const App: FC = () => {
             <Route path={ACCOUNT_ROUTES.ACCOUNT_SETTINGS} element={<AccountSettings />} />
             <Route path={ACCOUNT_ROUTES.ACCOUNT_HISTORY} element={<AccountHistory />} />
           </Route>
+          <Route path={ROUTE.NEWS} element={<NewsPage />} />
+          <Route path={`${ROUTE.NEWS}/:id`} element={<NewsDetailed />} />
 
           <Route path="*" element={<p> Not found</p>} />
         </Route>

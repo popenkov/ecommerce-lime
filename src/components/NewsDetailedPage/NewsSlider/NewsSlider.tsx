@@ -9,53 +9,42 @@ import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
 
-import { MainSliderCard } from "../MainSliderCard";
 import { Styled } from "./styles";
-import { LargeSliderType } from "@src/types/commonTypes";
+import { ImageType } from "@src/types/commonTypes";
+import { IMAGES } from "@src/utils/ImagesMap";
 
-type MainSliderProps = {
-  data: LargeSliderType[];
+type NewsSliderProps = {
+  data: ImageType[];
 };
 
-export const MainSlider: FC<MainSliderProps> = ({ data }) => {
+export const NewsSlider: FC<NewsSliderProps> = ({ data }) => {
   const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
   const buttonNextRef = useRef<HTMLButtonElement | null>(null);
 
   const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
 
-  const sliderCardEffect = isAdaptive ? undefined : "cards";
-  const centeredSlide = isAdaptive ? true : false;
-  const hasLoop = isAdaptive ? true : false;
   return (
     <>
-      {data && typeof isAdaptive === "boolean" && (
+      {data && (
         <Styled.Slider>
           <Swiper
-            effect={sliderCardEffect}
-            cardsEffect={{
-              rotate: false,
-              perSlideOffset: 20,
-            }}
-            spaceBetween={8}
-            slidesPerView={1.2}
-            centeredSlides={centeredSlide}
-            loop={hasLoop}
-            grabCursor={true}
-            modules={[EffectCards, Navigation, Pagination]}
+            spaceBetween={36}
+            slidesPerView={1}
+            centeredSlides
+            loop
+            modules={[Navigation]}
             onInit={(swiper: SwiperType) => {
               onBeforeInit(swiper, buttonPrevRef, buttonNextRef);
-            }}
-            pagination={{
-              type: "bullets",
             }}
             navigation={{
               nextEl: buttonNextRef.current,
               prevEl: buttonPrevRef.current,
             }}>
             {data.map((slide) => {
+              const imageToDraw: string = IMAGES[slide.img as keyof typeof IMAGES];
               return (
                 <SwiperSlide key={slide.id}>
-                  <MainSliderCard {...slide} />
+                  <Styled.SlideImg src={imageToDraw} alt={slide.alt} />
                 </SwiperSlide>
               );
             })}

@@ -1,45 +1,12 @@
 import { FunctionComponent, SVGProps } from "react";
 
-import { ItemType } from "./commonTypes";
-
-export type MainSliderType = {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: string;
-  color: string;
-  link: {
-    title: string;
-    href: string;
-  };
-};
+import { ItemType, LargeSliderType, NewsType, SingleNewsType } from "./commonTypes";
 
 export type AdvantageType = {
   id: string;
   icon?: string;
   title: string;
   text: string;
-};
-
-export type SingleNewsType = {
-  id: string;
-  img: string;
-  title: string;
-  text: string;
-  link: {
-    title: string;
-    href: string;
-  };
-};
-
-export type NewsType = {
-  title: string;
-  color: string;
-  button: {
-    text: string;
-    href: string;
-  };
-  items: SingleNewsType[];
 };
 
 export type ItemsType = {
@@ -66,7 +33,7 @@ export type ReviewsType = {
 };
 
 export type MainPageDataType = {
-  slider: MainSliderType[];
+  slider: LargeSliderType[];
   advantages: AdvantageType[];
   news: NewsType;
   products: ItemsType[];
