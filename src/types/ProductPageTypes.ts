@@ -4,8 +4,8 @@ import productMain from "@src/assets/images/product/product-main.jpg";
 import productThumb from "@src/assets/images/product/product-thumb.jpg";
 import receiptFirst from "@src/assets/images/receipts/barbeque.jpg";
 
-import { EnergyType, PriceType, RatingType } from "./commonTypes";
-import { ChiefReceiptsType } from "./MainPageTypes";
+import { ChiefReceiptsType, EnergyType, PriceType, RatingType } from "./commonTypes";
+// import { ChiefReceiptsType } from "./MainPageTypes";
 
 export type DescriptionItemType = {
   id: string;

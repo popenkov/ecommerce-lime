@@ -1,3 +1,5 @@
+import { ChiefReceiptIngredientType, ChiefReceiptTagType, ShowAllLink } from "./MainPageTypes";
+
 export type ItemType = {
   id: string;
   img: string;
@@ -78,3 +80,25 @@ export type SingleNewsType = {
 };
 
 export type EnergyType = { id: string; name: string; value: number | string };
+
+export type ChiefReceiptItemType = {
+  id: string;
+  title: string;
+  img: string;
+  tags: ChiefReceiptTagType[];
+  ingredients?: ChiefReceiptIngredientType[];
+  button?: ShowAllLink;
+};
+
+export type ChiefReceiptsType = {
+  title: string;
+  color?: string;
+  subtitle: string;
+  button?: ShowAllLink;
+  items: ChiefReceiptItemType[];
+  buttonText?: string;
+  buttonHref?: string;
+  isSmall?: boolean;
+  hasAllItemsLink?: boolean;
+  isOverflowVisible?: boolean;
+};

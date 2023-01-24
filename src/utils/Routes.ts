@@ -9,6 +9,7 @@ export const ROUTE = {
   SETTINGS: "/settings",
   HISTORY: "/history",
   NEWS: "/news",
+  RECEIPTS: "/receipts",
 };
 
 export const ACCOUNT_ROUTES = {

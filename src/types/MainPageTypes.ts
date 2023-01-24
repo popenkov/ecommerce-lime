@@ -58,24 +58,3 @@ export type ShowAllLink = {
   text: string;
   href: string;
 };
-
-export type ChiefReceiptItemType = {
-  id: string;
-  title: string;
-  img: string;
-  tags: ChiefReceiptTagType[];
-  ingredients?: ChiefReceiptIngredientType[];
-  button?: ShowAllLink;
-};
-
-export type ChiefReceiptsType = {
-  title: string;
-  subtitle: string;
-  button?: ShowAllLink;
-  items: ChiefReceiptItemType[];
-  buttonText?: string;
-  buttonHref?: string;
-  isSmall?: boolean;
-  hasAllItemsLink?: boolean;
-  isOverflowVisible?: boolean;
-};

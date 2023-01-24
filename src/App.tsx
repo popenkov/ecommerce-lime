@@ -18,6 +18,7 @@ import { ProductPage } from "./pages/ProductPage";
 import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
 import { NewsPage } from "./pages/NewsPage";
 import { NewsDetailed } from "./pages/NewsDetailed";
+import { ReceiptsPage } from "./pages/ReceiptsPage";
 
 const App: FC = () => {
   return (
@@ -36,6 +37,7 @@ const App: FC = () => {
           </Route>
           <Route path={ROUTE.NEWS} element={<NewsPage />} />
           <Route path={`${ROUTE.NEWS}/:id`} element={<NewsDetailed />} />
+          <Route path={ROUTE.RECEIPTS} element={<ReceiptsPage />} />
 
           <Route path="*" element={<p> Not found</p>} />
         </Route>
