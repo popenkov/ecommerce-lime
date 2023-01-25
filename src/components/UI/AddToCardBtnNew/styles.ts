@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { box, flexAlignCenter, font } from "@src/styles/mixins";
+import { box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
 const IconContainer = styled.span`
   margin-right: 13px;
@@ -18,7 +18,7 @@ const TextContainer = styled.span`
   box-sizing: border-box;
 `;
 
-const Button = styled.button<{ isAdded: boolean; isHovered: boolean }>`
+const Button = styled.button<{ isAdded: boolean; isHovered?: boolean; isSmall?: boolean; isLight?: boolean }>`
   width: 100%;
   height: 36px;
   padding: 7px;
@@ -38,6 +38,47 @@ const Button = styled.button<{ isAdded: boolean; isHovered: boolean }>`
         & svg path {
           fill: ${({ theme }) => theme.color.green};
         }
+      }
+    `};
+
+  ${({ isSmall }) =>
+    isSmall &&
+    css`
+      ${box(30)};
+      ${flexCenter}
+      & ${TextContainer} {
+        display: none;
+      }
+      & ${IconContainer} {
+        margin: 0;
+      }
+    `};
+  ${({ isSmall, isAdded }) =>
+    isSmall &&
+    isAdded &&
+    css`
+      background: ${({ theme }) => theme.color.white};
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+      & ${TextContainer} {
+        display: none;
+      }
+      & ${IconContainer} {
+        margin: 0;
+      }
+    `};
+
+  ${({ isLight }) =>
+    isLight &&
+    css`
+      ${flexAlignCenter}
+      width: auto;
+      display: inline-block;
+      background: ${({ theme }) => theme.color.white};
+
+      & ${TextContainer} {
+      }
+      & ${IconContainer} {
       }
     `};
 

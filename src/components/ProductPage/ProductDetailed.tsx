@@ -2,18 +2,22 @@ import { FC } from "react";
 
 import { RecommendatedItems } from "@src/mock/CartAside";
 
-import { ProductsSection } from "../UI";
+import { ProductsSection, ThumbSlider } from "../UI";
 import { DetailedDescription } from "./DetailedDescription";
 import { MainDescription } from "./MainDescription";
 import { ProductPreviews } from "./ProductPreviews";
-import { ProductSlider } from "./ProductSlider";
+
 import { Styled } from "./styles";
+import { productDetailedData } from "@src/mock/ProductDetailedData";
 
 export const ProductDetailed: FC = () => {
+  const { main, thumb, isFavorite } = productDetailedData.sliderImages;
+
+  const sliderData = { main, thumb, isFavorite };
   return (
     <Styled.Product>
       <Styled.ProductTopContainer>
-        <ProductSlider />
+        <ThumbSlider data={sliderData} />
         <MainDescription />
       </Styled.ProductTopContainer>
 

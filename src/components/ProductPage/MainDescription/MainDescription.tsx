@@ -3,7 +3,7 @@ import { FC } from "react";
 import { ChiefReceipts } from "@src/components/MainPage/ChiefSection/ChiefReceipts";
 import { Rating } from "@src/components/UI";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
-import { productDetailedData } from "@src/mock/ProductDetailed";
+import { productDetailedData } from "@src/mock/ProductDetailedData";
 import { theme } from "@src/theme";
 
 import { Coins } from "../Coins";

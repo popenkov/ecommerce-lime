@@ -11,6 +11,7 @@ const PageContainer = styled.main`
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
+  margin-top: 125px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.large}) {
     max-width: 1280px;
@@ -18,7 +19,6 @@ const PageContainer = styled.main`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0;
-    margin-top: 117px;
   }
 `;
 const MainContainer = styled.div`

@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
+import { Link } from "react-router-dom";
 
 const Title = styled.h3`
   margin-bottom: 12px;
@@ -31,21 +32,20 @@ const TagsContainer = styled.div`
   left: 10px;
 `;
 
-const ShowReceiptBackground = styled.div`
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  padding: 14px 19px;
-
-  background: linear-gradient(0deg, #a1d214 0%, rgba(255, 255, 255, 0) 100%), url(image.png);
-  border: 1px solid rgba(51, 51, 51, 0.05);
-  border-radius: 10px;
+const ShowReceiptLink = styled(Link)`
+  display: none;
 `;
 
 const ShowReceiptText = styled.span`
+  width: 100%;
+  ${flexAlignCenter};
+  justify-content: space-between;
   ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
+
+  & svg {
+    width: 15px;
+  }
 
   & svg path {
     fill: ${({ theme }) => theme.color.black};
@@ -81,6 +81,20 @@ const Receipt = styled.div<{ isSmall?: boolean }>`
   padding-bottom: 20px;
 
   &:hover {
+    & ${ShowReceiptLink} {
+      position: absolute;
+      inset: 0;
+      bottom: 6px;
+      right: -2px;
+      display: flex;
+      align-items: flex-end;
+      padding: 14px 19px;
+      text-decoration: none;
+
+      background: linear-gradient(0deg, #a1d214 0%, rgba(255, 255, 255, 0) 100%);
+      border: 1px solid rgba(51, 51, 51, 0.05);
+      border-radius: 10px;
+    }
   }
 
   ${({ isSmall }) =>
@@ -133,6 +147,6 @@ export const Styled = {
   IngredientsContainer,
   IngredientsItems,
   IngredientsButton,
-  ShowReceiptBackground,
+  ShowReceiptLink,
   ShowReceiptText,
 };

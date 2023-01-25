@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 
 import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
-import { productDetailedData } from "@src/mock/ProductDetailed";
+import { productDetailedData } from "@src/mock/ProductDetailedData";
 
 import { Styled } from "./styles";
 

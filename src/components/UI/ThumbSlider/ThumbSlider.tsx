@@ -9,13 +9,18 @@ import "swiper/css/thumbs";
 
 import { FavoritesButton } from "@src/components/UI/FavoritesButton/FavoritesButton";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
-import { productDetailedData } from "@src/mock/ProductDetailed";
 import { theme } from "@src/theme";
 
 import { Styled } from "./styles";
+import { SlideItemType } from "@src/types/commonTypes";
 
-export const ProductSlider: FC = () => {
-  const { main, thumb, isFavorite } = productDetailedData.sliderImages;
+type ThumbSliderProps = {
+  data: { main: SlideItemType[]; thumb: SlideItemType[]; isFavorite: boolean };
+  height?: string;
+};
+
+export const ThumbSlider: FC<ThumbSliderProps> = ({ data, height }) => {
+  const { main, thumb, isFavorite } = data;
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
@@ -23,7 +28,7 @@ export const ProductSlider: FC = () => {
   const thumbSliderSpaceBetween = !isAdaptive ? 10 : 40;
 
   return (
-    <Styled.Container>
+    <Styled.Container height={height}>
       <Styled.ThumbSlider>
         <Swiper
           onSwiper={setThumbsSwiper}

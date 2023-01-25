@@ -7,8 +7,6 @@ import ingredientFirst from "@src/assets/images/receipts/ingredientFirst.jpg";
 import ingredientSecond from "@src/assets/images/receipts/ingredientSecond.jpg";
 import ingredientThird from "@src/assets/images/receipts/ingredientThird.jpg";
 
-// import { ChiefReceiptsType, EnergyType, PriceType, RatingType } from "./MainPageData";
-
 import { ProductDetailedType } from "@src/types/ProductPageTypes";
 
 export const productDetailedData: ProductDetailedType = {

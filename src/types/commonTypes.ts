@@ -102,3 +102,9 @@ export type ChiefReceiptsType = {
   hasAllItemsLink?: boolean;
   isOverflowVisible?: boolean;
 };
+
+export type SlideItemType = {
+  id: string;
+  text: string;
+  img: string;
+};

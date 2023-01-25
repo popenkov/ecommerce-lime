@@ -11,7 +11,15 @@ type ReceiptProps = Omit<ChiefReceiptItemType, "id">;
 type isSmallProps = {
   isSmall?: boolean;
 };
-export const Receipt: FC<ChiefReceiptItemType & isSmallProps> = ({ id, title, img, tags, ingredients, isSmall }) => {
+export const Receipt: FC<ChiefReceiptItemType & isSmallProps> = ({
+  id,
+  title,
+  img,
+  tags,
+  ingredients,
+  isSmall,
+  button,
+}) => {
   return (
     <Styled.Receipt isSmall={isSmall}>
       <Styled.Title>{title}</Styled.Title>
@@ -22,12 +30,14 @@ export const Receipt: FC<ChiefReceiptItemType & isSmallProps> = ({ id, title, im
             return <Tag {...tag} key={tag.id} />;
           })}
         </Styled.TagsContainer>
-        <Styled.ShowReceiptBackground>
-          <Styled.ShowReceiptText>
-            Смотреть рецепт
-            <ArrowIcon />
-          </Styled.ShowReceiptText>
-        </Styled.ShowReceiptBackground>
+        {typeof button?.href === "string" && (
+          <Styled.ShowReceiptLink to={button?.href}>
+            <Styled.ShowReceiptText>
+              Смотреть рецепт
+              <ArrowIcon />
+            </Styled.ShowReceiptText>
+          </Styled.ShowReceiptLink>
+        )}
       </Styled.ImgContainer>
       {ingredients && (
         <Styled.IngredientsContainer>

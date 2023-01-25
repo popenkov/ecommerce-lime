@@ -9,16 +9,21 @@ import "react-perfect-scrollbar/dist/css/styles.css";
 import "react-redux-toastr/lib/css/react-redux-toastr.min.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import { Cart } from "./pages";
-import { AccountPage } from "./pages/AccountPage";
-import { Catalog } from "./pages/Catalog";
-import { FavoritesPage } from "./pages/Favorites";
-import { Main } from "./pages/Main";
-import { ProductPage } from "./pages/ProductPage";
+import {
+  AccountPage,
+  Cart,
+  Catalog,
+  FavoritesPage,
+  Main,
+  NewsDetailed,
+  NewsPage,
+  ProductPage,
+  ReceiptPage,
+  ReceiptsPage,
+} from "./pages";
+
 import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
-import { NewsPage } from "./pages/NewsPage";
-import { NewsDetailed } from "./pages/NewsDetailed";
-import { ReceiptsPage } from "./pages/ReceiptsPage";
+// import { ReceiptDetailedPage } from "@src/pages/ReceiptDetailedPage";
 
 const App: FC = () => {
   return (
@@ -38,6 +43,7 @@ const App: FC = () => {
           <Route path={ROUTE.NEWS} element={<NewsPage />} />
           <Route path={`${ROUTE.NEWS}/:id`} element={<NewsDetailed />} />
           <Route path={ROUTE.RECEIPTS} element={<ReceiptsPage />} />
+          <Route path={`${ROUTE.RECEIPTS}/:id`} element={<ReceiptPage />} />
 
           <Route path="*" element={<p> Not found</p>} />
         </Route>

@@ -10,8 +10,6 @@ export const calculateEnergie = (newItems: ItemType[]) => {
     }
   });
 
-  console.log(energyArr);
-
   const proteins = energyArr.reduce(
     (acc: number, obj: any) =>
       acc +

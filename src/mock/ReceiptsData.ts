@@ -89,12 +89,12 @@ export const ReceiptsData: ReceiptsType = {
     {
       title: "Салаты",
       color: "#A1D214",
-
       items: [
         {
           id: "1",
           title: "Курочка BARBEQUE",
           img: receiptFirst,
+          button: { href: "/receipts/1", text: "Смотреть все" },
           tags: [
             { id: "1", icon: ClockIcon, text: "15 минут" },
             { id: "2", icon: PortionIcon, text: "4 порции" },
@@ -124,6 +124,7 @@ export const ReceiptsData: ReceiptsType = {
           id: "2",
           title: "Курочка BARBEQUE",
           img: receiptFirst,
+          button: { href: "/receipts/1", text: "Смотреть все" },
           tags: [
             { id: "1", icon: ClockIcon, text: "15 минут" },
             { id: "2", icon: PortionIcon, text: "4 порции" },
@@ -153,6 +154,7 @@ export const ReceiptsData: ReceiptsType = {
           id: "3",
           title: "Курочка BARBEQUE",
           img: receiptFirst,
+          button: { href: "/receipts/1", text: "Смотреть все" },
           tags: [
             { id: "1", icon: ClockIcon, text: "15 минут" },
             { id: "2", icon: PortionIcon, text: "4 порции" },
@@ -182,6 +184,7 @@ export const ReceiptsData: ReceiptsType = {
           id: "4",
           title: "Курочка BARBEQUE",
           img: receiptFirst,
+          button: { href: "/receipts/1", text: "Смотреть все" },
           tags: [
             { id: "1", icon: ClockIcon, text: "15 минут" },
             { id: "2", icon: PortionIcon, text: "4 порции" },
@@ -218,6 +221,7 @@ export const ReceiptsData: ReceiptsType = {
           id: "1",
           title: "Курочка BARBEQUE",
           img: receiptFirst,
+          button: { href: "/receipts/1", text: "Смотреть все" },
           tags: [
             { id: "1", icon: ClockIcon, text: "15 минут" },
             { id: "2", icon: PortionIcon, text: "4 порции" },
@@ -247,6 +251,7 @@ export const ReceiptsData: ReceiptsType = {
           id: "2",
           title: "Курочка BARBEQUE",
           img: receiptFirst,
+          button: { href: "/receipts/1", text: "Смотреть все" },
           tags: [
             { id: "1", icon: ClockIcon, text: "15 минут" },
             { id: "2", icon: PortionIcon, text: "4 порции" },
@@ -276,6 +281,7 @@ export const ReceiptsData: ReceiptsType = {
           id: "3",
           title: "Курочка BARBEQUE",
           img: receiptFirst,
+          button: { href: "/receipts/1", text: "Смотреть все" },
           tags: [
             { id: "1", icon: ClockIcon, text: "15 минут" },
             { id: "2", icon: PortionIcon, text: "4 порции" },
@@ -305,6 +311,7 @@ export const ReceiptsData: ReceiptsType = {
           id: "4",
           title: "Курочка BARBEQUE",
           img: receiptFirst,
+          button: { href: "/receipts/1", text: "Смотреть все" },
           tags: [
             { id: "1", icon: ClockIcon, text: "15 минут" },
             { id: "2", icon: PortionIcon, text: "4 порции" },

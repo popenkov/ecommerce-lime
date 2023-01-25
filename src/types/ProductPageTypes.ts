@@ -4,7 +4,7 @@ import productMain from "@src/assets/images/product/product-main.jpg";
 import productThumb from "@src/assets/images/product/product-thumb.jpg";
 import receiptFirst from "@src/assets/images/receipts/barbeque.jpg";
 
-import { ChiefReceiptsType, EnergyType, PriceType, RatingType } from "./commonTypes";
+import { ChiefReceiptsType, EnergyType, PriceType, RatingType, SlideItemType } from "./commonTypes";
 // import { ChiefReceiptsType } from "./MainPageTypes";
 
 export type DescriptionItemType = {
@@ -56,13 +56,7 @@ export type CustomersReviewsItemType = {
   useFullReactions: string;
 };
 
-type SlideItemType = {
-  id: string;
-  text: string;
-  img: string;
-};
-
-type SliderImagesType = {
+export type SliderImagesType = {
   main: SlideItemType[];
   thumb: SlideItemType[];
   isFavorite: boolean;
