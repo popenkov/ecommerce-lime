@@ -15,12 +15,14 @@ const Title = styled.h2<{ isSmall?: boolean }>`
   ${font({ size: "18", lineHeight: "24", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${font({ size: "14", lineHeight: "17", fontWeight: "700" })};
+  }
+
   ${({ isSmall }) =>
     isSmall &&
     css`
       ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
-      @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-      }
     `};
 
   &::after {

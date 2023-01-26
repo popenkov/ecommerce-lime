@@ -15,17 +15,17 @@ import { Styled } from "./styles";
 import { SlideItemType } from "@src/types/commonTypes";
 
 type ThumbSliderProps = {
-  data: { main: SlideItemType[]; thumb: SlideItemType[]; isFavorite: boolean };
+  data: { main: SlideItemType[]; thumb: SlideItemType[] };
   height?: string;
 };
 
 export const ThumbSlider: FC<ThumbSliderProps> = ({ data, height }) => {
-  const { main, thumb, isFavorite } = data;
+  const { main, thumb } = data;
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
   const thumbSliderDirection = !isAdaptive ? "vertical" : "horizontal";
-  const thumbSliderSpaceBetween = !isAdaptive ? 10 : 40;
+  const thumbSliderSpaceBetween = !isAdaptive ? 10 : 22;
 
   return (
     <Styled.Container height={height}>
@@ -56,10 +56,6 @@ export const ThumbSlider: FC<ThumbSliderProps> = ({ data, height }) => {
               </SwiperSlide>
             ))}
         </Swiper>
-
-        <Styled.FavoritesButtonContainer>
-          <FavoritesButton isFavorite={isFavorite} />
-        </Styled.FavoritesButtonContainer>
       </Styled.MainSlider>
     </Styled.Container>
   );

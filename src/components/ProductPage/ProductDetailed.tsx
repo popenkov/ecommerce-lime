@@ -9,15 +9,22 @@ import { ProductPreviews } from "./ProductPreviews";
 
 import { Styled } from "./styles";
 import { productDetailedData } from "@src/mock/ProductDetailedData";
+import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
 
 export const ProductDetailed: FC = () => {
   const { main, thumb, isFavorite } = productDetailedData.sliderImages;
 
-  const sliderData = { main, thumb, isFavorite };
+  const sliderData = { main, thumb };
   return (
     <Styled.Product>
       <Styled.ProductTopContainer>
-        <ThumbSlider data={sliderData} />
+        <Styled.ThumbSliderContainer>
+          <ThumbSlider data={sliderData} />
+
+          <Styled.FavoritesButtonContainer>
+            <FavoritesButton isFavorite={isFavorite} />
+          </Styled.FavoritesButtonContainer>
+        </Styled.ThumbSliderContainer>
         <MainDescription />
       </Styled.ProductTopContainer>
 

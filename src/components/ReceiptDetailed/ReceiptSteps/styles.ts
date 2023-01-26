@@ -51,6 +51,10 @@ const Description = styled.p`
   margin-bottom: 33px;
   ${font({ size: "14", lineHeight: "24", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const StepsItems = styled.div``;

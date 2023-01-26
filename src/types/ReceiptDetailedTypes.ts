@@ -1,5 +1,5 @@
-import { SliderImagesType } from "@src/types/ProductPageTypes";
-import { ChiefReceiptsType, EnergyType, RatingType } from "@src/types/commonTypes";
+import { CustomersReviewsItemType, ReviewsType, SliderImagesType } from "@src/types/ProductPageTypes";
+import { ChiefReceiptsType, EnergyType, LinkType, RatingType } from "@src/types/commonTypes";
 import { ChiefReceiptTagType } from "@src/types/MainPageTypes";
 import { SelectOptionType } from "@src/components/UI/Select/select.interface";
 
@@ -40,7 +40,9 @@ export type ReceiptStepsType = {
 
 export type ReceiptDetailedType = {
   sliderImages: SliderImagesType;
+  videoLink: LinkType;
   description: ReceiptDescriptionType;
   receiptSteps: ReceiptStepsType;
+  reviews: ReviewsType;
   anotherReceipts: ChiefReceiptsType;
 };

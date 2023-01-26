@@ -27,7 +27,7 @@ export const AsideEmptyCart: FC = () => {
       </Styled.CatalogContainer>
 
       <Styled.RecentOrderContainer>
-        <Styled.RecentOrderButton to="/catalog">Повторить прошлый заказ</Styled.RecentOrderButton>
+        <Styled.RecentOrderButton to="/account/history">Повторить прошлый заказ</Styled.RecentOrderButton>
         <Styled.RecentOrderText>Вы можете быстро добавить в корзину ваши предыдущие покупки</Styled.RecentOrderText>
       </Styled.RecentOrderContainer>
     </Styled.Container>

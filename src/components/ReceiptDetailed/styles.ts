@@ -14,10 +14,6 @@ const Title = styled.h2`
   ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   position: relative;
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
-  }
 `;
 
 const ReceiptTopContainer = styled.div`
@@ -26,12 +22,30 @@ const ReceiptTopContainer = styled.div`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column;
-    margin-bottom: 41px;
+    margin-bottom: 8px;
   }
 `;
 
 const SliderContainer = styled.div`
-  max-width: 47%;
+  width: 47%;
+  gap: 34px;
+  margin-right: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    height: auto;
+    gap: 0;
+    margin: 0;
+  }
+`;
+
+const VideoButtonContainer = styled.div`
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const ReceiptBottomContainer = styled.div`
@@ -52,6 +66,10 @@ const ReceiptBottomContainer = styled.div`
 
 const RatingButton = styled.button`
   ${flexAlignCenter};
+`;
+
+const RatingButtonText = styled.span`
+  margin-right: 6px;
   ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
 `;
@@ -60,6 +78,10 @@ const TabsContainer = styled.div`
   ${flexAlignCenter};
   gap: 44px;
   margin-bottom: 35px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 46px;
+  }
 `;
 const TabsLink = styled.button<{ isActive?: boolean }>`
   position: relative;
@@ -81,8 +103,7 @@ const TabsLink = styled.button<{ isActive?: boolean }>`
         background-color: ${({ theme }) => theme.color.green};
 
         @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-          height: 2px;
-          bottom: -4px;
+          bottom: -14px;
         }
       }
     `};
@@ -107,5 +128,7 @@ export const Styled = {
   TabsLink,
   TabItem,
   RatingButton,
+  RatingButtonText,
   SliderContainer,
+  VideoButtonContainer,
 };

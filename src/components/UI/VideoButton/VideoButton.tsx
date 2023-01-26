@@ -1,10 +1,16 @@
 import { FC } from "react";
-
+import { ReactComponent as PlayIcon } from "@src/assets/icons/play-icon.svg";
 import { Styled } from "./styles";
-export const VideoButton: FC = () => {
+import { LinkType } from "@src/types/commonTypes";
+
+type VideoButtonProps = Omit<LinkType, "id">;
+export const VideoButton: FC<VideoButtonProps> = ({ text, href }) => {
   return (
-    <Styled.Button>
-      <Styled.Text>Смотрите видео приготовления</Styled.Text>
+    <Styled.Button href={href}>
+      <Styled.Text>{text}</Styled.Text>
+      <Styled.IconContainer>
+        <PlayIcon />
+      </Styled.IconContainer>
     </Styled.Button>
   );
 };

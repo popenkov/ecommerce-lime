@@ -8,6 +8,12 @@ const IconContainer = styled.span`
   & svg path {
     fill: ${({ theme }) => theme.color.black};
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    & svg {
+      ${box(24)}
+    }
+  }
 `;
 
 const TextContainer = styled.span`
@@ -27,6 +33,11 @@ const Button = styled.button<{ isAdded: boolean; isHovered?: boolean; isSmall?: 
   color: ${({ theme }) => theme.color.black};
   background-color: ${({ theme }) => theme.color.green};
   border-radius: 5px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   ${({ isHovered }) =>
     isHovered &&
@@ -81,9 +92,6 @@ const Button = styled.button<{ isAdded: boolean; isHovered?: boolean; isSmall?: 
       & ${IconContainer} {
       }
     `};
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 export const Styled = {

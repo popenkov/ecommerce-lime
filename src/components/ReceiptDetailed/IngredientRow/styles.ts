@@ -3,15 +3,16 @@ import styled from "styled-components";
 
 const Ingredient = styled.div`
   ${flexAlignCenter};
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
 `;
 
 const IngredientImage = styled.img`
   ${box(28)};
   object-fit: contain;
   margin-right: 16px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
 `;
 
 const IngredientName = styled.span`

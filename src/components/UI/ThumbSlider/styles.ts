@@ -2,8 +2,7 @@ import styled, { css } from "styled-components";
 
 const ThumbSlider = styled.div`
   width: 90px;
-  margin-top: 20px;
-  margin-left: 14px;
+  margin-right: 25px;
 
   & .swiper-slide {
     width: auto;
@@ -51,9 +50,9 @@ const MainSlider = styled.div`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 100vw;
-    height: 402px;
     padding: 0 15px;
     box-sizing: border-box;
+    margin-bottom: 8px;
   }
 `;
 
@@ -62,31 +61,18 @@ const MainImage = styled.img`
   height: 500px;
   object-fit: contain;
   object-position: center;
+  border-radius: 10px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    height: 402px;
-  }
-`;
-
-const FavoritesButtonContainer = styled.span`
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    top: -4px;
-    right: 10px;
+    object-fit: cover;
   }
 `;
 
 const Container = styled.div<{ height?: string }>`
-  width: 47%;
+  width: 100%;
   max-width: 100%;
   height: 500px;
   display: flex;
-  gap: 34px;
-  margin-right: 82px;
 
   ${({ height }) =>
     !!height &&
@@ -113,5 +99,4 @@ export const Styled = {
   ThumbSlider,
   ThumbImage,
   MainImage,
-  FavoritesButtonContainer,
 };

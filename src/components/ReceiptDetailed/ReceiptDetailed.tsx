@@ -2,6 +2,7 @@ import { ReceiptDetailedData } from "@src/mock/ReceiptDetailedData";
 import { FC, useState } from "react";
 import { ChiefReceipts } from "../MainPage/ChiefSection/ChiefReceipts";
 import { Rating, ThumbSlider } from "../UI";
+import { VideoButton } from "../UI/VideoButton";
 import { ReceiptDescription } from "./ReceiptDescription";
 import { ReceiptReviews } from "./ReceiptReviews";
 import { ReceiptSteps } from "./ReceiptSteps";
@@ -9,7 +10,7 @@ import { ReceiptSteps } from "./ReceiptSteps";
 import { Styled } from "./styles";
 
 export const ReceiptDetailed: FC = () => {
-  const { sliderImages, description, anotherReceipts } = ReceiptDetailedData;
+  const { sliderImages, description, anotherReceipts, videoLink } = ReceiptDetailedData;
   const { title, color, rating } = ReceiptDetailedData.receiptSteps;
   const [activeTab, setActiveTab] = useState(1);
 
@@ -20,7 +21,12 @@ export const ReceiptDetailed: FC = () => {
   return (
     <Styled.Receipt>
       <Styled.ReceiptTopContainer>
-        <ThumbSlider data={sliderImages} height="314px" />
+        <Styled.SliderContainer>
+          <ThumbSlider data={sliderImages} height="314px" />
+          <Styled.VideoButtonContainer>
+            <VideoButton {...videoLink} />
+          </Styled.VideoButtonContainer>
+        </Styled.SliderContainer>
 
         <ReceiptDescription data={description} />
       </Styled.ReceiptTopContainer>
@@ -32,7 +38,8 @@ export const ReceiptDetailed: FC = () => {
           </Styled.TabsLink>
           <Styled.TabsLink onClick={() => handleTabLinkClick(2)} isActive={activeTab === 2}>
             <Styled.RatingButton>
-              Отзывы
+              <Styled.RatingButtonText>Отзывы</Styled.RatingButtonText>
+
               <Rating data={rating} showReviewsValue={false} />
             </Styled.RatingButton>
           </Styled.TabsLink>
@@ -57,7 +64,7 @@ export const ReceiptDetailed: FC = () => {
           subtitle={anotherReceipts.subtitle}
           items={anotherReceipts.items}
           buttonHref={anotherReceipts?.button?.href || "#"}
-          buttonText={""}
+          buttonText={anotherReceipts?.button?.text}
           hasAllItemsLink={true}
         />
       </Styled.ReceiptsContainer>

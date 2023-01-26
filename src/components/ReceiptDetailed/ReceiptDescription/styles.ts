@@ -18,7 +18,7 @@ const Description = styled.div`
   border-radius: 10px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     margin: 0 15px;
-    padding: 8px 11px 11px;
+    padding: 20px 11px 0;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-bottom: 19px;
@@ -30,6 +30,7 @@ const Title = styled.h2`
   ${font({ size: "24", lineHeight: "29", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 11px;
     ${font({ size: "18", lineHeight: "22", fontWeight: "700" })};
   }
 `;
@@ -39,7 +40,7 @@ const TagsContainer = styled.div`
   margin-bottom: 18px;
   margin-right: 19px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -48,7 +49,7 @@ const RatingContainer = styled.div`
   margin-bottom: 18px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -92,7 +93,7 @@ const SelectContainer = styled.div`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin-bottom: 12px;
+    margin-bottom: 17px;
   }
 `;
 
@@ -130,12 +131,26 @@ const EnergieContainer = styled.div`
   background: #f1f1f1;
   border-radius: 5px;
   margin-bottom: 18px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 6px;
+    padding: 11px 9px;
+    flex-wrap: wrap;
+  }
 `;
 
 const EnergyItem = styled.div`
   ${flexAlignCenter};
   flex-direction: column;
   ${font({ size: "10", lineHeight: "24", fontWeight: "400" })};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 40%;
+    flex-grow: 1;
+    margin-bottom: 5px;
+    flex-direction: row;
+    ${font({ size: "10", lineHeight: "14", fontWeight: "400" })};
+  }
 `;
 
 const EnergyName = styled.span`
@@ -165,11 +180,23 @@ const IngredientsCartContainer = styled.div`
   background-color: ${({ theme }) => theme.color.green};
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column;
+    gap: 18px;
+    width: calc(100% + -6px);
+    margin-left: -11px;
+    padding: 24px 9px 13px;
+  }
 `;
 
 const IngredientsPriceContainer = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 `;
 
 const IngredientsPriceTitle = styled.span`
@@ -178,10 +205,18 @@ const IngredientsPriceTitle = styled.span`
   ${font({ size: "10", lineHeight: "12", fontWeight: "400" })};
   color: ${({ theme }) => theme.color.black};
   opacity: 0.7;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    max-width: 44%;
+  }
 `;
 const IngredientsPriceValue = styled.span`
   ${font({ size: "16", lineHeight: "20", fontWeight: "700" })};
   color: ${({ theme }) => theme.color.black};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${font({ size: "24", lineHeight: "29", fontWeight: "700" })};
+  }
 `;
 
 export const Styled = {

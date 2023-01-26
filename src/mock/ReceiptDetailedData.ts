@@ -78,6 +78,11 @@ export const ReceiptDetailedData: ReceiptDetailedType = {
     ],
     isFavorite: true,
   },
+  videoLink: {
+    id: "1",
+    href: "#",
+    text: "Смотрите видео приготовления",
+  },
   description: {
     title: "Рецепт самого сочного и вкусного бургера",
     rating: { value: "4.2", amount: "123231" },
@@ -334,12 +339,50 @@ export const ReceiptDetailedData: ReceiptDetailedType = {
       },
     ],
   },
+  reviews: {
+    title: "Отзывы покупателей",
+    color: "#A1D214",
+    subtitle: { value: 3254, text: "отзывов" },
+    filter: [
+      {
+        id: "1",
+        text: "Сначала новые",
+        isActive: true,
+      },
+      { id: "2", text: "По популярности", isActive: false },
+    ],
+
+    reviews: [
+      {
+        id: "1",
+        name: "Елена",
+        rating: {
+          value: "4",
+          amount: "123321",
+        },
+        date: "18 июля 2020 г.",
+        text: "Замечательный продукт! Каждый день беру его и едим всей семьей! Мука что надо, булочки пышные!",
+        useFullReactions: "2",
+      },
+      {
+        id: "2",
+        name: "Елена",
+        rating: {
+          value: "4",
+          amount: "123321",
+        },
+        date: "18 июля 2020 г.",
+        text: "Замечательный продукт! Каждый день беру его и едим всей семьей! Мука что надо, булочки пышные!",
+        useFullReactions: "2",
+      },
+    ],
+  },
   anotherReceipts: {
-    title: "Рецепты с этим товаром",
+    title: "Похожие рецепты",
     subtitle: "",
     button: {
-      text: "Смотреть все",
-      href: "#",
+      text: "Показать все",
+      href: "/receipts",
     },
     items: [
       {
@@ -350,6 +393,26 @@ export const ReceiptDetailedData: ReceiptDetailedType = {
           { id: "1", icon: ClockIcon, text: "15 минут" },
           { id: "2", icon: PortionIcon, text: "4 порции" },
         ],
+        ingredients: [
+          {
+            id: "1",
+            text: "Колбаска",
+            price: "5 руб",
+            img: ingredientFirst,
+          },
+          {
+            id: "2",
+            text: "Маслины без косточки",
+            price: "2,54 руб",
+            img: ingredientSecond,
+          },
+          {
+            id: "3",
+            text: "Хлебушек",
+            price: "1 руб",
+            img: ingredientThird,
+          },
+        ],
       },
       {
         id: "2",
@@ -358,6 +421,26 @@ export const ReceiptDetailedData: ReceiptDetailedType = {
         tags: [
           { id: "1", icon: ClockIcon, text: "15 минут" },
           { id: "2", icon: PortionIcon, text: "4 порции" },
+        ],
+        ingredients: [
+          {
+            id: "1",
+            text: "Колбаска",
+            price: "5 руб",
+            img: ingredientFirst,
+          },
+          {
+            id: "2",
+            text: "Маслины без косточки",
+            price: "2,54 руб",
+            img: ingredientSecond,
+          },
+          {
+            id: "3",
+            text: "Хлебушек",
+            price: "1 руб",
+            img: ingredientThird,
+          },
         ],
       },
       {
@@ -368,6 +451,26 @@ export const ReceiptDetailedData: ReceiptDetailedType = {
           { id: "1", icon: ClockIcon, text: "15 минут" },
           { id: "2", icon: PortionIcon, text: "4 порции" },
         ],
+        ingredients: [
+          {
+            id: "1",
+            text: "Колбаска",
+            price: "5 руб",
+            img: ingredientFirst,
+          },
+          {
+            id: "2",
+            text: "Маслины без косточки",
+            price: "2,54 руб",
+            img: ingredientSecond,
+          },
+          {
+            id: "3",
+            text: "Хлебушек",
+            price: "1 руб",
+            img: ingredientThird,
+          },
+        ],
       },
       {
         id: "4",
@@ -376,6 +479,26 @@ export const ReceiptDetailedData: ReceiptDetailedType = {
         tags: [
           { id: "1", icon: ClockIcon, text: "15 минут" },
           { id: "2", icon: PortionIcon, text: "4 порции" },
+        ],
+        ingredients: [
+          {
+            id: "1",
+            text: "Колбаска",
+            price: "5 руб",
+            img: ingredientFirst,
+          },
+          {
+            id: "2",
+            text: "Маслины без косточки",
+            price: "2,54 руб",
+            img: ingredientSecond,
+          },
+          {
+            id: "3",
+            text: "Хлебушек",
+            price: "1 руб",
+            img: ingredientThird,
+          },
         ],
       },
     ],

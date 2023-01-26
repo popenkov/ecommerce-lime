@@ -8,6 +8,7 @@ const Step = styled.div`
   margin-bottom: 34px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column;
   }
 `;
 
@@ -16,8 +17,13 @@ const Img = styled.img`
   max-width: 397px;
   margin-right: 36px;
   object-fit: contain;
+  border-radius: 10px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-right: 0;
+    height: 222px;
+    object-fit: cover;
+    margin-bottom: 33px;
   }
 `;
 
@@ -36,7 +42,9 @@ const Title = styled.h3`
 const Text = styled.p`
   ${font({ size: "12", lineHeight: "24", fontWeight: "400" })}
   color: ${({ theme }) => theme.color.black};
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 13px;
   }
 `;
 

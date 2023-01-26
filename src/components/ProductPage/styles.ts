@@ -33,9 +33,38 @@ const ProductBottomContainer = styled.div`
 
 const RecommendationsContainer = styled.div``;
 
+const ThumbSliderContainer = styled.div`
+  position: relative;
+  width: 47%;
+  gap: 34px;
+  margin-right: 82px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+    height: auto;
+    gap: 0;
+    margin: 0;
+    flex-direction: column-reverse;
+  }
+`;
+
+const FavoritesButtonContainer = styled.span`
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    top: -4px;
+    right: 10px;
+  }
+`;
+
 export const Styled = {
   Product,
   ProductTopContainer,
   ProductBottomContainer,
   RecommendationsContainer,
+  ThumbSliderContainer,
+  FavoritesButtonContainer,
 };

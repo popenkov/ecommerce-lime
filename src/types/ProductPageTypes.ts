@@ -39,7 +39,7 @@ type ReviewsFilterType = {
   isActive: boolean;
 };
 
-type ReviewsType = {
+export type ReviewsType = {
   title: string;
   color: string;
   subtitle: { value: number; text: string };
