@@ -6,7 +6,7 @@ import { HeaderDataType } from "@src/types/HeaderTypes";
 export const baseApi = createApi({
   reducerPath: "baseApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_BASE_URL,
+    baseUrl: process.env.REACT_APP_HEROKU_URL,
   }),
   endpoints: (build) => ({
     getHeaderData: build.query<HeaderDataType, void>({

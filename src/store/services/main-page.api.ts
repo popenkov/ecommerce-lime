@@ -7,7 +7,7 @@ const mainPagePath = "/main-page";
 export const mainPageApi = createApi({
   reducerPath: "mainPageApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_BASE_URL,
+    baseUrl: process.env.REACT_APP_HEROKU_URL,
   }),
 
   endpoints: (build) => ({

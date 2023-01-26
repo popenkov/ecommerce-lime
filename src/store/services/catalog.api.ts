@@ -5,7 +5,7 @@ import { CatalogItemType } from "@src/types/CatalogMenuTypes";
 export const catalogApi = createApi({
   reducerPath: "catalogApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_BASE_URL,
+    baseUrl: process.env.REACT_APP_HEROKU_URL,
   }),
   endpoints: (build) => ({
     getCatalogMenuData: build.query<CatalogItemType[], void>({
