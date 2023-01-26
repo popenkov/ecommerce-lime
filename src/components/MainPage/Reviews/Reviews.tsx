@@ -34,6 +34,7 @@ export const Reviews: FC<ReviewsProp> = ({ data }) => {
               modules={[Navigation]}
               slidesPerView="auto"
               spaceBetween={36}
+              cssMode
               onInit={(swiper: SwiperType) => {
                 onBeforeInit(swiper, buttonPrevRef, buttonNextRef);
               }}

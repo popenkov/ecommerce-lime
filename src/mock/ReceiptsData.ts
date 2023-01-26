@@ -85,6 +85,105 @@ export const ReceiptsData: ReceiptsType = {
       ],
     },
   ],
+  mobileFilters: [
+    {
+      title: "Категории",
+      type: "checkboxes",
+      items: [
+        {
+          id: "1",
+          text: "Категория 1",
+          inputName: "category",
+          inputValue: "category-1",
+        },
+        {
+          id: "2",
+          text: "Категория 2",
+          inputName: "category",
+          inputValue: "category-2",
+        },
+        {
+          id: "3",
+          text: "Категория 3",
+          inputName: "category",
+          inputValue: "category-3",
+        },
+      ],
+    },
+
+    {
+      title: "Кухня",
+      type: "checkboxes",
+      items: [
+        {
+          id: "1",
+          text: "Кухня 1",
+          inputName: "products",
+          inputValue: "products-1",
+        },
+        {
+          id: "2",
+          text: "Кухня 2",
+          inputName: "products",
+          inputValue: "products-2",
+        },
+        {
+          id: "3",
+          text: "Кухня 3",
+          inputName: "products",
+          inputValue: "products-3",
+        },
+      ],
+    },
+    {
+      title: "Время приготовления",
+      type: "checkboxes",
+      items: [
+        {
+          id: "1",
+          text: "Время 1",
+          inputName: "products",
+          inputValue: "products-1",
+        },
+        {
+          id: "2",
+          text: "Время 2",
+          inputName: "products",
+          inputValue: "products-2",
+        },
+        {
+          id: "3",
+          text: "Время 3",
+          inputName: "products",
+          inputValue: "products-3",
+        },
+      ],
+    },
+    {
+      title: "Продукты",
+      type: "checkboxes",
+      items: [
+        {
+          id: "1",
+          text: "Продукты 1",
+          inputName: "products",
+          inputValue: "products-1",
+        },
+        {
+          id: "2",
+          text: "Продукты 2",
+          inputName: "products",
+          inputValue: "products-2",
+        },
+        {
+          id: "3",
+          text: "Продукты 3",
+          inputName: "products",
+          inputValue: "products-3",
+        },
+      ],
+    },
+  ],
   receipts: [
     {
       title: "Салаты",

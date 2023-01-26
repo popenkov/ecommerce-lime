@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const CatalogItem = styled.li<{ isActive?: boolean }>`
+  cursor: pointer;
   ${flexAlignCenter};
   position: relative;
   border-top: 1px solid ${({ theme }) => theme.color.greyBorderLight};

@@ -17,6 +17,7 @@ const PageContainer = styled.main`
 const MainContainer = styled.main`
   flex: 1;
   width: calc(100% - 220px);
+  width: calc(100% - 309px);
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 100vw;

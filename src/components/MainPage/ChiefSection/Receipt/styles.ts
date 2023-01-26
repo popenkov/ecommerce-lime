@@ -15,7 +15,8 @@ const ImgContainer = styled.div`
 `;
 
 const Img = styled.img`
-  width: 290px;
+  /* width: 290px; */
+  width: 100%;
   height: 212px;
   object-fit: cover;
   object-position: center;
@@ -77,7 +78,8 @@ const IngredientsButton = styled.div`
 
 const Receipt = styled.div<{ isSmall?: boolean }>`
   position: relative;
-  width: 290px;
+  /* width: 290px; */
+  width: 100%;
   padding-bottom: 20px;
 
   &:hover {

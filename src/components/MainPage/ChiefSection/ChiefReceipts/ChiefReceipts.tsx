@@ -57,6 +57,7 @@ export const ChiefReceipts: FC<ChiefReceiptsProps> = ({
         <Swiper
           modules={[Navigation]}
           spaceBetween={12}
+          cssMode
           slidesPerView={slidesPerView}
           onInit={(swiper: SwiperType) => {
             onBeforeInit(swiper, buttonPrevRef, buttonNextRef);

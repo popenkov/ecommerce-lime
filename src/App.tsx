@@ -23,11 +23,13 @@ import {
 } from "./pages";
 
 import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
+import Preloader from "./components/UI/Preloader/Preloader";
 // import { ReceiptDetailedPage } from "@src/pages/ReceiptDetailedPage";
 
 const App: FC = () => {
   return (
     <div>
+      <Preloader />
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Main />} />

@@ -118,7 +118,7 @@ const ThumbLeft = styled.input`
   width: 172px;
   outline: none;
 
-  z-index: 3;
+  z-index: 2;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 320px;
@@ -149,7 +149,7 @@ const ThumbRight = styled.input`
   width: 172px;
   outline: none;
 
-  z-index: 4;
+  z-index: 2;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 320px;

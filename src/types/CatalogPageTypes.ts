@@ -14,7 +14,7 @@ type RangeType = {
   maxPrice: number;
 };
 
-type FilterType = {
+export type FilterType = {
   title: string;
   type: string;
   items?: LinkType[] | CheckboxType[];

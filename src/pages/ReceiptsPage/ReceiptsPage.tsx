@@ -1,6 +1,6 @@
-import { FC } from "react";
-
-import { Sidebar } from "@src/components";
+import { FC, useEffect, useState } from "react";
+import { ReactComponent as SettingsIcon } from "@src/assets/icons/settings.svg";
+import { Accordion, Sidebar } from "@src/components";
 import { Filter } from "@src/components/Catalog/Filter";
 import { Favorites } from "@src/components/Favorites";
 import { EmptyFavorites } from "@src/components/Favorites/EmptyFavorites";
@@ -8,13 +8,49 @@ import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { numberDeclination } from "@src/utils/numberDeclination";
 
+import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
+
 import { Styled } from "./styles";
 import { ReceiptsData } from "@src/mock/ReceiptsData";
 import { Select } from "@src/components/UI/Select/Select";
 import { ReceiptssSection } from "@src/components/ReceiptsPage/ReceiptsSection";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
+import { FormCheckbox } from "@src/components/UI/FormCheckbox";
+import { CheckboxType } from "@src/types/CatalogPageTypes";
+import { ReceiptsMobileFilter } from "@src/components/ReceiptsPage/ReceiptsMobileFilter";
 
 export const ReceiptsPage: FC = () => {
-  const { title, resultsAmount, resultWords, filters, receipts } = ReceiptsData;
+  const { title, resultsAmount, resultWords, filters, mobileFilters, receipts } = ReceiptsData;
+
+  const isAdaptive = useMediaQuery(theme.breakpoints.medium);
+
+  const [isFilterShown, setIsFilterShown] = useState(false);
+
+  useEffect(() => {
+    if (isFilterShown) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isFilterShown]);
+
+  const isFilterToShowOnMobile = isAdaptive && isFilterShown;
+  const isFilterToShow = isFilterToShowOnMobile || !isAdaptive;
+
+  const handleFilterMenuOpen = () => {
+    setIsFilterShown(true);
+  };
+  const handleFilterMenuClose = () => {
+    setIsFilterShown(false);
+  };
+
+  const handleFilterReset = () => {
+    handleFilterMenuClose();
+  };
+  const handleFilterSubmit = () => {
+    handleFilterMenuClose();
+  };
 
   const resultValueText = `${resultsAmount} ${numberDeclination(resultsAmount, resultWords)}`;
   return (
@@ -27,6 +63,13 @@ export const ReceiptsPage: FC = () => {
         </Styled.ResultsHeader>
 
         <Styled.ResultsContainer>
+          <Styled.MobileFilterButton onClick={handleFilterMenuOpen}>
+            <Styled.MobileButtonText> Фильтр рецептов</Styled.MobileButtonText>
+            <Styled.ShevronIcon>
+              <Shevron />
+            </Styled.ShevronIcon>
+          </Styled.MobileFilterButton>
+
           <Styled.FiltersContainer>
             {filters.map((item) => {
               return (
@@ -36,6 +79,19 @@ export const ReceiptsPage: FC = () => {
               );
             })}
           </Styled.FiltersContainer>
+
+          {isFilterToShow && (
+            <Styled.MobileFiltersContainer>
+              <ReceiptsMobileFilter data={mobileFilters} />
+
+              {isFilterToShowOnMobile && (
+                <Styled.MobileFilterButtons>
+                  <Styled.MobileCancelButton onClick={handleFilterReset}>x</Styled.MobileCancelButton>
+                  <Styled.MobileSubmitButton onClick={handleFilterSubmit}>Применить фильтр</Styled.MobileSubmitButton>
+                </Styled.MobileFilterButtons>
+              )}
+            </Styled.MobileFiltersContainer>
+          )}
 
           <Styled.ReceiptsContainer>
             {receipts.map((item) => {

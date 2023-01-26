@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { flexCenter, font } from "@src/styles/mixins";
+import { box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
 
 const PageContainer = styled.main`
   display: flex;
@@ -19,6 +19,7 @@ const PageContainer = styled.main`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0;
+    margin-top: 111px;
   }
 `;
 const MainContainer = styled.div`
@@ -41,7 +42,7 @@ const ResultsHeader = styled.div`
   margin-bottom: 16px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin: 37px 13px 18px;
+    margin: -21px 10px 15px;
     display: flex;
     flex-direction: column;
   }
@@ -77,22 +78,137 @@ const ResultsContainer = styled.div`
 
 const FiltersContainer = styled.div`
   display: flex;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  gap: 16px;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: none;
   }
 `;
+
+const MobileFiltersContainer = styled.div`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    display: block;
+    position: fixed;
+    z-index: 6;
+    inset: 0;
+    top: 78px;
+    padding: 13px 13px 50px;
+    overflow-y: scroll;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: ${({ theme }) => theme.color.white};
+  }
+`;
+
 const FilterContainer = styled.div`
   width: 98%;
   display: flex;
-  gap: 16px;
+  flex: 1;
+
   margin-bottom: 23px;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column;
     gap: 0;
-    margin: 0;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 6px;
+  }
+`;
+
+const MobileFilterButton = styled.button`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+    width: calc(100% - 26px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 26px;
+    padding: 6px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+    color: ${({ theme }) => theme.color.black};
+  }
+`;
+
+const ShevronIcon = styled.span`
+  margin-left: 10px;
+  & svg {
+    width: 6px;
+    height: 10px;
+    transform: rotateZ(-90deg);
+  }
+  & path {
+    fill: ${({ theme }) => theme.color.green};
+  }
+`;
+
+const MobileButtonText = styled.span`
+  ${font({ size: "12", lineHeight: "15", fontWeight: "700" })};
+  color: ${({ theme }) => theme.color.black};
+`;
+
+const MobileFilterButtons = styled.div`
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    top: auto;
+
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+const MobileCancelButton = styled.button`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    ${box(40)};
+    ${flexCenter};
+    box-sizing: border-box;
+
+    background-color: ${({ theme }) => theme.color.orange};
+    color: ${({ theme }) => theme.color.white};
+    ${font({ size: "26", lineHeight: "34", fontWeight: "400" })};
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+`;
+
+const MobileSubmitButton = styled.button`
+  display: none;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex: 1;
+    ${flexCenter};
+    width: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: ${({ theme }) => theme.color.green};
+    border-radius: 5px;
+    margin: 0 auto;
   }
 `;
 
 const ReceiptsContainer = styled.div``;
+
+const CheckboxContainer = styled.div`
+  ${flexAlignCenter}
+`;
+
+const CheckboxAmount = styled.span`
+  padding-bottom: 5px;
+  margin-left: 4px;
+  ${font({ size: "12", lineHeight: "32", fontWeight: "400" })};
+  color: ${({ theme }) => theme.color.greyFont};
+`;
 
 export const Styled = {
   PageContainer,
@@ -102,6 +218,15 @@ export const Styled = {
   SearchAmount,
   ResultsContainer,
   FilterContainer,
+  MobileFiltersContainer,
   FiltersContainer,
   ReceiptsContainer,
+  MobileSubmitButton,
+  MobileCancelButton,
+  MobileFilterButtons,
+  MobileButtonText,
+  MobileFilterButton,
+  CheckboxContainer,
+  CheckboxAmount,
+  ShevronIcon,
 };

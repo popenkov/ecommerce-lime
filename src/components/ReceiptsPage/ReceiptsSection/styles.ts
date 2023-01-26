@@ -11,6 +11,7 @@ const Container = styled.section`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0px 15px 16px;
+
     margin-bottom: 21px;
     box-shadow: unset;
   }
@@ -98,13 +99,18 @@ const ItemsContainer = styled.div`
   flex-wrap: wrap;
   margin: -19px;
 
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  & .swiper-slide {
+    width: 291px;
   }
 `;
 
 const ReceiptContainer = styled.div`
   width: calc(33% - 38px);
   margin: 19px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 100%;
+  }
 `;
 
 const ShevronIcon = styled.span<{ isActive?: boolean }>`
