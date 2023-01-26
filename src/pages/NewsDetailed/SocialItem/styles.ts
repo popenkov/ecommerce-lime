@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import { flexCenter, font } from "@src/styles/mixins";
 

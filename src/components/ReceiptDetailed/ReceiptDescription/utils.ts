@@ -1,4 +1,4 @@
-import { EnergyType, ItemType } from "@src/types/commonTypes";
+import { EnergyType } from "@src/types/commonTypes";
 import { ReceiptIngredientType } from "@src/types/ReceiptDetailedTypes";
 
 export const calculateEnergie = (ingredients: ReceiptIngredientType[], portionValue?: number) => {

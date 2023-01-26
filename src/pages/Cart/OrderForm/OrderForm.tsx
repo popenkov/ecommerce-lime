@@ -53,9 +53,7 @@ export const OrderForm: FC = () => {
               name="savedAddress"
               control={control}
               defaultValue=""
-              render={({ field: { value, onChange }, fieldState: { error } }) => (
-                <FormRadioButton name="savedAddress" id="savedAddress" isChecked text={savedText} />
-              )}
+              render={() => <FormRadioButton name="savedAddress" id="savedAddress" isChecked text={savedText} />}
             />
           </Styled.SavedAddresses>
 
@@ -84,12 +82,8 @@ export const OrderForm: FC = () => {
             <Controller
               control={control}
               name="time"
-              rules={{ required: true }} //optional
-              render={({
-                field: { onChange, name, value },
-                fieldState: { invalid, isDirty }, //optional
-                formState: { errors }, //optional, but necessary if you want to show an error message
-              }) => (
+              rules={{ required: true }}
+              render={({ field: { name }, formState: { errors } }) => (
                 <>
                   <CustomDateTimePicker placeholder={"Выберите дату и время доставки"} />
                   {errors && errors[name] && errors[name]?.type === "required" && <span>your error message !</span>}

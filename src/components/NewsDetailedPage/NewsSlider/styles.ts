@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { box } from "@src/styles/mixins";
-
 const Slider = styled.div`
   max-width: 76%;
 
@@ -60,33 +58,6 @@ const Slider = styled.div`
       }
     }
   }
-
-  /* & .swiper-slide-prev {
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 2;
-      height: 448px;
-      width: 120px;
-      background: linear-gradient(90deg, #ffffff 50%, rgba(255, 255, 255, 0) 100%);
-    }
-  }
-  & .swiper-slide-next {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 2;
-      height: 448px;
-      width: 120px;
-      background: linear-gradient(-90deg, #ffffff 50%, rgba(255, 255, 255, 0) 100%);
-    }
-  } */
 `;
 
 const SlideImg = styled.img`

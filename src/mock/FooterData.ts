@@ -40,7 +40,6 @@ export const FooterData: FooterDataType = {
     phone: {
       id: "1",
       icon: "",
-      //   icon: PhoneIcon,
       text: "7756",
       href: "tel: 7756",
     },
@@ -48,14 +47,12 @@ export const FooterData: FooterDataType = {
       {
         id: "1",
         icon: "",
-        // icon: AppStoreIcon,
         text: "Скачать в AppStore",
         href: "#",
       },
       {
         id: "2",
         icon: "",
-        // icon: PlayMarketIcon,
         text: "Скачать в Play Market",
         href: "#",
       },
@@ -64,21 +61,18 @@ export const FooterData: FooterDataType = {
       {
         id: "1",
         icon: "",
-        // icon: FacebookIcon,
         text: "",
         href: "#",
       },
       {
         id: "2",
         icon: "",
-        // icon: YoutubeIcon,
         text: "",
         href: "#",
       },
       {
         id: "3",
         icon: "",
-        // icon: FacebookIcon,
         text: "",
         href: "#",
       },

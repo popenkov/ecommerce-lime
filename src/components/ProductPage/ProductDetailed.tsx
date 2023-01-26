@@ -1,15 +1,14 @@
 import { FC } from "react";
 
 import { RecommendatedItems } from "@src/mock/CartAside";
+import { productDetailedData } from "@src/mock/ProductDetailedData";
 
 import { ProductsSection, ThumbSlider } from "../UI";
+import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
 import { DetailedDescription } from "./DetailedDescription";
 import { MainDescription } from "./MainDescription";
 import { ProductPreviews } from "./ProductPreviews";
-
 import { Styled } from "./styles";
-import { productDetailedData } from "@src/mock/ProductDetailedData";
-import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
 
 export const ProductDetailed: FC = () => {
   const { main, thumb, isFavorite } = productDetailedData.sliderImages;

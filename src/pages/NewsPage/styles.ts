@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { font } from "@src/styles/mixins";
@@ -94,7 +93,6 @@ const NewsContainer = styled.div`
   margin-bottom: 232px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-    /* flex-direction: column; */
     gap: 0;
     margin: 0;
     margin-bottom: 42px;

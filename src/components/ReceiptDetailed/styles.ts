@@ -1,5 +1,6 @@
-import { flexAlignCenter, font } from "@src/styles/mixins";
 import styled, { css } from "styled-components";
+
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Receipt = styled.section`
   width: calc(100% - 27px);
@@ -49,11 +50,9 @@ const VideoButtonContainer = styled.div`
 `;
 
 const ReceiptBottomContainer = styled.div`
-  /* display: flex; */
   width: 100%;
   max-width: 621px;
   margin: 0 auto;
-  /* margin-left: 13px; */
   margin-bottom: 65px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

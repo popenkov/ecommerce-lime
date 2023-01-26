@@ -2,13 +2,15 @@ import { FC } from "react";
 import { Outlet, useLocation } from "react-router";
 
 import { Sidebar } from "@src/components";
+import { AccountData } from "@src/mock/AccountData";
 
 import { Styled } from "./styles";
-import { accountNavData } from "@src/mock/AccountData";
 
 export const AccountPage: FC = () => {
   const location = useLocation();
   const currentLocation = location.pathname;
+
+  const { accountNavData } = AccountData;
 
   return (
     <Styled.PageContainer>

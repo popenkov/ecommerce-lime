@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
-import { Link } from "react-router-dom";
 
 const Title = styled.h3`
   margin-bottom: 12px;
@@ -15,7 +15,6 @@ const ImgContainer = styled.div`
 `;
 
 const Img = styled.img`
-  /* width: 290px; */
   width: 100%;
   height: 212px;
   object-fit: cover;
@@ -78,7 +77,6 @@ const IngredientsButton = styled.div`
 
 const Receipt = styled.div<{ isSmall?: boolean }>`
   position: relative;
-  /* width: 290px; */
   width: 100%;
   padding-bottom: 20px;
 

@@ -5,13 +5,13 @@ import { ICONS } from "@src/utils/IconsMap";
 
 import { Styled } from "./styles";
 
-type DownloadButtonType = Omit<LinkType, "id">;
+type DownloadButtonType = Omit<LinkType, "id" | "href">;
 
 const renderIcon = (Icon: any) => {
   return <Icon />;
 };
 
-export const DownloadButton: FC<DownloadButtonType> = ({ text, href, icon }) => {
+export const DownloadButton: FC<DownloadButtonType> = ({ text, icon }) => {
   const key = icon as keyof typeof ICONS;
   const Icon = typeof icon === "string" ? (ICONS[key] as React.FunctionComponent<React.SVGProps<SVGSVGElement>>) : null;
   return (

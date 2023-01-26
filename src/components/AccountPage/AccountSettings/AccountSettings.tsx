@@ -13,7 +13,6 @@ export const AccountSettings: FC = () => {
   const {
     handleSubmit,
     register,
-    control,
     formState: { errors },
     reset,
   } = useForm<UserForm>({
@@ -23,9 +22,7 @@ export const AccountSettings: FC = () => {
 
   const {
     handleSubmit: handleNotificationsSubmit,
-    register: notificationRegister,
     control: notificationsControl,
-    formState: { errors: notificationErrors },
     reset: notificationReset,
   } = useForm<NotificationsForm>({
     mode: "onChange",
@@ -37,7 +34,7 @@ export const AccountSettings: FC = () => {
     console.log(data);
   };
   const handleNotificationFormSubmit: SubmitHandler<NotificationsForm> = (data) => {
-    reset();
+    notificationReset();
     console.log(data);
   };
 

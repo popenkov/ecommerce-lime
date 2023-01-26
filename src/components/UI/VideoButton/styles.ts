@@ -1,5 +1,6 @@
-import { box, flexCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { box, flexCenter, font } from "@src/styles/mixins";
 
 const Button = styled.a`
   box-sizing: border-box;

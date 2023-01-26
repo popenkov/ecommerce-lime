@@ -1,10 +1,15 @@
-import { FC, useState } from "react";
+import { FC, ReactNode, useState } from "react";
 
 import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
 
 import { Styled } from "./styles";
 
-export const Accordion: FC<any> = ({ title, children }) => {
+type AccordionProps = {
+  title: string;
+  children: ReactNode;
+};
+
+export const Accordion: FC<AccordionProps> = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleHeaderClick = () => {

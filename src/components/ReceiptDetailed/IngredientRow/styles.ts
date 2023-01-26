@@ -1,5 +1,6 @@
-import { box, flexAlignCenter, font } from "@src/styles/mixins";
 import styled from "styled-components";
+
+import { box, flexAlignCenter, font } from "@src/styles/mixins";
 
 const Ingredient = styled.div`
   ${flexAlignCenter};

@@ -3,10 +3,10 @@ import { FC } from "react";
 import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
+import { NewsType } from "@src/types/commonTypes";
 
 import { NewsItem } from "../NewsItem";
 import { Styled } from "./styles";
-import { NewsType } from "@src/types/commonTypes";
 
 type NewsProps = {
   data: NewsType;

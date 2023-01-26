@@ -40,7 +40,6 @@ const CloseButton = styled.button`
   &:before,
   &:after {
     ${absolutePseudoEl};
-    /* left: 6px; */
     height: 10px;
     width: 1px;
     border-radius: 100px;

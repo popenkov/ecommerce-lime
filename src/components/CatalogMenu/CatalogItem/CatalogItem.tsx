@@ -19,7 +19,7 @@ const renderIcon = (Icon: any) => {
   return <Icon />;
 };
 
-export const CatalogItem: FC<CatalogItemProps> = ({ id, icon, name, children, onClick, showDetailed }) => {
+export const CatalogItem: FC<CatalogItemProps> = ({ icon, name, children, onClick, showDetailed }) => {
   const key = icon as keyof typeof ICONS;
   const Icon = typeof icon === "string" ? ICONS[key] : null;
 

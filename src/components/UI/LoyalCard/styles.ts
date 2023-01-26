@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-import { box, flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
+import { box, flexCenter, font } from "@src/styles/mixins";
 
 const Card = styled.section`
   flex: 1;

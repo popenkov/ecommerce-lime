@@ -1,7 +1,7 @@
-import { CustomersReviewsItemType, ReviewsType, SliderImagesType } from "@src/types/ProductPageTypes";
+import { SelectOptionType } from "@src/components/UI/Select/select.interface";
 import { ChiefReceiptsType, EnergyType, LinkType, RatingType } from "@src/types/commonTypes";
 import { ChiefReceiptTagType } from "@src/types/MainPageTypes";
-import { SelectOptionType } from "@src/components/UI/Select/select.interface";
+import { ReviewsType, SliderImagesType } from "@src/types/ProductPageTypes";
 
 export type ReceiptIngredientType = {
   id: string;

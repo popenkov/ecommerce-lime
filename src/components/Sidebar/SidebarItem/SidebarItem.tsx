@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import { useActions } from "@src/hooks/useActions";
-import { ItemType } from "@src/types/commonTypes";
+import { ItemType, PriceType } from "@src/types/commonTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
 
 import { AmountCounter } from "../AmountCounter";

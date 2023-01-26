@@ -1,9 +1,10 @@
-import { ReceiptStepItemType } from "@src/types/ReceiptDetailedTypes";
 import { FC } from "react";
+
+import { ReceiptStepItemType } from "@src/types/ReceiptDetailedTypes";
 
 import { Styled } from "./styles";
 
-export const ReceiptStep: FC<ReceiptStepItemType> = ({ id, img, title, text }) => {
+export const ReceiptStep: FC<ReceiptStepItemType> = ({ img, title, text }) => {
   return (
     <Styled.Step>
       <Styled.Img src={img} />

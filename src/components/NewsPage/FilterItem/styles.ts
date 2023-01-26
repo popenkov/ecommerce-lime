@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-import { flexCenter, font } from "@src/styles/mixins";
+import { font } from "@src/styles/mixins";
 
 const FilterItem = styled.div<{ isActive?: boolean }>`
   padding: 15px 25px;

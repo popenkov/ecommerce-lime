@@ -5,6 +5,7 @@ import { ReactComponent as ChiefAdvIcon } from "@src/assets/icons/chief.svg";
 import { ReactComponent as ClockIcon } from "@src/assets/icons/clock.svg";
 import { ReactComponent as FacebookIcon } from "@src/assets/icons/facebook.svg";
 import { ReactComponent as FavoritesIcon } from "@src/assets/icons/favorites.svg";
+import { ReactComponent as InstagramIcon } from "@src/assets/icons/instagram.svg";
 import { ReactComponent as PinIcon } from "@src/assets/icons/map-pin.svg";
 import { ReactComponent as ChiefIcon } from "@src/assets/icons/menu/chef.svg";
 import { ReactComponent as CondimentIcon } from "@src/assets/icons/menu/condiment.svg";
@@ -24,22 +25,16 @@ import { ReactComponent as ZooIcon } from "@src/assets/icons/menu/zoo.svg";
 import { ReactComponent as OrderIcon } from "@src/assets/icons/order.svg";
 import { ReactComponent as AccountIcon } from "@src/assets/icons/person.svg";
 import { ReactComponent as PhoneIcon } from "@src/assets/icons/phone.svg";
-
 // footer icons
 import { ReactComponent as PlayMarketIcon } from "@src/assets/icons/play-market.svg";
 import { ReactComponent as BellIcon } from "@src/assets/icons/reception-bell.svg";
 import { ReactComponent as RecommendIcon } from "@src/assets/icons/recommended.svg";
-import { ReactComponent as YoutubeIcon } from "@src/assets/icons/youtube.svg";
-
 // catalog menu icons
-
-// advantages icon
-
 // news soacal
 import { ReactComponent as TelegramIcon } from "@src/assets/icons/telegram.svg";
-import { ReactComponent as WhatsappIcon } from "@src/assets/icons/whatsapp.svg";
-import { ReactComponent as InstagramIcon } from "@src/assets/icons/instagram.svg";
 import { ReactComponent as VKIcon } from "@src/assets/icons/vkontakte.svg";
+import { ReactComponent as WhatsappIcon } from "@src/assets/icons/whatsapp.svg";
+import { ReactComponent as YoutubeIcon } from "@src/assets/icons/youtube.svg";
 
 export const ICONS = {
   PHONE: PhoneIcon,

@@ -13,7 +13,7 @@ import { Styled } from "./styles";
 
 export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, price, amount, unit, energy }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
-  const { addItemToCart, removeItemfromCart } = useActions();
+  const { addItemToCart } = useActions();
   const { items } = useAppSelector((state) => state.cart);
 
   const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];

@@ -1,6 +1,8 @@
+import { FC } from "react";
+
 import { ReviewItem } from "@src/components/ProductPage/ReviewItem";
 import { ReceiptDetailedData } from "@src/mock/ReceiptDetailedData";
-import { FC } from "react";
+
 import { Styled } from "./styles";
 export const ReceiptReviews: FC = () => {
   const { filter, reviews } = ReceiptDetailedData.reviews;

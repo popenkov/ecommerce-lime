@@ -1,24 +1,17 @@
 import { FC, useEffect, useState } from "react";
-import { ReactComponent as SettingsIcon } from "@src/assets/icons/settings.svg";
-import { Accordion, Sidebar } from "@src/components";
-import { Filter } from "@src/components/Catalog/Filter";
-import { Favorites } from "@src/components/Favorites";
-import { EmptyFavorites } from "@src/components/Favorites/EmptyFavorites";
-import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
-import { useAppSelector } from "@src/hooks/useAppSelector";
-import { numberDeclination } from "@src/utils/numberDeclination";
 
 import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
+import { Sidebar } from "@src/components";
+import { ReceiptsMobileFilter } from "@src/components/ReceiptsPage/ReceiptsMobileFilter";
+import { ReceiptssSection } from "@src/components/ReceiptsPage/ReceiptsSection";
+import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
+import { Select } from "@src/components/UI/Select/Select";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { ReceiptsData } from "@src/mock/ReceiptsData";
+import { theme } from "@src/theme";
+import { numberDeclination } from "@src/utils/numberDeclination";
 
 import { Styled } from "./styles";
-import { ReceiptsData } from "@src/mock/ReceiptsData";
-import { Select } from "@src/components/UI/Select/Select";
-import { ReceiptssSection } from "@src/components/ReceiptsPage/ReceiptsSection";
-import { useMediaQuery } from "@src/hooks/useMediaQuery";
-import { theme } from "@src/theme";
-import { FormCheckbox } from "@src/components/UI/FormCheckbox";
-import { CheckboxType } from "@src/types/CatalogPageTypes";
-import { ReceiptsMobileFilter } from "@src/components/ReceiptsPage/ReceiptsMobileFilter";
 
 export const ReceiptsPage: FC = () => {
   const { title, resultsAmount, resultWords, filters, mobileFilters, receipts } = ReceiptsData;

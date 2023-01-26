@@ -8,10 +8,7 @@ import { Styled } from "./styles";
 const animatedComponents = makeAnimated();
 
 export const Select: FC<SelectProps> = ({ defaultValue, options, placeholder, field, error }) => {
-  const handleSelectChange = (
-    newValue: SingleValue<SelectOptionType> | MultiValue<SelectOptionType>,
-    action: ActionMeta<SelectOptionType>
-  ): void => {
+  const handleSelectChange = (newValue: SingleValue<SelectOptionType> | MultiValue<SelectOptionType>): void => {
     field.onChange(newValue);
   };
 

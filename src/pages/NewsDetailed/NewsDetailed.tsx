@@ -1,19 +1,16 @@
 import { FC } from "react";
-import { useParams } from "react-router";
 
 import { Sidebar } from "@src/components";
-
-import { Styled } from "./styles";
+import { News } from "@src/components/MainPage/News";
+import { NewsSlider } from "@src/components/NewsDetailedPage/NewsSlider";
 import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
 import { newsDetailedData } from "@src/mock/NewsDetailedData";
 import { IMAGES } from "@src/utils/ImagesMap";
-import { NewsSlider } from "@src/components/NewsDetailedPage/NewsSlider";
+
 import { SocialItem } from "./SocialItem";
-import { News } from "@src/components/MainPage/News";
+import { Styled } from "./styles";
 
 export const NewsDetailed: FC = () => {
-  const { id } = useParams();
-
   const { image, title, text, slider, socialMedia, otherNews } = newsDetailedData;
   const imageToDraw: string = IMAGES[image as keyof typeof IMAGES];
 

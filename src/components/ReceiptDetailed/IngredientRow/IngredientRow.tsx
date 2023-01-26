@@ -1,9 +1,10 @@
-import { AddToCardBtnNew } from "@src/components/UI/AddToCardBtnNew";
-import { ReceiptIngredientType } from "@src/types/ReceiptDetailedTypes";
 import { FC, useState } from "react";
 
+import { AddToCardBtnNew } from "@src/components/UI/AddToCardBtnNew";
+import { ReceiptIngredientType } from "@src/types/ReceiptDetailedTypes";
+
 import { Styled } from "./styles";
-export const IngredientRow: FC<ReceiptIngredientType> = ({ id, text, amount, price, img, energy }) => {
+export const IngredientRow: FC<ReceiptIngredientType> = ({ text, amount, img }) => {
   const [isItemInCart, setIsItemInCart] = useState(false);
   const handleAddToCardClick = () => {
     console.log("added to cart");

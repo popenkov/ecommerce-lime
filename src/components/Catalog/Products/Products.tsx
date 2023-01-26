@@ -50,11 +50,7 @@ export const Products: FC = () => {
 
       <Styled.ItemsContainer>
         {productsSecond.map((item) => {
-          return (
-            // <Styled.ProductContainer key={item.id}>
-            <CatalogProduct {...item} key={item.id} />
-            // </Styled.ProductContainer>
-          );
+          return <CatalogProduct {...item} key={item.id} />;
         })}
       </Styled.ItemsContainer>
 

@@ -5,14 +5,10 @@ import { SubmitHandler, Controller, useForm } from "react-hook-form";
 import { FormInput } from "@src/components/UI/FormInput";
 import { FormRadioButton } from "@src/components/UI/FormRadioButton";
 import { LoyalCard } from "@src/components/UI/LoyalCard";
+import { AccountData } from "@src/mock/AccountData";
 
 import { Styled } from "./styles";
 import { UserForm, validationSchema } from "./utils";
-
-const userData = {
-  street: "ул.Пимена-панчанки, д. 12, под. 4, кв. 312",
-  cardNumber: "2200 8756 8777 3245",
-};
 
 export const AccountPersonal: FC = () => {
   const {
@@ -25,6 +21,8 @@ export const AccountPersonal: FC = () => {
     mode: "onChange",
     resolver: yupResolver(validationSchema),
   });
+
+  const { userData } = AccountData;
 
   const handleFormSubmit: SubmitHandler<UserForm> = (data) => {
     reset();
@@ -69,7 +67,7 @@ export const AccountPersonal: FC = () => {
                   name="savedAddress"
                   control={control}
                   defaultValue=""
-                  render={({ field: { value, onChange }, fieldState: { error } }) => (
+                  render={() => (
                     <FormRadioButton name="savedAddress" id="savedAddress" isChecked text={userData.street} />
                   )}
                 />

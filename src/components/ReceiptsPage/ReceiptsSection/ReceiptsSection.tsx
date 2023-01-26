@@ -1,13 +1,13 @@
 import { FC, useState } from "react";
-
-import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
-import { useMediaQuery } from "@src/hooks/useMediaQuery";
-import { theme } from "@src/theme";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Styled } from "./styles";
-import { ReceiptsSectionType } from "@src/types/ReceiptTypes";
+import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
 import { Receipt } from "@src/components/MainPage/ChiefSection/Receipt";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { theme } from "@src/theme";
+import { ReceiptsSectionType } from "@src/types/ReceiptTypes";
+
+import { Styled } from "./styles";
 
 type ReceiptssSectionProps = {
   data: ReceiptsSectionType;

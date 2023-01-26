@@ -9,7 +9,7 @@ type CustomPaginationProps = {
   onPageChange: (value: number) => void;
 };
 
-export const CustomPagination: FC<CustomPaginationProps> = ({ lastPage, maxLength, onPageChange }) => {
+export const CustomPagination: FC<CustomPaginationProps> = ({ onPageChange }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const handlePageChange = (pageNumber: number) => {

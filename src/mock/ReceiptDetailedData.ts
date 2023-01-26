@@ -1,13 +1,11 @@
+import { ReactComponent as ClockIcon } from "@src/assets/icons/clock.svg";
+import { ReactComponent as PortionIcon } from "@src/assets/icons/portion.svg";
 import receiptMain from "@src/assets/images/receiptDetailed/slider-big.jpg";
 import receiptThumb from "@src/assets/images/receiptDetailed/slider-thumb-1.jpg";
-import { ReactComponent as ClockIcon } from "@src/assets/icons/clock.svg";
 import receiptFirst from "@src/assets/images/receipts/barbeque.jpg";
 import ingredientFirst from "@src/assets/images/receipts/ingredientFirst.jpg";
 import ingredientSecond from "@src/assets/images/receipts/ingredientSecond.jpg";
 import ingredientThird from "@src/assets/images/receipts/ingredientThird.jpg";
-
-import { ReactComponent as PortionIcon } from "@src/assets/icons/portion.svg";
-
 import { ReceiptDetailedType } from "@src/types/ReceiptDetailedTypes";
 
 export const ReceiptDetailedData: ReceiptDetailedType = {

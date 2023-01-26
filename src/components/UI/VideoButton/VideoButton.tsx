@@ -1,7 +1,9 @@
 import { FC } from "react";
+
 import { ReactComponent as PlayIcon } from "@src/assets/icons/play-icon.svg";
-import { Styled } from "./styles";
 import { LinkType } from "@src/types/commonTypes";
+
+import { Styled } from "./styles";
 
 type VideoButtonProps = Omit<LinkType, "id">;
 export const VideoButton: FC<VideoButtonProps> = ({ text, href }) => {

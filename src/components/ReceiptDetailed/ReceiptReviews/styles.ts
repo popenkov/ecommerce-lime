@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { flexAlignCenter, flexCenter, font } from "@src/styles/mixins";
+import { flexAlignCenter, font } from "@src/styles/mixins";
 
 const Reviews = styled.div`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

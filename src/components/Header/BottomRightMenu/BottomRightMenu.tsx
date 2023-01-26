@@ -14,8 +14,6 @@ export const BottomRightMenu: FC<BottomRightMenuProps> = ({ data }) => {
   const activePage = location.pathname;
   const { totalCount } = useAppSelector((state) => state.cart);
 
-  const isCartPage = location.pathname.includes("cart");
-
   return (
     <Styled.Container>
       {data.map((item) => {

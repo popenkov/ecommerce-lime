@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { font } from "@src/styles/mixins";
 
 const SelectContainer = styled.div`
-  /* flex: 1; */
   width: 100%;
   & .custom-select {
     &__control {

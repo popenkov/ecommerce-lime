@@ -1,19 +1,22 @@
 import { useCallback, useEffect, useState, useRef, FC } from "react";
 
 import { Styled } from "./styles";
-// import "./multiRangeSlider.css";
 
-export const RangeSlider: FC<any> = ({ min, max, onChange }) => {
+type RangeSliderProps = {
+  min: number;
+  max: number;
+  onChange: any;
+};
+
+export const RangeSlider: FC<RangeSliderProps> = ({ min, max, onChange }) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
   const minValRef = useRef(min);
   const maxValRef = useRef(max);
   const range = useRef<HTMLDivElement | null>(null);
 
-  // Convert to percentage
   const getPercent = useCallback((value: number) => Math.round(((value - min) / (max - min)) * 100), [min, max]);
 
-  // Set width of the range to decrease from the left side
   useEffect(() => {
     const minPercent = getPercent(minVal);
     const maxPercent = getPercent(maxValRef.current);
@@ -24,7 +27,6 @@ export const RangeSlider: FC<any> = ({ min, max, onChange }) => {
     }
   }, [minVal, getPercent]);
 
-  // Set width of the range to decrease from the right side
   useEffect(() => {
     const minPercent = getPercent(minValRef.current);
     const maxPercent = getPercent(maxVal);
@@ -34,7 +36,6 @@ export const RangeSlider: FC<any> = ({ min, max, onChange }) => {
     }
   }, [maxVal, getPercent]);
 
-  // Get min and max values when their state changes
   useEffect(() => {
     onChange({ min: minVal, max: maxVal });
   }, [minVal, maxVal, onChange]);
@@ -52,7 +53,6 @@ export const RangeSlider: FC<any> = ({ min, max, onChange }) => {
             setMinVal(value);
             minValRef.current = value;
           }}
-          //   style={{ zIndex: minVal > max - 100 && "5" }}
         />
         <Styled.ThumbRight
           type="range"

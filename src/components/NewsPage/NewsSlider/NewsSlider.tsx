@@ -1,17 +1,14 @@
 import { FC, useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
-import { EffectCards } from "swiper";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
-import { useMediaQuery } from "@src/hooks/useMediaQuery";
-import { theme } from "@src/theme";
-
-import { Styled } from "./styles";
 import { LargeSliderType } from "@src/types/commonTypes";
+
 import { NewsSliderCard } from "../NewsSliderCard";
+import { Styled } from "./styles";
 
 type NewsSliderProps = {
   data: LargeSliderType[];
@@ -20,8 +17,6 @@ type NewsSliderProps = {
 export const NewsSlider: FC<NewsSliderProps> = ({ data }) => {
   const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
   const buttonNextRef = useRef<HTMLButtonElement | null>(null);
-
-  const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
 
   return (
     <>

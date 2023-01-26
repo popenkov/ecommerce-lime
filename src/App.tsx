@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { AccountHistory, AccountPersonal, AccountSettings } from "@src/components/AccountPage";
 
+import Preloader from "./components/UI/Preloader/Preloader";
 import { AppLayout } from "./layout";
 
 import "react-perfect-scrollbar/dist/css/styles.css";
@@ -21,10 +22,7 @@ import {
   ReceiptPage,
   ReceiptsPage,
 } from "./pages";
-
 import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
-import Preloader from "./components/UI/Preloader/Preloader";
-// import { ReceiptDetailedPage } from "@src/pages/ReceiptDetailedPage";
 
 const App: FC = () => {
   return (

@@ -1,18 +1,16 @@
 import { FC } from "react";
 
+import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
 import { Ingredient } from "@src/components/UI/Ingredient";
 import { Tag } from "@src/components/UI/Tag";
-import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
-
-import { Styled } from "./styles";
 import { ChiefReceiptItemType } from "@src/types/commonTypes";
 
-type ReceiptProps = Omit<ChiefReceiptItemType, "id">;
+import { Styled } from "./styles";
+
 type isSmallProps = {
   isSmall?: boolean;
 };
 export const Receipt: FC<ChiefReceiptItemType & isSmallProps> = ({
-  id,
   title,
   img,
   tags,

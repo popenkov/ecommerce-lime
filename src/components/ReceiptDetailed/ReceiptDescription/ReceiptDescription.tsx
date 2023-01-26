@@ -1,14 +1,15 @@
-import { ReceiptDescriptionType } from "@src/types/ReceiptDetailedTypes";
 import React, { FC, useState } from "react";
-import { Rating } from "@src/components/UI";
+import ReactSelect, { SingleValue } from "react-select";
 
-import { Styled } from "./styles";
-import { Tag } from "@src/components/UI/Tag";
-import ReactSelect, { ActionMeta, MultiValue, SingleValue } from "react-select";
-import { SelectOptionType } from "@src/components/UI/Select/select.interface";
-import { IngredientRow } from "../IngredientRow";
-import { calculateEnergie, calculateIngredientsPrice } from "./utils";
+import { Rating } from "@src/components/UI";
 import { AddToCardBtnNew } from "@src/components/UI/AddToCardBtnNew";
+import { SelectOptionType } from "@src/components/UI/Select/select.interface";
+import { Tag } from "@src/components/UI/Tag";
+import { ReceiptDescriptionType } from "@src/types/ReceiptDetailedTypes";
+
+import { IngredientRow } from "../IngredientRow";
+import { Styled } from "./styles";
+import { calculateEnergie, calculateIngredientsPrice } from "./utils";
 
 type ReceiptDescriptionProps = {
   data: ReceiptDescriptionType;

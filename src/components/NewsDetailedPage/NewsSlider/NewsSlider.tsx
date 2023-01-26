@@ -1,17 +1,16 @@
 import { FC, useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
-import { EffectCards } from "swiper";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { NavigationButtons } from "@src/components/UI/ProductsSection/NavigationButton";
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
-
-import { Styled } from "./styles";
 import { ImageType } from "@src/types/commonTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
+
+import { Styled } from "./styles";
 
 type NewsSliderProps = {
   data: ImageType[];

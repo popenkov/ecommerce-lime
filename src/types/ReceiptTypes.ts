@@ -1,6 +1,7 @@
 import { SelectOptionType } from "@src/components/UI/Select/select.interface";
+
 import { FilterType } from "./CatalogPageTypes";
-import { ChiefReceiptItemType, ChiefReceiptsType } from "./commonTypes";
+import { ChiefReceiptItemType } from "./commonTypes";
 import { ShowAllLink } from "./MainPageTypes";
 
 export type ReceiptsType = {

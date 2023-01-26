@@ -7,12 +7,11 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import { FavoritesButton } from "@src/components/UI/FavoritesButton/FavoritesButton";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
+import { SlideItemType } from "@src/types/commonTypes";
 
 import { Styled } from "./styles";
-import { SlideItemType } from "@src/types/commonTypes";
 
 type ThumbSliderProps = {
   data: { main: SlideItemType[]; thumb: SlideItemType[] };
@@ -37,7 +36,7 @@ export const ThumbSlider: FC<ThumbSliderProps> = ({ data, height }) => {
           watchSlidesProgress={true}
           direction={thumbSliderDirection}
           modules={[Navigation, Thumbs]}>
-          {thumb?.map((item: any) => (
+          {thumb?.map((item) => (
             <SwiperSlide key={item.id}>
               <Styled.ThumbImage src={item.img} alt={item.text} />
             </SwiperSlide>

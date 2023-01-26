@@ -3,6 +3,7 @@ import { Control, Controller, FieldErrorsImpl, UseFormRegister } from "react-hoo
 
 import { FormInput } from "@src/components/UI/FormInput";
 import { FormRadioButton } from "@src/components/UI/FormRadioButton";
+import { CartData } from "@src/mock/CartData";
 
 import { RequestFormType } from "../utils";
 import { Styled } from "./styles";
@@ -16,52 +17,20 @@ type PaymentMethodsProps = {
   >;
 };
 
-const PaymentMethodsData = [
-  {
-    name: "paymentMethod",
-    id: "online",
-    value: "online",
-    text: "Картой онлайн",
-    checked: true,
-  },
-  {
-    name: "paymentMethod",
-    id: "online-to-carrier",
-    value: "online-to-carrier",
-    text: "Картой курьеру",
-    checked: false,
-  },
-  {
-    name: "paymentMethod",
-    id: "cash",
-    value: "cash",
-    text: "Наличными курьеру",
-    checked: false,
-  },
-  {
-    name: "paymentMethod",
-    id: "certificate",
-    value: "certificate",
-    text: "Сертификатом",
-    checked: false,
-  },
-];
-
 export const PaymentMethods: FC<PaymentMethodsProps> = ({ control, register, errors }) => {
+  const { paymentMethods } = CartData;
   return (
     <Styled.PaymentMethods>
       <Styled.SectionTitle>Оплата заказа</Styled.SectionTitle>
       <Styled.InputsContainer>
-        {PaymentMethodsData.map((item) => {
+        {paymentMethods.map((item) => {
           return (
             <Styled.InputWrapper key={item.id}>
               <Controller
                 name={item.name as "paymentMethod"}
                 control={control}
                 defaultValue=""
-                render={({ field: { value, onChange }, fieldState: { error } }) => (
-                  <FormRadioButton name={item.name} id={item.id} value={item.value} text={item.text} />
-                )}
+                render={() => <FormRadioButton name={item.name} id={item.id} value={item.value} text={item.text} />}
               />
             </Styled.InputWrapper>
           );

@@ -1,17 +1,18 @@
-import { ReceiptDetailedData } from "@src/mock/ReceiptDetailedData";
 import { FC, useState } from "react";
+
+import { ReceiptDetailedData } from "@src/mock/ReceiptDetailedData";
+
 import { ChiefReceipts } from "../MainPage/ChiefSection/ChiefReceipts";
 import { Rating, ThumbSlider } from "../UI";
 import { VideoButton } from "../UI/VideoButton";
 import { ReceiptDescription } from "./ReceiptDescription";
 import { ReceiptReviews } from "./ReceiptReviews";
 import { ReceiptSteps } from "./ReceiptSteps";
-
 import { Styled } from "./styles";
 
 export const ReceiptDetailed: FC = () => {
   const { sliderImages, description, anotherReceipts, videoLink } = ReceiptDetailedData;
-  const { title, color, rating } = ReceiptDetailedData.receiptSteps;
+  const { title, rating } = ReceiptDetailedData.receiptSteps;
   const [activeTab, setActiveTab] = useState(1);
 
   const handleTabLinkClick = (activeId: number) => {

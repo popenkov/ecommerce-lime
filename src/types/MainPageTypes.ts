@@ -1,6 +1,6 @@
 import { FunctionComponent, SVGProps } from "react";
 
-import { ItemType, LargeSliderType, NewsType, SingleNewsType } from "./commonTypes";
+import { ItemType, LargeSliderType, NewsType } from "./commonTypes";
 
 export type AdvantageType = {
   id: string;

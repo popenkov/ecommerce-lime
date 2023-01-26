@@ -1,23 +1,18 @@
 import { FC } from "react";
-import { useLocation } from "react-router";
 
 import { Sidebar } from "@src/components";
+import { NewsItem } from "@src/components/MainPage/NewsItem";
+import FilterItem from "@src/components/NewsPage/FilterItem/FilterItem";
+import { NewsSlider } from "@src/components/NewsPage/NewsSlider";
+import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
+import { Select } from "@src/components/UI/Select/Select";
+import { useMediaQuery } from "@src/hooks/useMediaQuery";
+import { newsData } from "@src/mock/NewsData";
+import { theme } from "@src/theme";
 
 import { Styled } from "./styles";
-import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
-import { newsData } from "@src/mock/NewsData";
-import { NewsSlider } from "@src/components/NewsPage/NewsSlider";
-import FilterItem from "@src/components/NewsPage/FilterItem/FilterItem";
-import { News } from "@src/components/MainPage/News";
-import { NewsItem } from "@src/components/MainPage/NewsItem";
-import { useMediaQuery } from "@src/hooks/useMediaQuery";
-import { theme } from "@src/theme";
-import { Select } from "@src/components/UI/Select/Select";
 
 export const NewsPage: FC = () => {
-  const location = useLocation();
-  const currentLocation = location.pathname;
-
   const { title, slider, filters, mobileFilters, news } = newsData;
 
   const isAdaptive = useMediaQuery(theme.breakpoints.tablet);

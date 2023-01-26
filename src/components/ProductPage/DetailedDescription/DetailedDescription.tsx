@@ -16,7 +16,7 @@ export const DetailedDescription: FC = () => {
     <Styled.DetailedDescription>
       <Styled.Title color={color}>{title}</Styled.Title>
       <Styled.TextContainer isFullHeight={isFullHeight}>
-        {description.map((item: any) => {
+        {description.map((item) => {
           return (
             <Styled.TextItem key={item.id}>
               <Styled.TextTitle>{item.title}</Styled.TextTitle>

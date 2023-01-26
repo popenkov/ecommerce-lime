@@ -1,11 +1,10 @@
 import { FC } from "react";
 
 import { ReactComponent as ArrowIcon } from "@src/assets/icons/arrow-right.svg";
-
+import { LargeSliderType } from "@src/types/commonTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
 
 import { Styled } from "./styles";
-import { LargeSliderType } from "@src/types/commonTypes";
 
 type MainSliderCardType = Omit<LargeSliderType, "id">;
 

@@ -2,7 +2,6 @@ import { FC, useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
 
 import { Select } from "@src/components/UI/Select/Select";
-import { SelectOptionType } from "@src/components/UI/Select/select.interface";
 import { SortingType } from "@src/types/sortingTypes";
 
 import { Styled } from "./styles";

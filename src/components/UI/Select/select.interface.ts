@@ -3,7 +3,6 @@ import { Options } from "react-select";
 
 export interface IFieldProps {
   placeholder: string;
-  // error?: FieldError | undefined;
   error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined;
 }
 

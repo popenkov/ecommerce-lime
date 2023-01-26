@@ -8,10 +8,10 @@ import { NavigationButtons } from "@src/components/UI/ProductsSection/Navigation
 import { onBeforeInit } from "@src/components/UI/ProductsSection/utils";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { theme } from "@src/theme";
+import { LargeSliderType } from "@src/types/commonTypes";
 
 import { MainSliderCard } from "../MainSliderCard";
 import { Styled } from "./styles";
-import { LargeSliderType } from "@src/types/commonTypes";
 
 type MainSliderProps = {
   data: LargeSliderType[];
