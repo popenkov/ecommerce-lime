@@ -43,13 +43,14 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "node server.js",
+    "start:dev": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "eslint:fix": "eslint -c ./.eslintrc.js \"./**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:css": "stylelint './src/*.js'",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "server": "json-server --watch public/db.json --port 3001"
+    "server": "json-server --watch public/db.json --port 8000"
   },
   "eslintConfig": {
     "extends": [
@@ -94,5 +95,5 @@
   "engines": {
     "node": "14.17.6"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:8000"
 }
