@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { ReactComponent as HeaderLogo } from "@src/assets/images/loader-logo.svg";
 
 import { Styled } from "./styles";
 const Preloader = () => {
   const loaderRef = useRef<HTMLDivElement | null>(null);
-  const logoRef = useRef<HTMLDivElement | null>(null);
+  const [opacity, setOpacity] = useState(0);
 
   let count = 1;
   const countFinishValue = 100;
@@ -13,9 +13,7 @@ const Preloader = () => {
 
   const loadHandler = () => {
     if (count <= countFinishValue) {
-      if (logoRef?.current) {
-        logoRef.current.style.opacity = `${0.01 * count}`;
-      }
+      setOpacity((prev) => (prev = 0.01 * count));
       count++;
     } else {
       if (loaderId && loaderRef.current) {
@@ -34,7 +32,7 @@ const Preloader = () => {
 
   return (
     <Styled.Preloader ref={loaderRef}>
-      <Styled.LogoContainer ref={logoRef}>
+      <Styled.LogoContainer opacity={opacity}>
         <HeaderLogo />
       </Styled.LogoContainer>
     </Styled.Preloader>

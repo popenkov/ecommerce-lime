@@ -3,7 +3,7 @@ import { FC } from "react";
 import { ProductsSection } from "@src/components";
 import { CartItem } from "@src/components/CartPage";
 import { useAppSelector } from "@src/hooks/useAppSelector";
-import { RecommendatedItems } from "@src/mock/CartAside";
+import { CartAsideData } from "@src/mock/CartAside";
 import { ROUTE } from "@src/utils/Routes";
 
 import { OrderForm } from "./OrderForm";
@@ -11,6 +11,7 @@ import { Styled } from "./styles";
 
 export const Cart: FC = () => {
   const { items } = useAppSelector((state) => state.cart);
+  const { recommendatedItems } = CartAsideData;
 
   return (
     <Styled.PageContainer>
@@ -33,7 +34,7 @@ export const Cart: FC = () => {
         )}
 
         <Styled.Recommendation>
-          <ProductsSection data={RecommendatedItems} />
+          <ProductsSection data={recommendatedItems} />
         </Styled.Recommendation>
       </Styled.Items>
       {items.length > 0 && (

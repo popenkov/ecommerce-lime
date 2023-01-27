@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { RecommendatedItems } from "@src/mock/CartAside";
+import { CartAsideData } from "@src/mock/CartAside";
 import { productDetailedData } from "@src/mock/ProductDetailedData";
 
 import { ProductsSection, ThumbSlider } from "../UI";
@@ -12,6 +12,8 @@ import { Styled } from "./styles";
 
 export const ProductDetailed: FC = () => {
   const { main, thumb, isFavorite } = productDetailedData.sliderImages;
+
+  const { recommendatedItems } = CartAsideData;
 
   const sliderData = { main, thumb };
   return (
@@ -33,7 +35,7 @@ export const ProductDetailed: FC = () => {
       </Styled.ProductBottomContainer>
 
       <Styled.RecommendationsContainer>
-        <ProductsSection data={RecommendatedItems} hideLink />
+        <ProductsSection data={recommendatedItems} hideLink />
       </Styled.RecommendationsContainer>
     </Styled.Product>
   );

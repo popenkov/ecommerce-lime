@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { box } from "@src/styles/mixins";
 
@@ -12,21 +12,22 @@ const Preloader = styled.div`
   padding: 25px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 2;
-    overflow: hidden;
-    background: ${({ theme }) => theme.color.black};
-    padding: 25px;
+    background: ${({ theme }) => theme.color.white};
   }
 `;
-const LogoContainer = styled.div`
+const LogoContainer = styled.div<{ opacity: number }>`
+  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  ${({ opacity }) =>
+    opacity &&
+    css`
+      opacity: ${opacity};
+    `};
 
   & svg {
     ${box(300)}
