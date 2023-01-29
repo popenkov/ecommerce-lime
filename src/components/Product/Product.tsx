@@ -1,5 +1,5 @@
 import { FC } from "react";
-
+import { toastr } from "react-redux-toastr";
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { useHover } from "@src/hooks/useHover";
@@ -10,6 +10,8 @@ import { ROUTE } from "@src/utils/Routes";
 import { Rating } from "../UI";
 import { AddToCardBtn } from "../UI/AddToCardBtn";
 import { Styled } from "./styles";
+import { toast } from "react-toastify";
+import { handleSuccesCartToastr } from "../Toastrs/CustomTostrs";
 
 export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, price, amount, unit, energy }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
@@ -31,6 +33,8 @@ export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, pric
       unit,
       energy,
     };
+
+    handleSuccesCartToastr("Товар добавлен в корзину");
 
     addItemToCart(itemDate);
   };

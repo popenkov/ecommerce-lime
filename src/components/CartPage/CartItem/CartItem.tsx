@@ -8,8 +8,22 @@ import { IMAGES } from "@src/utils/ImagesMap";
 
 import { AmountCounter } from "../AmountCounter";
 import { Styled } from "./styles";
+import { handleRemoveFavoritesToastr, handleSuccesFavoritesToastr } from "@src/components/Toastrs/CustomTostrs";
 
-export const CartItem: FC<ItemType> = ({ id, img, rating, energy, isFavorite, title, price, amount, unit, button }) => {
+type CartItemProps = Omit<ItemType, "category">;
+
+export const CartItem: FC<CartItemProps> = ({
+  id,
+  img,
+  rating,
+  energy,
+  isFavorite,
+  title,
+  price,
+  amount,
+  unit,
+  button,
+}) => {
   const { removeItemfromCart, addItemToFavorites, removeItemfromFavorites } = useActions();
   const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
 
@@ -20,6 +34,15 @@ export const CartItem: FC<ItemType> = ({ id, img, rating, energy, isFavorite, ti
   const { items: favoriteItem } = useAppSelector((state) => state.favorites);
 
   const isItemFavorite = Boolean(favoriteItem.find((item) => item.id === id));
+
+  const handleRemoveFavoriteItem = (id: string) => {
+    removeItemfromFavorites(id);
+    handleSuccesFavoritesToastr("Товар добавлен в избранное");
+  };
+  const handleAddFavoriteItem = (itemDate: CartItemProps) => {
+    addItemToFavorites(itemDate);
+    handleRemoveFavoritesToastr("Товар удален из избранных");
+  };
 
   const handleAddToFavoritesClick = () => {
     const itemDate = {
@@ -35,7 +58,7 @@ export const CartItem: FC<ItemType> = ({ id, img, rating, energy, isFavorite, ti
       button,
     };
 
-    isItemFavorite ? removeItemfromFavorites(id) : addItemToFavorites(itemDate);
+    isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(itemDate);
   };
 
   return (

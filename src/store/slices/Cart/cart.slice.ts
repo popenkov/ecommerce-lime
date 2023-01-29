@@ -32,6 +32,7 @@ export const cartSlice = createSlice({
       const newItems = state.items.filter((item) => {
         return item.id != id;
       });
+
       return {
         ...state,
         items: newItems,

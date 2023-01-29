@@ -1,13 +1,14 @@
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
+import Modal from "react-modal";
 
 import { AccountHistory, AccountPersonal, AccountSettings } from "@src/components/AccountPage";
 
 import Preloader from "./components/UI/Preloader/Preloader";
 import { AppLayout } from "./layout";
 
+import "react-toastify/dist/ReactToastify.css";
 import "react-perfect-scrollbar/dist/css/styles.css";
-import "react-redux-toastr/lib/css/react-redux-toastr.min.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import {
@@ -23,11 +24,24 @@ import {
   ReceiptsPage,
 } from "./pages";
 import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
+import { ToastContainerDefault } from "./components/Toastrs/ToastContainerDefault";
+import { popupStyles } from "./styles/popupStyles";
+import { AuthPopup } from "./components/AuthPopup";
+
+Modal.setAppElement("#root");
 
 const App: FC = () => {
+  const handleClosePopupClick = () => {
+    console.log("popup closed");
+  };
+  const handleClosePopup = () => {
+    console.log("popup closed");
+  };
+
   return (
     <div>
       <Preloader />
+      <ToastContainerDefault />
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Main />} />
@@ -48,6 +62,14 @@ const App: FC = () => {
           <Route path="*" element={<p> Not found</p>} />
         </Route>
       </Routes>
+      <Modal
+        isOpen={true}
+        shouldCloseOnOverlayClick={true}
+        shouldCloseOnEsc={true}
+        onRequestClose={handleClosePopupClick}
+        style={popupStyles}>
+        <AuthPopup handleClosePopup={handleClosePopup} />
+      </Modal>
     </div>
   );
 };

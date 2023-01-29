@@ -13,10 +13,19 @@ import { Rating } from "../UI";
 import { AddToCardBtnNew } from "../UI/AddToCardBtnNew";
 import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
 import { Styled } from "./styles";
+import { toastr } from "react-redux-toastr";
+import { toast } from "react-toastify";
+import {
+  handleRemoveFavoritesToastr,
+  handleSuccesCartToastr,
+  handleSuccesFavoritesToastr,
+} from "../Toastrs/CustomTostrs";
 
 type CatalogProductProps = {
   width?: string;
 };
+
+type ItemDateType = Omit<ItemType, "category">;
 
 export const CatalogProduct: FC<ItemType & CatalogProductProps> = ({
   id,
@@ -58,7 +67,17 @@ export const CatalogProduct: FC<ItemType & CatalogProductProps> = ({
       energy,
     };
 
+    handleSuccesCartToastr("Товар добавлен в корзину");
     addItemToCart(itemDate);
+  };
+
+  const handleRemoveFavoriteItem = (id: string) => {
+    removeItemfromFavorites(id);
+    handleSuccesFavoritesToastr("Товар добавлен в избранное");
+  };
+  const handleAddFavoriteItem = (itemDate: ItemDateType) => {
+    addItemToFavorites(itemDate);
+    handleRemoveFavoritesToastr("Товар удален из избранных");
   };
 
   const handleAddToFavoritesClick = () => {
@@ -75,7 +94,7 @@ export const CatalogProduct: FC<ItemType & CatalogProductProps> = ({
       button,
     };
 
-    isItemFavorite ? removeItemfromFavorites(id) : addItemToFavorites(itemDate);
+    isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(itemDate);
   };
 
   return (

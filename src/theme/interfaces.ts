@@ -10,6 +10,7 @@ export type Color = {
   greyTrack: string;
   greyFont: string;
   greyIcon: string;
+  greyText: string;
   popupBackground: string;
   green: string;
   orange: string;

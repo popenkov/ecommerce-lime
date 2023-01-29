@@ -5,6 +5,8 @@ import { ItemType } from "@src/types/commonTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
 
 import { Styled } from "./styles";
+import { toastr } from "react-redux-toastr";
+import { handleSuccesCartToastr } from "@src/components/Toastrs/CustomTostrs";
 
 export const PopularItem: FC<ItemType> = ({ id, img, title, rating, isFavorite, price, amount, unit }) => {
   const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
@@ -22,7 +24,7 @@ export const PopularItem: FC<ItemType> = ({ id, img, title, rating, isFavorite, 
       amount,
       unit,
     };
-
+    handleSuccesCartToastr("Товар добавлен в корзину");
     addItemToCart(itemDate);
   };
 
