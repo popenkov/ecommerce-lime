@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { reducer as toastrReducer } from "react-redux-toastr";
 import { baseApi, catalogApi, mainPageApi } from "./services";
-import { catalogMenu, cart, favorites } from "./slices";
+import { catalogMenu, cart, favorites, user, authPopup } from "./slices";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +11,8 @@ export const store = configureStore({
     catalogMenu,
     cart,
     favorites,
+    user,
+    authPopup,
     toastr: toastrReducer,
   },
   middleware: (getDefaultMiddleware) => [

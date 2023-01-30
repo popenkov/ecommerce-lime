@@ -7,7 +7,7 @@ import { Styled } from "./styles";
 type AuthPopupType = {
   handleClosePopup: () => void;
 };
-export const AuthPopup: FC<AuthPopupType> = ({ handleClosePopup }) => {
+export const AuthPopup: FC = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   const handleTabLinkClick = (activeId: number) => {

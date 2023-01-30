@@ -4,19 +4,15 @@ import { getStoreLocal } from "@src/utils/localStorage";
 import { login, logout, register } from "./user.actions";
 
 const initialState = {
-  isLoggedIn: Boolean(getStoreLocal("userToken")),
-  userToken: getStoreLocal("userToken"),
+  isLoggedIn: Boolean(getStoreLocal("user")),
+  user: getStoreLocal("user"),
   isLoading: false,
 };
 
 export const userSlice = createSlice({
   name: "user",
   initialState,
-  reducers: {
-    register: (state) => {
-      //   state.isOpen = true;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(register.pending, (state) => {
@@ -24,11 +20,11 @@ export const userSlice = createSlice({
       })
       .addCase(register.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.userToken = payload.token;
+        state.user = payload;
       })
       .addCase(register.rejected, (state) => {
         state.isLoading = false;
-        state.userToken = null;
+        state.user = null;
       })
       .addCase(login.pending, (state) => {
         state.isLoading = true;
@@ -36,18 +32,21 @@ export const userSlice = createSlice({
       .addCase(login.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.isLoggedIn = true;
-        state.userToken = payload.token;
+        state.user = payload;
       })
       .addCase(login.rejected, (state) => {
         state.isLoading = false;
-        state.userToken = null;
+        state.user = null;
       })
       .addCase(logout.fulfilled, (state) => {
         state.isLoading = false;
         state.isLoggedIn = false;
-        state.userToken = null;
+        state.user = null;
       });
   },
 });
 
-export const { reducer } = userSlice;
+// export const { reducer } = userSlice;
+
+export const userActions = userSlice.actions;
+export default userSlice.reducer;

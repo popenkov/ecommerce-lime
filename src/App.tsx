@@ -27,15 +27,17 @@ import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
 import { ToastContainerDefault } from "./components/Toastrs/ToastContainerDefault";
 import { popupStyles } from "./styles/popupStyles";
 import { AuthPopup } from "./components/AuthPopup";
+import { useActions } from "./hooks/useActions";
+import { useAppSelector } from "./hooks/useAppSelector";
 
 Modal.setAppElement("#root");
 
 const App: FC = () => {
-  const handleClosePopupClick = () => {
-    console.log("popup closed");
-  };
+  const { closeAuthPopup } = useActions();
+  const { isOpen } = useAppSelector((state) => state.authPopup);
+
   const handleClosePopup = () => {
-    console.log("popup closed");
+    closeAuthPopup();
   };
 
   return (
@@ -63,12 +65,12 @@ const App: FC = () => {
         </Route>
       </Routes>
       <Modal
-        isOpen={true}
+        isOpen={isOpen}
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
-        onRequestClose={handleClosePopupClick}
+        onRequestClose={handleClosePopup}
         style={popupStyles}>
-        <AuthPopup handleClosePopup={handleClosePopup} />
+        <AuthPopup />
       </Modal>
     </div>
   );
