@@ -5,10 +5,10 @@ import { Navigate } from "react-router-dom/dist";
 import { useAuth } from "../../hooks/useAuth";
 
 type ProtectedRouteType = {
-  children?: ReactNode;
+  children: ReactNode;
 };
 
-export const ProtectedRoute: FC<ProtectedRouteType> = ({ children }) => {
+export const ProtectedRoute: FC<ProtectedRouteType> = ({ children }): any => {
   const { user } = useAuth();
   const { openAuthPopup } = useActions();
 

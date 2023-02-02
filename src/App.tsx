@@ -29,6 +29,7 @@ import { popupStyles } from "./styles/popupStyles";
 import { AuthPopup } from "./components/AuthPopup";
 import { useActions } from "./hooks/useActions";
 import { useAppSelector } from "./hooks/useAppSelector";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 Modal.setAppElement("#root");
 
@@ -50,8 +51,21 @@ const App: FC = () => {
           <Route path={ROUTE.CART} element={<Cart />} />
           <Route path={ROUTE.PRODUCT} element={<ProductPage />} />
           <Route path={ROUTE.CATALOG} element={<Catalog />} />
-          <Route path={ROUTE.FAVORITES} element={<FavoritesPage />} />
-          <Route path={ROUTE.ACCOUNT} element={<AccountPage />}>
+          <Route
+            path={ROUTE.FAVORITES}
+            element={
+              <ProtectedRoute>
+                <FavoritesPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path={ROUTE.ACCOUNT}
+            element={
+              <ProtectedRoute>
+                <AccountPage />
+              </ProtectedRoute>
+            }>
             <Route path={ACCOUNT_ROUTES.ACCOUNT_PERSONAL} element={<AccountPersonal />} />
             <Route path={ACCOUNT_ROUTES.ACCOUNT_SETTINGS} element={<AccountSettings />} />
             <Route path={ACCOUNT_ROUTES.ACCOUNT_HISTORY} element={<AccountHistory />} />
