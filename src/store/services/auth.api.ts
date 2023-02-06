@@ -1,4 +1,3 @@
-import { saveToStorage } from "@src/utils/localStorage";
 import axios from "axios";
 
 const baseUrlValue =

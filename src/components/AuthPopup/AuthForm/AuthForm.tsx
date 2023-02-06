@@ -1,13 +1,15 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FC, useEffect } from "react";
 import { SubmitHandler, Controller, useForm } from "react-hook-form";
-import { AgreementText, AuthFormType, validationSchema } from "./utils";
 
-import { Styled } from "./styles";
 import { FormInput } from "@src/components/UI/FormInput";
 import { FormSubmitBtn } from "@src/components/UI/FormSubmitBtn/FormSubmitBtn";
 import { useActions } from "@src/hooks/useActions";
+
+import { Styled } from "./styles";
+import { AgreementText, AuthFormType, validationSchema } from "./utils";
 export const AuthForm: FC = () => {
+  const { closeAuthPopup } = useActions();
   const {
     handleSubmit,
     register,
@@ -22,8 +24,8 @@ export const AuthForm: FC = () => {
 
   const handleFormSubmit: SubmitHandler<AuthFormType> = (data) => {
     reset();
-    console.log(data);
     login(data);
+    closeAuthPopup();
   };
 
   return (

@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
+
 import { AuthForm } from "./AuthForm";
 import { RegisterForm } from "./RegisterForm";
-
 import { Styled } from "./styles";
 
 type AuthPopupType = {

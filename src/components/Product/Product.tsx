@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { toastr } from "react-redux-toastr";
+
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { useHover } from "@src/hooks/useHover";
@@ -7,20 +7,29 @@ import { ItemType } from "@src/types/commonTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
 import { ROUTE } from "@src/utils/Routes";
 
+import {
+  handleRemoveFavoritesToastr,
+  handleSuccesCartToastr,
+  handleSuccesFavoritesToastr,
+} from "../Toastrs/CustomTostrs";
 import { Rating } from "../UI";
 import { AddToCardBtn } from "../UI/AddToCardBtn";
+import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
 import { Styled } from "./styles";
-import { toast } from "react-toastify";
-import { handleSuccesCartToastr } from "../Toastrs/CustomTostrs";
 
-export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, price, amount, unit, energy }) => {
+type ItemDateType = Omit<ItemType, "category">;
+
+export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, price, amount, unit, energy, button }) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
-  const { addItemToCart } = useActions();
+  const { addItemToCart, addItemToFavorites, removeItemfromFavorites } = useActions();
   const { items } = useAppSelector((state) => state.cart);
+  const { items: favoriteItem } = useAppSelector((state) => state.favorites);
 
   const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
 
   const isItemInCart = Boolean(items.find((item) => item.id === id));
+  const isItemFavorite = Boolean(favoriteItem.find((item) => item.id === id));
+
   const handleAddToCardClick = () => {
     const itemDate = {
       id,
@@ -32,6 +41,7 @@ export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, pric
       amount,
       unit,
       energy,
+      button,
     };
 
     handleSuccesCartToastr("Товар добавлен в корзину");
@@ -39,10 +49,41 @@ export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, pric
     addItemToCart(itemDate);
   };
 
+  const handleAddToFavoritesClick = () => {
+    const itemDate = {
+      id,
+      img,
+      rating,
+      isFavorite,
+      title,
+      price,
+      amount,
+      unit,
+      energy,
+      button,
+    };
+
+    isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(itemDate);
+  };
+
+  const handleRemoveFavoriteItem = (id: string) => {
+    removeItemfromFavorites(id);
+    handleSuccesFavoritesToastr("Товар добавлен в избранное");
+  };
+  const handleAddFavoriteItem = (itemDate: ItemDateType) => {
+    addItemToFavorites(itemDate);
+    handleRemoveFavoritesToastr("Товар удален из избранных");
+  };
+
   return (
     <Styled.Product ref={hoverRef}>
-      <Styled.LinkContainer to={ROUTE.PRODUCT}>
+      <Styled.PhotoContainer>
+        <Styled.FavoritesButtonContainer onClick={handleAddToFavoritesClick}>
+          <FavoritesButton isFavorite={isFavorite as boolean} isSmall />
+        </Styled.FavoritesButtonContainer>
         <Styled.Photo src={imageToDraw} />
+      </Styled.PhotoContainer>
+      <Styled.LinkContainer to={ROUTE.PRODUCT}>
         <Rating data={rating} />
         <Styled.Title>{title}</Styled.Title>
         <Styled.Price>

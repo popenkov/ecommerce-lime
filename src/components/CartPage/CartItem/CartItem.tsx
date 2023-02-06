@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import { ReactComponent as FavoritesIcon } from "@src/assets/icons/favorites.svg";
+import { handleRemoveFavoritesToastr, handleSuccesFavoritesToastr } from "@src/components/Toastrs/CustomTostrs";
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { ItemType } from "@src/types/commonTypes";
@@ -8,7 +9,6 @@ import { IMAGES } from "@src/utils/ImagesMap";
 
 import { AmountCounter } from "../AmountCounter";
 import { Styled } from "./styles";
-import { handleRemoveFavoritesToastr, handleSuccesFavoritesToastr } from "@src/components/Toastrs/CustomTostrs";
 
 type CartItemProps = Omit<ItemType, "category">;
 

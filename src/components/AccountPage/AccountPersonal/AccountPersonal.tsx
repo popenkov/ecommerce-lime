@@ -1,10 +1,12 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FC } from "react";
 import { SubmitHandler, Controller, useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
 
 import { FormInput } from "@src/components/UI/FormInput";
 import { FormRadioButton } from "@src/components/UI/FormRadioButton";
 import { LoyalCard } from "@src/components/UI/LoyalCard";
+import { useActions } from "@src/hooks/useActions";
 import { AccountData } from "@src/mock/AccountData";
 
 import { Styled } from "./styles";
@@ -21,12 +23,17 @@ export const AccountPersonal: FC = () => {
     mode: "onChange",
     resolver: yupResolver(validationSchema),
   });
-
+  const navigate = useNavigate();
   const { userData } = AccountData;
+  const { logout } = useActions();
 
   const handleFormSubmit: SubmitHandler<UserForm> = (data) => {
     reset();
-    console.log(data);
+  };
+
+  const handleLogoutClick = () => {
+    logout();
+    navigate("/");
   };
 
   return (
@@ -114,6 +121,7 @@ export const AccountPersonal: FC = () => {
           </Styled.LoyalCardsContainer>
         </Styled.LoyalCardsSection>
       </form>
+      <Styled.LogoutButton onClick={handleLogoutClick}>Выйти из учетной записи</Styled.LogoutButton>
     </Styled.PersonalContainer>
   );
 };

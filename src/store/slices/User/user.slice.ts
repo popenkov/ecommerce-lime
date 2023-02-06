@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import { getStoreLocal } from "@src/utils/localStorage";
 
 import { login, logout, register } from "./user.actions";

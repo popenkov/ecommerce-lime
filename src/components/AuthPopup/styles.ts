@@ -16,15 +16,17 @@ const Popup = styled.div`
   background-color: ${({ theme }) => theme.color.white};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.medium}) {
-    position: fixed;
     width: calc(100% - 56px);
+    width: 100%;
+    margin: 0;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     height: auto;
-    max-width: 1020px;
-    margin: 28px auto;
+
+    transform: none;
+    box-shadow: none;
   }
 `;
 
@@ -90,6 +92,7 @@ const PopupContainer = styled.div`
   box-sizing: border-box;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 38px 30px;
   }
 `;
 

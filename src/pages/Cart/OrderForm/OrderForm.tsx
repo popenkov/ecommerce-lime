@@ -27,7 +27,6 @@ export const OrderForm: FC = () => {
 
   const handleFormSubmit: SubmitHandler<RequestFormType> = (data) => {
     reset();
-    console.log(data);
   };
 
   return (

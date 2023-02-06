@@ -1,12 +1,12 @@
 import React, { FC } from "react";
+import { toastr } from "react-redux-toastr";
 
+import { handleSuccesCartToastr } from "@src/components/Toastrs/CustomTostrs";
 import { useActions } from "@src/hooks/useActions";
 import { ItemType } from "@src/types/commonTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
 
 import { Styled } from "./styles";
-import { toastr } from "react-redux-toastr";
-import { handleSuccesCartToastr } from "@src/components/Toastrs/CustomTostrs";
 
 export const PopularItem: FC<ItemType> = ({ id, img, title, rating, isFavorite, price, amount, unit }) => {
   const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];

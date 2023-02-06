@@ -1,14 +1,15 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FC, useEffect } from "react";
 import { SubmitHandler, Controller, useForm } from "react-hook-form";
-import { AgreementText, RegisterFormType, validationSchema } from "./utils";
 
-import { Styled } from "./styles";
 import { FormInput } from "@src/components/UI/FormInput";
 import { FormSubmitBtn } from "@src/components/UI/FormSubmitBtn/FormSubmitBtn";
 import { useActions } from "@src/hooks/useActions";
+
+import { Styled } from "./styles";
+import { AgreementText, RegisterFormType, validationSchema } from "./utils";
 export const RegisterForm: FC = () => {
-  const { register: registerDispatch } = useActions();
+  const { register: registerDispatch, closeAuthPopup } = useActions();
   const {
     handleSubmit,
     register,
@@ -21,8 +22,8 @@ export const RegisterForm: FC = () => {
 
   const handleFormSubmit: SubmitHandler<RegisterFormType> = (data) => {
     reset();
-    console.log(data);
     registerDispatch(data);
+    closeAuthPopup();
   };
 
   return (

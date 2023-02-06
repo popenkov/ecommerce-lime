@@ -26,6 +26,22 @@ const LinkContainer = styled(Link)`
   text-decoration: none;
 `;
 
+const PhotoContainer = styled.div`
+  position: relative;
+`;
+
+const FavoritesButtonContainer = styled.span`
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    top: -4px;
+    left: 10px;
+  }
+`;
+
 const Photo = styled.img`
   width: 100%;
   height: 134px;
@@ -109,4 +125,6 @@ export const Styled = {
   NewPrice,
   OldPrice,
   LinkToCard,
+  PhotoContainer,
+  FavoritesButtonContainer,
 };

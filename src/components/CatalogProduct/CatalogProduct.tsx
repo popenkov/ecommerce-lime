@@ -9,17 +9,15 @@ import { ItemType } from "@src/types/commonTypes";
 import { IMAGES } from "@src/utils/ImagesMap";
 import { ROUTE } from "@src/utils/Routes";
 
-import { Rating } from "../UI";
-import { AddToCardBtnNew } from "../UI/AddToCardBtnNew";
-import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
-import { Styled } from "./styles";
-import { toastr } from "react-redux-toastr";
-import { toast } from "react-toastify";
 import {
   handleRemoveFavoritesToastr,
   handleSuccesCartToastr,
   handleSuccesFavoritesToastr,
 } from "../Toastrs/CustomTostrs";
+import { Rating } from "../UI";
+import { AddToCardBtnNew } from "../UI/AddToCardBtnNew";
+import { FavoritesButton } from "../UI/FavoritesButton/FavoritesButton";
+import { Styled } from "./styles";
 
 type CatalogProductProps = {
   width?: string;

@@ -1,10 +1,15 @@
 import { FC } from "react";
-import { Route, Routes } from "react-router-dom";
 import Modal from "react-modal";
+import { Route, Routes } from "react-router-dom";
 
 import { AccountHistory, AccountPersonal, AccountSettings } from "@src/components/AccountPage";
 
+import { AuthPopup } from "./components/AuthPopup";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import { ToastContainerDefault } from "./components/Toastrs/ToastContainerDefault";
 import Preloader from "./components/UI/Preloader/Preloader";
+import { useActions } from "./hooks/useActions";
+import { useAppSelector } from "./hooks/useAppSelector";
 import { AppLayout } from "./layout";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -23,13 +28,8 @@ import {
   ReceiptPage,
   ReceiptsPage,
 } from "./pages";
-import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
-import { ToastContainerDefault } from "./components/Toastrs/ToastContainerDefault";
 import { popupStyles } from "./styles/popupStyles";
-import { AuthPopup } from "./components/AuthPopup";
-import { useActions } from "./hooks/useActions";
-import { useAppSelector } from "./hooks/useAppSelector";
-import { ProtectedRoute } from "./components/ProtectedRoute";
+import { ACCOUNT_ROUTES, ROUTE } from "./utils/Routes";
 
 Modal.setAppElement("#root");
 

@@ -1,10 +1,10 @@
 import { bindActionCreators } from "@reduxjs/toolkit";
+import { useMemo } from "react";
 
-import { catalogMenuActions, cartActions, favoritesActions, authPopupActions } from "../store/slices";
 import * as userActions from "@src/store/slices/User/user.actions";
 
+import { catalogMenuActions, cartActions, favoritesActions, authPopupActions } from "../store/slices";
 import { useAppDispatch } from "./useAppDispatch";
-import { useMemo } from "react";
 
 const allActions: any = {
   ...catalogMenuActions,

@@ -6,12 +6,14 @@ import { Favorites } from "@src/components/Favorites";
 import { EmptyFavorites } from "@src/components/Favorites/EmptyFavorites";
 import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
 import { useAppSelector } from "@src/hooks/useAppSelector";
+import { useGetCatalogDataQuery } from "@src/store/services";
 import { numberDeclination } from "@src/utils/numberDeclination";
 
 import { Styled } from "./styles";
 
 export const FavoritesPage: FC = () => {
   const { totalCount: favoritesItemsAmount, items: favoriteItems } = useAppSelector((state) => state.favorites);
+  const { data } = useGetCatalogDataQuery();
 
   const favoritesItems = `${favoritesItemsAmount} ${numberDeclination(favoritesItemsAmount, [
     "товар",
@@ -28,9 +30,11 @@ export const FavoritesPage: FC = () => {
         </Styled.ResultsHeader>
         {favoriteItems.length ? (
           <Styled.ResultsContainer>
-            <Styled.FiltersContainer>
-              <Filter />
-            </Styled.FiltersContainer>
+            {data?.filters && (
+              <Styled.FiltersContainer>
+                <Filter filters={data.filters} />
+              </Styled.FiltersContainer>
+            )}
 
             <Styled.ProductsContainer>
               <Favorites />

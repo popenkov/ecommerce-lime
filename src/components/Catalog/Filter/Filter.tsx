@@ -7,14 +7,16 @@ import { RangeSlider } from "@src/components/UI/RangeSlider";
 import { useMediaQuery } from "@src/hooks/useMediaQuery";
 import { catalogData } from "@src/mock/CatalogData";
 import { theme } from "@src/theme";
-import { CheckboxType } from "@src/types/CatalogPageTypes";
+import { CheckboxType, FilterType } from "@src/types/CatalogPageTypes";
 import { LinkType } from "@src/types/commonTypes";
 
 import { Styled } from "./styles";
 
-export const Filter: FC = () => {
-  const { filters } = catalogData;
+type FilterProps = {
+  filters: FilterType[];
+};
 
+export const Filter: FC<FilterProps> = ({ filters }) => {
   const isAdaptive = useMediaQuery(theme.breakpoints.tablet);
 
   const [isFilterShown, setIsFilterShown] = useState(false);
@@ -55,7 +57,7 @@ export const Filter: FC = () => {
       </Styled.MobileFilterButton>
       {isFilterToShow && (
         <Styled.Filter>
-          {filters.map((filter) => {
+          {filters?.map((filter) => {
             let renderData;
             const type = filter.type;
 

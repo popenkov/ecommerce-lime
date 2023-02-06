@@ -59,6 +59,7 @@ const PaginationContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 65px;
   margin-top: -4px;
+  margin-top: 26px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: column-reverse;

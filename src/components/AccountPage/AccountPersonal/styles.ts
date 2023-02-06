@@ -157,6 +157,8 @@ const AddCardText = styled.span`
   color: ${({ theme }) => theme.color.black};
 `;
 
+const LogoutButton = styled.button``;
+
 export const Styled = {
   PersonalContainer,
   FormSection,
@@ -176,4 +178,5 @@ export const Styled = {
   AddCardButton,
   AddCardPlus,
   AddCardText,
+  LogoutButton,
 };

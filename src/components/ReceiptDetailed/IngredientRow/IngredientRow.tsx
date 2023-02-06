@@ -7,7 +7,6 @@ import { Styled } from "./styles";
 export const IngredientRow: FC<ReceiptIngredientType> = ({ text, amount, img }) => {
   const [isItemInCart, setIsItemInCart] = useState(false);
   const handleAddToCardClick = () => {
-    console.log("added to cart");
     setIsItemInCart((prev) => !prev);
   };
 

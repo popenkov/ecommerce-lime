@@ -4,32 +4,45 @@ import { Sidebar } from "@src/components";
 import { Filter } from "@src/components/Catalog/Filter";
 import { Products } from "@src/components/Catalog/Products";
 import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
-import { catalogData } from "@src/mock/CatalogData";
+import { Loader } from "@src/components/UI/Loader";
+import { useGetCatalogDataQuery } from "@src/store/services";
 import { numberDeclination } from "@src/utils/numberDeclination";
 
 import { Styled } from "./styles";
 
 export const Catalog: FC = () => {
-  const { searchAmount, searchQuery } = catalogData;
-  const searchAmountValue = `${searchAmount} ${numberDeclination(searchAmount, ["товар", "товара", "товаров"])}`;
+  const { data, isLoading } = useGetCatalogDataQuery();
+
+  const getSearchAmountValue = (amount: number) =>
+    `${amount} ${numberDeclination(amount, ["товар", "товара", "товаров"])}`;
   return (
     <Styled.PageContainer>
       <Styled.MainContainer>
         <Breadcrumbs />
-        <Styled.ResultsHeader>
-          <Styled.SearchTitle>{searchQuery}</Styled.SearchTitle>
-          <Styled.SearchAmount>{searchAmountValue}</Styled.SearchAmount>
-        </Styled.ResultsHeader>
+        {isLoading ? (
+          <Loader />
+        ) : data ? (
+          <>
+            <Styled.ResultsHeader>
+              <Styled.SearchTitle>{data.searchQuery}</Styled.SearchTitle>
+              <Styled.SearchAmount>{getSearchAmountValue(data.searchAmount)}</Styled.SearchAmount>
+            </Styled.ResultsHeader>
 
-        <Styled.ResultsContainer>
-          <Styled.FiltersContainer>
-            <Filter />
-          </Styled.FiltersContainer>
+            <Styled.ResultsContainer>
+              {data?.filters && (
+                <Styled.FiltersContainer>
+                  <Filter filters={data.filters} />
+                </Styled.FiltersContainer>
+              )}
 
-          <Styled.ProductsContainer>
-            <Products />
-          </Styled.ProductsContainer>
-        </Styled.ResultsContainer>
+              <Styled.ProductsContainer>
+                <Products />
+              </Styled.ProductsContainer>
+            </Styled.ResultsContainer>
+          </>
+        ) : (
+          <p>no data available</p>
+        )}
       </Styled.MainContainer>
       <Sidebar />
     </Styled.PageContainer>

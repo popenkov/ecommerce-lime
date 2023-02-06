@@ -1,6 +1,7 @@
-import { useActions } from "@src/hooks/useActions";
 import { FC, ReactElement, ReactNode } from "react";
 import { Navigate } from "react-router-dom/dist";
+
+import { useActions } from "@src/hooks/useActions";
 
 import { useAuth } from "../../hooks/useAuth";
 
