@@ -9,7 +9,7 @@ import { ROUTE } from "@src/utils/Routes";
 import { OrderForm } from "./OrderForm";
 import { Styled } from "./styles";
 
-export const Cart: FC = () => {
+const Cart: FC = () => {
   const { items } = useAppSelector((state) => state.cart);
   const { recommendatedItems } = CartAsideData;
 
@@ -22,7 +22,7 @@ export const Cart: FC = () => {
             <Styled.MobileTitle>Товары в корзине</Styled.MobileTitle>
             <Styled.AddedItems>
               {items.map((item) => {
-                return <CartItem {...item} key={item.id} />;
+                return <CartItem data={item} key={item.id} />;
               })}
             </Styled.AddedItems>
           </>
@@ -46,3 +46,5 @@ export const Cart: FC = () => {
     </Styled.PageContainer>
   );
 };
+
+export default Cart;

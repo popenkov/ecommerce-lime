@@ -6,7 +6,7 @@ import { AccountData } from "@src/mock/AccountData";
 
 import { Styled } from "./styles";
 
-export const AccountPage: FC = () => {
+const AccountPage: FC = () => {
   const location = useLocation();
   const currentLocation = location.pathname;
 
@@ -34,3 +34,5 @@ export const AccountPage: FC = () => {
     </Styled.PageContainer>
   );
 };
+
+export default AccountPage;

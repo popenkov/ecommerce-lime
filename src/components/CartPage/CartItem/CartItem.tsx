@@ -10,20 +10,10 @@ import { IMAGES } from "@src/utils/ImagesMap";
 import { AmountCounter } from "../AmountCounter";
 import { Styled } from "./styles";
 
-type CartItemProps = Omit<ItemType, "category">;
+type CartItemProps = { data: ItemType };
 
-export const CartItem: FC<CartItemProps> = ({
-  id,
-  img,
-  rating,
-  energy,
-  isFavorite,
-  title,
-  price,
-  amount,
-  unit,
-  button,
-}) => {
+export const CartItem: FC<CartItemProps> = ({ data }) => {
+  const { id, img, rating, energy, isFavorite, title, price, amount, unit, button } = data;
   const { removeItemfromCart, addItemToFavorites, removeItemfromFavorites } = useActions();
   const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
 
@@ -39,8 +29,8 @@ export const CartItem: FC<CartItemProps> = ({
     removeItemfromFavorites(id);
     handleSuccesFavoritesToastr("Товар добавлен в избранное");
   };
-  const handleAddFavoriteItem = (itemDate: CartItemProps) => {
-    addItemToFavorites(itemDate);
+  const handleAddFavoriteItem = (itemData: ItemType) => {
+    addItemToFavorites(itemData);
     handleRemoveFavoritesToastr("Товар удален из избранных");
   };
 
@@ -58,7 +48,7 @@ export const CartItem: FC<CartItemProps> = ({
       button,
     };
 
-    isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(itemDate);
+    isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(data);
   };
 
   return (

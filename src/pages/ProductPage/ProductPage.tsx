@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@src/components/UI/Breadcrumps";
 
 import { Styled } from "./styles";
 
-export const ProductPage: FC = () => {
+const ProductPage: FC = () => {
   return (
     <Styled.PageContainer>
       <Styled.MainContainer>
@@ -17,3 +17,5 @@ export const ProductPage: FC = () => {
     </Styled.PageContainer>
   );
 };
+
+export default ProductPage;

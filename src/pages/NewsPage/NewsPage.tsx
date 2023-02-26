@@ -39,6 +39,7 @@ export const NewsPage: FC = () => {
               <Select defaultValue={mobileFilters[0]} options={mobileFilters} />
             </Styled.FilterContainer>
           )}
+
           <Styled.NewsContainer>
             {news.map((item) => {
               return (
