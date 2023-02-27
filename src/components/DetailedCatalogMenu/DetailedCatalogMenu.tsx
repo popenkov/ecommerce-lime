@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { CatalogChildrenType } from "@src/types/CatalogMenuTypes";
 
@@ -6,7 +6,7 @@ import { Styled } from "./styles";
 
 type DetailedCatalogMenuProps = Omit<CatalogChildrenType, "id">;
 
-export const DetailedCatalogMenu: FC<DetailedCatalogMenuProps> = ({ title, items }) => {
+export const DetailedCatalogMenu: FC<DetailedCatalogMenuProps> = memo(({ title, items }) => {
   return (
     <Styled.DetailedCatalog>
       <Styled.Title>{title}</Styled.Title>
@@ -21,4 +21,4 @@ export const DetailedCatalogMenu: FC<DetailedCatalogMenuProps> = ({ title, items
       </Styled.CatalogList>
     </Styled.DetailedCatalog>
   );
-};
+});

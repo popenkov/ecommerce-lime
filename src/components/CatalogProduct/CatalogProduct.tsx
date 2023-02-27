@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
@@ -25,122 +25,112 @@ type CatalogProductProps = {
 
 type ItemDateType = Omit<ItemType, "category">;
 
-export const CatalogProduct: FC<ItemType & CatalogProductProps> = ({
-  id,
-  img,
-  rating,
-  isFavorite,
-  title,
-  price,
-  amount,
-  unit,
-  energy,
-  button,
-  width,
-}) => {
-  const [hoverRef, isHovered] = useHover<HTMLDivElement>();
-  const { addItemToCart, addItemToFavorites, removeItemfromFavorites } = useActions();
-  const { items: cartItem } = useAppSelector((state) => state.cart);
-  const { items: favoriteItem } = useAppSelector((state) => state.favorites);
+export const CatalogProduct: FC<ItemType & CatalogProductProps> = memo(
+  ({ id, img, rating, isFavorite, title, price, amount, unit, energy, button, width }) => {
+    const [hoverRef, isHovered] = useHover<HTMLDivElement>();
+    const { addItemToCart, addItemToFavorites, removeItemfromFavorites } = useActions();
+    const { items: cartItem } = useAppSelector((state) => state.cart);
+    const { items: favoriteItem } = useAppSelector((state) => state.favorites);
 
-  const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
+    const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
 
-  const isItemInCart = Boolean(cartItem.find((item) => item.id === id));
-  const isItemFavorite = Boolean(favoriteItem.find((item) => item.id === id));
+    const isItemInCart = Boolean(cartItem.find((item) => item.id === id));
+    const isItemFavorite = Boolean(favoriteItem.find((item) => item.id === id));
 
-  const isAdaptive = useMediaQuery(theme.breakpoints.large);
+    const isAdaptive = useMediaQuery(theme.breakpoints.large);
 
-  const buttonText = !isAdaptive ? button?.text : button?.mobileText;
+    const buttonText = !isAdaptive ? button?.text : button?.mobileText;
 
-  const handleAddToCardClick = () => {
-    const itemDate = {
-      id,
-      img,
-      rating,
-      isFavorite,
-      title,
-      price,
-      amount,
-      unit,
-      energy,
+    const handleAddToCardClick = () => {
+      const itemDate = {
+        id,
+        img,
+        rating,
+        isFavorite,
+        title,
+        price,
+        amount,
+        unit,
+        energy,
+      };
+
+      handleSuccesCartToastr("Товар добавлен в корзину");
+      addItemToCart(itemDate);
     };
 
-    handleSuccesCartToastr("Товар добавлен в корзину");
-    addItemToCart(itemDate);
-  };
-
-  const handleRemoveFavoriteItem = (id: string) => {
-    removeItemfromFavorites(id);
-    handleSuccesFavoritesToastr("Товар добавлен в избранное");
-  };
-  const handleAddFavoriteItem = (itemDate: ItemDateType) => {
-    addItemToFavorites(itemDate);
-    handleRemoveFavoritesToastr("Товар удален из избранных");
-  };
-
-  const handleAddToFavoritesClick = () => {
-    const itemDate = {
-      id,
-      img,
-      rating,
-      isFavorite,
-      title,
-      price,
-      amount,
-      unit,
-      energy,
-      button,
+    const handleRemoveFavoriteItem = (id: string) => {
+      removeItemfromFavorites(id);
+      handleSuccesFavoritesToastr("Товар добавлен в избранное");
+    };
+    const handleAddFavoriteItem = (itemDate: ItemDateType) => {
+      addItemToFavorites(itemDate);
+      handleRemoveFavoritesToastr("Товар удален из избранных");
     };
 
-    isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(itemDate);
-  };
+    const handleAddToFavoritesClick = () => {
+      const itemDate = {
+        id,
+        img,
+        rating,
+        isFavorite,
+        title,
+        price,
+        amount,
+        unit,
+        energy,
+        button,
+      };
 
-  return (
-    <Styled.Product ref={hoverRef} width={width}>
-      <Styled.PhotoContainer>
-        <Styled.FavoritesButtonContainer onClick={handleAddToFavoritesClick}>
-          <FavoritesButton isFavorite={isFavorite as boolean} isSmall />
-        </Styled.FavoritesButtonContainer>
-        <Styled.Photo src={imageToDraw} />
-      </Styled.PhotoContainer>
-      <Rating data={rating} showStarsValue showReviewsValue={false} />
-      <Styled.LinkContainer to={ROUTE.PRODUCT}>
-        <Styled.Title>{title}</Styled.Title>
-      </Styled.LinkContainer>
+      isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(itemDate);
+    };
 
-      {energy && (
-        <Styled.EnergieContainer>
-          {energy.map((item) => {
-            return (
-              <Styled.EnergyItem key={item.id}>
-                <Styled.EnergyName>{item.name}</Styled.EnergyName>
-                <Styled.EnergyValue>{item.value}</Styled.EnergyValue>
-              </Styled.EnergyItem>
-            );
-          })}
-        </Styled.EnergieContainer>
-      )}
-      <Styled.Price>
-        {!price.oldPrice ? (
-          <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
-        ) : (
-          <>
-            <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
-            <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
-          </>
+    return (
+      <Styled.Product ref={hoverRef} width={width}>
+        <Styled.PhotoContainer>
+          <Styled.FavoritesButtonContainer onClick={handleAddToFavoritesClick}>
+            <FavoritesButton isFavorite={isFavorite as boolean} isSmall />
+          </Styled.FavoritesButtonContainer>
+          <Styled.Photo src={imageToDraw} />
+        </Styled.PhotoContainer>
+        <Rating data={rating} showStarsValue showReviewsValue={false} />
+        <Styled.LinkContainer to={ROUTE.PRODUCT}>
+          <Styled.Title>{title}</Styled.Title>
+        </Styled.LinkContainer>
+
+        {energy && (
+          <Styled.EnergieContainer>
+            {energy.map((item) => {
+              return (
+                <Styled.EnergyItem key={item.id}>
+                  <Styled.EnergyName>{item.name}</Styled.EnergyName>
+                  <Styled.EnergyValue>{item.value}</Styled.EnergyValue>
+                </Styled.EnergyItem>
+              );
+            })}
+          </Styled.EnergieContainer>
         )}
-      </Styled.Price>
+        <Styled.Price>
+          {!price.oldPrice ? (
+            <Styled.CurrentPrice>{price.price} руб.</Styled.CurrentPrice>
+          ) : (
+            <>
+              <Styled.NewPrice>{price.price} руб.</Styled.NewPrice>
+              <Styled.OldPrice>{price.oldPrice} руб.</Styled.OldPrice>
+            </>
+          )}
+        </Styled.Price>
 
-      {!isItemInCart ? (
-        <AddToCardBtnNew
-          text={buttonText}
-          onClick={handleAddToCardClick}
-          isHovered={isHovered}
-          isAdded={isItemInCart}
-        />
-      ) : (
-        <Styled.LinkToCard to={ROUTE.CART}> В корзину</Styled.LinkToCard>
-      )}
-    </Styled.Product>
-  );
-};
+        {!isItemInCart ? (
+          <AddToCardBtnNew
+            text={buttonText}
+            onClick={handleAddToCardClick}
+            isHovered={isHovered}
+            isAdded={isItemInCart}
+          />
+        ) : (
+          <Styled.LinkToCard to={ROUTE.CART}> В корзину</Styled.LinkToCard>
+        )}
+      </Styled.Product>
+    );
+  }
+);
