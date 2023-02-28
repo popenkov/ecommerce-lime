@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { ReactComponent as Logo } from "@src/assets/images/header-logo.svg";
 
@@ -8,7 +8,7 @@ type LoyalCardType = {
   number: string;
 };
 
-export const LoyalCard: FC<LoyalCardType> = ({ number }) => {
+export const LoyalCard: FC<LoyalCardType> = memo(({ number }) => {
   return (
     <Styled.Card>
       <Styled.LogoContainer>
@@ -17,4 +17,6 @@ export const LoyalCard: FC<LoyalCardType> = ({ number }) => {
       <Styled.CardNumber>{number}</Styled.CardNumber>
     </Styled.Card>
   );
-};
+});
+
+LoyalCard.displayName = "LoyalCard";

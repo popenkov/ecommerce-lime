@@ -1,4 +1,4 @@
-import { forwardRef, InputHTMLAttributes, useState, ChangeEvent } from "react";
+import { forwardRef, InputHTMLAttributes, useState, ChangeEvent, useEffect } from "react";
 import { FieldError } from "react-hook-form";
 
 import { Styled } from "./styles";
@@ -22,6 +22,7 @@ export const FormInput = forwardRef<HTMLInputElement, IField>(
     const hasError = Boolean(error);
     const minInputLengthPhone = 1;
     const minInputLengthText = 0;
+
     const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
       const trimmedInputValueLength = evt.target.value.trim().length;
       const minInputLength = !isPhone ? minInputLengthText : minInputLengthPhone;
@@ -33,6 +34,10 @@ export const FormInput = forwardRef<HTMLInputElement, IField>(
       }
     };
 
+    useEffect(() => {
+      console.log("touched");
+    }, [touched]);
+
     const handlePhoneInput = (evt: ChangeEvent<HTMLInputElement>) => {
       handleInputChange(evt);
       handlePhoneFormat(evt);
@@ -42,7 +47,14 @@ export const FormInput = forwardRef<HTMLInputElement, IField>(
       <Styled.Container>
         <Styled.Label>
           {!isPhone ? (
-            <Styled.Input ref={ref} type={type} {...rest} onChange={handleInputChange} hasInputError={hasError} />
+            <Styled.Input
+              ref={ref}
+              type={type}
+              {...rest}
+              onChange={handleInputChange}
+              //   onPaste={handleInputPaste}
+              hasInputError={hasError}
+            />
           ) : (
             <Styled.Input
               ref={ref}

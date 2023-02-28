@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { ReactComponent as PlayIcon } from "@src/assets/icons/play-icon.svg";
 import { LinkType } from "@src/types/commonTypes";
@@ -6,7 +6,7 @@ import { LinkType } from "@src/types/commonTypes";
 import { Styled } from "./styles";
 
 type VideoButtonProps = Omit<LinkType, "id">;
-export const VideoButton: FC<VideoButtonProps> = ({ text, href }) => {
+export const VideoButton: FC<VideoButtonProps> = memo(({ text, href }) => {
   return (
     <Styled.Button href={href}>
       <Styled.Text>{text}</Styled.Text>
@@ -15,4 +15,6 @@ export const VideoButton: FC<VideoButtonProps> = ({ text, href }) => {
       </Styled.IconContainer>
     </Styled.Button>
   );
-};
+});
+
+VideoButton.displayName = "VideoButton";

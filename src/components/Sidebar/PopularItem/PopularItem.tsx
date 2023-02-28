@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import { toastr } from "react-redux-toastr";
 
 import { handleSuccesCartToastr } from "@src/components/Toastrs/CustomTostrs";
@@ -8,24 +8,20 @@ import { IMAGES } from "@src/utils/ImagesMap";
 
 import { Styled } from "./styles";
 
-export const PopularItem: FC<ItemType> = ({ id, img, title, rating, isFavorite, price, amount, unit }) => {
+type PopularItemProps = {
+  data: ItemType;
+};
+
+export const PopularItem: FC<PopularItemProps> = memo(({ data }) => {
+  const { img, title, price, unit } = data;
+
   const imageToDraw: string = IMAGES[img as keyof typeof IMAGES];
 
   const { addItemToCart } = useActions();
 
   const handleAddToCardClick = () => {
-    const itemDate = {
-      id,
-      img,
-      rating,
-      isFavorite,
-      title,
-      price,
-      amount,
-      unit,
-    };
     handleSuccesCartToastr("Товар добавлен в корзину");
-    addItemToCart(itemDate);
+    addItemToCart(data);
   };
 
   return (
@@ -41,4 +37,6 @@ export const PopularItem: FC<ItemType> = ({ id, img, title, rating, isFavorite, 
       </Styled.Description>
     </Styled.PopularItem>
   );
-};
+});
+
+PopularItem.displayName = "PopularItem";

@@ -42,7 +42,7 @@ export const Products: FC = () => {
 
           <Styled.ItemsContainer>
             {data.products.map((item) => {
-              return <CatalogProduct {...item} key={item.id} />;
+              return <CatalogProduct {...item} data={item} key={item.id} />;
             })}
           </Styled.ItemsContainer>
 
@@ -52,7 +52,7 @@ export const Products: FC = () => {
 
           <Styled.ItemsContainer>
             {data.productsSecond.map((item) => {
-              return <CatalogProduct {...item} key={item.id} />;
+              return <CatalogProduct data={item} key={item.id} />;
             })}
           </Styled.ItemsContainer>
 

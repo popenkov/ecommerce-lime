@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import ReactSelect, { ActionMeta, MultiValue, SingleValue } from "react-select";
 import makeAnimated from "react-select/animated";
 
@@ -7,7 +7,7 @@ import { Styled } from "./styles";
 
 const animatedComponents = makeAnimated();
 
-export const Select: FC<SelectProps> = ({ defaultValue, options, placeholder, field, error }) => {
+export const Select: FC<SelectProps> = memo(({ defaultValue, options, placeholder, field, error }) => {
   const handleSelectChange = (newValue: SingleValue<SelectOptionType> | MultiValue<SelectOptionType>): void => {
     field.onChange(newValue);
   };
@@ -25,4 +25,6 @@ export const Select: FC<SelectProps> = ({ defaultValue, options, placeholder, fi
       {error && <Styled.ErrorMessage>{error.message}</Styled.ErrorMessage>}
     </Styled.SelectContainer>
   );
-};
+});
+
+Select.displayName = "Select";

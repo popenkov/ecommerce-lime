@@ -1,19 +1,21 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { ReactComponent as DietIcon } from "@src/assets/icons/diet.svg";
 
 import { Styled } from "./styles";
+import { useAuth } from "@src/hooks/useAuth";
 
 const data = {
   name: "Tony",
 };
 
-export const AsideEmptyCart: FC = () => {
+export const AsideEmptyCart: FC = memo(() => {
+  const { user } = useAuth();
   return (
     <Styled.Container>
       <Styled.GreetingsContainer>
-        Здравствуйте,
-        <Styled.GreetingsName>{data.name}!</Styled.GreetingsName>
+        Здравствуйте
+        {user && <Styled.GreetingsName>{data.name}!</Styled.GreetingsName>}
       </Styled.GreetingsContainer>
 
       <Styled.EmptyCartContainer>
@@ -32,4 +34,6 @@ export const AsideEmptyCart: FC = () => {
       </Styled.RecentOrderContainer>
     </Styled.Container>
   );
-};
+});
+
+AsideEmptyCart.displayName = "AsideEmptyCart";

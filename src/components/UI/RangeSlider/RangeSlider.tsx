@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useRef, FC } from "react";
+import { useCallback, useEffect, useState, useRef, FC, memo } from "react";
 
 import { Styled } from "./styles";
 
@@ -8,7 +8,7 @@ type RangeSliderProps = {
   onChange: any;
 };
 
-export const RangeSlider: FC<RangeSliderProps> = ({ min, max, onChange }) => {
+export const RangeSlider: FC<RangeSliderProps> = memo(({ min, max, onChange }) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
   const minValRef = useRef(min);
@@ -81,4 +81,6 @@ export const RangeSlider: FC<RangeSliderProps> = ({ min, max, onChange }) => {
       </Styled.Slider>
     </Styled.Container>
   );
-};
+});
+
+RangeSlider.displayName = "RangeSlider";

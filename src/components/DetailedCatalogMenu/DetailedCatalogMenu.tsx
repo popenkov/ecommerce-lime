@@ -22,3 +22,5 @@ export const DetailedCatalogMenu: FC<DetailedCatalogMenuProps> = memo(({ title, 
     </Styled.DetailedCatalog>
   );
 });
+
+DetailedCatalogMenu.displayName = "DetailedCatalogMenu";

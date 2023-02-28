@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC, memo } from "react";
 
 import { Styled } from "./styles";
 
@@ -9,7 +9,7 @@ type AddToCardBtnProps = {
   onClick: () => void;
 };
 
-export const AddToCardBtn: FC<AddToCardBtnProps> = ({ text, isHovered, onClick, isAdded }) => {
+export const AddToCardBtn: FC<AddToCardBtnProps> = memo(({ text, isHovered, onClick, isAdded }) => {
   return (
     <Styled.Button onClick={onClick} isAdded={isAdded}>
       <Styled.PlusContainer isHovered={isHovered} isAdded={isAdded}>
@@ -20,4 +20,6 @@ export const AddToCardBtn: FC<AddToCardBtnProps> = ({ text, isHovered, onClick, 
       </Styled.TextContainer>
     </Styled.Button>
   );
-};
+});
+
+AddToCardBtn.displayName = "AddToCardBtn";

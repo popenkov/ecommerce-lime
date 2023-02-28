@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { RatingType } from "@src/types/commonTypes";
 
@@ -11,7 +11,7 @@ type RatingProps = {
   showReviewsValue?: boolean;
 };
 
-export const Rating: FC<RatingProps> = ({ data, showStarsValue, showReviewsValue }) => {
+export const Rating: FC<RatingProps> = memo(({ data, showStarsValue, showReviewsValue }) => {
   const { value, amount } = data;
 
   const valueNumber = Math.floor(Number(value));
@@ -29,7 +29,9 @@ export const Rating: FC<RatingProps> = ({ data, showStarsValue, showReviewsValue
       {showReviewsValue && <Styled.Value>{amount}</Styled.Value>}
     </Styled.Rating>
   );
-};
+});
+
+Rating.displayName = "Rating";
 
 Rating.defaultProps = {
   showStarsValue: false,

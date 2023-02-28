@@ -1,7 +1,7 @@
 import { LinkType } from "./commonTypes";
 
 export type AccountDataType = {
-  userData: {
+  userDataMock: {
     street: string;
     cardNumber: string;
   };

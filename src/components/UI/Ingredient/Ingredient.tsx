@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
@@ -6,7 +6,7 @@ import { ChiefReceiptIngredientType } from "@src/types/MainPageTypes";
 
 import { Styled } from "./styles";
 
-export const Ingredient: FC<ChiefReceiptIngredientType> = ({ id, text, price, img }) => {
+export const Ingredient: FC<ChiefReceiptIngredientType> = memo(({ id, text, price, img }) => {
   const tooltipId = `ingredient-item/${id}/${Math.random()}`;
   return (
     <Styled.Ingredient>
@@ -16,4 +16,6 @@ export const Ingredient: FC<ChiefReceiptIngredientType> = ({ id, text, price, im
       </Tooltip>
     </Styled.Ingredient>
   );
-};
+});
+
+Ingredient.displayName = "Ingredient";

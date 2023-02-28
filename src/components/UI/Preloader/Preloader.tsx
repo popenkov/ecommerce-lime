@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 
 import { ReactComponent as HeaderLogo } from "@src/assets/images/loader-logo.svg";
 
@@ -39,4 +39,6 @@ const Preloader = () => {
   );
 };
 
-export default Preloader;
+export default memo(Preloader);
+
+Preloader.displayName = "Preloader";

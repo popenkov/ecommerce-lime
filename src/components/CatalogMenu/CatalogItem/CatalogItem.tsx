@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { ReactComponent as Shevron } from "@src/assets/icons/shevron-left.svg";
 import { DetailedCatalogMenu } from "@src/components/DetailedCatalogMenu";
@@ -19,9 +19,9 @@ const renderIcon = (Icon: any) => {
   return <Icon />;
 };
 
-export const CatalogItem: FC<CatalogItemProps> = ({ icon, name, children, onClick, showDetailed }) => {
-  const key = icon as keyof typeof ICONS;
-  const Icon = typeof icon === "string" ? ICONS[key] : null;
+export const CatalogItem: FC<CatalogItemProps> = memo(({ icon, name, children, onClick, showDetailed }) => {
+  const iconKey = icon as keyof typeof ICONS;
+  const Icon = typeof icon === "string" ? ICONS[iconKey] : null;
 
   const { showSubcategory, hideSubcategory } = useActions();
   const { isSubcategoryShown } = useAppSelector((state) => state.catalogMenu);
@@ -48,4 +48,6 @@ export const CatalogItem: FC<CatalogItemProps> = ({ icon, name, children, onClic
       {showDetailedCatalog && <DetailedCatalogMenu {...children} />}
     </>
   );
-};
+});
+
+CatalogItem.displayName = "CatalogItem";

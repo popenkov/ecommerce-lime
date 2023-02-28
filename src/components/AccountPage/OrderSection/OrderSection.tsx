@@ -36,7 +36,7 @@ export const OrderSection: FC<OrderHistoryType> = ({ id, date, time, address, pr
 
       <Styled.OrderProducts>
         {itemsToDraw.map((item) => {
-          return <CatalogProduct {...item} width={productWidth} key={item.id} />;
+          return <CatalogProduct data={item} width={productWidth} key={item.id} />;
         })}
         <Styled.Shadow>
           {isBtnToShow && (

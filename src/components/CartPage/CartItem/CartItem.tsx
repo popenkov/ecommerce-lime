@@ -35,19 +35,6 @@ export const CartItem: FC<CartItemProps> = ({ data }) => {
   };
 
   const handleAddToFavoritesClick = () => {
-    const itemDate = {
-      id,
-      img,
-      rating,
-      isFavorite,
-      title,
-      price,
-      amount,
-      unit,
-      energy,
-      button,
-    };
-
     isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(data);
   };
 

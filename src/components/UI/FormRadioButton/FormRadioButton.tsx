@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { Styled } from "./styles";
 
@@ -10,11 +10,13 @@ type FormRadioButtonType = {
   isChecked?: boolean;
 };
 
-export const FormRadioButton: FC<FormRadioButtonType> = ({ name, id, isChecked, value, text }) => {
+export const FormRadioButton: FC<FormRadioButtonType> = memo(({ name, id, isChecked, value, text }) => {
   return (
     <Styled.CheckboxWrapper>
       <input type="radio" readOnly checked={isChecked} name={name} value={value} id={id} />
       <Styled.CheckboxLabel htmlFor={id}>{text}</Styled.CheckboxLabel>
     </Styled.CheckboxWrapper>
   );
-};
+});
+
+FormRadioButton.displayName = "FormRadioButton";

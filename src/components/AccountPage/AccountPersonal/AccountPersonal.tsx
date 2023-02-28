@@ -1,5 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { SubmitHandler, Controller, useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 
@@ -11,21 +11,41 @@ import { AccountData } from "@src/mock/AccountData";
 
 import { Styled } from "./styles";
 import { UserForm, validationSchema } from "./utils";
+import { useAppSelector } from "@src/hooks/useAppSelector";
 
 export const AccountPersonal: FC = () => {
   const {
     handleSubmit,
     register,
     control,
-    formState: { errors },
+    formState: { errors, defaultValues },
     reset,
   } = useForm<UserForm>({
     mode: "onChange",
     resolver: yupResolver(validationSchema),
   });
   const navigate = useNavigate();
-  const { userData } = AccountData;
-  const { logout } = useActions();
+  const { userDataMock } = AccountData;
+  const { user } = useAppSelector((state) => state.user);
+  const { userData } = useAppSelector((state) => state.user);
+  const { logout, getUserData } = useActions();
+
+  const getProfileInitialValues = (user: any) => {
+    return {
+      name: user.name,
+      surname: user.lastName,
+      fatherName: user.fatherName,
+      phone: user?.phone,
+      email: user?.email,
+      dob: user?.dob,
+    };
+  };
+
+  useEffect(() => {
+    getUserData(user.email);
+    const defaultValues = getProfileInitialValues(userData);
+    reset(defaultValues);
+  }, [user]);
 
   const handleFormSubmit: SubmitHandler<UserForm> = (data) => {
     reset();
@@ -43,31 +63,66 @@ export const AccountPersonal: FC = () => {
           <Styled.SectionTitle>Контактные данные</Styled.SectionTitle>
           <Styled.InputsContainer>
             <Styled.InputWrapper>
-              <FormInput {...register("name")} placeholder={"Ваше имя"} error={errors.name} required />
+              <FormInput
+                {...register("name")}
+                placeholder={"Ваше имя"}
+                touched={!!defaultValues?.name}
+                error={errors.name}
+                required
+              />
             </Styled.InputWrapper>
             <Styled.InputWrapper>
-              <FormInput {...register("surname")} placeholder={"Фамилия"} error={errors.surname} required />
+              <FormInput
+                {...register("surname")}
+                touched={!!defaultValues?.surname}
+                placeholder={"Фамилия"}
+                error={errors.surname}
+                required
+              />
             </Styled.InputWrapper>
             <Styled.InputWrapper>
-              <FormInput {...register("fatherName")} placeholder={"Отчество"} error={errors.name} />
+              <FormInput
+                {...register("fatherName")}
+                touched={!!defaultValues?.fatherName}
+                placeholder={"Отчество"}
+                error={errors.name}
+              />
             </Styled.InputWrapper>
           </Styled.InputsContainer>
           <Styled.InputsContainer>
             <Styled.InputWrapper>
-              <FormInput isPhone {...register("phone")} placeholder={"Номер телефона"} error={errors.phone} required />
+              <FormInput
+                isPhone
+                {...register("phone")}
+                touched={!!defaultValues?.phone}
+                placeholder={"Номер телефона"}
+                error={errors.phone}
+                required
+              />
             </Styled.InputWrapper>
             <Styled.InputWrapper>
-              <FormInput isPhone {...register("email")} placeholder={"Ваш e-mail"} error={errors.email} required />
+              <FormInput
+                {...register("email")}
+                touched={!!defaultValues?.email}
+                placeholder={"Ваш e-mail"}
+                error={errors.email}
+                required
+              />
             </Styled.InputWrapper>
             <Styled.InputWrapper>
-              <FormInput isPhone {...register("dob")} placeholder={"Дата рождения"} error={errors.dob} />
+              <FormInput
+                {...register("dob")}
+                touched={!!defaultValues?.dob}
+                placeholder={"Дата рождения"}
+                error={errors.dob}
+              />
             </Styled.InputWrapper>
           </Styled.InputsContainer>
         </Styled.FormSection>
 
         <Styled.FormSection>
           <Styled.AddressTitle>Адрес доставки</Styled.AddressTitle>
-          {userData.street && (
+          {userDataMock.street && (
             <Styled.SavedAddresses>
               <Styled.SavedAddressItem>
                 <Controller
@@ -75,7 +130,7 @@ export const AccountPersonal: FC = () => {
                   control={control}
                   defaultValue=""
                   render={() => (
-                    <FormRadioButton name="savedAddress" id="savedAddress" isChecked text={userData.street} />
+                    <FormRadioButton name="savedAddress" id="savedAddress" isChecked text={userDataMock.street} />
                   )}
                 />
               </Styled.SavedAddressItem>
@@ -117,7 +172,7 @@ export const AccountPersonal: FC = () => {
               <Styled.AddCardPlus>+</Styled.AddCardPlus>
               <Styled.AddCardText>Добавить карту лояльности</Styled.AddCardText>
             </Styled.AddCardButton>
-            <LoyalCard number={userData.cardNumber} />
+            <LoyalCard number={userDataMock.cardNumber} />
           </Styled.LoyalCardsContainer>
         </Styled.LoyalCardsSection>
       </form>

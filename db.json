@@ -3,12 +3,22 @@
     {
       "email": "test@test.ru",
       "password": "$2a$10$6xGlilHdemnopPioYVSNKO8b9UwkIu880VegxQ5n1vDF.oZMLHivO",
-      "id": 1
+      "id": 1,
+      "name": "Tony",
+      "lastName": "Honest",
+      "fatherName": "n/a",
+      "phone": "+1 000 000 000",
+      "dob": "12.11.1990"
     },
     {
       "email": "test@test.test",
       "password": "$2a$10$z8osjIgZOmuv5owJQ5BhxO3Y8L06Q9IOM8595TpfIaeU0vr/zBHw.",
-      "id": 2
+      "id": 2,
+      "name": "Tony",
+      "lastName": "Honest",
+      "fatherName": "n/a",
+      "phone": "+1 000 000 000",
+      "dob": "12.11.1990"
     }
   ],
   "header": {

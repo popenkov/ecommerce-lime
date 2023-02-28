@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, memo, useEffect, useState } from "react";
 
 import { useAppSelector } from "@src/hooks/useAppSelector";
 import { useGetCatalogMenuDataQuery } from "@src/store/services";
@@ -6,7 +6,7 @@ import { useGetCatalogMenuDataQuery } from "@src/store/services";
 import { CatalogItem } from "./CatalogItem";
 import { Styled } from "./styles";
 
-export const CatalogMenu: FC = () => {
+export const CatalogMenu: FC = memo(() => {
   const { data } = useGetCatalogMenuDataQuery();
   const { isOpen, isSubcategoryShown } = useAppSelector((state) => state.catalogMenu);
   const [activeMenu, setActiveMenu] = useState<number | null>(null);
@@ -55,4 +55,6 @@ export const CatalogMenu: FC = () => {
       )}
     </>
   );
-};
+});
+
+CatalogMenu.displayName = "CatalogMenu";

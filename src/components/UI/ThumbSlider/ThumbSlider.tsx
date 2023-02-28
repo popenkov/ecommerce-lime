@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, memo, useState } from "react";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import type { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,7 +18,7 @@ type ThumbSliderProps = {
   height?: string;
 };
 
-export const ThumbSlider: FC<ThumbSliderProps> = ({ data, height }) => {
+export const ThumbSlider: FC<ThumbSliderProps> = memo(({ data, height }) => {
   const { main, thumb } = data;
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
@@ -58,4 +58,6 @@ export const ThumbSlider: FC<ThumbSliderProps> = ({ data, height }) => {
       </Styled.MainSlider>
     </Styled.Container>
   );
-};
+});
+
+ThumbSlider.displayName = "ThumbSlider";

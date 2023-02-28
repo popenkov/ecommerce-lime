@@ -2,11 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import { getStoreLocal } from "@src/utils/localStorage";
 
-import { login, logout, register } from "./user.actions";
+import { login, logout, register, getUserData } from "./user.actions";
 
 const initialState = {
   isLoggedIn: Boolean(getStoreLocal("user")),
   user: getStoreLocal("user"),
+  userData: {},
   isLoading: false,
 };
 
@@ -43,11 +44,15 @@ export const userSlice = createSlice({
         state.isLoading = false;
         state.isLoggedIn = false;
         state.user = null;
+      })
+      .addCase(getUserData.fulfilled, (state, { payload }) => {
+        state.userData = payload;
+      })
+      .addCase(getUserData.rejected, (state) => {
+        state.userData = {};
       });
   },
 });
-
-// export const { reducer } = userSlice;
 
 export const userActions = userSlice.actions;
 export default userSlice.reducer;

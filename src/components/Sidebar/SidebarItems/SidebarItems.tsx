@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { ItemType } from "@src/types/commonTypes";
 
@@ -9,7 +9,7 @@ type SidebarItemsProps = {
   data: ItemType[];
 };
 
-export const SidebarItems: FC<SidebarItemsProps> = ({ data }) => {
+export const SidebarItems: FC<SidebarItemsProps> = memo(({ data }) => {
   return (
     <Styled.Container>
       <Styled.ItemsCategory>
@@ -21,4 +21,6 @@ export const SidebarItems: FC<SidebarItemsProps> = ({ data }) => {
       </Styled.ItemsCategory>
     </Styled.Container>
   );
-};
+});
+
+SidebarItems.displayName = "SidebarItems";

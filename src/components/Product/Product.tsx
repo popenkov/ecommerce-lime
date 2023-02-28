@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 import { useActions } from "@src/hooks/useActions";
 import { useAppSelector } from "@src/hooks/useAppSelector";
@@ -19,7 +19,12 @@ import { Styled } from "./styles";
 
 type ItemDateType = Omit<ItemType, "category">;
 
-export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, price, amount, unit, energy, button }) => {
+type ProductProps = {
+  data: ItemDateType;
+};
+
+export const Product: FC<ProductProps> = memo(({ data }) => {
+  const { id, img, rating, isFavorite, title, price } = data;
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
   const { addItemToCart, addItemToFavorites, removeItemfromFavorites } = useActions();
   const { items } = useAppSelector((state) => state.cart);
@@ -31,47 +36,20 @@ export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, pric
   const isItemFavorite = Boolean(favoriteItem.find((item) => item.id === id));
 
   const handleAddToCardClick = () => {
-    const itemDate = {
-      id,
-      img,
-      rating,
-      isFavorite,
-      title,
-      price,
-      amount,
-      unit,
-      energy,
-      button,
-    };
-
     handleSuccesCartToastr("Товар добавлен в корзину");
-
-    addItemToCart(itemDate);
+    addItemToCart(data);
   };
 
   const handleAddToFavoritesClick = () => {
-    const itemDate = {
-      id,
-      img,
-      rating,
-      isFavorite,
-      title,
-      price,
-      amount,
-      unit,
-      energy,
-      button,
-    };
-
-    isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(itemDate);
+    isItemFavorite ? handleRemoveFavoriteItem(id) : handleAddFavoriteItem(data);
   };
 
   const handleRemoveFavoriteItem = (id: string) => {
     removeItemfromFavorites(id);
     handleSuccesFavoritesToastr("Товар добавлен в избранное");
   };
-  const handleAddFavoriteItem = (itemDate: ItemDateType) => {
-    addItemToFavorites(itemDate);
+  const handleAddFavoriteItem = (data: ItemDateType) => {
+    addItemToFavorites(data);
     handleRemoveFavoritesToastr("Товар удален из избранных");
   };
 
@@ -104,4 +82,6 @@ export const Product: FC<ItemType> = ({ id, img, rating, isFavorite, title, pric
       )}
     </Styled.Product>
   );
-};
+});
+
+Product.displayName = "Product";

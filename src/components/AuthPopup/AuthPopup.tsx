@@ -1,13 +1,10 @@
-import { FC, useState } from "react";
+import { FC, memo, useState } from "react";
 
 import { AuthForm } from "./AuthForm";
 import { RegisterForm } from "./RegisterForm";
 import { Styled } from "./styles";
 
-type AuthPopupType = {
-  handleClosePopup: () => void;
-};
-export const AuthPopup: FC = () => {
+export const AuthPopup: FC = memo(() => {
   const [activeTab, setActiveTab] = useState(1);
 
   const handleTabLinkClick = (activeId: number) => {
@@ -39,4 +36,6 @@ export const AuthPopup: FC = () => {
       </Styled.PopupContainer>
     </Styled.Popup>
   );
-};
+});
+
+AuthPopup.displayName = "AuthPopup";

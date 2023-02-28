@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC, memo } from "react";
 
 import { ReactComponent as CartIcon } from "@src/assets/icons/cart.svg";
 import { ReactComponent as CheckIcon } from "@src/assets/icons/checkbox.svg";
@@ -14,16 +14,20 @@ type AddToCardBtnNewProps = {
   onClick: () => void;
 };
 
-export const AddToCardBtnNew: FC<AddToCardBtnNewProps> = ({ text, isHovered, onClick, isAdded, isSmall, isLight }) => {
-  const isSmallAndAdded = isAdded && isSmall;
-  return (
-    <Styled.Button onClick={onClick} isAdded={isAdded} isHovered={isHovered} isSmall={isSmall} isLight={isLight}>
-      <Styled.IconContainer>{!isSmallAndAdded ? <CartIcon /> : <CheckIcon />}</Styled.IconContainer>
+export const AddToCardBtnNew: FC<AddToCardBtnNewProps> = memo(
+  ({ text, isHovered, onClick, isAdded, isSmall, isLight }) => {
+    const isSmallAndAdded = isAdded && isSmall;
+    return (
+      <Styled.Button onClick={onClick} isAdded={isAdded} isHovered={isHovered} isSmall={isSmall} isLight={isLight}>
+        <Styled.IconContainer>{!isSmallAndAdded ? <CartIcon /> : <CheckIcon />}</Styled.IconContainer>
 
-      <Styled.TextContainer>{text}</Styled.TextContainer>
-    </Styled.Button>
-  );
-};
+        <Styled.TextContainer>{text}</Styled.TextContainer>
+      </Styled.Button>
+    );
+  }
+);
+
+AddToCardBtnNew.displayName = "AddToCardBtnNew";
 
 AddToCardBtnNew.defaultProps = {
   isAdded: false,

@@ -1,4 +1,4 @@
-import { FC, useRef } from "react";
+import { FC, memo, useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,7 +18,7 @@ type ProductsSectionProps = {
   hideLink?: boolean;
 };
 
-export const ProductsSection: FC<ProductsSectionProps> = ({ data, hideLink }) => {
+export const ProductsSection: FC<ProductsSectionProps> = memo(({ data, hideLink }) => {
   const { title, button, color, items } = data;
 
   const buttonPrevRef = useRef<HTMLButtonElement | null>(null);
@@ -51,7 +51,7 @@ export const ProductsSection: FC<ProductsSectionProps> = ({ data, hideLink }) =>
           {items.map((item) => {
             return (
               <SwiperSlide key={item.id}>
-                <Product {...item} />
+                <Product {...item} data={item} />
               </SwiperSlide>
             );
           })}
@@ -61,4 +61,6 @@ export const ProductsSection: FC<ProductsSectionProps> = ({ data, hideLink }) =>
       </Styled.ItemsContainer>
     </Styled.Container>
   );
-};
+});
+
+ProductsSection.displayName = "ProductsSection";

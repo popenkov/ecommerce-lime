@@ -2,7 +2,7 @@ import { AccountDataType } from "@src/types/AccountDataTypes";
 import { ACCOUNT_ROUTES } from "@src/utils/Routes";
 
 export const AccountData: AccountDataType = {
-  userData: {
+  userDataMock: {
     street: "ул.Пимена-панчанки, д. 12, под. 4, кв. 312",
     cardNumber: "2200 8756 8777 3245",
   },
